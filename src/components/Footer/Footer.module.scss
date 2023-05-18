@@ -1,0 +1,29 @@
+.footer {
+    background-color: #000;
+    padding: 50px 50px 100px 50px;
+    .logo {
+        display: inline-block;
+        font-family: 'Oswald', sans-serif;
+        font-size: 40px;
+        color: #e91c23;
+        cursor: pointer;
+        margin-bottom: 50px;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        .wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 27px;
+            .title {
+                color: #ffffffd5;
+            }
+            .subTitle {
+                color: #ffffff5b;
+                cursor: pointer;
+            }
+        }
+    }
+}

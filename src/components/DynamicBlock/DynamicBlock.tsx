@@ -67,7 +67,7 @@ export const DynamicBlock: FC = () => {
                 </li>
             </ul>
 
-            <button className={styles.btn}>Dynamic Block</button>
+            <button className={styles.btn}>DYNAMIC BLOCK</button>
         </section>
     );
 };

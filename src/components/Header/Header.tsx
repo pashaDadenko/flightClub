@@ -7,7 +7,7 @@ import backgroundImg from '../../images/backgroundImg.jpg';
 import styles from './Header.module.scss';
 
 export const Header: FC = () => {
-    const headerList: TypeHeaderList = ['sneakers', 'store', 'account'];
+    const headerList: TypeHeaderList = ['Sneakers', 'Store', 'Account'];
 
     return (
         <>
@@ -24,7 +24,7 @@ export const Header: FC = () => {
                         <input className={styles.search} type='search' placeholder='Search' />
                         <SearchIcon className={styles.icon} />
                     </div>
-                    <div className={styles.logo}>Resale store</div>
+                    <div className={styles.logo}>FLIGHT CLUB</div>
                     <ul className={styles.listWrapper}>
                         {headerList.map((list: string, index: number) => (
                             <li className={styles.list} key={index}>
