@@ -1,0 +1,916 @@
+{
+    "Nike": [
+        {
+            "id": 1,
+            "rating": 4,
+            "price": 141,
+            "brand": "Nike",
+            "model": "dunk",
+            "color": "black",
+            "title": "WMNS DUNK LOW 'BLACK WHITE'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/294568/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/294568/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/294568/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/294568/4.jpg"
+            ],
+            "article": "dd1503 101 | white/black/white | 3/10/21",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "A women's shoe, the Wmns Dunk Low 'Black White' also known as ‘Panda’ emerges with a classic two-tone look. Built entirely with leather, the shoe's upper sports a white base overlaid by black, with black also marking the Swoosh branding. Perforations on the toe box provide breathability, while white branding appears on the tongue and heel patch. Underfoot, the two-tone rubber cupsole includes a concentric outsole to provide traction."
+        },
+        {
+            "id": 2,
+            "rating": 6,
+            "price": 134,
+            "brand": "Nike",
+            "model": "dunk",
+            "color": "brown",
+            "title": "DUNK LOW PREMIUM 'SETSUBUN'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/323746/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/323746/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/323746/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/323746/4.jpg"
+            ],
+            "article": "dq5009 268 | white onyx/court purple/khaki | 4/11/23",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "An annual festival that celebrates the first day of spring in Japan's old calendar inspires the Nike Dunk Low Premium ‘Setsubun.’ The essence of the festival, which is intended to dismiss bad luck and evil spirits from the previous year, is echoed in the low-top's details. The leather upper in beige has a lightly crackled surface with brown and tan overlays. An image of Japanese warrior Tsuno Daishi is stitched on the lateral heel in purple, with playful Swooshes-as-horns. Additional purple hits appear in the signature Swoosh and lining of the collar. Artist Utagawa Kuniyoshi created the sockliner graphics that picture folk hero Kintarō."
+        },
+        {
+            "id": 3,
+            "rating": 5,
+            "price": 300,
+            "brand": "Nike",
+            "model": "dunk",
+            "color": "cream",
+            "title": "JARRITOS X DUNK LOW SB",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/346203/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/346203/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/346203/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/346203/4.jpg"
+            ],
+            "article": "fd0860 001 | phantom/safety orange/malachite | 5/10/23",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "A collaboration between Jarritos x Nike Dunk Low SB takes inspiration from the famous Mexican soda brand. The upper of the sneaker combines a Malachite green textile Swoosh against the upper of Phantom white leather with hemp canvas overlays. The lateral heel is embellished with the Jarritos logo stitched in green and orange, and the woven tongue tag has dual branding. Alternating heel tabs read 'Nike' and 'Jarritos.' The sneaker rides a sturdy rubber cupsole with white sidewalls atop a green and orange outsole."
+        },
+        {
+            "id": 4,
+            "rating": 2,
+            "price": 120,
+            "brand": "Nike",
+            "model": "air max",
+            "color": "grey",
+            "title": "AIR MAX 1 SC 'MICA GREEN'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/357229/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/357229/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/357229/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/357229/4.jpg"
+            ],
+            "article": "dz4549 100 | white/mica green/photon dust/black | 4/14/23",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "The Nike Air Max 1 SC 'Mica Green' employs the classic color blocking of the original model that debuted in 1987. The upper is constructed with white mesh intersected by overlays of grey suede and a green leather mudguard for added support. The sneaker also features green accents via the Nike branding, including Nike Air stitching at the heel and the iconic Swoosh. The shoe's foam midsole has a wedge shape and includes a Max Air unit in the heel, which provides a cushioned landing and a comfortable stride."
+        },
+        {
+            "id": 5,
+            "rating": 3,
+            "price": 118,
+            "brand": "Nike",
+            "model": "air max",
+            "color": "green",
+            "title": "AIR MAX 95 'BLACK EARTH'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/353942/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/353942/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/353942/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/353942/4.jpg"
+            ],
+            "article": "fd0652 001 | black/earth/sequoia/cargo khaki",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": ""
+        },
+        {
+            "id": 6,
+            "rating": 7,
+            "price": 737,
+            "brand": "Nike",
+            "model": "air max",
+            "color": "multi",
+            "title": "SEAN WOTHERSPOON X AIR MAX 1/97",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/802623/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/802623/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/802623/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/802623/4.jpg"
+            ],
+            "article": "aj4219 400 | light blue fury/lemon wash | 3/26/18",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "As winner of the ‘Vote Forward’ campaign, this Sean Wotherspoon-designed hybrid blends the upper of an Air Max 97 with the sole of an Air Max 1, and was (naturally) released on Air Max Day in 2018. The sneaker’s multicolored upper and pull tabs are decked in corduroy, and completing the look are Velcro tongue patches and an Infrared Air unit."
+        },
+        {
+            "id": 7,
+            "rating": 6,
+            "price": 79,
+            "brand": "Nike",
+            "model": "air force",
+            "color": "white",
+            "title": "AIR FORCE 1 '07 'TRIPLE WHITE'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/251353/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/251353/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/251353/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/251353/4.jpg"
+            ],
+            "article": "cw2288 111 | white/white/white | 12/9/20",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": ""
+        },
+        {
+            "id": 8,
+            "rating": 10,
+            "price": 4997,
+            "brand": "Nike",
+            "model": "air force",
+            "color": "red",
+            "title": "LOUIS VUITTON X AIR FORCE 1 LOW 'WHITE COMET RED'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/322957/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/322957/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/322957/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/322957/4.jpg"
+            ],
+            "article": "1a9v white red | white/comet red | 7/19/22",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": ""
+        },
+        {
+            "id": 9,
+            "rating": 4,
+            "price": 82,
+            "brand": "Nike",
+            "model": "air force",
+            "color": "blue",
+            "title": "AIR FORCE 1 LOW 'COLOR OF THE MONTH - UNIVERSITY BLUE'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/341467/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/341467/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/341467/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/341467/4.jpg"
+            ],
+            "article": "dm0576 400 | university blue/white/metallic gold | 11/3/22",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": ""
+        },
+        {
+            "id": 10,
+            "rating": 8,
+            "price": 174,
+            "brand": "Nike",
+            "model": "air force",
+            "color": "tan",
+            "title": "SUPREME X AIR FORCE 1 LOW SP 'WHEAT'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/289029/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/289029/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/289029/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/289029/4.jpg"
+            ],
+            "article": "dn1555 200 | flax/flax/gum light brown | 11/5/21",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "The Supreme x Nike Air Force 1 Low SP 'Wheat' is made exclusively for the influential New York skate brand. It showcases a familiar build that recalls Timberland's iconic work boots and has a monochrome beige hue executed on a smooth nubuck upper, lined in soft DURAPLUSH that's accented with Supreme's red box logo on the lateral heel. Dual branding elements adorn the sneaker's woven tongue tag, sockliner and metallic lace jewels. It's built on a gum rubber cupsole that packs Nike Air heel cushioning in the heel, encapsulated within a foam wedge."
+        }
+    ],
+
+    "OffWhite": [
+        {
+            "id": 11,
+            "rating": 6,
+            "price": 837,
+            "brand": "Off-white",
+            "model": "air vapormax",
+            "color": "black",
+            "title": "OFF-WHITE X AIR VAPORMAX 'THE TEN'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/801892/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/801892/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/801892/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/801892/4.jpg"
+            ],
+            "article": "aa3831 001 | black/white-clear | 9/6/17",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "The OFF-WHITE x Air VaporMax 'The Ten' released as part of The Ten collection from Virgil Abloh. The shoe emerges with a black Flyknit upper accented by an oversized white Swoosh, with minimalist branding that includes 'Air' above the VaporMax sole unit and 'Shoelaces' on the shoelaces. A retro-style tongue emerges in off-white, while the medial-side branding notes the silhouette's debut year."
+        },
+        {
+            "id": 12,
+            "rating": 7,
+            "price": 386,
+            "brand": "Off-white",
+            "model": "air max",
+            "color": "brown",
+            "title": "OFF-WHITE X AIR MAX 90 'DESERT ORE'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/806511/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/806511/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/806511/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/806511/4.jpg"
+            ],
+            "article": "aa7293 200 | desert ore/desert ore/hyper jade/bright mango | 2/7/19",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "The OFF-WHITE x Air Max 90 'Desert Ore' released as part of a collaboration between Nike and Off-White's Virgil Abloh. The shoe's leather, nubuck and suede upper appears in Desert Ore, with Bright mango and Hyper Jade coming together on the Swoosh branding. Underfoot, the classic midsole houses a visible Air unit in the heel, while a blue hang-tag and printed text on the medial side add signature Abloh touches."
+        },
+        {
+            "id": 13,
+            "rating": 8,
+            "price": 900,
+            "brand": "Off-white",
+            "model": "air jordan",
+            "color": "cream",
+            "title": "OFF-WHITE X WMNS AIR JORDAN 4 SP 'SAIL'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/174409/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/174409/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/174409/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/174409/4.jpg"
+            ],
+            "article": "cv9388 100 | sail/muslin/white/black | 7/25/20",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "The OFF-WHITE x Wmns Air Jordan 4 SP 'Sail' released as part of a collaboration between Virgil Abloh's luxury brand and Jordan Brand. The classic basketball silhouette emerges with a deconstructed leather build, finished in off-white and complemented by semi-translucent TPU on the eyelets, wings and heel panel. A tonal zip-tie and 'Air' above the visible cushioning complete the look."
+        },
+        {
+            "id": 14,
+            "rating": 9,
+            "price": 448,
+            "brand": "Off-white",
+            "model": "air max",
+            "color": "grey",
+            "title": "OFF-WHITE X AIR MAX 97 'MENTA'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/805150/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/805150/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/805150/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/805150/4.jpg"
+            ],
+            "article": "aj4585 101 | off white/wolf grey-white-menta | 10/18/18",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "The OFF-WHITE x Air Max 97 ‘Menta’ collab features a translucent textile upper wrapped in Wolf Grey, complemented by Virgil Abloh’s signature text and tonal zigzag stitching throughout. The neutral color palette is punctuated by a multicolored Swoosh that transitions from green to blue to red, while a smoky grey rubber outsole maintains the shoe’s translucent theme underfoot."
+        },
+        {
+            "id": 15,
+            "rating": 10,
+            "price": 717,
+            "brand": "Off-white",
+            "model": "dunk",
+            "color": "green",
+            "title": "OFF-WHITE X DUNK LOW 'PINE GREEN'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/152361/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/152361/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/152361/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/152361/4.jpg"
+            ],
+            "article": "ct0856 100 | white/pine green/pine green | 12/20/19",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "Emerging with Virgil Abloh's signature design touch, the OFF-WHITE x Dunk Low 'Pine Green' released as part of a three-shoe collection. The upper appears in Pine Green and white on its leather construciton, accented by an orange flag label on the lateral side and overbranding on the medial. A second lacing system overlays the first, while underfoot, a two-tone rubber cupsole provides support."
+        },
+        {
+            "id": 16,
+            "rating": 6,
+            "price": 750,
+            "brand": "Off-white",
+            "model": "blazer",
+            "color": "multi",
+            "title": "SERENA WILLIAMS X OFF-WHITE X BLAZER STUDIO MID 'QUEEN'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/805281/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/805281/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/805281/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/805281/4.jpg"
+            ],
+            "article": "aa3832 002 | wolf grey/cool grey-pure platinum-volt | 8/25/18",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "Part of a larger collection celebrating Serena Williams and her play at the 2018 US Open, the Serena Williams x OFF-WHITE x Blazer Studio Mid 'Queen' features a Wolf Grey upper in a mix of leather, suede and translucent textile. An oversized Swoosh in black makes its way down onto the midsole, while the midsole itself sports a gradient from grey to purple to pink. A Volt tag adds color near the heel, with the color also on the hang-tag that reads 'Queen of Queens, NY.'"
+        },
+        {
+            "id": 17,
+            "rating": 7,
+            "price": 3695,
+            "brand": "Off-white",
+            "model": "air jordan",
+            "color": "white",
+            "title": "OFF-WHITE X AIR JORDAN 1 RETRO HIGH OG 'WHITE' 2018",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/803295/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/803295/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/803295/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/803295/4.jpg"
+            ],
+            "article": "aq0818 100 | white/white | 3/3/18",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "The OFF-WHITEx Air Jordan 1 Retro High OG 'White', inspired by Air Jordan 1 colorways, is a reimagination of its 'Chicago' predecessor. Designed by Virgil Abloh, the model features a premium all-white leather and mesh upper with deconstructed Swoosh branding and blue detail, as well as Wings logos on the ankles. It is accentuated on the midsole with black AIR markings, on the side panels with black ' Off-WhiteTM for NIKE ' text and orange tabs."
+        },
+        {
+            "id": 18,
+            "rating": 8,
+            "price": 546,
+            "brand": "Off-white",
+            "model": "dunk",
+            "color": "red",
+            "title": "OFF-WHITE X DUNK LOW 'UNIVERSITY RED'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/153270/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/153270/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/153270/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/153270/4.jpg"
+            ],
+            "article": "ct0856 600 | university red/university red/wolf grey | 12/20/19",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "Part of a larger collaboration from Virgil Abloh and Nike, the OFF-WHITE x Dunk Low 'University Red' offers a unique take on the Dunk Low. The shoe's upper is built with leather in University Red and Wolf Grey, accented by a second lacing overlay over the top of the traditional laces. Exposed foam on the tongue and overbranding on the lateral side contribute to the aesthetic, while a two-tone rubber cupsole supports the fit underfoot."
+        },
+        {
+            "id": 19,
+            "rating": 5,
+            "price": 167,
+            "brand": "Off-white",
+            "model": "waffle",
+            "color": "blue",
+            "title": "OFF-WHITE X WMNS WAFFLE RACER 'VIVID SKY'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/144803/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/144803/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/144803/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/144803/4.jpg"
+            ],
+            "article": "cd8180 400 | vivid sky/black/electric green | 12/12/19",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "Virgil Abloh brings his signature aesthetic to the Waffle Racer with the OFF-WHITE x Wmns Waffle Racer 'Vivid Sky.' Releasing as part of a three-shoe pack, the shoe's Vivid Sky upper is overlaid by translucent textile, highlighted by Electric Green Swooshes and laces. The signature hang-tag and medial-side branding are both present, while underfoot, a bold spiked outsole provides traction."
+        },
+        {
+            "id": 20,
+            "rating": 8,
+            "price": 500,
+            "brand": "Off-white",
+            "model": "dunk",
+            "color": "tan",
+            "title": "OFF-WHITE X DUNK LOW 'UNIVERSITY TAN'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/155691/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/155691/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/155691/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/155691/4.jpg"
+            ],
+            "article": "ct0856 700 | university gold/midnight navy/white | 12/20/19",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "The OFF-WHITE x Dunk Low 'University Gold' released as part of a collection from Nike and Virgil Abloh. The shoe's leather upper appears in a mix of University Gold and Midnight Navy, with the signature flag label on the lateral side of the heel. A second lacing system overlays the first, while exposed foam emerges on the tongue. A rubber cupsole supports the shoe."
+        }
+    ],
+
+    "AirJordan": [
+        {
+            "id": 21,
+            "rating": 5,
+            "price": 695,
+            "brand": "Air jordan",
+            "model": "jordan 4",
+            "color": "black",
+            "title": "AIR JORDAN 4 RETRO 'BLACK CAT' 2020",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/149400/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/149400/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/149400/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/149400/4.jpg"
+            ],
+            "article": "cu1110 010 | black/black/light graphite | 1/22/20",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "Looking to one of Michael Jordan's oldest nicknames, the Air Jordan 4 Retro 'Black Cat' 2020 brings back a 2006 colorway. Built with suede, the upper appears entirely in black, save for a hit of Light Graphite on the tongue branding. Underfoot, the Air midsole continues the tonal look, giving way to a rubber outsole for traction."
+        },
+        {
+            "id": 22,
+            "rating": 5,
+            "price": 77,
+            "brand": "Air jordan",
+            "model": "jordan 1",
+            "color": "brown",
+            "title": "AIR JORDAN 1 RETRO HIGH OG 'PATINA'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/173887/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/173887/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/173887/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/173887/4.jpg"
+            ],
+            "article": "555088 033 | black/light army/sail/fresh mint | 5/4/21",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "The Air Jordan 1 Retro High OG 'Patina', also known as the 'Rust Shadow', brings an aged look to the classic basketball silhouette. The shoe's upper is built with a black tumbled leather base, overlaid by grey nubuck on the heel and collar. The eyestay, forefoot and Swoosh branding all sport a distressed bronze finish, while the tongue tag includes zigzag stitching and green Nike Air branding. Underfoot, the midsole houses Air in the heel for cushioning, giving way to a concentric rubber outsole for traction."
+        },
+        {
+            "id": 23,
+            "rating": 4,
+            "price": 155,
+            "brand": "Air jordan",
+            "model": "jordan 4",
+            "color": "cream",
+            "title": "AIR JORDAN 4 RETRO SE 'CRAFT'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/334080/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/334080/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/334080/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/334080/4.jpg"
+            ],
+            "article": "dv3742 021 | photon dust/pale vanilla/off white/grey fog/flat pewter/sail | 2/11/23",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "Tinker Hatfield’s legacy 1989 model is modernized with new details in the Air Jordan 4 Retro SE ‘Craft.’ Light grey leather forms the base of the upper with color-matched suede appearing on the forefoot overlay and collar. The signature plastic netting that originally appeared on the quarter panel has been replaced with grids of suede accented by support wings constructed from cracked leather. The molded eyelets and tongue and heel Jumpman branding appear in a Pale Vanilla hue. A PU midsole in off-white features an exposed Air-sole unit in the heel for optimal comfort and support underfoot."
+        },
+        {
+            "id": 24,
+            "rating": 7,
+            "price": 2300,
+            "brand": "Air jordan",
+            "model": "jordan 4",
+            "color": "grey",
+            "title": "KAWS X AIR JORDAN 4 RETRO 'COOL GREY'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/800624/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/800624/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/800624/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/800624/4.jpg"
+            ],
+            "article": "930155 003 | cool grey/white | 3/31/17",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "The KAWSx Air Jordan 4 Retro is a collaboration between Brooklyn street artist KAWS, a.k.a. Brian Donnelly, and Jordan Brand. The design removes the traditional plastic accents of the silhouette and dresses in a premium grey suede over the entire upper and midsole. The sneaker also has a branding of KAWS' 'XX' on the heel tab. The shoes were released in March 2017 along with a small capsule collection that included a jacket, hoodie, t-shirt and hat. The hype for this release was so intense that police read the riot act at the in-store raffle at Patta in London and sneakerheads hacked into Donnelly's website for an opportunity."
+        },
+        {
+            "id": 25,
+            "rating": 9,
+            "price": 134,
+            "brand": "Air jordan",
+            "model": "jordan 1",
+            "color": "green",
+            "title": "AIR JORDAN 1 RETRO HIGH OG 'LUCKY GREEN'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/347616/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/347616/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/347616/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/347616/4.jpg"
+            ],
+            "article": "dz5485 031 | black/lucky green/white | 4/15/23",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "Recalling a legendary 1986 series between the Chicago Bulls and the Boston Celtics is the Air Jordan 1 Retro High OG ‘Lucky Green.’ This colorway first surfaced as one pair in the 2009 Air Jordan 1 ‘Defining Moments Pack.' The high-top arrives in a smooth white leather combined with a padded collar, forefoot overlay and signature Swoosh in a contrasting black. Hits of Kelly green adorn the overlay at the heel and the ankle flap, while the lateral side is decorated by a retro Wings logo. Branding is simple with the trademark Nike tongue tag indicating its OG status."
+        },
+        {
+            "id": 26,
+            "rating": 4,
+            "price": 279,
+            "brand": "Air jordan",
+            "model": "jordan 1",
+            "color": "multi",
+            "title": "J. BALVIN X AIR JORDAN 1 RETRO OG HIGH 'COLORES Y VIBRAS'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/181573/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/181573/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/181573/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/181573/4.jpg"
+            ],
+            "article": "dc3481 900 | multi-color/black/pink foam/multi-color | 12/8/20",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "The reggaeton singer teamed up with Nike to create the J Balvin x Jordan 1 Retro OG High 'Tie Dye' in December 2020. The shoe's upper is built with textile, appearing in a vibrant mix of hues, with rough cut edges contributing to a DIY aesthetic. Black contrast emerges on the collar, laces, 'Wings' logo and quarter panel, while the lateral heel includes a series of removable Velcro badges. Underfoot, a pastel rubber cupsole supports the fit."
+        },
+        {
+            "id": 27,
+            "rating": 9,
+            "price": 380,
+            "brand": "Air jordan",
+            "model": "jordan 11",
+            "color": "white",
+            "title": "AIR JORDAN 11 RETRO 'CONCORD' 2018",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/805882/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/805882/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/805882/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/805882/4.jpg"
+            ],
+            "article": "378037 100 | white/black-dark concord | 12/8/18",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "The 2018 version of the Air Jordan 11 Retro ‘Concord’ shows off ‘45’ imprinted on the black heel tab in honor of the jersey number that Michael Jordan wore when he returned to the NBA after his first retirement. The shoe’s other signature details remain intact, including a white ballistic mesh upper, black patent leather overlays, and an icy translucent outsole."
+        },
+        {
+            "id": 28,
+            "rating": 10,
+            "price": 211,
+            "brand": "Air jordan",
+            "model": "jordan 1",
+            "color": "red",
+            "title": "MARVEL X AIR JORDAN 1 RETRO HIGH OG 'NEXT CHAPTER'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/349168/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/349168/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/349168/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/349168/4.jpg"
+            ],
+            "article": "dv1748 601 | university red/black/white | 5/20/23",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "The Marvel x Air Jordan 1 Retro High OG ‘Next Chapter' is a collaboration whose colorway is inspired by the animated film 'Spider-Man: Across the Spider-Verse.’ This version of the iconic sneaker model is a creative twist on the classic ‘Chicago’ colorway, with a white leather upper and black patent leather on the signature Swoosh and collar. The scarlet overlays are a combination of various textures and prints, pieced together to create a unique design that references the complex nature of the Spiderman universe. The shoe is supported by a rubber cupsole that combines aged sidewalls with a crimson semi-clear rubber outsole. A Nike tag made of woven nylon decorates the tongue while the retro Wings logo is stamped on the lateral collar flap."
+        },
+        {
+            "id": 29,
+            "rating": 8,
+            "price": 550,
+            "brand": "Air jordan",
+            "model": "jordan 4",
+            "color": "blue",
+            "title": "UNION LA X AIR JORDAN 4 RETRO 'OFF NOIR'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/199241/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/199241/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/199241/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/199241/4.jpg"
+            ],
+            "article": "dc9533 001 | off noir/brigade blue/dark smoke grey/light fusion red | 8/29/20",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "Released in August 2020, the Union LA x Air Jordan 4 Retro is a follow-up to an Air Jordan 1 collaboration from 2018. Built with black suede, the upper includes mesh on the toe box and collar. Translucent wings mark the quarter panel, while the classic eyelets appear in black and white. Contrast stitching emerges throughout, while the Air Jordan tongue tag sports an inside-out aesthetic. The side wall includes 'UN/LA' branding, while underfoot, a yellowed midsole contributes to the retro look, with visible Air in the heel providing cushioning."
+        },
+        {
+            "id": 30,
+            "rating": 3,
+            "price": 132,
+            "brand": "Air jordan",
+            "model": "jordan 11",
+            "color": "tan",
+            "title": "WMNS AIR JORDAN 11 RETRO LOW 'TAN SNAKESKIN'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/355544/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/355544/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/355544/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/355544/4.jpg"
+            ],
+            "article": "ah7860 107 | white/tour yellow/sail | 5/11/23",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "The Air Jordan 11 Low 'Yellow Snakeskin' for women adds a pop of color and texture to the classic silhouette. The shoe's upper is made of smooth white leather with tonal webbing eyelets and is accentuated by a vibrant yellow python print mudguard. The Jumpman branding on the heel and sockliner also feature the same yellow hue. The shoe's white Phylon midsole provides cushioning with full-length Air technology and a visible carbon fiber sprint plate. The yellow translucent rubber outsole adds further grip to the shoe with its herringbone-patterned traction pods."
+        }
+    ],
+
+    "Yeezy": [
+        {
+            "id": 31,
+            "rating": 7,
+            "price": 240,
+            "brand": "Yeezy",
+            "model": "yeezy 350",
+            "color": "black",
+            "title": "YEEZY BOOST 350 V2 'BRED'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/800389/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/800389/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/800389/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/800389/4.jpg"
+            ],
+            "article": "cp9652 | core black/core black/red | 2/11/17",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "The Yeezy Boost 350 V2 'Bred' brings a classic colorway to its minimalist construction. The shoe's upper is built with Primeknit, finished in black and highlighted by the SPLY-350 branding on the side wall. More red marks the heel pull-loop, while rope laces secure the fit. Underfoot, a full-length Boost midsole wrapped in a black rubber cage provides cushioning. A rubber outsole with cutouts provides traction."
+        },
+        {
+            "id": 32,
+            "rating": 8,
+            "price": 230,
+            "brand": "Yeezy",
+            "model": "yeezy 500",
+            "color": "brown",
+            "title": "YEEZY 500 'BROWN CLAY'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/281433/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/281433/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/281433/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/281433/4.jpg"
+            ],
+            "article": "gx3606 | brown clay/brown clay/brown clay | 10/30/21",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "An earthy color tone is featured on the adidas Yeezy 500 'Brown Clay' throughout the branding-free upper with a ventilated open mesh base with soft suede overlays and a reinforced rubber mudguard. The subdued color palette extends to the sneaker's high-rebound adiPRENE+ midsole, modeled after the retro 'Feet You Wear' technology used on Kobe Bryant's adidas KB8 3 from 1999. It's built on rubber pods to deliver better grip."
+        },
+        {
+            "id": 33,
+            "rating": 9,
+            "price": 250,
+            "brand": "Yeezy",
+            "model": "yeezy 700",
+            "color": "cream",
+            "title": "YEEZY BOOST 700 V2 'CREAM'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/254031/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/254031/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/254031/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/254031/4.jpg"
+            ],
+            "article": "gy7924 | cream/cream/cream | 3/13/21",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "The Yeezy Boost 700 V2 'Cream' brings a subdued look to its running-inspired construction. Built with a rolled knit design, the shoe's upper is bolstered by no-sew skins and nubuck overlays, finished in a mix of grey and tan. Underfoot, the subdued look continues on the off-white EVA midsole, which houses drop-in Boost for further cushioning. A herringbone rubber outsole offers traction."
+        },
+        {
+            "id": 34,
+            "rating": 10,
+            "price": 398,
+            "brand": "Yeezy",
+            "model": "yeezy 700",
+            "color": "grey",
+            "title": "YEEZY BOOST 700 'WAVE RUNNER'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/802501/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/802501/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/802501/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/802501/4.jpg"
+            ],
+            "article": "b75571 | solid grey/chalk white/core black | 10/31/17",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "This first colorway of Yeezy Wave Runner 700 from Kanye West was introduced in November 2017, following an initial public opening in the Yeezy Season 5 fashion show previously that year. The retro-inspired lines of the sneaker worked together with a chunky silhouette reminiscent of a previous age. A mesh base on the quarter panel is completed in gray and a yellow with a teal forefoot."
+        },
+        {
+            "id": 35,
+            "rating": 6,
+            "price": 396,
+            "brand": "Yeezy",
+            "model": "yeezy 350",
+            "color": "green",
+            "title": "YEEZY BOOST 350 V2 GID 'GLOW'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/140232/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/140232/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/140232/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/140232/4.jpg"
+            ],
+            "article": "eg5293 | glow/glow/glow | 5/24/19",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "The Yeezy Boost 350 V2 GID 'Glow' features a glow-in-the-dark finish throughout its Primeknit upper. The signature design includes a translucent monofilament stripe for the only contrast, as the rope laces and heel pull-loop are worked tonally into the construction. Underfoot, a Boost midsole is encased in a Tubular sole unit to support the fit."
+        },
+        {
+            "id": 36,
+            "rating": 4,
+            "price": 211,
+            "brand": "Yeezy",
+            "model": "yeezy 350",
+            "color": "multi",
+            "title": "YEEZY BOOST 350 V2 'YECHEIL NON-REFLECTIVE'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/156799/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/156799/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/156799/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/156799/4.jpg"
+            ],
+            "article": "fw5190 | yecheil/yecheil/yecheil | 12/20/19",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "Dropping with a reflective colorway, the Yeezy Boost 350 V2 'Yecheil Non-Reflective' emerges with a vibrant look. The upper is built with Primeknit, working a series of bright hues into its construction. Contrasted by a black monofilament stripe that runs through the design, a black TPU midsole underfoot houses a Boost unit, with a rubber outsole for traction."
+        },
+        {
+            "id": 37,
+            "rating": 5,
+            "price": 378,
+            "brand": "Yeezy",
+            "model": "yeezy 500",
+            "color": "white",
+            "title": "YEEZY 500 'BONE WHITE'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/151876/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/151876/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/151876/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/151876/4.jpg"
+            ],
+            "article": "fv3573 | bone white/bone white/bone white | 8/24/19",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "Dropping in August 2019, the Yeezy 500 ‘Bone White’ features a subtle monochromatic finish on the layered upper, constructed from a blend of cow suede, premium leather and breathable mesh. Reflective detailing around the eyelets, tongue and mudguard piping offer added visibility in low-light conditions, while adidas’ adiPRENE cushioning delivers a smooth ride."
+        },
+        {
+            "id": 38,
+            "rating": 2,
+            "price": 315,
+            "brand": "Yeezy",
+            "model": "yeezy 700",
+            "color": "red",
+            "title": "YEEZY BOOST 700 'HI-RES RED'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/317241/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/317241/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/317241/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/317241/4.jpg"
+            ],
+            "article": "hq6979 | hi-res red/hi-res red/hi-res red | 6/17/22",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "The Yeezy Boost 700 arrives in an unmissable colorway, showcasing a vibrant Hi-Res Red on the mesh and leather upper portion of the lifestyle runner. Black suede overlays that run across the shoe are reminiscent of the original release, including the green pop on the front of the midsole and the grey toe cap. Full-length Boost cushioning is embedded in the sculpted midsole, highlighted with red and orange accents. A rubber Hi-Res Red herringbone outsole completes the look."
+        },
+        {
+            "id": 39,
+            "rating": 1,
+            "price": 192,
+            "brand": "Yeezy",
+            "model": "yeezy 500",
+            "color": "blue",
+            "title": "YEEZY 500 HIGH 'FROSTED BLUE'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/262615/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/262615/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/262615/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/262615/4.jpg"
+            ],
+            "article": "gz5544 | frosted blue/frosted blue/frosted blue | 4/12/21",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "The Yeezy 500 High 'Frosted Blue' is a lifestyle-inspired shoe with a simple colorway. The shoe's upper is built with stretchy elastane, finished in blue and overlaid by lighter blue suede. Further suede, in tan, marks the segmented eyestay and reinforced toe, while a toggle lacing system and padded, high-cut collar support the fit. Underfoot, Feet You Wear-inspired podular Adiprene provides cushioning in the midsole, giving way to a rubber outsole for traction."
+        },
+        {
+            "id": 40,
+            "rating": 8,
+            "price": 299,
+            "brand": "Yeezy",
+            "model": "yeezy 700",
+            "color": "tan",
+            "title": "YEEZY BOOST 700 V2 'MAUVE'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/279130/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/279130/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/279130/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/279130/4.jpg"
+            ],
+            "article": "gz0724 | mauve/mauve/mauve | 9/25/21",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "The adidas Yeezy Boost 700 V2 'Mauve' is a continuation of the original 'Mauve' colorway of the Yeezy Boost 700. This sneaker has a textured mesh upper with seamless skins along the quarter panel. Greenish-grey suede is present along the shoe and a full Boost midsole is fitted in a polyurethane carrier. On the bottom is a herringbone-traction rubber outsole."
+        }
+    ],
+
+    "NewBalance": [
+        {
+            "id": 41,
+            "rating": 5,
+            "price": 256,
+            "brand": "New balance",
+            "model": "2002R",
+            "color": "black",
+            "title": "2002R 'PROTECTION PACK - PHANTOM'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/275137/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/275137/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/275137/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/275137/4.jpg"
+            ],
+            "article": "m2002rdb | phantom/magnet | 8/13/21",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "Part of the three shoe Protection Pack, the 2002R 'Protection Pack - Phantom' emerges with a blacked-out look. The shoe's upper is built with mesh, overlaid by raw-edged suede, all finished in black. The side wall adds tonal 'N' branding on the side wall, while the 2002R branding on the quarter panel adds the only contrast in white. Underfoot, a distressed Abzorb midsole offers cushioning, giving way to a rubber outsole for traction."
+        },
+        {
+            "id": 42,
+            "rating": 3,
+            "price": 111,
+            "brand": "New balance",
+            "model": "2002R",
+            "color": "brown",
+            "title": "2002R 'LUNAR NEW YEAR - RICH EARTH'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/350100/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/350100/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/350100/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/350100/4.jpg"
+            ],
+            "article": "m2002rly | rich earth/blacktop/castlerock | 12/30/22",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": ""
+        },
+        {
+            "id": 43,
+            "rating": 6,
+            "price": 158,
+            "brand": "New balance",
+            "model": "2002R",
+            "color": "cream",
+            "title": "2002R 'INCENSE'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/258609/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/258609/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/258609/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/258609/4.jpg"
+            ],
+            "article": "ml2002rp | incense/deep taupe | 2/13/21",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": ""
+        },
+        {
+            "id": 44,
+            "rating": 5,
+            "price": 134,
+            "brand": "New balance",
+            "model": "990",
+            "color": "grey",
+            "title": "990V3 MADE IN USA 'GREY'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/284851/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/284851/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/284851/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/284851/4.jpg"
+            ],
+            "article": "m990gy3 | grey/white | 10/1/21",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": ""
+        },
+        {
+            "id": 45,
+            "rating": 8,
+            "price": 449,
+            "brand": "New balance",
+            "model": "990",
+            "color": "green",
+            "title": "JJJJOUND X 990V3 MADE IN USA 'OLIVE'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/292071/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/292071/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/292071/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/292071/4.jpg"
+            ],
+            "article": "m990jd3 | olive | 2/24/22",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "In collaboration with designer Justin Saunders in the third iteration of the vaunted 990 series is the JJJJound x New Balance 990v3 Made in USA 'Olive.' The upper is made from breathable mesh with soft pigskin suede overlays and is permeated with rich olive green hues. A black 'N' logo is featured on the quarter panel, while 'JJJJound' is inscribed on the reflective silver heel tab. It's built on New Balance's ENCAP midsole with a plush EVA core and a polyurethane rim."
+        },
+        {
+            "id": 46,
+            "rating": 7,
+            "price": 400,
+            "brand": "New balance",
+            "model": "990",
+            "color": "multi",
+            "title": "990V3 BIG KID 'WILD STYLE'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/336276/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/336276/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/336276/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/336276/4.jpg"
+            ],
+            "article": "gc990dl3 | vibrant sky/vibrant orange/vibrant yellow",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": ""
+        },
+        {
+            "id": 47,
+            "rating": 4,
+            "price": 91,
+            "brand": "New balance",
+            "model": "550",
+            "color": "white",
+            "title": "WMNS 550 'RAIN CLOUD'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/349978/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/349978/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/349978/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/349978/4.jpg"
+            ],
+            "article": "bbw550bb | white/rain cloud | 4/6/23",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "The New Balance Women's 550 'Rain Cloud' is a retro-inspired shoe that combines a sleek, neutral color scheme with a classic design. Light grey accents appear on the white leather upper, including the signature 'N' logo, TPU heel counter, and the padded mesh collar’s leather overlay. The woven tongue tag displays the New Balance 550 branding, and a Flying NB logo adds a touch of style to the back heel. The shoe's durable rubber cupsole is reminiscent of 80s basketball shoes, with an exposed foam wedge on the medial side providing additional support."
+        },
+        {
+            "id": 48,
+            "rating": 6,
+            "price": 325,
+            "brand": "New balance",
+            "model": "550",
+            "color": "red",
+            "title": "AIMÉ LEON DORE X 550 'RED'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/245208/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/245208/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/245208/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/245208/4.jpg"
+            ],
+            "article": "bb550ae1 | red/white | 10/9/20",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": "New Balance teamed up with the New York menswear brand to create the Aimé Leon Dore x 550 'Red.' Originally released in 1989, the retro basketball shoe emerges with an off-white leather construction on the upper, with hits of red and black throughout. The tongue tag includes Aimé Leon Dore branding, matched by the overlay on the heel of the left shoe, while a pre-yellowed midsole supports the fit underfoot."
+        },
+        {
+            "id": 49,
+            "rating": 3,
+            "price": 80,
+            "brand": "New balance",
+            "model": "550",
+            "color": "blue",
+            "title": "550 'SUEDE PACK - TEAM ROYAL'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/351641/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/351641/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/351641/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/351641/4.jpg"
+            ],
+            "article": "bb550vna | team royal/white/concrete | 1/6/23",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": ""
+        },
+        {
+            "id": 50,
+            "rating": 5,
+            "price": 115,
+            "brand": "New balance",
+            "model": "550",
+            "color": "tan",
+            "title": "WMNS 550 'LILAC CHALK'",
+            "images": [
+                "https://cdn.flightclub.com/750/TEMPLATE/347478/1.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/347478/2.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/347478/3.jpg",
+                "https://cdn.flightclub.com/750/TEMPLATE/347478/4.jpg"
+            ],
+            "article": "bbw550pb | lilac chalk/macadamia nut/white",
+            "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5],
+            "InfoProduct": ""
+        }
+    ]
+}

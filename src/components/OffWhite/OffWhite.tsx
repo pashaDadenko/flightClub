@@ -2,12 +2,12 @@ import { FC } from 'react';
 
 import test from '../../images/1.jpg';
 
-import styles from './TopSellers.module.scss';
+import styles from './OffWhite.module.scss';
 
-export const TopSellers: FC = () => {
+export const OffWhite: FC = () => {
     return (
         <section className={styles.wrapper}>
-            <h2 className={styles.title}>TOP SELLERS</h2>
+            <h2 className={styles.title}>OFF WHITE</h2>
             <ul className={styles.previewGroupe}>
                 <li className={styles.previewProduct}>
                     <img className={styles.img} src={test} alt='' />
@@ -67,7 +67,7 @@ export const TopSellers: FC = () => {
                 </li>
             </ul>
 
-            <button className={styles.btn}>SHOP TOP SELLERS</button>
+            <button className={styles.btn}>SHOP OFF WHITE</button>
         </section>
     );
 };
