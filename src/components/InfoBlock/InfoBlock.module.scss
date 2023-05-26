@@ -26,8 +26,8 @@
                 letter-spacing: 0.5px;
                 font-size: 15px;
                 a {
-                    text-decoration: underline;
-                    cursor: pointer;
+                    color: #000000a6;
+
                     &:hover {
                         color: #000000e0;
                     }
@@ -36,8 +36,7 @@
             .link {
                 display: inline-block;
                 margin-top: 64px;
-                text-decoration: underline;
-                cursor: pointer;
+                color: #000000;
                 &:hover {
                     color: #33322f49;
                 }
@@ -72,8 +71,7 @@
             .link {
                 display: inline-block;
                 margin-top: 30px;
-                text-decoration: underline;
-                cursor: pointer;
+                color: #000000;
                 &:hover {
                     color: #33322f49;
                 }

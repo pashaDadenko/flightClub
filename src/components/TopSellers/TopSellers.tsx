@@ -2,17 +2,17 @@ import { FC } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
 
-import styles from './AirJordan.module.scss';
+import styles from './TopSellers.module.scss';
 
-export const AirJordan: FC = () => {
-    const airJordan = useSelector((state: RootState) => state.homeSlice.airJordanData);
+export const TopSellers: FC = () => {
+    const topSellers = useSelector((state: RootState) => state.homeSlice.topSellersData);
 
     return (
         <section className={styles.wrapper}>
-            <h2 className={styles.title}>AIR JORDAN</h2>
+            <h2 className={styles.title}>TOP SELLERS</h2>
             <ul className={styles.previewGroupe}>
-                {airJordan &&
-                    airJordan.map((sneaker) => (
+                {topSellers &&
+                    topSellers.map((sneaker) => (
                         <li key={sneaker.id} className={styles.previewProduct}>
                             <img className={styles.img} src={sneaker.images[0]} alt='image' />
                             <div className={styles.info}>
@@ -23,7 +23,7 @@ export const AirJordan: FC = () => {
                     ))}
             </ul>
 
-            <button className={styles.btn}>SHOP AIR JORDAN</button>
+            <button className={styles.btn}>SHOP TOP SELLERS</button>
         </section>
     );
 };

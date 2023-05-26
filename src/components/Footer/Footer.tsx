@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { Link } from 'react-router-dom';
 
 import { FooterBot } from '../FooterBot/FooterBot';
 
@@ -8,7 +9,9 @@ export const Footer: FC = () => {
     return (
         <>
             <footer className={styles.footer}>
-                <div className={styles.logo}>FLIGHT CLUB</div>
+                <Link className={styles.logo} to={'/'}>
+                    FLIGHT CLUB
+                </Link>
                 <div className={styles.wrapper}>
                     <div className={styles.wrap}>
                         <div className={styles.title}>Trending</div>

@@ -1,0 +1,52 @@
+.wrapper {
+    .container {
+        width: 91%;
+        margin: 0 auto;
+        padding: 70px 0;
+
+        .title {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .storeWrapper {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+
+            .store {
+                display: flex;
+                gap: 30px;
+                border: 1px solid #0000003f;
+                padding: 20px;
+                width: 48%;
+
+                .storeTitle {
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
+                .storeAddress {
+                    opacity: 0.5;
+                    color: #000000d2;
+                    text-decoration: none;
+                    &:hover {
+                        opacity: 0.7;
+                        text-decoration: underline;
+                    }
+                }
+                .storeSubTitle {
+                    margin-top: 15px;
+                    opacity: 0.5;
+                    margin-bottom: 5px;
+                }
+                .storeHours {
+                    opacity: 0.5;
+                    margin-bottom: 15px;
+                }
+                .Consignment {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}

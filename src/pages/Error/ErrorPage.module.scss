@@ -1,0 +1,23 @@
+.wrapper {
+    background-color: #fff;
+
+    .container {
+        width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        padding: 176px 0;
+
+        .title {
+            font-size: 30px;
+            font-weight: normal;
+            margin-bottom: 30px;
+        }
+
+        .text {
+            opacity: 0.4;
+            letter-spacing: -0.3px;
+        }
+    }
+}

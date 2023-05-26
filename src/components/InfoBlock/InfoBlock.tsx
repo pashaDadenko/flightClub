@@ -1,7 +1,8 @@
 import { FC } from 'react';
+import { Link } from 'react-router-dom';
 
-import storeImg from '../../images/STORES.jpg';
-import historyImg from '../../images/HISTORY.jpg';
+import storeImg from '../../images/stores.jpg';
+import historyImg from '../../images/history.jpg';
 import styles from './InfoBlock.module.scss';
 
 export const InfoBlock: FC = () => {
@@ -9,23 +10,32 @@ export const InfoBlock: FC = () => {
         <div className={styles.wrapper}>
             <div className={styles.container}>
                 <div className={styles.store}>
-                    <img className={styles.storeImg} src={storeImg} alt='store' />
+                    <Link to={'storelocator'}>
+                        <img className={styles.storeImg} src={storeImg} alt='store' />
+                    </Link>
                     <h2 className={styles.titleStore}>FLIGHT CLUB STORES</h2>
                     <p className={styles.textStore}>
-                        With three retail locations in <a>New York</a>, <a>Los Angeles</a>, and <a>Miami</a>, Flight Club remains the premier source
-                        for everything sneakers.
+                        With three retail locations in <Link to={'storelocator'}>New York</Link>, <Link to={'storelocator'}>Los Angeles</Link>, and{' '}
+                        <Link to={'storelocator'}>Miami</Link>, Flight Club remains the premier source for everything sneakers.
                     </p>
-                    <p className={styles.link}>Learn More</p>
+                    <Link className={styles.link} to={'storelocator'}>
+                        Learn More
+                    </Link>
                 </div>
+
                 <div className={styles.history}>
-                    <img className={styles.historyImg} src={historyImg} alt='history' />
+                    <Link to={'about-us'}>
+                        <img className={styles.historyImg} src={historyImg} alt='history' />
+                    </Link>
                     <h2 className={styles.titleHistory}>OUR HISTORY</h2>
                     <p className={styles.textHistory}>
                         For over a decade, Flight Club has changed the landscape of sneaker retail. Carrying every brand name on the market, Flight
                         Club has evolved from a one-stop sneaker destination, to a cultural hub for sneaker enthusiasts and novices alike.From{' '}
                         <a>Air Jordans</a> to <a>Nike</a> to <a>Adidas</a> and more, we have it all.
                     </p>
-                    <p className={styles.link}>Learn More</p>
+                    <Link className={styles.link} to={'about-us'}>
+                        Learn More
+                    </Link>
                 </div>
             </div>
         </div>
