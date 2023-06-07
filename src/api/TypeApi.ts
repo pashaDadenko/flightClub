@@ -1,4 +1,4 @@
-export type TypeAllData = {
+export type TypeApi = {
     InfoProduct: string;
     article: string;
     brand: string;
@@ -10,11 +10,4 @@ export type TypeAllData = {
     rating: number;
     title: string;
     sizes: number[];
-};
-
-export type HomeSliceState = {
-    sneakersData: TypeAllData[];
-    topSellersData: TypeAllData[];
-    offWhiteData: TypeAllData[];
-    airJordanData: TypeAllData[];
 };

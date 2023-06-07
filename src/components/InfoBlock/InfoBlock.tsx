@@ -10,15 +10,15 @@ export const InfoBlock: FC = () => {
         <div className={styles.wrapper}>
             <div className={styles.container}>
                 <div className={styles.store}>
-                    <Link to={'storelocator'}>
+                    <Link to={'store-location'}>
                         <img className={styles.storeImg} src={storeImg} alt='store' />
                     </Link>
                     <h2 className={styles.titleStore}>FLIGHT CLUB STORES</h2>
                     <p className={styles.textStore}>
-                        With three retail locations in <Link to={'storelocator'}>New York</Link>, <Link to={'storelocator'}>Los Angeles</Link>, and{' '}
-                        <Link to={'storelocator'}>Miami</Link>, Flight Club remains the premier source for everything sneakers.
+                        With three retail locations in <Link to={'store-location'}>New York</Link>, <Link to={'store-location'}>Los Angeles</Link>, and{' '}
+                        <Link to={'store-location'}>Miami</Link>, Flight Club remains the premier source for everything sneakers.
                     </p>
-                    <Link className={styles.link} to={'storelocator'}>
+                    <Link className={styles.link} to={'store-location'}>
                         Learn More
                     </Link>
                 </div>

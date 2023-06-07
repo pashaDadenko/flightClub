@@ -1,10 +1,11 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { HomeSliceState, TypeAllData } from './typeHomeSlice';
+import { homeSliceState } from './TypeHomeSlice';
+import { TypeApi } from '../../api/TypeApi';
 
 export const homeSlice = createSlice({
     name: 'home',
 
-    initialState: <HomeSliceState>{
+    initialState: <homeSliceState>{
         sneakersData: [],
         topSellersData: [],
         offWhiteData: [],
@@ -12,7 +13,7 @@ export const homeSlice = createSlice({
     },
 
     reducers: {
-        setSneakersData(state, { payload }: PayloadAction<TypeAllData[]>) {
+        setSneakersData(state, { payload }: PayloadAction<TypeApi[]>) {
             state.sneakersData = payload;
             state.topSellersData = payload
                 .sort((a, b) => a.rating - b.rating)

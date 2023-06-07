@@ -6,8 +6,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import { HomePage } from './pages/Home/HomePage';
 import { ErrorPage } from './pages/Error/ErrorPage';
-import { AboutUs } from './components/AboutUs/AboutUs';
-import { Stores } from './components/Stores/Stores';
+import { TopSellersPage } from './pages/TopSellers/TopSellersPage';
+import { AboutUsPage } from './pages/AboutUs/AboutUsPage';
+import { StoresPage } from './pages/Stores/StoresPage';
 
 import styles from './main.module.scss';
 
@@ -18,12 +19,16 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
     },
     {
-        path: 'storelocator',
-        element: <Stores />,
+        path: 'top-sellers',
+        element: <TopSellersPage />,
+    },
+    {
+        path: 'store-location',
+        element: <StoresPage />,
     },
     {
         path: 'about-us',
-        element: <AboutUs />,
+        element: <AboutUsPage />,
     },
 ]);
 

@@ -1,13 +1,12 @@
 import { FC } from 'react';
 
-import { Header } from '../Header/Header';
-import { Footer } from '../Footer/Footer';
+import { Header } from '../../components/Header/Header';
+import { Footer } from '../../components/Footer/Footer';
 
-import styles from './AboutUs.module.scss';
+import imageStore from '../../images/aboutUs.png';
+import styles from './AboutUsPage.module.scss';
 
-export const AboutUs: FC = () => {
-    const imageStore = 'https://www.flightclub.com/static/staticPages/about-us.png';
-
+export const AboutUsPage: FC = () => {
     return (
         <div className={styles.wrapper}>
             <Header />

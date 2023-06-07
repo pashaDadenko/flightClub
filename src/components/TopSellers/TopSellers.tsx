@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
 
 import styles from './TopSellers.module.scss';
+import { Link } from 'react-router-dom';
 
 export const TopSellers: FC = () => {
     const topSellers = useSelector((state: RootState) => state.homeSlice.topSellersData);
@@ -23,7 +24,9 @@ export const TopSellers: FC = () => {
                     ))}
             </ul>
 
-            <button className={styles.btn}>SHOP TOP SELLERS</button>
+            <Link className={styles.link} to={'top-sellers'}>
+                <button className={styles.btn}>SHOP TOP SELLERS</button>
+            </Link>
         </section>
     );
 };

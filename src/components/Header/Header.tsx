@@ -19,7 +19,7 @@ export const Header: FC = () => {
 
     return (
         <>
-            <header style={pathname === '/' ? styleHeader : { height: '100px' }}>
+            <header style={pathname === '/' ? styleHeader : { height: '100px', backgroundColor: '#fff' }}>
                 <div className={styles.headerTop}>
                     <div className={styles.searchWrapper}>
                         <input className={styles.search} type='search' placeholder='Search' />
@@ -33,7 +33,7 @@ export const Header: FC = () => {
                         <Link className={styles.sneakers} to={''}>
                             Sneakers
                         </Link>
-                        <Link className={styles.store} to={'storelocator'}>
+                        <Link className={styles.store} to={'store-location'}>
                             Store
                         </Link>
                         <Link className={styles.cart} to={''}>
