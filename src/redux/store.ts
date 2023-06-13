@@ -2,13 +2,13 @@ import { configureStore } from '@reduxjs/toolkit';
 
 import homeSlice from './home/homeSlice';
 import errorSlice from './error/errorSlice';
-import topSellersSlice from './topSellers/topSellersSlice';
+import detailsSlice from './details/detailsSlice';
 
 export const store = configureStore({
     reducer: {
         homeSlice,
         errorSlice,
-        topSellersSlice,
+        detailsSlice,
     },
 });
 

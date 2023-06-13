@@ -19,8 +19,14 @@ export const homeSlice = createSlice({
                 .sort((a, b) => a.rating - b.rating)
                 .reverse()
                 .slice(0, 8);
-            state.offWhiteData = payload.filter((item) => item.brand === 'Off-white').slice(0, 8);
-            state.airJordanData = payload.filter((item) => item.brand === 'Air jordan').slice(0, 8);
+            state.offWhiteData = payload
+                .filter((item) => item.brand === 'Off-white')
+                .sort(() => 0.5 - Math.random())
+                .slice(0, 8);
+            state.airJordanData = payload
+                .filter((item) => item.brand === 'Air jordan')
+                .sort(() => 0.5 - Math.random())
+                .slice(0, 8);
         },
     },
 });

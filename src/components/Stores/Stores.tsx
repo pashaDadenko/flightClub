@@ -1,14 +1,13 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 
-import { Header } from '../../components/Header/Header';
-import { Footer } from '../../components/Footer/Footer';
-import { TypeStores } from './TypeStoresPage';
+import { TypeStores } from './TypeStores';
 
 import mapImage from '../../images/map.png';
-import styles from './StoresPage.module.scss';
 
-export const StoresPage: FC = () => {
+import styles from './Stores.module.scss';
+
+export const Stores: FC = () => {
     const stores: TypeStores[] = [
         {
             title: 'Flight Club New York',
@@ -35,32 +34,26 @@ export const StoresPage: FC = () => {
 
     return (
         <div className={styles.wrapper}>
-            <Header />
-
-            <div className={styles.container}>
-                <h2 className={styles.title}>STORES</h2>
-                <ul className={styles.storeWrapper}>
-                    {stores.map((item, index) => (
-                        <li className={styles.store} key={index}>
-                            <Link to={item.link}>
-                                <img src={mapImage} alt='mapImage' />
+            <h2 className={styles.title}>STORES</h2>
+            <ul className={styles.storeWrapper}>
+                {stores.map((item, index) => (
+                    <li className={styles.store} key={index}>
+                        <Link to={item.link}>
+                            <img src={mapImage} alt='mapImage' />
+                        </Link>
+                        <div>
+                            <h4 className={styles.storeTitle}>{item.title}</h4>
+                            <Link className={styles.storeAddress} to={item.link}>
+                                {item.address}
                             </Link>
-                            <div>
-                                <h4 className={styles.storeTitle}>{item.title}</h4>
-                                <Link className={styles.storeAddress} to={item.link}>
-                                    {item.address}
-                                </Link>
-                                <h4 className={styles.storeSubTitle}>Store Hours</h4>
-                                <p className={styles.storeHours}>{item.storeHours}</p>
-                                <p className={styles.storeSubTitle}>Consignment</p>
-                                <p className={styles.consignment}>{item.consignment}</p>
-                            </div>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-
-            <Footer />
+                            <h4 className={styles.storeSubTitle}>Store Hours</h4>
+                            <p className={styles.storeHours}>{item.storeHours}</p>
+                            <p className={styles.storeSubTitle}>Consignment</p>
+                            <p className={styles.consignment}>{item.consignment}</p>
+                        </div>
+                    </li>
+                ))}
+            </ul>
         </div>
     );
 };

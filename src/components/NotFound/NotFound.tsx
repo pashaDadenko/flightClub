@@ -1,21 +1,12 @@
 import { FC } from 'react';
-import { Api } from '../../api/Api';
-
-import { Header } from '../../components/Header/Header';
-import { Footer } from '../../components/Footer/Footer';
-import { AllSneakers } from '../../components/AllSneakers/AllSneakers';
 
 import notFoundImage from '../../images/notFound.png';
 
-import styles from './ErrorPage.module.scss';
+import styles from './NotFound.module.scss';
 
-export const ErrorPage: FC = () => {
-    Api();
-
+export const NotFound: FC = () => {
     return (
         <div className={styles.wrapper}>
-            <Header />
-
             <div className={styles.container}>
                 <div>
                     <h2 className={styles.title}>404 - PAGE NOT FOUND</h2>
@@ -25,9 +16,6 @@ export const ErrorPage: FC = () => {
                 </div>
                 <img src={notFoundImage} alt='notFoundImage' />
             </div>
-
-            <AllSneakers />
-            <Footer />
         </div>
     );
 };

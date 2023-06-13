@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
+import { Link } from 'react-router-dom';
 
 import styles from './TopSellers.module.scss';
-import { Link } from 'react-router-dom';
 
 export const TopSellers: FC = () => {
     const topSellers = useSelector((state: RootState) => state.homeSlice.topSellersData);
@@ -14,17 +14,17 @@ export const TopSellers: FC = () => {
             <ul className={styles.previewGroupe}>
                 {topSellers &&
                     topSellers.map((sneaker) => (
-                        <li key={sneaker.id} className={styles.previewProduct}>
+                        <Link to={`/details/${sneaker.id}`} key={sneaker.id} className={styles.previewProduct}>
                             <img className={styles.img} src={sneaker.images[0]} alt='image' />
                             <div className={styles.info}>
                                 <span className={styles.subTitle}>{sneaker.brand}</span>
                                 <p className={styles.text}>{sneaker.title}</p>
                             </div>
-                        </li>
+                        </Link>
                     ))}
             </ul>
 
-            <Link className={styles.link} to={'top-sellers'}>
+            <Link className={styles.link} to={''}>
                 <button className={styles.btn}>SHOP TOP SELLERS</button>
             </Link>
         </section>

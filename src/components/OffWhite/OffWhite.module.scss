@@ -21,6 +21,7 @@
             align-items: center;
             width: 300px;
             background-color: #fff;
+            text-decoration: none;
 
             .img {
                 width: 270px;
@@ -31,10 +32,11 @@
             .info {
                 padding: 0 20px 20px 20px;
                 .subTitle {
-                    opacity: 0.4;
+                    color: #818181;
                 }
                 .text {
                     margin-top: 10px;
+                    color: #000;
                 }
             }
         }
@@ -50,7 +52,7 @@
         cursor: pointer;
         margin-top: 30px;
         &:hover {
-            opacity: 0.8;
+            background-color: #000000e0;
         }
     }
 }

@@ -17,8 +17,7 @@
             background-color: transparent;
             border: 1px solid #000;
             &::placeholder {
-                color: #000;
-                opacity: 0.7;
+                color: #818181;
                 font-size: 16px;
             }
         }
@@ -58,7 +57,7 @@
                 color: #0000009c;
             }
             &:active {
-                opacity: 0.4;
+                color: #818181;
             }
         }
         .cart {

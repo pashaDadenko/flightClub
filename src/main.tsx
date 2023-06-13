@@ -4,11 +4,11 @@ import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import { HomePage } from './pages/Home/HomePage';
-import { ErrorPage } from './pages/Error/ErrorPage';
-import { TopSellersPage } from './pages/TopSellers/TopSellersPage';
-import { AboutUsPage } from './pages/AboutUs/AboutUsPage';
-import { StoresPage } from './pages/Stores/StoresPage';
+import { HomePage } from './pages/HomePage';
+import { ErrorPage } from './pages/ErrorPage';
+import { AboutUsPage } from './pages/AboutUsPage';
+import { StoresPage } from './pages/StoresPage';
+import { DetailsPage } from './pages/DetailsPage';
 
 import styles from './main.module.scss';
 
@@ -19,16 +19,16 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
     },
     {
-        path: 'top-sellers',
-        element: <TopSellersPage />,
-    },
-    {
-        path: 'store-location',
+        path: '/store-location',
         element: <StoresPage />,
     },
     {
-        path: 'about-us',
+        path: '/about-us',
         element: <AboutUsPage />,
+    },
+    {
+        path: '/details/:id',
+        element: <DetailsPage />,
     },
 ]);
 
