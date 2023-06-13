@@ -1,4 +1,4 @@
-import { CSSProperties, FC } from 'react';
+import { CSSProperties, FC, useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 import SearchIcon from '@mui/icons-material/Search';
@@ -8,8 +8,15 @@ import styles from './Header.module.scss';
 
 export const Header: FC = () => {
     const { pathname } = useLocation();
+    const [scroll, setScroll] = useState(0);
+    const handleScroll = () => setScroll(window.scrollY);
 
-    const styleHeader: CSSProperties = {
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const styleHeaderIMG: CSSProperties = {
         backgroundImage: `url(${backgroundImg})`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
@@ -19,8 +26,10 @@ export const Header: FC = () => {
     };
 
     return (
-        <header style={pathname === '/' ? styleHeader : { height: '100px' }}>
-            <div style={pathname !== '/' ? { backgroundColor: '#fff' } : {}} className={styles.headerTop}>
+        <header style={pathname === '/' ? styleHeaderIMG : { height: '100px' }}>
+            <div
+                style={pathname === '/' && scroll < document.documentElement.clientHeight ? { backgroundColor: '#ffffff00' } : {}}
+                className={styles.headerTop}>
                 <div className={styles.searchWrapper}>
                     <input className={styles.search} type='search' placeholder='Search' />
                     <SearchIcon className={styles.icon} />
@@ -53,3 +62,5 @@ export const Header: FC = () => {
         </header>
     );
 };
+
+//window.scrollTo(0, 0);

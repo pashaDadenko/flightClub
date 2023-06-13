@@ -7,6 +7,7 @@ import { Api } from '../api/Api';
 
 export const DetailsPage: FC = () => {
     Api();
+    window.scrollTo(0, 0);
 
     return (
         <>

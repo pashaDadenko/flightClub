@@ -1,0 +1,27 @@
+span {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.root {
+    padding: 15px 0;
+
+    .headingWrap {
+        padding-left: 0;
+        padding-right: 0;
+        .heading {
+        }
+    }
+
+    .icon {
+        font-size: 40px;
+    }
+
+    .textWrap {
+        padding-left: 0;
+
+        .text {
+        }
+    }
+}

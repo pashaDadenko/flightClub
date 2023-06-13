@@ -2,14 +2,13 @@ import { FC } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
-
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { AccordionMUI } from '../Accordion/AccordionMUI';
 
 import styles from './DetailsSneakers.module.scss';
 
 export const DetailsSneakers: FC = () => {
     const { id } = useParams();
-    const detailsSneakers = useSelector((state: RootState) => state.detailsSlice.DetailsSneakers.filter((item) => item.id === +id));
+    const detailsSneakers = useSelector((state: RootState) => state.detailsSlice.DetailsSneakers.filter((item) => item.id === +id!));
 
     return (
         <div className={styles.wrapper}>
@@ -39,9 +38,7 @@ export const DetailsSneakers: FC = () => {
                                 <div className={styles.InfoProduct}>{item.InfoProduct}</div>
                                 <div className={styles.article}>{item.article}</div>
 
-                                <div>
-                                    SHIPPING & RETURNS <KeyboardArrowDownIcon />
-                                </div>
+                                <AccordionMUI />
                             </div>
                         </div>
                     ))}

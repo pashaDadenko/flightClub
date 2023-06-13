@@ -8,6 +8,7 @@ import { Footer } from '../components/Footer/Footer';
 
 export const ErrorPage: FC = () => {
     Api();
+    window.scrollTo(0, 0);
 
     return (
         <>

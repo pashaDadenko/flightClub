@@ -10,6 +10,7 @@ import { Footer } from '../components/Footer/Footer';
 
 export const HomePage: FC = () => {
     Api();
+    window.scrollTo(0, 0);
 
     return (
         <>
