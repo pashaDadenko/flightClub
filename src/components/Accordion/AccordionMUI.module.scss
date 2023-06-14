@@ -4,24 +4,10 @@ span {
     font-size: 15px;
 }
 
-.root {
-    padding: 15px 0;
-
-    .headingWrap {
-        padding-left: 0;
-        padding-right: 0;
-        .heading {
-        }
-    }
-
-    .icon {
-        font-size: 40px;
-    }
-
-    .textWrap {
-        padding-left: 0;
-
-        .text {
-        }
+.link {
+    color: #000;
+    font-size: 17px;
+    &:hover {
+        color: #33322f49;
     }
 }

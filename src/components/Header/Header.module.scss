@@ -6,6 +6,7 @@
     width: 100%;
     background-color: #fff;
     position: fixed;
+    z-index: 999;
 
     .searchWrapper {
         position: relative;
@@ -36,6 +37,7 @@
         color: #e91c23;
         cursor: pointer;
         text-decoration: none;
+        margin-left: 50px;
     }
 
     .listing {

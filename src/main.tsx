@@ -9,6 +9,7 @@ import { ErrorPage } from './pages/ErrorPage';
 import { AboutUsPage } from './pages/AboutUsPage';
 import { StoresPage } from './pages/StoresPage';
 import { DetailsPage } from './pages/DetailsPage';
+import { ShippingAndReturnsPage } from './pages/ShippingAndReturnsPage';
 
 import styles from './main.module.scss';
 
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
     {
         path: '/details/:id',
         element: <DetailsPage />,
+    },
+    {
+        path: '/shipAndReturn',
+        element: <ShippingAndReturnsPage />,
     },
 ]);
 
