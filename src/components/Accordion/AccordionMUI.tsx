@@ -11,17 +11,19 @@ import styles from './AccordionMUI.module.scss';
 
 export const AccordionMUI: FC = () => {
     const [expanded, setExpanded] = useState<string | false>(false);
+    const handleChange = (panel: string) => (_event: React.SyntheticEvent, isExpanded: boolean) => setExpanded(isExpanded ? panel : false);
 
-    const handleChange = (panel: string) => (_event: React.SyntheticEvent, isExpanded: boolean) => {
-        setExpanded(isExpanded ? panel : false);
+    const accordionStyle = {
+        borderTop: '1px solid #000',
+        borderBottom: '1px solid #000',
+        boxShadow: 'none',
+        borderRadius: 0,
+        padding: '15px 0',
     };
 
     return (
         <div className={styles.wrapper}>
-            <Accordion
-                expanded={expanded === 'panel1'}
-                onChange={handleChange('panel1')}
-                style={{ borderTop: '1px solid #000', borderBottom: '1px solid #000', boxShadow: 'none', borderRadius: 0, padding: '15px 0' }}>
+            <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={accordionStyle}>
                 <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls='panel1bh-content' id='panel1bh-header' style={{ padding: 0 }}>
                     <Typography sx={{}}>SHIPPING & RETURNS</Typography>
                 </AccordionSummary>
