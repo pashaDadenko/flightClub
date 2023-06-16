@@ -3,9 +3,9 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
 import { Link, useParams } from 'react-router-dom';
 
-import styles from './Recommended.module.scss';
+import styles from './RecommendedBlock.module.scss';
 
-export const Recommended: FC = () => {
+export const RecommendedBlock: FC = () => {
     const { id } = useParams();
     const recommendedSneakers = useSelector((state: RootState) => state.detailsSlice.RecommendedSneakers.filter((item) => item.id !== +id!));
 

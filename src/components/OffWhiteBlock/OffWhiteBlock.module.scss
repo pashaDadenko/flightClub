@@ -17,8 +17,6 @@
         .previewProduct {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
             width: 300px;
             background-color: #fff;
             text-decoration: none;
@@ -27,6 +25,7 @@
                 width: 270px;
                 height: 270px;
                 object-fit: contain;
+                margin: 0 auto;
             }
 
             .info {

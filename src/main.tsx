@@ -10,6 +10,7 @@ import { AboutUsPage } from './pages/AboutUsPage';
 import { StoresPage } from './pages/StoresPage';
 import { DetailsPage } from './pages/DetailsPage';
 import { ShippingAndReturnsPage } from './pages/ShippingAndReturnsPage';
+import { AllSneakersPage } from './pages/AllSneakersPage';
 
 import styles from './main.module.scss';
 
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
     {
         path: '/shipAndReturn',
         element: <ShippingAndReturnsPage />,
+    },
+    {
+        path: '/sneakers',
+        element: <AllSneakersPage />,
     },
 ]);
 

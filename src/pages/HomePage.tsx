@@ -2,9 +2,9 @@ import { FC } from 'react';
 import { Api } from '../api/Api';
 
 import { Header } from '../components/Header/Header';
-import { TopSellers } from '../components/TopSellers/TopSellers';
-import { OffWhite } from '../components/OffWhite/OffWhite';
-import { AirJordan } from '../components/AirJordan/AirJordan';
+import { TopSellersBlock } from '../components/TopSellersBlock/TopSellersBlock';
+import { OffWhiteBlock } from '../components/OffWhiteBlock/OffWhiteBlock';
+import { AirJordanBlock } from '../components/AirJordanBlock/AirJordanBlock';
 import { InfoBlock } from '../components/InfoBlock/InfoBlock';
 import { Footer } from '../components/Footer/Footer';
 
@@ -15,9 +15,9 @@ export const HomePage: FC = () => {
     return (
         <>
             <Header />
-            <TopSellers />
-            <OffWhite />
-            <AirJordan />
+            <TopSellersBlock />
+            <OffWhiteBlock />
+            <AirJordanBlock />
             <InfoBlock />
             <Footer />
         </>

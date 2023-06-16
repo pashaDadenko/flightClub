@@ -1,61 +1,78 @@
 .wrapper {
-    background-color: #f9f9f9;
-
     .container {
         width: 1300px;
         margin: 0 auto;
-        padding-top: 100px;
-        padding-bottom: 100px;
+        margin-top: 50px;
+        margin-bottom: 50px;
 
-        .title {
-            margin-bottom: 50px;
-        }
-
-        .previewGroupe {
+        .wrap {
             display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            cursor: pointer;
+            justify-content: space-between;
 
-            .previewProduct {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+            .filter {
                 width: 300px;
-                background-color: #fff;
-                text-decoration: none;
-
-                .img {
-                    width: 270px;
-                    height: 270px;
-                    object-fit: contain;
-                }
-
-                .info {
-                    padding: 0 20px 20px 20px;
-                    .subTitle {
-                        color: #818181;
-                    }
-                    .text {
-                        margin-top: 10px;
-                        color: #000;
+                .filterWrap {
+                    margin-bottom: 30px;
+                    .title {
+                        font-size: 20px;
                     }
                 }
             }
-        }
 
-        .btn {
-            margin: 0 auto;
-            display: block;
-            background-color: #000;
-            color: #fff;
-            padding: 15px 20px;
-            border: 0;
-            cursor: pointer;
-            margin-top: 30px;
-            &:hover {
-                background-color: #000000e0;
+            .sneakers {
+                width: 960px;
+
+                .titleWrap {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 30px;
+                    .title {
+                        font-size: 20px;
+                        .quantity {
+                            display: inline-block;
+                            font-size: 20px;
+                            color: #818181;
+                        }
+                    }
+                }
+
+                .previewGroupe {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 30px;
+                    cursor: pointer;
+
+                    .previewProduct {
+                        display: flex;
+                        flex-direction: column;
+                        width: 300px;
+                        background-color: #fff;
+                        text-decoration: none;
+
+                        .img {
+                            margin: 0 auto;
+                            width: 270px;
+                            height: 270px;
+                            object-fit: contain;
+                        }
+
+                        .info {
+                            padding: 0 20px 20px 20px;
+                            .subTitle {
+                                color: #818181;
+                            }
+                            .text {
+                                margin-top: 10px;
+                                color: #000;
+                            }
+                            .price {
+                                margin-top: 10px;
+                                color: #000;
+                                font-weight: 900;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

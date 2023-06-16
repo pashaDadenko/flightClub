@@ -2,17 +2,22 @@
     display: flex;
     gap: 100px;
     align-items: center;
-    max-width: 2000px;
+    max-width: 3000px;
     margin: 0 auto;
     padding: 126px 0;
-
     .title {
         font-size: 30px;
         margin-bottom: 30px;
     }
     .text {
         color: #818181;
-        letter-spacing: -0.1px;
+        line-height: 30px;
+        .link {
+            color: #818181;
+            &:hover {
+                color: #464646;
+            }
+        }
     }
     .image {
         width: 400px;

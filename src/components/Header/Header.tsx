@@ -39,7 +39,7 @@ export const Header: FC = () => {
                 </Link>
 
                 <div className={styles.listing}>
-                    <Link className={styles.sneakers} to={''}>
+                    <Link className={styles.sneakers} to={'/sneakers'}>
                         Sneakers
                     </Link>
                     <Link className={styles.store} to={'/store-location'}>

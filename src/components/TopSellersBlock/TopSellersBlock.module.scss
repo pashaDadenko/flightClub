@@ -17,8 +17,6 @@
         .previewProduct {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
             width: 300px;
             background-color: #fff;
             text-decoration: none;
@@ -27,6 +25,7 @@
                 width: 270px;
                 height: 270px;
                 object-fit: contain;
+                margin: 0 auto;
             }
 
             .info {
@@ -42,17 +41,20 @@
         }
     }
 
-    .btn {
-        margin: 0 auto;
-        display: block;
-        background-color: #000;
-        color: #fff;
-        padding: 15px 20px;
-        border: 0;
-        cursor: pointer;
-        margin-top: 30px;
-        &:hover {
-            background-color: #000000e0;
+    .link {
+        text-decoration: none;
+        .btn {
+            margin: 0 auto;
+            display: block;
+            background-color: #000;
+            color: #fff;
+            padding: 15px 20px;
+            border: 0;
+            cursor: pointer;
+            margin-top: 30px;
+            &:hover {
+                background-color: #000000e0;
+            }
         }
     }
 }

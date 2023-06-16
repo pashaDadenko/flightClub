@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { setSneakersData } from '../redux/home/homeSlice';
 import { setRandomSneakers } from '../redux/error/errorSlice';
 import { setDetailsSneakers } from '../redux/details/detailsSlice';
+import { setAllSneakers } from '../redux/allSneakers/allSneakersSlice';
 
 export const Api = (): void => {
     const dispatch = useDispatch();
@@ -18,6 +19,7 @@ export const Api = (): void => {
                 dispatch(setRandomSneakers(data));
                 dispatch(setSneakersData(data));
                 dispatch(setDetailsSneakers(data));
+                dispatch(setAllSneakers(data));
             });
     }, []);
 };

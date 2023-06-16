@@ -3,17 +3,17 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
 import { Link } from 'react-router-dom';
 
-import styles from './OffWhite.module.scss';
+import styles from './AirJordanBlock.module.scss';
 
-export const OffWhite: FC = () => {
-    const offWhite = useSelector((state: RootState) => state.homeSlice.offWhiteData);
+export const AirJordanBlock: FC = () => {
+    const airJordan = useSelector((state: RootState) => state.homeSlice.airJordanData);
 
     return (
         <section className={styles.wrapper}>
-            <h2 className={styles.title}>OFF WHITE</h2>
+            <h2 className={styles.title}>AIR JORDAN</h2>
             <ul className={styles.previewGroupe}>
-                {offWhite &&
-                    offWhite.map((sneaker) => (
+                {airJordan &&
+                    airJordan.map((sneaker) => (
                         <Link to={`/details/${sneaker.id}`} key={sneaker.id} className={styles.previewProduct}>
                             <img className={styles.img} src={sneaker.images[0]} alt='image' />
                             <div className={styles.info}>
@@ -24,7 +24,7 @@ export const OffWhite: FC = () => {
                     ))}
             </ul>
 
-            <button className={styles.btn}>SHOP OFF WHITE</button>
+            <button className={styles.btn}>SHOP AIR JORDAN</button>
         </section>
     );
 };
