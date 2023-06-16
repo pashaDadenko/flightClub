@@ -9,6 +9,7 @@ export const detailsSlice = createSlice({
         DetailsSneakers: [],
         RecommendedSneakers: [],
         Brand: '',
+        ImageCarousel: [],
     },
 
     reducers: {
@@ -22,9 +23,12 @@ export const detailsSlice = createSlice({
         setBrand(state, { payload }: PayloadAction<string>) {
             state.Brand = payload;
         },
+        setImageCarousel(state, { payload }: PayloadAction<string[]>) {
+            state.ImageCarousel = payload;
+        },
     },
 });
 
-export const { setDetailsSneakers, setBrand } = detailsSlice.actions;
+export const { setDetailsSneakers, setBrand, setImageCarousel } = detailsSlice.actions;
 
 export default detailsSlice.reducer;
