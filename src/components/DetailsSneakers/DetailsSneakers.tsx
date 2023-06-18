@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
 import { AccordionMUI } from '../Accordion/AccordionMUI';
-import { setBrand, setImageCarousel } from '../../redux/details/detailsSlice';
+import { setBrand, setImageCarousel } from '../../redux/sneakersData/sneakersDataSlice';
 import { Carousel } from '../Carousel/Carousel';
 
 import styles from './DetailsSneakers.module.scss';
@@ -12,7 +12,7 @@ export const DetailsSneakers: FC = () => {
     const { id } = useParams();
     const dispatch = useDispatch();
 
-    const detailsSneakers = useSelector((state: RootState) => state.detailsSlice.DetailsSneakers).filter((item) => item.id === +id!);
+    const detailsSneakers = useSelector((state: RootState) => state.sneakersDataSlice.sneakersData).filter((item) => item.id === +id!);
 
     const brand = detailsSneakers.length > 0 && detailsSneakers[0].brand;
     typeof brand === 'string' && dispatch(setBrand(brand));

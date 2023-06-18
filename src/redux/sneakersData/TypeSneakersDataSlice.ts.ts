@@ -6,4 +6,7 @@ export type TypeSneakersDataSlice = {
     offWhiteData: TypeApi[];
     airJordanData: TypeApi[];
     randomSneakers: TypeApi[];
+    recommendedSneakers: TypeApi[];
+    ImageCarousel: string[];
+    brand: string;
 };

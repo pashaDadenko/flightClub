@@ -3,7 +3,6 @@ import { TypeApi } from './TypeApi';
 import { useDispatch } from 'react-redux';
 
 import { setSneakersData } from '../redux/sneakersData/sneakersDataSlice';
-import { setDetailsSneakers } from '../redux/details/detailsSlice';
 import { setAllSneakers } from '../redux/allSneakers/allSneakersSlice';
 
 export const Api = (): void => {
@@ -16,7 +15,6 @@ export const Api = (): void => {
             .then((res: Response) => res.json())
             .then((data: TypeApi[]) => {
                 dispatch(setSneakersData(data));
-                dispatch(setDetailsSneakers(data));
                 dispatch(setAllSneakers(data));
             });
     }, []);
