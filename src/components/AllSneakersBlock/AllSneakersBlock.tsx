@@ -6,15 +6,15 @@ import { Link } from 'react-router-dom';
 import styles from './AllSneakersBlock.module.scss';
 
 export const AllSneakersBlock: FC = () => {
-    const allSneakers = useSelector((state: RootState) => state.errorSlice.randomSneakers);
+    const randomSneakers = useSelector((state: RootState) => state.sneakersDataSlice.randomSneakers);
 
     return (
         <div className={styles.wrapper}>
             <section className={styles.container}>
                 <h2 className={styles.title}>ALL SNEAKERS</h2>
                 <ul className={styles.previewGroupe}>
-                    {allSneakers &&
-                        allSneakers.map((sneaker) => (
+                    {randomSneakers &&
+                        randomSneakers.map((sneaker) => (
                             <Link to={`/details/${sneaker.id}`} key={sneaker.id} className={styles.previewProduct}>
                                 <img className={styles.img} src={sneaker.images[0]} alt='image' />
                                 <div className={styles.info}>

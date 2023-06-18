@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import styles from './TopSellersBlock.module.scss';
 
 export const TopSellersBlock: FC = () => {
-    const topSellers = useSelector((state: RootState) => state.homeSlice.topSellersData);
+    const topSellers = useSelector((state: RootState) => state.sneakersDataSlice.topSellersData);
 
     return (
         <section className={styles.wrapper}>

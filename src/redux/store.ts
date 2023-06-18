@@ -1,14 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import homeSlice from './home/homeSlice';
-import errorSlice from './error/errorSlice';
+import sneakersDataSlice from './sneakersData/sneakersDataSlice';
 import detailsSlice from './details/detailsSlice';
 import allSneakersSlice from './allSneakers/allSneakersSlice';
 
 export const store = configureStore({
     reducer: {
-        homeSlice,
-        errorSlice,
+        sneakersDataSlice,
         detailsSlice,
         allSneakersSlice,
     },
