@@ -9,7 +9,7 @@ import { Selected } from '../Selected/Selected';
 import styles from './AllSneakers.module.scss';
 
 export const AllSneakers: FC = () => {
-    const allSneakers = useSelector((state: RootState) => state.allSneakersSlice.AllSneakers);
+    const allSneakers = useSelector((state: RootState) => state.sneakersDataSlice.sneakersData);
 
     return (
         <div className={styles.wrapper}>

@@ -2,19 +2,19 @@ import { FC } from 'react';
 import { TypeOptions } from './TypeSelected';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
-import { setCurrentSort } from '../../redux/allSneakers/allSneakersSlice';
+import { setCurrentSort } from '../../redux/sneakersData/sneakersDataSlice';
 import Select from 'react-select';
 
 import styles from './Selected.module.scss';
 
 export const Selected: FC = () => {
-    const currentSort = useSelector((state: RootState) => state.allSneakersSlice.CurrentSort);
+    const currentSort = useSelector((state: RootState) => state.sneakersDataSlice.currentSort);
     const dispatch = useDispatch();
 
     const options: TypeOptions[] = [
         { value: 'relevance', label: 'Relevance' },
-        { value: 'asc', label: 'Price low' },
-        { value: 'desc', label: 'Price high' },
+        { value: 'low', label: 'Price low' },
+        { value: 'high', label: 'Price high' },
     ];
 
     const getValue = () => (currentSort ? options.find((item) => item.value === currentSort) : '');

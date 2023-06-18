@@ -9,4 +9,5 @@ export type TypeSneakersDataSlice = {
     recommendedSneakers: TypeApi[];
     ImageCarousel: string[];
     brand: string;
+    currentSort: string;
 };

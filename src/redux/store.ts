@@ -1,12 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 
 import sneakersDataSlice from './sneakersData/sneakersDataSlice';
-import allSneakersSlice from './allSneakers/allSneakersSlice';
 
 export const store = configureStore({
     reducer: {
         sneakersDataSlice,
-        allSneakersSlice,
     },
 });
 

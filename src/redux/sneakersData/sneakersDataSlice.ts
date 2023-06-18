@@ -7,14 +7,16 @@ export const sneakersDataSlice = createSlice({
 
     initialState: <TypeSneakersDataSlice>{
         sneakersData: [],
-        topSellersData: [],
         offWhiteData: [],
         airJordanData: [],
         randomSneakers: [],
+        topSellersData: [],
 
         recommendedSneakers: [],
-        brand: '',
         ImageCarousel: [],
+        brand: '',
+
+        currentSort: 'relevance',
     },
 
     reducers: {
@@ -24,6 +26,10 @@ export const sneakersDataSlice = createSlice({
                 .sort((a, b) => a.rating - b.rating)
                 .reverse()
                 .slice(0, 8);
+            state.recommendedSneakers = payload
+                .filter((item) => item.brand === state.brand)
+                .slice(0, 9)
+                .sort(() => 0.5 - Math.random());
             state.offWhiteData = payload
                 .filter((item) => item.brand === 'Off-white')
                 .sort(() => 0.5 - Math.random())
@@ -32,10 +38,6 @@ export const sneakersDataSlice = createSlice({
                 .filter((item) => item.brand === 'Air jordan')
                 .sort(() => 0.5 - Math.random())
                 .slice(0, 8);
-            state.recommendedSneakers = payload
-                .filter((item) => item.brand === state.brand)
-                .slice(0, 9)
-                .sort(() => 0.5 - Math.random());
             state.randomSneakers = payload.sort(() => 0.5 - Math.random()).slice(0, 8);
         },
         setBrand(state, { payload }: PayloadAction<string>) {
@@ -44,9 +46,12 @@ export const sneakersDataSlice = createSlice({
         setImageCarousel(state, { payload }: PayloadAction<string[]>) {
             state.ImageCarousel = payload;
         },
+        setCurrentSort(state, { payload }: PayloadAction<string>) {
+            state.currentSort = payload;
+        },
     },
 });
 
-export const { setSneakersData, setBrand, setImageCarousel } = sneakersDataSlice.actions;
+export const { setSneakersData, setBrand, setImageCarousel, setCurrentSort } = sneakersDataSlice.actions;
 
 export default sneakersDataSlice.reducer;
