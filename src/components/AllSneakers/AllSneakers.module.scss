@@ -12,9 +12,19 @@
             .filter {
                 width: 300px;
                 .filterWrap {
-                    margin-bottom: 30px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 37px;
                     .title {
                         font-size: 20px;
+                        margin-top: 8px;
+                    }
+                    .clear {
+                        font-size: 20px;
+                        margin-top: 8px;
+                        font-weight: 800;
+                        cursor: pointer;
                     }
                 }
             }
@@ -24,8 +34,9 @@
 
                 .titleWrap {
                     display: flex;
+                    align-items: center;
                     justify-content: space-between;
-                    margin-bottom: 30px;
+                    margin-bottom: 20px;
                     .title {
                         font-size: 20px;
                         .quantity {

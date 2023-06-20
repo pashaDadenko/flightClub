@@ -4,8 +4,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
 import { setCurrentSort } from '../../redux/sneakersData/sneakersDataSlice';
 import Select from 'react-select';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 import styles from './Selected.module.scss';
+import './styleSelected.scss';
 
 export const Selected: FC = () => {
     const currentSort = useSelector((state: RootState) => state.sneakersDataSlice.currentSort);
@@ -25,7 +27,8 @@ export const Selected: FC = () => {
     return (
         <div className={styles.wrapper}>
             <span className={styles.title}>Sort By:</span>
-            <Select options={options} onChange={handlerChange} value={getValue()} isSearchable={false} />
+            <Select options={options} onChange={handlerChange} value={getValue()} isSearchable={false} classNamePrefix='styleSelect' />
+            <KeyboardArrowDownIcon className={styles.icon} />
         </div>
     );
 };

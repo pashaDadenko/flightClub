@@ -48,6 +48,13 @@ export const sneakersDataSlice = createSlice({
         },
         setCurrentSort(state, { payload }: PayloadAction<string>) {
             state.currentSort = payload;
+            if (payload === 'low') {
+                state.sneakersData = state.sneakersData.sort((a, b) => a.price - b.price);
+            } else if (payload === 'high') {
+                state.sneakersData = state.sneakersData.sort((a, b) => b.price - a.price);
+            } else if (payload === 'relevance') {
+                state.sneakersData = state.sneakersData.sort(() => 0.5 - Math.random());
+            }
         },
     },
 });

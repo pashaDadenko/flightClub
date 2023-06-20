@@ -4,6 +4,7 @@ import { RootState } from '../../redux/store';
 import { Link } from 'react-router-dom';
 
 import { TitleBrand } from '../TitleBrand/TitleBrand';
+import { FilterBrand } from '../FilterBrand/FilterBrand';
 import { Selected } from '../Selected/Selected';
 
 import styles from './AllSneakers.module.scss';
@@ -19,7 +20,9 @@ export const AllSneakers: FC = () => {
                     <div className={styles.filter}>
                         <div className={styles.filterWrap}>
                             <p className={styles.title}>FILTER</p>
+                            <p className={styles.clear}>Clear Filters</p>
                         </div>
+                        <FilterBrand />
                     </div>
                     <div className={styles.sneakers}>
                         <div className={styles.titleWrap}>
