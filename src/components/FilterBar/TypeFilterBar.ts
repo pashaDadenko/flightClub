@@ -1,4 +1,4 @@
-export type TypeFilterBrand = {
+export type TypeFilterBar = {
     boxShadow: string;
     transition: string;
 };

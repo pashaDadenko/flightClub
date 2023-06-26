@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import { TypeFilterBrand } from './TypeFilterBrand';
+import { TypeFilterBar } from './TypeFilterBar';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
 
@@ -9,9 +9,9 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-import styles from './FilterBrand.module.scss';
+import styles from './FilterBar.module.scss';
 
-export const FilterBrand: FC = () => {
+export const FilterBar: FC = () => {
     const allSneakers = useSelector((state: RootState) => state.sneakersDataSlice.sneakersData);
     const updateBrand = [...new Set(allSneakers.map((sneakers) => sneakers.brand))].sort();
     const updateModel = [...new Set(allSneakers.map((sneakers) => sneakers.model))].sort();
@@ -20,7 +20,7 @@ export const FilterBrand: FC = () => {
     const [expanded, setExpanded] = useState<string | false>('panel1');
     const handleChange = (panel: string) => (_event: React.SyntheticEvent, isExpanded: boolean) => setExpanded(isExpanded ? panel : false);
 
-    const accordionStyle: TypeFilterBrand = {
+    const accordionStyle: TypeFilterBar = {
         boxShadow: 'none',
         transition: 'none',
     };
