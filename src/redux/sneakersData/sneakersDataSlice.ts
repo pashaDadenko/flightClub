@@ -17,6 +17,10 @@ export const sneakersDataSlice = createSlice({
         brand: '',
 
         currentSort: 'relevance',
+
+        filterBrand: '',
+        filterModel: '',
+        isChecked: false,
     },
 
     reducers: {
@@ -48,17 +52,23 @@ export const sneakersDataSlice = createSlice({
         },
         setCurrentSort(state, { payload }: PayloadAction<string>) {
             state.currentSort = payload;
-            if (payload === 'low') {
-                state.sneakersData = state.sneakersData.sort((a, b) => a.price - b.price);
-            } else if (payload === 'high') {
-                state.sneakersData = state.sneakersData.sort((a, b) => b.price - a.price);
-            } else if (payload === 'relevance') {
-                state.sneakersData = state.sneakersData.sort(() => 0.5 - Math.random());
-            }
+            if (payload === 'low') state.sneakersData = state.sneakersData.sort((a, b) => a.price - b.price);
+            else if (payload === 'high') state.sneakersData = state.sneakersData.sort((a, b) => b.price - a.price);
+            else if (payload === 'relevance') state.sneakersData = state.sneakersData.sort(() => 0.5 - Math.random());
+        },
+        setFilterBrand(state, { payload }: PayloadAction<string>) {
+            state.filterBrand = payload;
+        },
+        setFilterModel(state, { payload }: PayloadAction<string>) {
+            state.filterModel = payload;
+        },
+        setIsChecked(state, { payload }: PayloadAction<boolean>) {
+            state.isChecked = payload;
         },
     },
 });
 
-export const { setSneakersData, setBrand, setImageCarousel, setCurrentSort } = sneakersDataSlice.actions;
+export const { setSneakersData, setBrand, setImageCarousel, setCurrentSort, setFilterBrand, setFilterModel, setIsChecked } =
+    sneakersDataSlice.actions;
 
 export default sneakersDataSlice.reducer;

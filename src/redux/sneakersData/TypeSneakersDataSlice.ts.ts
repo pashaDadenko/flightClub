@@ -10,4 +10,7 @@ export type TypeSneakersDataSlice = {
     ImageCarousel: string[];
     brand: string;
     currentSort: string;
+    filterBrand: string;
+    filterModel: string;
+    isChecked: boolean;
 };

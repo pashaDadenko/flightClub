@@ -1,4 +1,4 @@
-export type TypeFilterBar = {
+export type TypeAccordionStyle = {
     boxShadow: string;
     transition: string;
 };
