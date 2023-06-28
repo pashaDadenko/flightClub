@@ -20,6 +20,10 @@ export const AllSneakers: FC = () => {
 
 	const updateSneakers = isChecked ? allSneakers.filter((sneakers) => sneakers.brand === filterBrand) : allSneakers;
 
+	// const isBrandMatch = filterBrand === '' || sneakers.brand === filterBrand;
+	// const isModelMatch = filterModel === '' || sneakers.model === filterModel;
+	// return isBrandMatch && isModelMatch;
+
 	return (
 		<div className={styles.wrapper}>
 			<TitleBrand />

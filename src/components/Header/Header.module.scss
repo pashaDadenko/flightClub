@@ -1,97 +1,102 @@
 .headerTop {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    width: 100%;
-    background-color: #fff;
-    position: fixed;
-    z-index: 999;
-    transition: 0.7s;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100px;
+	width: 100%;
+	background-color: #fff;
+	position: fixed;
+	z-index: 999;
+	transition: 0.7s;
 
-    .searchWrapper {
-        position: relative;
-        margin-left: 50px;
-        .search {
-            border-radius: 5px;
-            padding: 10px 35px;
-            outline: none;
-            border: 0;
-            background-color: transparent;
-            border: 1px solid #000;
-            &::placeholder {
-                color: #818181;
-                font-size: 16px;
-            }
-        }
-        .icon {
-            position: absolute;
-            top: 7px;
-            left: 7px;
-            color: #000;
-        }
-    }
+	.searchWrapper {
+		position: relative;
+		margin-left: 50px;
+		.search {
+			border-radius: 5px;
+			padding: 10px 35px;
+			outline: none;
+			border: 0;
+			background-color: transparent;
+			border: 1px solid #000;
+			&::placeholder {
+				color: #818181;
+				font-size: 16px;
+			}
+		}
+		.icon {
+			position: absolute;
+			top: 7px;
+			left: 7px;
+			color: #000;
+		}
+	}
 
-    .logo {
-        font-family: 'Oswald', sans-serif;
-        font-size: 40px;
-        color: #e91c23;
-        cursor: pointer;
-        text-decoration: none;
-        margin-left: 50px;
-    }
+	.logo {
+		font-family: 'Oswald', sans-serif;
+		font-size: 40px;
+		color: #e91c23;
+		cursor: pointer;
+		text-decoration: none;
+		margin-left: 50px;
+	}
 
-    .listing {
-        display: flex;
-        gap: 50px;
-        margin-right: 60px;
-        .sneakers {
-            text-decoration: none;
-            font-size: 20px;
-            color: #000;
-            &:hover {
-                color: #0000009c;
-            }
-        }
-        .store {
-            text-decoration: none;
-            font-size: 20px;
-            color: #000;
-            &:hover {
-                color: #0000009c;
-            }
-            &:active {
-                color: #818181;
-            }
-        }
-        .cart {
-            text-decoration: none;
-            font-size: 20px;
-            color: #000;
-            &:hover {
-                color: #0000009c;
-            }
-        }
-    }
+	.listing {
+		display: flex;
+		gap: 50px;
+		margin-right: 60px;
+		.sneakers {
+			text-decoration: none;
+			font-size: 20px;
+			color: #000;
+			&:hover {
+				color: #0000009c;
+			}
+		}
+		.store {
+			text-decoration: none;
+			font-size: 20px;
+			color: #000;
+			&:hover {
+				color: #0000009c;
+			}
+		}
+		.cart {
+			text-decoration: none;
+			font-size: 20px;
+			color: #000;
+			&:hover {
+				color: #0000009c;
+			}
+		}
+		.account {
+			text-decoration: none;
+			font-size: 20px;
+			color: #000;
+			&:hover {
+				color: #0000009c;
+			}
+		}
+	}
 }
 
 .previewWrapper {
-    position: absolute;
-    top: 35%;
-    left: 20%;
-    width: 400px;
-    .previewName {
-        color: #fff;
-        font-size: 40px;
-    }
-    .previewShow {
-        font-size: 20px;
-        color: #fff;
-        margin-top: 30px;
-        text-decoration: underline;
-        cursor: pointer;
-        &:hover {
-            color: #33322f49;
-        }
-    }
+	position: absolute;
+	top: 35%;
+	left: 20%;
+	width: 400px;
+	.previewName {
+		color: #fff;
+		font-size: 40px;
+	}
+	.previewShow {
+		font-size: 20px;
+		color: #fff;
+		margin-top: 30px;
+		text-decoration: underline;
+		cursor: pointer;
+		&:hover {
+			color: #33322f49;
+		}
+	}
 }
