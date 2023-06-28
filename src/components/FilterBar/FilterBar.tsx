@@ -20,9 +20,10 @@ export const FilterBar: FC = () => {
 	const isChecked = useSelector((state: RootState) => state.sneakersDataSlice.isChecked);
 
 	const updateBrand = [...new Set(allSneakers.map((sneakers) => sneakers.brand))].sort();
-	const updateModel = filterBrand
-		? [...new Set(allSneakers.filter((item) => item.brand === filterBrand).map((sneakers) => sneakers.model))].sort()
-		: [...new Set(allSneakers.map((sneakers) => sneakers.model))].sort();
+	const updateModel =
+		filterBrand && isChecked
+			? [...new Set(allSneakers.filter((item) => item.brand === filterBrand).map((sneakers) => sneakers.model))].sort()
+			: [...new Set(allSneakers.map((sneakers) => sneakers.model))].sort();
 	const updateColor = [...new Set(allSneakers.map((sneakers) => sneakers.color))].sort();
 
 	const [expanded, setExpanded] = useState<string | false>('panel1');
