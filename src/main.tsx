@@ -9,7 +9,7 @@ import { ErrorPage } from './pages/ErrorPage';
 import { StoresPage } from './pages/StoresPage';
 import { AboutUsPage } from './pages/AboutUsPage';
 import { DetailsPage } from './pages/DetailsPage';
-import { MyAccountPage } from './pages/MyAccountPage';
+import { AccountPage } from './pages/AccountPage';
 import { AllSneakersPage } from './pages/AllSneakersPage';
 import { ShippingAndReturnsPage } from './pages/ShippingAndReturnsPage';
 
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
 	},
 	{
 		path: '/my-account',
-		element: <MyAccountPage />,
+		element: <AccountPage />,
 	},
 ]);
 
