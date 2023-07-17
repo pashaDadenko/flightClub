@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
-import { AccordionMUI } from '../Accordion/AccordionMUI';
+import { DetailsAccordion } from '../DetailsAccordion/DetailsAccordion';
 import { setBrand, setImageCarousel } from '../../redux/sneakersData/sneakersDataSlice';
 import { Carousel } from '../Carousel/Carousel';
 
@@ -46,7 +46,7 @@ export const DetailsSneakers: FC = () => {
                                 <div className={styles.InfoProduct}>{item.InfoProduct}</div>
                                 <div className={styles.article}>{item.article}</div>
 
-                                <AccordionMUI />
+                                <DetailsAccordion />
                             </div>
                         </div>
                     ))}

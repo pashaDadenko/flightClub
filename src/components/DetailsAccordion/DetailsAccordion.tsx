@@ -6,15 +6,15 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { TypeAccordionStyle } from './TypeAccordionMUI';
+import { TypeDetailsAccordionStyle } from './TypeDetailsAccordion';
 
-import styles from './AccordionMUI.module.scss';
+import styles from './DetailsAccordion.module.scss';
 
-export const AccordionMUI: FC = () => {
+export const DetailsAccordion: FC = () => {
     const [expanded, setExpanded] = useState<string | false>(false);
     const handleChange = (panel: string) => (_event: React.SyntheticEvent, isExpanded: boolean) => setExpanded(isExpanded ? panel : false);
 
-    const accordionStyle: TypeAccordionStyle = {
+    const accordionStyle: TypeDetailsAccordionStyle = {
         borderTop: '1px solid #000',
         borderBottom: '1px solid #000',
         boxShadow: 'none',

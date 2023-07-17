@@ -1,4 +1,4 @@
-export type TypeAccordionStyle = {
+export type TypeDetailsAccordionStyle = {
     borderTop: string;
     borderBottom: string;
     boxShadow: string;

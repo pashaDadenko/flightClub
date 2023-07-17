@@ -48,8 +48,8 @@ export const AllSneakers: FC = () => {
 							<Selected />
 						</div>
 						<ul className={styles.previewGroupe}>
-							{updateSneakers &&
-								updateSneakers.map((sneaker) => (
+							{allSneakers &&
+								allSneakers.map((sneaker) => (
 									<Link to={`/details/${sneaker.id}`} key={sneaker.id} className={styles.previewProduct}>
 										<img className={styles.img} src={sneaker.images[0]} alt='image' />
 										<div className={styles.info}>
