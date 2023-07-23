@@ -1,8 +1,8 @@
 import { FC, useState } from 'react';
-import { TypeAccordionStyle } from './TypeFilterBar';
+import { FilterBarProps, TypeAccordionStyle } from './TypeFilterBar';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
-import { setFilterBrand, setFilterModel, setIsChecked } from '../../redux/sneakersData/sneakersDataSlice';
+import { setValueBrand, setValueModel, setValueColor } from '../../redux/sneakersData/sneakersDataSlice';
 
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -12,25 +12,22 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import styles from './FilterBar.module.scss';
 
-export const FilterBar: FC = () => {
+export const FilterBar: FC<FilterBarProps> = ({ updateSneakers }) => {
 	const dispatch = useDispatch();
-	const allSneakers = useSelector((state: RootState) => state.sneakersDataSlice.sneakersData);
-	const filterBrand = useSelector((state: RootState) => state.sneakersDataSlice.filterBrand);
-	const filterModel = useSelector((state: RootState) => state.sneakersDataSlice.filterModel);
-	const isChecked = useSelector((state: RootState) => state.sneakersDataSlice.isChecked);
 
-	const updateBrand = [...new Set(allSneakers.map((sneakers) => sneakers.brand))].sort();
-	const updateModel =
-		filterBrand && isChecked
-			? [...new Set(allSneakers.filter((item) => item.brand === filterBrand).map((sneakers) => sneakers.model))].sort()
-			: [...new Set(allSneakers.map((sneakers) => sneakers.model))].sort();
-	const updateColor = [...new Set(allSneakers.map((sneakers) => sneakers.color))].sort();
+	const allSneakers = useSelector((state: RootState) => state.sneakersDataSlice.sneakersData);
+
+	const brands = [...new Set(allSneakers.map((sneakers) => sneakers.brand))].sort();
+	const models = [...new Set(updateSneakers.map((sneakers) => sneakers.model))].sort();
+	const colors = [...new Set(allSneakers.map((sneakers) => sneakers.color))].sort();
 
 	const [expanded, setExpanded] = useState<string | false>('panel1');
 	const handleChange = (panel: string) => (_event: React.SyntheticEvent, isExpanded: boolean) => setExpanded(isExpanded ? panel : false);
 
 	const accordionStyle: TypeAccordionStyle = { boxShadow: 'none', transition: 'none' };
 	const multiColor = { backgroundImage: `linear-gradient(to left, rgb(255, 244, 12), rgb(74, 138, 0) 31%, rgb(0, 72, 156) 63%, rgb(213, 55, 54))` };
+
+	const [activeColors, setActiveColors] = useState<{ [key: number]: boolean }>({});
 
 	return (
 		<div className={styles.wrapper}>
@@ -44,15 +41,13 @@ export const FilterBar: FC = () => {
 				</AccordionSummary>
 				<AccordionDetails style={{ border: '1px solid #81818131', borderTop: 'none', padding: '10px 20px 0 20px' }}>
 					<Typography sx={{ display: 'flex', flexDirection: 'column' }}>
-						{updateBrand &&
-							updateBrand.map((brand, index) => (
+						{brands &&
+							brands.map((brand, index) => (
 								<span key={index} className={styles.wrapBrand}>
 									<input
-										onChange={(e) => {
-											dispatch(setFilterBrand(brand));
-											dispatch(setIsChecked(e.target.checked));
+										onClick={() => {
+											dispatch(setValueBrand(brand));
 										}}
-										checked={filterBrand === brand && isChecked}
 										className={styles.checkbox}
 										type='checkbox'
 										name={brand}
@@ -77,24 +72,23 @@ export const FilterBar: FC = () => {
 				</AccordionSummary>
 				<AccordionDetails style={{ border: '1px solid #81818131', borderTop: 'none', padding: '10px 20px 0 20px' }}>
 					<Typography sx={{}}>
-						{updateModel.map((model, index) => (
-							<span key={index} className={styles.wrapBrand}>
-								<input
-									onChange={(e) => {
-										dispatch(setFilterModel(model));
-										dispatch(setIsChecked(e.target.checked));
-									}}
-									checked={filterModel === model && isChecked}
-									className={styles.checkbox}
-									type='checkbox'
-									name={model}
-									id={model}
-								/>
-								<label className={styles.label} htmlFor={model}>
-									{model}
-								</label>
-							</span>
-						))}
+						{models &&
+							models.map((model, index) => (
+								<span key={index} className={styles.wrapBrand}>
+									<input
+										onClick={() => {
+											dispatch(setValueModel(model));
+										}}
+										className={styles.checkbox}
+										type='checkbox'
+										name={model}
+										id={model}
+									/>
+									<label className={styles.label} htmlFor={model}>
+										{model}
+									</label>
+								</span>
+							))}
 					</Typography>
 				</AccordionDetails>
 			</Accordion>
@@ -110,14 +104,24 @@ export const FilterBar: FC = () => {
 				<AccordionDetails style={{ border: '1px solid #81818131', borderTop: 'none', padding: 0 }}>
 					<Typography sx={{}}>
 						<span className={styles.wrapColor}>
-							{updateColor &&
-								updateColor.map((color, index) => (
-									<span key={index} className={styles.wrap}>
+							{colors &&
+								colors.map((color, index) => (
+									<button
+										onClick={() => {
+											dispatch(setValueColor(color));
+											setActiveColors((prevActiveColors) => ({
+												...prevActiveColors,
+												[index]: !prevActiveColors[index],
+											}));
+										}}
+										key={index}
+										className={styles.wrap}
+										style={activeColors[index] ? { border: '1px solid #000' } : {}}>
 										<span
 											style={color === 'multi' ? multiColor : { backgroundColor: `${color}` }}
 											className={styles.circle}></span>
 										<span>{color}</span>
-									</span>
+									</button>
 								))}
 						</span>
 					</Typography>
