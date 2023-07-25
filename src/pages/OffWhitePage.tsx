@@ -2,11 +2,11 @@ import { FC } from 'react';
 import { Api } from '../api/Api';
 
 import { Header } from '../components/Header/Header';
-import { AllSneakers } from '../components/AllSneakers/AllSneakers';
 import { Footer } from '../components/Footer/Footer';
 import { TitleBrand } from '../components/TitleBrand/TitleBrand';
+import { AllSneakers } from '../components/AllSneakers/AllSneakers';
 
-export const AllSneakersPage: FC = () => {
+export const OffWhitePage: FC = () => {
 	Api();
 	window.scrollTo(0, 0);
 

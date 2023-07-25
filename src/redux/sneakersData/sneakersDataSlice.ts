@@ -18,18 +18,17 @@ export const sneakersDataSlice = createSlice({
 
 		currentSort: 'relevance',
 
-		valueBrand: [],
-		valueModel: [],
-		valueColor: [],
+		filterValues: {
+			valueBrand: [],
+			valueModel: [],
+			valueColor: [],
+		},
 	},
 
 	reducers: {
 		setSneakersData(state, { payload }: PayloadAction<TypeApi[]>) {
 			state.sneakersData = payload;
-			state.topSellersData = payload
-				.sort((a, b) => a.rating - b.rating)
-				.reverse()
-				.slice(0, 8);
+			state.topSellersData = payload.sort((a, b) => b.rating - a.rating).slice(0, 8);
 			state.recommendedSneakers = payload
 				.filter((item) => item.brand === state.brand)
 				.slice(0, 9)
@@ -57,32 +56,38 @@ export const sneakersDataSlice = createSlice({
 			else if (payload === 'relevance') state.sneakersData = state.sneakersData.sort(() => 0.5 - Math.random());
 		},
 		setValueBrand(state, { payload }: PayloadAction<string>) {
-			if (state.valueBrand.includes(payload)) {
-				let filters = state.valueBrand.filter((el) => el !== payload);
-				state.valueBrand = filters;
+			if (state.filterValues.valueBrand.includes(payload)) {
+				let filters = state.filterValues.valueBrand.filter((el) => el !== payload);
+				state.filterValues.valueBrand = filters;
 			} else {
-				state.valueBrand = [...state.valueBrand, payload];
+				state.filterValues.valueBrand = [...state.filterValues.valueBrand, payload];
 			}
 		},
 		setValueModel(state, { payload }: PayloadAction<string>) {
-			if (state.valueModel.includes(payload)) {
-				let filters = state.valueModel.filter((el) => el !== payload);
-				state.valueModel = filters;
+			if (state.filterValues.valueModel.includes(payload)) {
+				let filters = state.filterValues.valueModel.filter((el) => el !== payload);
+				state.filterValues.valueModel = filters;
 			} else {
-				state.valueModel = [...state.valueModel, payload];
+				state.filterValues.valueModel = [...state.filterValues.valueModel, payload];
 			}
 		},
 		setValueColor(state, { payload }: PayloadAction<string>) {
-			if (state.valueColor.includes(payload)) {
-				let filters = state.valueColor.filter((el) => el !== payload);
-				state.valueColor = filters;
+			if (state.filterValues.valueColor.includes(payload)) {
+				let filters = state.filterValues.valueColor.filter((el) => el !== payload);
+				state.filterValues.valueColor = filters;
 			} else {
-				state.valueColor = [...state.valueColor, payload];
+				state.filterValues.valueColor = [...state.filterValues.valueColor, payload];
 			}
+		},
+		setClearFilter(state) {
+			state.filterValues.valueBrand = [];
+			state.filterValues.valueModel = [];
+			state.filterValues.valueColor = [];
 		},
 	},
 });
 
-export const { setSneakersData, setBrand, setImageCarousel, setCurrentSort, setValueBrand, setValueModel, setValueColor } = sneakersDataSlice.actions;
+export const { setSneakersData, setBrand, setImageCarousel, setCurrentSort, setValueBrand, setValueModel, setValueColor, setClearFilter } =
+	sneakersDataSlice.actions;
 
 export default sneakersDataSlice.reducer;

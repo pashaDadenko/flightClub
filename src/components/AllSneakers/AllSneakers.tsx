@@ -1,62 +1,75 @@
 import { FC, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
-import { TypeFilters } from './TypeAllSneakers';
-
-import { TitleBrand } from '../TitleBrand/TitleBrand';
 import { FilterBar } from '../FilterBar/FilterBar';
 import { Selected } from '../Selected/Selected';
+import { setClearFilter } from '../../redux/sneakersData/sneakersDataSlice';
 
 import styles from './AllSneakers.module.scss';
 
 export const AllSneakers: FC = () => {
+	const dispatch = useDispatch();
+	const { pathname } = useLocation();
+
 	const allSneakers = useSelector((state: RootState) => state.sneakersDataSlice.sneakersData);
+	const { valueBrand, valueModel, valueColor } = useSelector((state: RootState) => state.sneakersDataSlice.filterValues);
 
-	const valueBrand = [...new Set(useSelector((state: RootState) => state.sneakersDataSlice.valueBrand))];
-	const valueModel = [...new Set(useSelector((state: RootState) => state.sneakersDataSlice.valueModel))];
-	const valueColor = [...new Set(useSelector((state: RootState) => state.sneakersDataSlice.valueColor))];
-
-	const [filters, setFilters] = useState<TypeFilters>({
-		brand: valueBrand,
-		model: ['air'],
-		color: ['black'],
-	});
-
-	const handleClearFilters = () => {
-		setFilters({
-			brand: [],
-			model: [],
-			color: [],
-		});
-	};
-
-	const updateSneakers = allSneakers.filter((sneakers) => {
+	let updateSneakers = allSneakers.filter((sneakers) => {
 		const { brand, model, color } = sneakers;
-		const brandFilterMatch = filters.brand.length === 0 || filters.brand.includes(brand);
-		const modelFilterMatch = filters.model.length === 0 || filters.model.includes(model);
-		const colorFilterMatch = filters.color.length === 0 || filters.color.includes(color);
+		const brandFilterMatch = valueBrand.length === 0 || valueBrand.includes(brand);
+		const modelFilterMatch = valueModel.length === 0 || valueModel.includes(model);
+		const colorFilterMatch = valueColor.length === 0 || valueColor.includes(color);
 		return brandFilterMatch && modelFilterMatch && colorFilterMatch;
 	});
 
-	const renderClearFiltersBtn = filters.brand.length > 0 || filters.model.length > 0 || filters.color.length > 0;
+	if (pathname === '/top-sellers') updateSneakers = updateSneakers.sort((a, b) => b.rating - a.rating);
+	if (pathname === '/off-white') updateSneakers = updateSneakers.filter((item) => item.brand === 'Off-white');
+	if (pathname === '/air-jordan') updateSneakers = updateSneakers.filter((item) => item.brand === 'Air jordan');
+	if (pathname === '/nike') updateSneakers = updateSneakers.filter((item) => item.brand === 'Nike');
+	if (pathname === '/yeezy') updateSneakers = updateSneakers.filter((item) => item.brand === 'Yeezy');
+	if (pathname === '/new-balance') updateSneakers = updateSneakers.filter((item) => item.brand === 'New balance');
+
+	const renderClearFiltersBtn = valueBrand.length > 0 || valueModel.length > 0 || valueColor.length > 0;
+
+	const [activeBrand, setActiveBrand] = useState<{ [key: number]: boolean }>({});
+	const [activeModel, setActiveModel] = useState<{ [key: number]: boolean }>({});
+	const [activeColors, setActiveColors] = useState<{ [key: number]: boolean }>({});
+
+	const clearActiveColor = () => {
+		setActiveBrand({});
+		setActiveModel({});
+		setActiveColors({});
+	};
 
 	return (
 		<div className={styles.wrapper}>
-			<TitleBrand />
 			<div className={styles.container}>
 				<div className={styles.wrap}>
 					<div className={styles.filter}>
 						<div className={styles.filterWrap}>
 							<p className={styles.title}>FILTER</p>
 							{renderClearFiltersBtn && (
-								<p onClick={handleClearFilters} className={styles.clear}>
+								<p
+									onClick={() => {
+										dispatch(setClearFilter());
+										clearActiveColor();
+									}}
+									className={styles.clear}>
 									Clear Filters
 								</p>
 							)}
 						</div>
-						<FilterBar updateSneakers={updateSneakers} />
+						<FilterBar
+							updateSneakers={updateSneakers}
+							activeBrand={activeBrand}
+							activeModel={activeModel}
+							activeColors={activeColors}
+							setActiveBrand={setActiveBrand}
+							setActiveModel={setActiveModel}
+							setActiveColors={setActiveColors}
+						/>
 					</div>
 					<div className={styles.sneakers}>
 						<div className={styles.titleWrap}>

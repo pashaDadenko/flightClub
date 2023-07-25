@@ -1,5 +1,11 @@
 import { TypeApi } from '../../api/TypeApi';
 
+export type TypeFiltersValue = {
+	valueBrand: string[];
+	valueModel: string[];
+	valueColor: string[];
+};
+
 export type TypeSneakersDataSlice = {
 	sneakersData: TypeApi[];
 	topSellersData: TypeApi[];
@@ -10,7 +16,5 @@ export type TypeSneakersDataSlice = {
 	ImageCarousel: string[];
 	brand: string;
 	currentSort: string;
-	valueBrand: string[];
-	valueModel: string[];
-	valueColor: string[];
+	filterValues: TypeFiltersValue;
 };
