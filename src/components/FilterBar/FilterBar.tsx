@@ -109,7 +109,7 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 					<Typography sx={{}}>COLOR</Typography>
 				</AccordionSummary>
 				<AccordionDetails style={{ borderTop: 'none', padding: 0, backgroundColor: '#f9f9f9' }}>
-					<Typography sx={{}}>
+					<Typography sx={{ display: 'flex', flexWrap: 'wrap', marginLeft: '10px' }}>
 						<span className={styles.wrapColor}>
 							{colors &&
 								colors.map((color, index) => (
@@ -122,7 +122,7 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 											}));
 										}}
 										key={index}
-										className={styles.wrap}
+										className={styles.btn}
 										style={activeColors[index] ? { border: '1px solid #000' } : {}}>
 										<span
 											style={color === 'multi' ? multiColor : { backgroundColor: `${color}` }}
