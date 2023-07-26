@@ -16,6 +16,7 @@ export const TitleBrand: FC = () => {
 				<h2 className={styles.title}>{pathname === '/nike' ? 'NIKE' : ''}</h2>
 				<h2 className={styles.title}>{pathname === '/yeezy' ? 'YEEZY' : ''}</h2>
 				<h2 className={styles.title}>{pathname === '/new-balance' ? 'NEW BALANCE' : ''}</h2>
+				<h2 className={styles.title}>{pathname === '/lowest-price' ? 'LOWEST PRICE' : ''}</h2>
 
 				<p className={styles.text}>
 					{pathname === '/sneakers'
@@ -45,6 +46,11 @@ export const TitleBrand: FC = () => {
 				<p className={styles.text}>
 					{pathname === '/off-white'
 						? `Virgil Abloh created Off-White as a fashion house with a streetwear mentality. Critiquing contemporary culture and always looking for his next inspiration, Abloh serves up a unique design language with Off-White, leaving his mark on classic Air Jordan, Converse, and Nike silhouettes through the brand's coveted sneaker collaborations.`
+						: ''}
+				</p>
+				<p className={styles.text}>
+					{pathname === '/lowest-price'
+						? `Shop the latest price drops on Air Jordan, Yeezy and more, including Air Jordan 1s, Yeezy Boost 350s, Air Max, Vans Sk8-Hi and Air Force 1s.`
 						: ''}
 				</p>
 			</div>

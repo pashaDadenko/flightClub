@@ -4,43 +4,26 @@
 	gap: 20px;
 
 	.button {
-		padding: 10px;
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		gap: 10px;
 		width: 120px;
 		font-size: 16px;
-		text-align: center;
+		padding: 10px;
 		cursor: pointer;
 		border: 1px solid #81818131;
 		background-color: #fff;
 		&:hover {
 			background-color: #81818113;
 		}
-	}
 
-	.wrapColor {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 5px;
-		justify-content: center;
-		padding: 20px 0 10px 0;
-		.btn {
-			display: flex;
-			align-items: center;
-			gap: 10px;
-			border: 1px solid #81818131;
-			padding: 10px 0 3px 10px;
-			width: 110px;
-			cursor: pointer;
+		.circle {
+			width: 15px;
+			height: 15px;
 			margin: 0;
-			background-color: #fff;
-			&:hover {
-				background-color: #81818113;
-			}
-			.circle {
-				width: 15px;
-				height: 15px;
-				border-radius: 30px;
-				border: 1px solid #818181;
-			}
+			border-radius: 30px;
+			border: 1px solid #818181;
 		}
 	}
 }

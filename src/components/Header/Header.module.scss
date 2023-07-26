@@ -9,29 +9,6 @@
 	z-index: 999;
 	transition: 0.7s;
 
-	.searchWrapper {
-		position: relative;
-		margin-left: 50px;
-		.search {
-			border-radius: 5px;
-			padding: 10px 35px;
-			outline: none;
-			border: 0;
-			background-color: transparent;
-			border: 1px solid #000;
-			&::placeholder {
-				color: #818181;
-				font-size: 16px;
-			}
-		}
-		.icon {
-			position: absolute;
-			top: 7px;
-			left: 7px;
-			color: #000;
-		}
-	}
-
 	.logo {
 		font-family: 'Oswald', sans-serif;
 		font-size: 40px;

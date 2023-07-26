@@ -22,7 +22,7 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 	const allSneakers = useSelector((state: RootState) => state.sneakersDataSlice.sneakersData);
 	const brands = [...new Set(allSneakers.map((sneakers) => sneakers.brand))].sort();
 	const models = [...new Set(updateSneakers.map((sneakers) => sneakers.model))].sort();
-	const colors = [...new Set(allSneakers.map((sneakers) => sneakers.color))].sort();
+	const colors = [...new Set(updateSneakers.map((sneakers) => sneakers.color))].sort();
 
 	const [expanded, setExpanded] = useState<string | false>('panel1');
 	const handleChange = (panel: string) => (_event: React.SyntheticEvent, isExpanded: boolean) => setExpanded(isExpanded ? panel : false);
@@ -30,7 +30,7 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 	const accordionStyle: TypeAccordionStyle = { boxShadow: 'none', transition: 'none' };
 	const multiColor = { backgroundImage: `linear-gradient(to left, rgb(255, 244, 12), rgb(74, 138, 0) 31%, rgb(0, 72, 156) 63%, rgb(213, 55, 54))` };
 
-	const renderBrand = pathname === '/sneakers' || pathname === '/top-sellers';
+	const renderBrand = pathname === '/sneakers' || pathname === '/top-sellers' || pathname === '/lowest-price';
 
 	return (
 		<div className={styles.wrapper}>
@@ -108,29 +108,28 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 					style={{ border: '1px solid #81818131' }}>
 					<Typography sx={{}}>COLOR</Typography>
 				</AccordionSummary>
-				<AccordionDetails style={{ borderTop: 'none', padding: 0, backgroundColor: '#f9f9f9' }}>
-					<Typography sx={{ display: 'flex', flexWrap: 'wrap', marginLeft: '10px' }}>
-						<span className={styles.wrapColor}>
-							{colors &&
-								colors.map((color, index) => (
-									<button
-										onClick={() => {
-											dispatch(setValueColor(color));
-											setActiveColors((prevActiveColors) => ({
-												...prevActiveColors,
-												[index]: !prevActiveColors[index],
-											}));
-										}}
-										key={index}
-										className={styles.btn}
-										style={activeColors[index] ? { border: '1px solid #000' } : {}}>
-										<span
-											style={color === 'multi' ? multiColor : { backgroundColor: `${color}` }}
-											className={styles.circle}></span>
-										<span>{color}</span>
-									</button>
-								))}
-						</span>
+				<AccordionDetails style={{ borderTop: 'none', padding: '20px 20px 0 20px', backgroundColor: '#f9f9f9' }}>
+					<Typography sx={{ display: 'flex', flexWrap: 'wrap', gap: '5px', marginLeft: '10px' }}>
+						{colors &&
+							colors.map((color, index) => (
+								<button
+									onClick={() => {
+										dispatch(setValueColor(color));
+										setActiveColors((prevActiveColors) => ({
+											...prevActiveColors,
+											[index]: !prevActiveColors[index],
+										}));
+									}}
+									style={activeColors[index] ? { border: '1px solid #000' } : {}}
+									className={styles.button}
+									name={color}
+									id={color}
+									key={index}>
+									<span style={color === 'multi' ? multiColor : { backgroundColor: `${color}` }} className={styles.circle}></span>
+
+									{color}
+								</button>
+							))}
 					</Typography>
 				</AccordionDetails>
 			</Accordion>

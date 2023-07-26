@@ -1,0 +1,132 @@
+.wrapper {
+	margin-top: 600px;
+	.wrapSearch {
+		position: relative;
+		width: 100%;
+		height: 100px;
+		background-color: #fff;
+		display: flex;
+		align-items: center;
+		border-bottom: 2px solid #eaeaea;
+
+		.search {
+			padding: 10px 35px;
+			outline: none;
+			width: 100%;
+			border: 0;
+			background-color: transparent;
+			margin-left: 30px;
+			&::placeholder {
+				color: #818181;
+				font-size: 16px;
+			}
+		}
+
+		.icon {
+			position: absolute;
+			top: 37%;
+			left: 40px;
+			color: #000;
+		}
+
+		.buttonClear {
+			background-color: transparent;
+			padding: 0 30px;
+			border: none;
+			font-size: 20px;
+			cursor: pointer;
+		}
+		input[type='search']::-webkit-search-cancel-button {
+			display: none;
+		}
+		.buttonClose {
+			background-color: transparent;
+			padding: 0 30px;
+			border: none;
+			font-size: 20px;
+			cursor: pointer;
+		}
+
+		.line {
+			height: 100px;
+			width: 2px;
+			background-color: #f9f9f9;
+		}
+	}
+
+	.wrapSearchBottom {
+		background-color: #fff;
+		height: 600px;
+		display: flex;
+		justify-content: space-between;
+
+		.title {
+			margin-bottom: 30px;
+		}
+
+		.left {
+			width: 50%;
+			padding: 40px;
+
+			.previewGroupe {
+				display: flex;
+				flex-wrap: wrap;
+
+				.previewProduct {
+					display: flex;
+					align-items: center;
+					gap: 30px;
+					text-decoration: none;
+					width: 50%;
+					margin-bottom: 20px;
+
+					.img {
+						width: 140px;
+						height: 100px;
+					}
+					.text {
+						color: #000;
+						font-size: 20px;
+					}
+				}
+			}
+		}
+
+		.right {
+			border-left: 2px solid #eaeaea;
+			width: 50%;
+			padding: 40px;
+			.wrap {
+				display: flex;
+				justify-content: space-between;
+
+				.brand {
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					gap: 15px;
+					width: 50%;
+
+					.button {
+						background-color: #fff;
+						border: none;
+						cursor: pointer;
+					}
+				}
+
+				.recommended {
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					gap: 15px;
+					width: 50%;
+					.button {
+						background-color: #fff;
+						border: none;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+}

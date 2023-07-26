@@ -9,17 +9,17 @@ import { InfoBlock } from '../components/InfoBlock/InfoBlock';
 import { Footer } from '../components/Footer/Footer';
 
 export const HomePage: FC = () => {
-    Api();
-    window.scrollTo(0, 0);
+	Api();
+	window.scrollTo(0, 0);
 
-    return (
-        <>
-            <Header />
-            <TopSellersBlock />
-            <OffWhiteBlock />
-            <AirJordanBlock />
-            <InfoBlock />
-            <Footer />
-        </>
-    );
+	return (
+		<>
+			<Header />
+			<AirJordanBlock />
+			<OffWhiteBlock />
+			<TopSellersBlock />
+			<InfoBlock />
+			<Footer />
+		</>
+	);
 };

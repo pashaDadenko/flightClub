@@ -30,6 +30,7 @@ export const AllSneakers: FC = () => {
 	if (pathname === '/nike') updateSneakers = updateSneakers.filter((item) => item.brand === 'Nike');
 	if (pathname === '/yeezy') updateSneakers = updateSneakers.filter((item) => item.brand === 'Yeezy');
 	if (pathname === '/new-balance') updateSneakers = updateSneakers.filter((item) => item.brand === 'New balance');
+	if (pathname === '/lowest-price') updateSneakers = updateSneakers.filter((item) => item.price < 300);
 
 	const renderClearFiltersBtn = valueBrand.length > 0 || valueModel.length > 0 || valueColor.length > 0;
 
@@ -42,6 +43,9 @@ export const AllSneakers: FC = () => {
 		setActiveModel({});
 		setActiveColors({});
 	};
+
+	const [visibleProducts, setVisibleProducts] = useState(9);
+	const handleShowMore = () => setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + 6);
 
 	return (
 		<div className={styles.wrapper}>
@@ -81,7 +85,7 @@ export const AllSneakers: FC = () => {
 						</div>
 						<ul className={styles.previewGroupe}>
 							{updateSneakers.length > 0 &&
-								updateSneakers.map((sneaker) => (
+								updateSneakers.slice(0, visibleProducts).map((sneaker) => (
 									<Link to={`/details/${sneaker.id}`} key={sneaker.id} className={styles.previewProduct}>
 										<img className={styles.img} src={sneaker.images[0]} alt='image' />
 										<div className={styles.info}>
@@ -92,6 +96,11 @@ export const AllSneakers: FC = () => {
 									</Link>
 								))}
 						</ul>
+						{visibleProducts < updateSneakers.length && (
+							<button onClick={handleShowMore} className={styles.button}>
+								SHOW MORE
+							</button>
+						)}
 					</div>
 				</div>
 			</div>

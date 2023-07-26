@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { HomePage } from './pages/HomePage';
 import { NikePage } from './pages/NikePage';
 import { ErrorPage } from './pages/ErrorPage';
+import { YeezyPage } from './pages/YeezyPage';
 import { StoresPage } from './pages/StoresPage';
 import { AboutUsPage } from './pages/AboutUsPage';
 import { DetailsPage } from './pages/DetailsPage';
@@ -14,12 +15,12 @@ import { AccountPage } from './pages/AccountPage';
 import { OffWhitePage } from './pages/OffWhitePage';
 import { AirJordanPage } from './pages/AirJordanPage';
 import { TopSellersPage } from './pages/TopSellersPage';
+import { NewBalancePage } from './pages/NewBalancePage';
+import { LowestPricePage } from './pages/LowestPricePage';
 import { AllSneakersPage } from './pages/AllSneakersPage';
 import { ShippingAndReturnsPage } from './pages/ShippingAndReturnsPage';
 
 import styles from './main.module.scss';
-import { YeezyPage } from './pages/YeezyPage';
-import { NewBalancePage } from './pages/NewBalancePage';
 
 const router = createBrowserRouter([
 	{
@@ -74,6 +75,10 @@ const router = createBrowserRouter([
 	{
 		path: '/new-balance',
 		element: <NewBalancePage />,
+	},
+	{
+		path: '/lowest-price',
+		element: <LowestPricePage />,
 	},
 ]);
 

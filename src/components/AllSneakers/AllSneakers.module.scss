@@ -87,6 +87,20 @@
 						}
 					}
 				}
+
+				.button {
+					margin: 0 auto;
+					display: block;
+					background-color: #000;
+					color: #fff;
+					padding: 15px 20px;
+					border: 0;
+					cursor: pointer;
+					margin-top: 30px;
+					&:hover {
+						background-color: #000000e0;
+					}
+				}
 			}
 		}
 	}
