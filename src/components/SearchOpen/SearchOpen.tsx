@@ -39,11 +39,9 @@ export const SearchOpen: FC<SearchProps> = ({ setIsClicked }) => {
 						className={styles.search}
 						onChange={(e) => setSearchValue(e.target.value)}
 					/>
-					{searchValue && (
-						<button className={styles.buttonClear} onClick={() => searchClear()}>
-							Clear
-						</button>
-					)}
+					<button style={searchValue ? { color: '#000' } : undefined} className={styles.buttonClear} onClick={() => searchClear()}>
+						Clear
+					</button>
 					<div className={styles.line}></div>
 					<button className={styles.buttonClose} onClick={() => setIsClicked(false)}>
 						Close

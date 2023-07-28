@@ -21,8 +21,8 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 
 	const allSneakers = useSelector((state: RootState) => state.sneakersDataSlice.sneakersData);
 	const brands = [...new Set(allSneakers.map((sneakers) => sneakers.brand))].sort();
-	const models = [...new Set(updateSneakers.map((sneakers) => sneakers.model))].sort();
-	const colors = [...new Set(updateSneakers.map((sneakers) => sneakers.color))].sort();
+	const models = [...new Set(allSneakers.map((sneakers) => sneakers.model))].sort();
+	const colors = [...new Set(allSneakers.map((sneakers) => sneakers.color))].sort();
 
 	const [expanded, setExpanded] = useState<string | false>('panel1');
 	const handleChange = (panel: string) => (_event: React.SyntheticEvent, isExpanded: boolean) => setExpanded(isExpanded ? panel : false);
