@@ -41,8 +41,7 @@ export const SearchOpen: FC<SearchProps> = ({ setIsClicked }) => {
 						placeholder='Search'
 						className={styles.search}
 						onChange={(e) => dispatch(setSearchValue(e.target.value))}
-						onKeyDown={(e) => e.key === 'Enter' && <Link to={'/search-result'} />}
-				
+						onKeyDown={(e) => e.key === 'Enter' && navigate('/search-result')}
 					/>
 					<Link to={'/search-result'} />
 					{searchValue && (
