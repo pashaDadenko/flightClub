@@ -1,5 +1,6 @@
 .wrapper {
 	background-color: #fff;
+
 	.container {
 		width: 1200px;
 		margin: 0 auto;
@@ -14,12 +15,10 @@
 		.infoWrap {
 			display: flex;
 			flex-wrap: wrap;
-			justify-content: center;
-			align-items: center;
 			gap: 20px;
 
 			.accountWrap {
-				width: 44%;
+				width: 43%;
 				height: 170px;
 				border: 1px solid #eaeaea;
 				padding: 30px;
@@ -45,7 +44,7 @@
 			}
 
 			.shippingWrap {
-				width: 44%;
+				width: 43%;
 				height: 170px;
 				border: 1px solid #eaeaea;
 				padding: 30px;
@@ -71,7 +70,7 @@
 			}
 
 			.paymentWrap {
-				width: 44%;
+				width: 43%;
 				height: 170px;
 				border: 1px solid #eaeaea;
 				padding: 30px;
@@ -97,7 +96,7 @@
 			}
 
 			.billingWrap {
-				width: 44%;
+				width: 43%;
 				height: 170px;
 				border: 1px solid #eaeaea;
 				padding: 30px;

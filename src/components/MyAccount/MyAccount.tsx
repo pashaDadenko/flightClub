@@ -1,7 +1,9 @@
 import { FC, useState } from 'react';
 
-import styles from './MyAccount.module.scss';
 import { EditAccount } from '../EditAccount/EditAccount';
+import { EditShipping } from '../EditShipping/EditShipping';
+
+import styles from './MyAccount.module.scss';
 
 export const MyAccount: FC = () => {
 	const [accountClick, setAccountClick] = useState(false);
@@ -78,7 +80,8 @@ export const MyAccount: FC = () => {
 					</div>
 				</div>
 			</div>
-			{accountClick && <EditAccount />}
+			{accountClick && <EditAccount setAccountClick={setAccountClick} />}
+			{shippingClick && <EditShipping setShippingClick={setShippingClick} />}
 		</div>
 	);
 };

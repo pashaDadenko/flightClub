@@ -1,4 +1,4 @@
-import { FC, useRef } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
@@ -28,6 +28,22 @@ export const SearchOpen: FC<SearchProps> = ({ setIsClicked }) => {
 		const brand = sneaker.brand.toLowerCase().includes(searchValue.toLowerCase());
 		return title || brand;
 	});
+
+	const [scrollLocked, setScrollLocked] = useState(false);
+
+	useEffect(() => {
+		if (!scrollLocked) {
+			document.body.style.overflow = 'hidden';
+			setScrollLocked(true);
+		}
+
+		return () => {
+			if (scrollLocked) {
+				document.body.style.overflow = 'auto';
+				setScrollLocked(false);
+			}
+		};
+	}, [scrollLocked]);
 
 	return (
 		<>
