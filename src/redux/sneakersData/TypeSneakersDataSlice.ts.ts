@@ -17,4 +17,5 @@ export type TypeSneakersDataSlice = {
 	brand: string;
 	currentSort: string;
 	filterValues: TypeFiltersValue;
+	searchValue: string;
 };

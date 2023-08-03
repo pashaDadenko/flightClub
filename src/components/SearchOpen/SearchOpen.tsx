@@ -1,22 +1,25 @@
-import { FC, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { FC, useRef } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
 import { SearchProps } from './TypeSearchOpen';
+import { setSearchValue } from '../../redux/sneakersData/sneakersDataSlice';
 
 import SearchIcon from '@mui/icons-material/Search';
 
 import styles from './SearchOpen.module.scss';
 
 export const SearchOpen: FC<SearchProps> = ({ setIsClicked }) => {
-	const sneakersData = useSelector((state: RootState) => state.sneakersDataSlice.sneakersData);
+	const dispatch = useDispatch();
+	const navigate = useNavigate();
 
-	const [searchValue, setSearchValue] = useState('');
+	const sneakersData = useSelector((state: RootState) => state.sneakersDataSlice.sneakersData);
+	const searchValue = useSelector((state: RootState) => state.sneakersDataSlice.searchValue);
 
 	const inputRef = useRef<HTMLInputElement>(null);
 
 	const searchClear = () => {
-		setSearchValue('');
+		dispatch(setSearchValue(''));
 		inputRef.current?.focus();
 	};
 
@@ -37,8 +40,10 @@ export const SearchOpen: FC<SearchProps> = ({ setIsClicked }) => {
 						value={searchValue}
 						placeholder='Search'
 						className={styles.search}
-						onChange={(e) => setSearchValue(e.target.value)}
+						onChange={(e) => dispatch(setSearchValue(e.target.value))}
+						onKeyDown={(e) => e.key === 'Enter' && navigate('/search-result')}
 					/>
+					<Link to={'/search-result'} />
 					{searchValue && (
 						<button className={styles.buttonClear} onClick={() => searchClear()}>
 							Clear

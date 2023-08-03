@@ -11,13 +11,14 @@ import { YeezyPage } from './pages/YeezyPage';
 import { StoresPage } from './pages/StoresPage';
 import { AboutUsPage } from './pages/AboutUsPage';
 import { DetailsPage } from './pages/DetailsPage';
-import { AccountPage } from './pages/AccountPage';
+import { MyAccountPage } from './pages/MyAccountPage';
 import { OffWhitePage } from './pages/OffWhitePage';
 import { AirJordanPage } from './pages/AirJordanPage';
 import { TopSellersPage } from './pages/TopSellersPage';
 import { NewBalancePage } from './pages/NewBalancePage';
 import { LowestPricePage } from './pages/LowestPricePage';
 import { AllSneakersPage } from './pages/AllSneakersPage';
+import { SearchResultPage } from './pages/SearchResultPage';
 import { ShippingAndReturnsPage } from './pages/ShippingAndReturnsPage';
 
 import styles from './main.module.scss';
@@ -50,7 +51,7 @@ const router = createBrowserRouter([
 	},
 	{
 		path: '/my-account',
-		element: <AccountPage />,
+		element: <MyAccountPage />,
 	},
 	{
 		path: '/top-sellers',
@@ -79,6 +80,10 @@ const router = createBrowserRouter([
 	{
 		path: '/lowest-price',
 		element: <LowestPricePage />,
+	},
+	{
+		path: '/search-result',
+		element: <SearchResultPage />,
 	},
 ]);
 

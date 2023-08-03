@@ -14,6 +14,7 @@ export const Header: FC = () => {
 	const handleScroll = () => setScroll(window.scrollY);
 
 	const [isClicked, setIsClicked] = useState(false);
+	const [isHovered, setIsHovered] = useState(false);
 
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll);
@@ -29,11 +30,12 @@ export const Header: FC = () => {
 		position: 'relative',
 	};
 
+	const scrollBack =
+		pathname === '/' && scroll < document.documentElement.clientHeight ? { backgroundColor: '#ffffff00' } : { backgroundColor: '#fff' };
+
 	return (
 		<header style={pathname === '/' ? styleHeaderIMG : { height: '100px' }}>
-			<div
-				style={pathname === '/' && scroll < document.documentElement.clientHeight ? { backgroundColor: '#ffffff00' } : {}}
-				className={styles.headerTop}>
+			<div style={scrollBack} className={styles.headerTop}>
 				{isClicked ? <SearchOpen setIsClicked={setIsClicked} /> : <Search setIsClicked={setIsClicked} />}
 
 				{!isClicked && (
@@ -44,18 +46,31 @@ export const Header: FC = () => {
 
 				{!isClicked && (
 					<div className={styles.listing}>
-						<Link className={styles.sneakers} to={'/sneakers'}>
+						<Link className={styles.item} to={'/sneakers'}>
 							Sneakers
 						</Link>
-						<Link className={styles.store} to={'/store-location'}>
+						<Link className={styles.item} to={'/store-location'}>
 							Store
 						</Link>
-						<Link className={styles.cart} to={''}>
-							Cart
-						</Link>
-						<Link className={styles.account} to={'/my-account'}>
-							Account
-						</Link>
+
+						<div onMouseLeave={() => setIsHovered(false)} className={styles.accountWrap}>
+							<Link onMouseEnter={() => setIsHovered(true)} className={styles.item} to={'/my-account'}>
+								Account
+							</Link>
+							{isHovered && (
+								<div style={scrollBack} className={styles.wrap}>
+									<Link className={styles.item} to={'/my-account'}>
+										My Account
+									</Link>
+									<Link className={styles.item} to={'/my-cart'}>
+										My Cart
+									</Link>
+									<Link className={styles.item} to={'/sing -up'}>
+										Sing Up
+									</Link>
+								</div>
+							)}
+						</div>
 					</div>
 				)}
 			</div>

@@ -14,10 +14,10 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import styles from './FilterBar.module.scss';
 
 export const FilterBar: FC<FilterBarProps> = (props) => {
+	const { updateSneakers, activeBrand, activeModel, activeColors, setActiveBrand, setActiveModel, setActiveColors } = props;
+
 	const dispatch = useDispatch();
 	const { pathname } = useLocation();
-
-	const { updateSneakers, activeBrand, activeModel, activeColors, setActiveBrand, setActiveModel, setActiveColors } = props;
 
 	const allSneakers = useSelector((state: RootState) => state.sneakersDataSlice.sneakersData);
 	const brands = [...new Set(allSneakers.map((sneakers) => sneakers.brand))].sort();
@@ -30,7 +30,7 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 	const accordionStyle: TypeAccordionStyle = { boxShadow: 'none', transition: 'none' };
 	const multiColor = { backgroundImage: `linear-gradient(to left, rgb(255, 244, 12), rgb(74, 138, 0) 31%, rgb(0, 72, 156) 63%, rgb(213, 55, 54))` };
 
-	const renderBrand = pathname === '/sneakers' || pathname === '/top-sellers' || pathname === '/lowest-price';
+	const renderBrand = pathname === '/sneakers' || pathname === '/top-sellers' || pathname === '/lowest-price' || pathname === '/search-result';
 
 	return (
 		<div className={styles.wrapper}>

@@ -14,6 +14,7 @@ export const AllSneakers: FC = () => {
 	const { pathname } = useLocation();
 
 	const allSneakers = useSelector((state: RootState) => state.sneakersDataSlice.sneakersData);
+	const searchValue = useSelector((state: RootState) => state.sneakersDataSlice.searchValue);
 	const { valueBrand, valueModel, valueColor } = useSelector((state: RootState) => state.sneakersDataSlice.filterValues);
 
 	let updateSneakers = allSneakers.filter((sneakers) => {
@@ -31,6 +32,11 @@ export const AllSneakers: FC = () => {
 	if (pathname === '/yeezy') updateSneakers = updateSneakers.filter((item) => item.brand === 'Yeezy');
 	if (pathname === '/new-balance') updateSneakers = updateSneakers.filter((item) => item.brand === 'New balance');
 	if (pathname === '/lowest-price') updateSneakers = updateSneakers.filter((item) => item.price < 300);
+	if (pathname === '/search-result')
+		updateSneakers = updateSneakers.filter(
+			(sneaker) =>
+				sneaker.title.toLowerCase().includes(searchValue.toLowerCase()) || sneaker.brand.toLowerCase().includes(searchValue.toLowerCase())
+		);
 
 	const renderClearFiltersBtn = valueBrand.length > 0 || valueModel.length > 0 || valueColor.length > 0;
 

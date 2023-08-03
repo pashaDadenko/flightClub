@@ -1,10 +1,13 @@
 import { FC } from 'react';
 import { useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../redux/store';
 
 import styles from './TitleBrand.module.scss';
 
 export const TitleBrand: FC = () => {
 	const { pathname } = useLocation();
+	const searchValue = useSelector((state: RootState) => state.sneakersDataSlice.searchValue).toUpperCase();
 
 	return (
 		<div className={styles.wrapper}>
@@ -17,6 +20,7 @@ export const TitleBrand: FC = () => {
 				<h2 className={styles.title}>{pathname === '/yeezy' ? 'YEEZY' : ''}</h2>
 				<h2 className={styles.title}>{pathname === '/new-balance' ? 'NEW BALANCE' : ''}</h2>
 				<h2 className={styles.title}>{pathname === '/lowest-price' ? 'LOWEST PRICE' : ''}</h2>
+				<h2 className={styles.title}>{pathname === '/search-result' ? `SEARCH RESULTS FOR "${searchValue}"` : ''}</h2>
 
 				<p className={styles.text}>
 					{pathname === '/sneakers'

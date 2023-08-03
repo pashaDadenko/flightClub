@@ -1,0 +1,126 @@
+.wrapper {
+	background-color: #fff;
+	.container {
+		width: 1200px;
+		margin: 0 auto;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		.title {
+			font-size: 30px;
+			margin-left: 6px;
+			margin-bottom: 40px;
+		}
+
+		.infoWrap {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			gap: 20px;
+
+			.accountWrap {
+				width: 44%;
+				height: 170px;
+				border: 1px solid #eaeaea;
+				padding: 30px;
+				.accountTop {
+					display: flex;
+					justify-content: space-between;
+					border-bottom: 1px solid #eaeaea;
+					padding-bottom: 20px;
+					.edit {
+						color: #818181;
+						text-decoration: underline;
+						cursor: pointer;
+						&:hover {
+							color: #000;
+						}
+					}
+				}
+
+				.accountBottom {
+					margin-top: 20px;
+					color: #818181;
+				}
+			}
+
+			.shippingWrap {
+				width: 44%;
+				height: 170px;
+				border: 1px solid #eaeaea;
+				padding: 30px;
+				.shippingTop {
+					display: flex;
+					justify-content: space-between;
+					border-bottom: 1px solid #eaeaea;
+					padding-bottom: 20px;
+					.edit {
+						color: #818181;
+						text-decoration: underline;
+						cursor: pointer;
+						&:hover {
+							color: #000;
+						}
+					}
+				}
+
+				.shippingBottom {
+					margin-top: 20px;
+					color: #818181;
+				}
+			}
+
+			.paymentWrap {
+				width: 44%;
+				height: 170px;
+				border: 1px solid #eaeaea;
+				padding: 30px;
+				.paymentTop {
+					display: flex;
+					justify-content: space-between;
+					border-bottom: 1px solid #eaeaea;
+					padding-bottom: 20px;
+					.edit {
+						color: #818181;
+						text-decoration: underline;
+						cursor: pointer;
+						&:hover {
+							color: #000;
+						}
+					}
+				}
+
+				.paymentBottom {
+					margin-top: 20px;
+					color: #818181;
+				}
+			}
+
+			.billingWrap {
+				width: 44%;
+				height: 170px;
+				border: 1px solid #eaeaea;
+				padding: 30px;
+				.billingTop {
+					display: flex;
+					justify-content: space-between;
+					border-bottom: 1px solid #eaeaea;
+					padding-bottom: 20px;
+					.edit {
+						color: #818181;
+						text-decoration: underline;
+						cursor: pointer;
+						&:hover {
+							color: #000;
+						}
+					}
+				}
+
+				.billingBottom {
+					margin-top: 20px;
+					color: #818181;
+				}
+			}
+		}
+	}
+}

@@ -23,6 +23,8 @@ export const sneakersDataSlice = createSlice({
 			valueModel: [],
 			valueColor: [],
 		},
+
+		searchValue: '',
 	},
 
 	reducers: {
@@ -84,10 +86,23 @@ export const sneakersDataSlice = createSlice({
 			state.filterValues.valueModel = [];
 			state.filterValues.valueColor = [];
 		},
+
+		setSearchValue(state, { payload }: PayloadAction<string>) {
+			state.searchValue = payload;
+		},
 	},
 });
 
-export const { setSneakersData, setBrand, setImageCarousel, setCurrentSort, setValueBrand, setValueModel, setValueColor, setClearFilter } =
-	sneakersDataSlice.actions;
+export const {
+	setSneakersData,
+	setBrand,
+	setImageCarousel,
+	setCurrentSort,
+	setValueBrand,
+	setValueModel,
+	setValueColor,
+	setClearFilter,
+	setSearchValue,
+} = sneakersDataSlice.actions;
 
 export default sneakersDataSlice.reducer;

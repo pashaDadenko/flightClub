@@ -4,7 +4,6 @@
 	align-items: center;
 	height: 100px;
 	width: 100%;
-	background-color: #fff;
 	position: fixed;
 	z-index: 999;
 	transition: 0.7s;
@@ -15,14 +14,14 @@
 		color: #e91c23;
 		cursor: pointer;
 		text-decoration: none;
-		margin-left: 150px;
+		margin-left: 70px;
 	}
 
 	.listing {
 		display: flex;
 		gap: 50px;
 		margin-right: 60px;
-		.sneakers {
+		.item {
 			text-decoration: none;
 			font-size: 20px;
 			color: #000;
@@ -30,28 +29,19 @@
 				color: #0000009c;
 			}
 		}
-		.store {
-			text-decoration: none;
-			font-size: 20px;
-			color: #000;
-			&:hover {
-				color: #0000009c;
-			}
-		}
-		.cart {
-			text-decoration: none;
-			font-size: 20px;
-			color: #000;
-			&:hover {
-				color: #0000009c;
-			}
-		}
-		.account {
-			text-decoration: none;
-			font-size: 20px;
-			color: #000;
-			&:hover {
-				color: #0000009c;
+
+		.accountWrap {
+			position: relative;
+
+			.wrap {
+				display: flex;
+				flex-direction: column;
+				position: absolute;
+				right: -60px;
+				padding: 30px 60px 40px 40px;
+				gap: 20px;
+				width: 100px;
+				align-items: end;
 			}
 		}
 	}
