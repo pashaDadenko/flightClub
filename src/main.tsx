@@ -96,3 +96,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 		</Provider>
 	</React.StrictMode>
 );
+
+// создать компонент SEARCH RESULTS
+// написать условие TitleBrand
+// написать условия фильтра массива allSneakers
