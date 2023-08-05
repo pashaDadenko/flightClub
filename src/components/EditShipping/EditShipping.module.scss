@@ -1,16 +1,12 @@
 .wrapper {
 	background-color: #fff;
 	width: 500px;
-	height: 100%;
-	margin: 0 auto;
+	height: 100vh;
 	z-index: 999;
 	position: absolute;
 	top: 0;
-	right: 0; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
+	right: 0;
+	margin-bottom: 20px;
 	.titleWrap {
 		display: flex;
 		justify-content: space-between;
@@ -39,19 +35,21 @@
 			padding: 10px;
 		}
 	}
+
 	.buttonWrap {
-		text-align: center;
-		padding: 20px;
 		.button {
-			width: 100%;
+			margin: 20px;
+			position: absolute;
+			bottom: 0;
+			width: 92%;
 			background-color: #e91c23;
 			border: 1px solid #e91c23;
 			color: #fff;
-			border: none;
 			padding: 10px;
 			cursor: pointer;
 			&:hover {
-				background-color: #e91c23e1;
+				background-color: #c01a22;
+				transition: 0.2s;
 			}
 		}
 	}

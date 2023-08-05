@@ -2,6 +2,7 @@ import { FC, useState } from 'react';
 
 import { EditAccount } from '../EditAccount/EditAccount';
 import { EditShipping } from '../EditShipping/EditShipping';
+import { EditPayment } from '../EditPayment/EditPayment';
 
 import styles from './MyAccount.module.scss';
 
@@ -9,7 +10,6 @@ export const MyAccount: FC = () => {
 	const [accountClick, setAccountClick] = useState(false);
 	const [shippingClick, setShippingClick] = useState(false);
 	const [paymentClick, setPaymentClick] = useState(false);
-	const [billingClick, setBillingClick] = useState(false);
 
 	return (
 		<div className={styles.wrapper}>
@@ -20,7 +20,12 @@ export const MyAccount: FC = () => {
 					<div className={styles.accountWrap}>
 						<div className={styles.accountTop}>
 							<p>ACCOUNT</p>
-							<p onClick={() => setAccountClick(true)} className={styles.edit}>
+							<p
+								onClick={() => {
+									setAccountClick(true);
+									window.scrollTo(0, 0);
+								}}
+								className={styles.edit}>
 								Edit
 							</p>
 						</div>
@@ -33,11 +38,18 @@ export const MyAccount: FC = () => {
 					<div className={styles.shippingWrap}>
 						<div className={styles.shippingTop}>
 							<p>SHIPPING ADDRESS</p>
-							<p onClick={() => setShippingClick(true)} className={styles.edit}>
+							<p
+								onClick={() => {
+									setShippingClick(true);
+									window.scrollTo(0, 0);
+								}}
+								className={styles.edit}>
 								Edit
 							</p>
 						</div>
 						<div className={styles.shippingBottom}>
+							{/* <div> Please add a default shipping address.</div> */}
+
 							<p>Full Name</p>
 							<p>Street Address</p>
 							<p>Apartment, Suite, Unit, Building, Floor, etc.</p>
@@ -51,37 +63,28 @@ export const MyAccount: FC = () => {
 					<div className={styles.paymentWrap}>
 						<div className={styles.paymentTop}>
 							<p>PAYMENT</p>
-							<p onClick={() => setPaymentClick(true)} className={styles.edit}>
+							<p
+								onClick={() => {
+									setPaymentClick(true);
+									window.scrollTo(0, 0);
+								}}
+								className={styles.edit}>
 								Edit
 							</p>
 						</div>
 						<div className={styles.paymentBottom}>
-							<p>Full Name</p>
-							<p>card number</p>
-						</div>
-					</div>
+							{/* <div>No saved payments.</div> */}
 
-					<div className={styles.billingWrap}>
-						<div className={styles.billingTop}>
-							<p>BILLING ADDRESS</p>
-							<p onClick={() => setBillingClick(true)} className={styles.edit}>
-								Edit
-							</p>
-						</div>
-						<div className={styles.billingBottom}>
-							<p>Full Name</p>
-							<p>Street Address</p>
-							<p>Apartment, Suite, Unit, Building, Floor, etc.</p>
-							<p>City</p>
-							<p> Zip / Postal Code</p>
-							<p>Country or Region</p>
-							<p>Telephone</p>
+							<p>Name on Card</p>
+							<p>Credit Card</p>
 						</div>
 					</div>
 				</div>
 			</div>
+
 			{accountClick && <EditAccount setAccountClick={setAccountClick} />}
 			{shippingClick && <EditShipping setShippingClick={setShippingClick} />}
+			{paymentClick && <EditPayment setPaymentClick={setPaymentClick} />}
 		</div>
 	);
 };

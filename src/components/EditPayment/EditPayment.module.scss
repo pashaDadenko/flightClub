@@ -34,6 +34,30 @@
 			border: 1px solid #eaeaea;
 			padding: 10px;
 		}
+
+		.inputWrap {
+			display: flex;
+			border: 1px solid #eaeaea;
+			width: 100%;
+			.cardNumber {
+				outline: none;
+				width: 70%;
+				padding: 10px;
+				border: none;
+			}
+			.mm_yy {
+				outline: none;
+				width: 10%;
+				padding: 10px;
+				border: none;
+			}
+			.cvc {
+				outline: none;
+				width: 10%;
+				padding: 10px;
+				border: none;
+			}
+		}
 	}
 
 	.buttonWrap {

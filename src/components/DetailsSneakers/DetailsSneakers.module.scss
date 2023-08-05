@@ -1,94 +1,98 @@
 .wrapper {
-    background-color: #fff;
+	background-color: #fff;
 
-    .container {
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 50px 0;
+	.container {
+		max-width: 1400px;
+		margin: 0 auto;
+		padding: 50px 0;
 
-        .wrap {
-            display: flex;
-            gap: 100px;
+		.wrap {
+			display: flex;
+			gap: 100px;
 
-            .image {
-                width: 600px;
-                height: 400px;
-            }
+			.image {
+				width: 600px;
+				height: 400px;
+			}
 
-            .infoWrap {
-                width: 500px;
+			.infoWrap {
+				width: 500px;
 
-                .brand {
-                    color: #818181;
-                }
-                .title {
-                    margin: 20px 0;
-                    font-size: 30px;
-                }
-                .selectSize {
-                    margin-bottom: 30px;
-                    font-size: 20px;
-                }
-                .sizeWrap {
-                    display: flex;
-                    gap: 10px;
-                    flex-wrap: wrap;
-                    margin-bottom: 30px;
-                    .size {
-                        background-color: #fff;
-                        color: #000;
-                        cursor: pointer;
-                        border: 1.5px solid #e7e7e7;
-                        width: 90px;
-                        height: 50px;
-                        &:hover {
-                            border: 1.5px solid #000;
+				.brand {
+					color: #818181;
+				}
+				.title {
+					margin: 20px 0;
+					font-size: 30px;
+				}
+				.selectSize {
+					margin-bottom: 30px;
+					font-size: 20px;
+				}
+				.sizeWrap {
+					display: flex;
+					gap: 10px;
+					flex-wrap: wrap;
+					margin-bottom: 30px;
+					.size {
+						background-color: #fff;
+						color: #000;
+						cursor: pointer;
+						border: 1.5px solid #e7e7e7;
+						width: 90px;
+						height: 50px;
+						&:hover {
+							border: 1.5px solid #00000065;
+						}
+                        &:focus {
+							border: 1.5px solid #000;
+
                         }
-                    }
-                }
-                .buy {
-                    font-size: 20px;
-                    margin-bottom: 30px;
-                    letter-spacing: 2px;
-                }
-                .btn {
-                    display: block;
-                    background-color: #e91c23;
-                    padding: 20px;
-                    color: #fff;
-                    border: none;
-                    width: 300px;
-                    font-size: 20px;
-                    cursor: pointer;
-                    margin-bottom: 30px;
-                    &:hover {
-                        background-color: #c01a22;
-                        transition: 0.2s;
-                    }
-                }
-                .line {
-                    height: 10px;
-                    background-color: #f9f9f9;
-                }
-                .lineMini {
-                    margin: 20px 0;
-                    height: 1px;
-                    background-color: #d8d8d8;
-                }
-                .about {
-                    margin: 30px 0;
-                    letter-spacing: 1px;
-                }
-                .InfoProduct {
-                    margin-bottom: 30px;
-                    font-size: 15px;
-                }
-                .article {
-                    color: #818181;
-                    letter-spacing: 1px;
-                    margin-bottom: 30px;
-                }
-            }
-        }
-    }
+					}
+				}
+				.buy {
+					font-size: 20px;
+					margin-bottom: 30px;
+					letter-spacing: 2px;
+				}
+				.btn {
+					display: block;
+					background-color: #e91c23;
+					padding: 20px;
+					color: #fff;
+					border: none;
+					width: 300px;
+					font-size: 20px;
+					cursor: pointer;
+					margin-bottom: 30px;
+					&:hover {
+						background-color: #c01a22;
+						transition: 0.2s;
+					}
+				}
+				.line {
+					height: 10px;
+					background-color: #f9f9f9;
+				}
+				.lineMini {
+					margin: 20px 0;
+					height: 1px;
+					background-color: #d8d8d8;
+				}
+				.about {
+					margin: 30px 0;
+					letter-spacing: 1px;
+				}
+				.InfoProduct {
+					margin-bottom: 30px;
+					font-size: 15px;
+				}
+				.article {
+					color: #818181;
+					letter-spacing: 1px;
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
 }
