@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import { FilterBarProps, TypeAccordionStyle } from './TypeFilterBar';
 import { useDispatch, useSelector } from 'react-redux';
-import { setValueBrand, setValueModel, setValueColor } from '../../redux/sneakersData/sneakersDataSlice';
+import { setValueBrand, setValueModel, setValueColor } from '../../redux/filterSlice/filterSlice';
 import { RootState } from '../../redux/store';
 import { useLocation } from 'react-router-dom';
 
@@ -19,7 +19,7 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 	const dispatch = useDispatch();
 	const { pathname } = useLocation();
 
-	const allSneakers = useSelector((state: RootState) => state.sneakersDataSlice.sneakersData);
+	const allSneakers = useSelector((state: RootState) => state.sneakersDataSlice.allSneakers);
 	const brands = [...new Set(allSneakers.map((sneakers) => sneakers.brand))].sort();
 	const models = [...new Set(updateSneakers.map((sneakers) => sneakers.model))].sort();
 	const colors = [...new Set(updateSneakers.map((sneakers) => sneakers.color))].sort();

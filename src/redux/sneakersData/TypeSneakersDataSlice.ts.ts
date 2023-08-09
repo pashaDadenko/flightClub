@@ -1,25 +1,15 @@
 import { TypeApi } from '../../api/TypeApi';
 
-export type TypeFilterValues = {
-	valueBrand: string[];
-	valueModel: string[];
-	valueColor: string[];
-};
-
-export type TypeCartItems = Omit<TypeApi, 'sizes'> & { sizes: number };
-
 export type TypeSneakersDataSlice = {
-	sneakersData: TypeApi[];
-	topSellersData: TypeApi[];
-	offWhiteData: TypeApi[];
-	airJordanData: TypeApi[];
+	allSneakers: TypeApi[];
+	offWhiteSneakers: TypeApi[];
+	airJordanSneakers: TypeApi[];
 	randomSneakers: TypeApi[];
+	topSellersSneakers: TypeApi[];
+
 	recommendedSneakers: TypeApi[];
 	ImageCarousel: string[];
 	brand: string;
+
 	currentSort: string;
-	filterValues: TypeFilterValues;
-	searchValue: string;
-	cartItems: TypeCartItems[];
-	size: number;
 };

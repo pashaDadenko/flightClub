@@ -7,7 +7,7 @@ import styles from './TitleBrand.module.scss';
 
 export const TitleBrand: FC = () => {
 	const { pathname } = useLocation();
-	const searchValue = useSelector((state: RootState) => state.sneakersDataSlice.searchValue).toUpperCase();
+	const searchValue = useSelector((state: RootState) => state.searchSlice.searchValue).toUpperCase();
 
 	return (
 		<div className={styles.wrapper}>

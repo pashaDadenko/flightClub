@@ -1,7 +1,8 @@
 import { FC } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { RootState } from '../../redux/store';
-import { deleteSneakers } from '../../redux/sneakersData/sneakersDataSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { deleteSneakers } from '../../redux/cartSlice/cartSlice';
 
 import ClearIcon from '@mui/icons-material/Clear';
 import styles from './MyCart.module.scss';
@@ -9,7 +10,7 @@ import styles from './MyCart.module.scss';
 export const MyCart: FC = () => {
 	const dispatch = useDispatch();
 
-	const cartItems = useSelector((state: RootState) => state.sneakersDataSlice.cartItems);
+	const cartItems = useSelector((state: RootState) => state.cartSlice.cartItems);
 
 	return (
 		<div className={styles.wrapper}>
@@ -21,10 +22,13 @@ export const MyCart: FC = () => {
 						cartItems.map((sneaker, index) => (
 							<div className={styles.sneaker} key={index}>
 								<div className={styles.flexBox}>
-									<img className={styles.img} src={sneaker.images[0]} alt={sneaker.brand} />
+									<Link to={`/details/${sneaker.id}`}>
+										<img className={styles.img} src={sneaker.images[0]} alt={sneaker.brand} />
+									</Link>
 									<div className={styles.flexInfo}>
 										<p className={styles.name}>{sneaker.title}</p>
 										<p className={styles.size}>US Size {sneaker.sizes}</p>
+										<p className={styles.brand}>{sneaker.brand}</p>
 									</div>
 								</div>
 								<div className={styles.flex}>
@@ -33,6 +37,15 @@ export const MyCart: FC = () => {
 								</div>
 							</div>
 						))}
+				</div>
+
+				<div className={styles.buttonWrap}>
+					<Link className={styles.link} to={'/sneakers'}>
+						<button className={styles.btn}>BACK TO SHOP</button>
+					</Link>
+					<Link className={styles.link} to={''}>
+						<button className={styles.btn}>CHECKOUT</button>
+					</Link>
 				</div>
 			</div>
 		</div>

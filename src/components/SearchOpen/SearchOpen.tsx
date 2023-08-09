@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
 import { SearchProps } from './TypeSearchOpen';
-import { setSearchValue } from '../../redux/sneakersData/sneakersDataSlice';
+import { setSearchValue } from '../../redux/searchSlice/searchSlice';
 
 import SearchIcon from '@mui/icons-material/Search';
 
@@ -13,8 +13,8 @@ export const SearchOpen: FC<SearchProps> = ({ setIsClicked }) => {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 
-	const sneakersData = useSelector((state: RootState) => state.sneakersDataSlice.sneakersData);
-	const searchValue = useSelector((state: RootState) => state.sneakersDataSlice.searchValue);
+	const allSneakers = useSelector((state: RootState) => state.sneakersDataSlice.allSneakers);
+	const searchValue = useSelector((state: RootState) => state.searchSlice.searchValue);
 
 	const inputRef = useRef<HTMLInputElement>(null);
 
@@ -23,7 +23,7 @@ export const SearchOpen: FC<SearchProps> = ({ setIsClicked }) => {
 		inputRef.current?.focus();
 	};
 
-	const filteredSneakers = sneakersData.filter((sneaker) => {
+	const filteredSneakers = allSneakers.filter((sneaker) => {
 		const title = sneaker.title.toLowerCase().includes(searchValue.toLowerCase());
 		const brand = sneaker.brand.toLowerCase().includes(searchValue.toLowerCase());
 		return title || brand;

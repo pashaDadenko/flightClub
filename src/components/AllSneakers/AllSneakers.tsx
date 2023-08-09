@@ -5,7 +5,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 import { FilterBar } from '../FilterBar/FilterBar';
 import { Selected } from '../Selected/Selected';
-import { setClearFilter } from '../../redux/sneakersData/sneakersDataSlice';
+import { setClearFilter } from '../../redux/filterSlice/filterSlice';
 
 import styles from './AllSneakers.module.scss';
 
@@ -13,9 +13,9 @@ export const AllSneakers: FC = () => {
 	const dispatch = useDispatch();
 	const { pathname } = useLocation();
 
-	const allSneakers = useSelector((state: RootState) => state.sneakersDataSlice.sneakersData);
-	const searchValue = useSelector((state: RootState) => state.sneakersDataSlice.searchValue);
-	const { valueBrand, valueModel, valueColor } = useSelector((state: RootState) => state.sneakersDataSlice.filterValues);
+	const allSneakers = useSelector((state: RootState) => state.sneakersDataSlice.allSneakers);
+	const searchValue = useSelector((state: RootState) => state.searchSlice.searchValue);
+	const { valueBrand, valueModel, valueColor } = useSelector((state: RootState) => state.filterSlice.filterValues);
 
 	let updateSneakers = allSneakers.filter((sneakers) => {
 		const { brand, model, color } = sneakers;

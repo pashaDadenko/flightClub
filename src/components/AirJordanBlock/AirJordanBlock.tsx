@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import styles from './AirJordanBlock.module.scss';
 
 export const AirJordanBlock: FC = () => {
-	const airJordan = useSelector((state: RootState) => state.sneakersDataSlice.airJordanData);
+	const airJordan = useSelector((state: RootState) => state.sneakersDataSlice.airJordanSneakers);
 
 	return (
 		<section className={styles.wrapper}>

@@ -2,16 +2,21 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
+import cartSlice from './cartSlice/cartSlice';
+import searchSlice from './searchSlice/searchSlice';
+import filterSlice from './filterSlice/filterSlice';
 import sneakersDataSlice from './sneakersData/sneakersDataSlice';
 
 const rootReducer = combineReducers({
 	sneakersDataSlice,
+	cartSlice,
+	searchSlice,
+	filterSlice,
 });
 
 const persistConfig = {
 	key: 'root',
 	storage,
-	blacklist: ['filter'],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

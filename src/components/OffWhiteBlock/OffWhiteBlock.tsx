@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import styles from './OffWhiteBlock.module.scss';
 
 export const OffWhiteBlock: FC = () => {
-	const offWhite = useSelector((state: RootState) => state.sneakersDataSlice.offWhiteData);
+	const offWhite = useSelector((state: RootState) => state.sneakersDataSlice.offWhiteSneakers);
 
 	return (
 		<section className={styles.wrapper}>

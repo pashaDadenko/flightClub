@@ -3,7 +3,8 @@ import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
 import { DetailsAccordion } from '../DetailsAccordion/DetailsAccordion';
-import { setBrand, setCartItems, setImageCarousel, setSize } from '../../redux/sneakersData/sneakersDataSlice';
+import { setBrand, setImageCarousel } from '../../redux/sneakersData/sneakersDataSlice';
+import { setCartItems, setSize } from '../../redux/cartSlice/cartSlice';
 import { Carousel } from '../Carousel/Carousel';
 
 import styles from './DetailsSneakers.module.scss';
@@ -12,8 +13,8 @@ export const DetailsSneakers: FC = () => {
 	const { id } = useParams();
 	const dispatch = useDispatch();
 
-	const detailsSneakers = useSelector((state: RootState) => state.sneakersDataSlice.sneakersData).filter((item) => item.id === +id!);
-	const size = useSelector((state: RootState) => state.sneakersDataSlice.size);
+	const detailsSneakers = useSelector((state: RootState) => state.sneakersDataSlice.allSneakers).filter((item) => item.id === +id!);
+	const size = useSelector((state: RootState) => state.cartSlice.size);
 
 	const brand = detailsSneakers.length > 0 && detailsSneakers[0].brand;
 	typeof brand === 'string' && dispatch(setBrand(brand));
