@@ -5,10 +5,10 @@ import storage from 'redux-persist/lib/storage';
 import cartSlice from './cartSlice/cartSlice';
 import searchSlice from './searchSlice/searchSlice';
 import filterSlice from './filterSlice/filterSlice';
-import sneakersDataSlice from './sneakersData/sneakersDataSlice';
+import sneakersSlice from './sneakersSlice/sneakersSlice';
 
 const rootReducer = combineReducers({
-	sneakersDataSlice,
+	sneakersSlice,
 	cartSlice,
 	searchSlice,
 	filterSlice,

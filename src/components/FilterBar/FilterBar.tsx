@@ -19,7 +19,7 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 	const dispatch = useDispatch();
 	const { pathname } = useLocation();
 
-	const allSneakers = useSelector((state: RootState) => state.sneakersDataSlice.allSneakers);
+	const allSneakers = useSelector((state: RootState) => state.sneakersSlice.allSneakers);
 	const brands = [...new Set(allSneakers.map((sneakers) => sneakers.brand))].sort();
 	const models = [...new Set(updateSneakers.map((sneakers) => sneakers.model))].sort();
 	const colors = [...new Set(updateSneakers.map((sneakers) => sneakers.color))].sort();

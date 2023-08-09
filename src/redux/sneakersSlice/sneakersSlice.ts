@@ -1,11 +1,11 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { TypeSneakersDataSlice } from './TypeSneakersDataSlice.ts';
-import { TypeApi } from '../../api/TypeApi';
+import { TypeSneakersSlice } from './TypeSneakersSlice.ts';
+import { TypeApi } from '../../api/TypeApi.ts';
 
-export const sneakersDataSlice = createSlice({
-	name: 'sneakersData',
+export const sneakersSlice = createSlice({
+	name: 'sneakersSlice',
 
-	initialState: <TypeSneakersDataSlice>{
+	initialState: <TypeSneakersSlice>{
 		allSneakers: [],
 		offWhiteSneakers: [],
 		airJordanSneakers: [],
@@ -43,6 +43,6 @@ export const sneakersDataSlice = createSlice({
 	},
 });
 
-export const { setSneakersData, setBrand, setImageCarousel, setCurrentSort } = sneakersDataSlice.actions;
+export const { setSneakersData, setBrand, setImageCarousel, setCurrentSort } = sneakersSlice.actions;
 
-export default sneakersDataSlice.reducer;
+export default sneakersSlice.reducer;

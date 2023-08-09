@@ -8,7 +8,7 @@ import styles from './Carousel.module.scss';
 
 export const Carousel: FC = () => {
 	const [currentImage, setCurrentImage] = useState<number>(0);
-	const imageCarousel = useSelector((state: RootState) => state.sneakersDataSlice.ImageCarousel);
+	const imageCarousel = useSelector((state: RootState) => state.sneakersSlice.ImageCarousel);
 
 	const handleBefore = () => setCurrentImage((prevImage) => (prevImage === 0 ? imageCarousel.length - 1 : prevImage - 1));
 	const handleNext = () => setCurrentImage((prevImage) => (prevImage === imageCarousel.length - 1 ? 0 : prevImage + 1));

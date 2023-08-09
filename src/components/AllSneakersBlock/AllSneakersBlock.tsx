@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import styles from './AllSneakersBlock.module.scss';
 
 export const AllSneakersBlock: FC = () => {
-    const randomSneakers = useSelector((state: RootState) => state.sneakersDataSlice.randomSneakers);
+    const randomSneakers = useSelector((state: RootState) => state.sneakersSlice.randomSneakers);
 
     return (
         <div className={styles.wrapper}>

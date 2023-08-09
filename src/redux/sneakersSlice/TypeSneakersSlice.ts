@@ -1,6 +1,6 @@
 import { TypeApi } from '../../api/TypeApi';
 
-export type TypeSneakersDataSlice = {
+export type TypeSneakersSlice = {
 	allSneakers: TypeApi[];
 	offWhiteSneakers: TypeApi[];
 	airJordanSneakers: TypeApi[];

@@ -13,7 +13,7 @@ export const SearchOpen: FC<SearchProps> = ({ setIsClicked }) => {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 
-	const allSneakers = useSelector((state: RootState) => state.sneakersDataSlice.allSneakers);
+	const allSneakers = useSelector((state: RootState) => state.sneakersSlice.allSneakers);
 	const searchValue = useSelector((state: RootState) => state.searchSlice.searchValue);
 
 	const inputRef = useRef<HTMLInputElement>(null);

@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { TypeOptions } from './TypeSelected';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
-import { setCurrentSort } from '../../redux/sneakersData/sneakersDataSlice';
+import { setCurrentSort } from '../../redux/sneakersSlice/sneakersSlice';
 import Select from 'react-select';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
@@ -10,7 +10,7 @@ import styles from './Selected.module.scss';
 import './styleSelected.scss';
 
 export const Selected: FC = () => {
-    const currentSort = useSelector((state: RootState) => state.sneakersDataSlice.currentSort);
+    const currentSort = useSelector((state: RootState) => state.sneakersSlice.currentSort);
     const dispatch = useDispatch();
 
     const options: TypeOptions[] = [
