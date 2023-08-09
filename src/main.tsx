@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
-import { store } from './redux/store';
+import { persistor, store } from './redux/store';
+import { PersistGate } from 'redux-persist/integration/react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import { HomePage } from './pages/HomePage';
 import { NikePage } from './pages/NikePage';
 import { ErrorPage } from './pages/ErrorPage';
-import { YeezyPage } from './pages/YeezyPage';
+import { YeezyPage } from './pages/YeezyPage';	
 import { StoresPage } from './pages/StoresPage';
 import { AboutUsPage } from './pages/AboutUsPage';
 import { DetailsPage } from './pages/DetailsPage';
@@ -22,6 +23,7 @@ import { SearchResultPage } from './pages/SearchResultPage';
 import { ShippingAndReturnsPage } from './pages/ShippingAndReturnsPage';
 
 import styles from './main.module.scss';
+import { MyCartPage } from './pages/MyCartPage';
 
 const router = createBrowserRouter([
 	{
@@ -85,18 +87,20 @@ const router = createBrowserRouter([
 		path: '/search-result',
 		element: <SearchResultPage />,
 	},
+	{
+		path: '/my-cart',
+		element: <MyCartPage />,
+	},
 ]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 	<React.StrictMode>
 		<Provider store={store}>
-			<div className={styles.wrapper}>
-				<RouterProvider router={router} />
-			</div>
+			<PersistGate loading={null} persistor={persistor}>
+				<div className={styles.wrapper}>
+					<RouterProvider router={router} />
+				</div>
+			</PersistGate>
 		</Provider>
 	</React.StrictMode>
 );
-
-// создать компонент SEARCH RESULTS
-// написать условие TitleBrand
-// написать условия фильтра массива allSneakers

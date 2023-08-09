@@ -1,49 +1,49 @@
 .wrapper {
-    width: 91%;
-    margin: 0 auto;
-    padding: 70px 0;
+	background-color: #fff;
+	margin: 0 auto;
+	padding: 70px;
 
-    .title {
-        font-size: 30px;
-        margin-bottom: 30px;
-    }
+	.title {
+		font-size: 30px;
+		margin-bottom: 30px;
+	}
 
-    .storeWrapper {
-        display: flex;
-        gap: 30px;
-        flex-wrap: wrap;
+	.storeWrapper {
+		display: flex;
+		gap: 30px;
+		flex-wrap: wrap;
 
-        .store {
-            display: flex;
-            gap: 30px;
-            border: 1px solid #0000003f;
-            padding: 20px;
-            width: 48%;
+		.store {
+			display: flex;
+			gap: 30px;
+			border: 1px solid #0000003f;
+			padding: 20px;
+			width: 48%;
 
-            .storeTitle {
-                font-weight: bold;
-                margin-bottom: 5px;
-            }
-            .storeAddress {
-                color: #818181;
-                text-decoration: none;
-                &:hover {
-                    color: #818181;
-                    text-decoration: underline;
-                }
-            }
-            .storeSubTitle {
-                margin-top: 15px;
-                color: #818181;
-                margin-bottom: 5px;
-            }
-            .storeHours {
-                color: #818181;
-                margin-bottom: 15px;
-            }
-            .consignment {
-                color: #818181;
-            }
-        }
-    }
+			.storeTitle {
+				font-weight: bold;
+				margin-bottom: 5px;
+			}
+			.storeAddress {
+				color: #818181;
+				text-decoration: none;
+				&:hover {
+					color: #818181;
+					text-decoration: underline;
+				}
+			}
+			.storeSubTitle {
+				margin-top: 15px;
+				color: #818181;
+				margin-bottom: 5px;
+			}
+			.storeHours {
+				color: #818181;
+				margin-bottom: 15px;
+			}
+			.consignment {
+				color: #818181;
+			}
+		}
+	}
 }

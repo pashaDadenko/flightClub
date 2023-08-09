@@ -6,7 +6,7 @@ export type TypeFilterValues = {
 	valueColor: string[];
 };
 
-export type TypeCardItems = Omit<TypeApi, 'sizes'> & { sizes: number };
+export type TypeCartItems = Omit<TypeApi, 'sizes'> & { sizes: number };
 
 export type TypeSneakersDataSlice = {
 	sneakersData: TypeApi[];
@@ -20,6 +20,6 @@ export type TypeSneakersDataSlice = {
 	currentSort: string;
 	filterValues: TypeFilterValues;
 	searchValue: string;
-	cardItems: TypeCardItems[];
+	cartItems: TypeCartItems[];
 	size: number;
 };

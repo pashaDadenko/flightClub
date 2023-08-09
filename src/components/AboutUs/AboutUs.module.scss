@@ -1,26 +1,26 @@
 .wrapper {
-    display: flex;
-    gap: 100px;
-    align-items: center;
-    max-width: 3000px;
-    margin: 0 auto;
-    padding: 126px 0;
-    .title {
-        font-size: 30px;
-        margin-bottom: 30px;
-    }
-    .text {
-        color: #818181;
-        line-height: 30px;
-        .link {
-            color: #818181;
-            &:hover {
-                color: #464646;
-            }
-        }
-    }
-    .image {
-        width: 400px;
-        height: 300px;
-    }
+	background-color: #fff;
+	display: flex;
+	gap: 100px;
+	align-items: center;
+	margin: 0 auto;
+	padding: 126px 70px;
+	.title {
+		font-size: 30px;
+		margin-bottom: 30px;
+	}
+	.text {
+		color: #818181;
+		line-height: 30px;
+		.link {
+			color: #818181;
+			&:hover {
+				color: #464646;
+			}
+		}
+	}
+	.image {
+		width: 400px;
+		height: 300px;
+	}
 }

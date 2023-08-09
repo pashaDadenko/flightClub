@@ -1,0 +1,70 @@
+.wrapper {
+	background-color: #fff;
+
+	.container {
+		width: 1000px;
+		margin: 0 auto;
+		padding-top: 50px;
+		padding-bottom: 50px;
+
+		.title {
+			font-size: 30px;
+			margin-bottom: 50px;
+		}
+
+		.sneakerWrap {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+
+			.sneaker {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				border: 1px solid #eaeaea;
+				padding: 0 50px;
+				.flexBox {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					gap: 50px;
+					.img {
+						object-fit: contain;
+						width: 140px;
+						margin-bottom: 35px;
+					}
+					.flexInfo {
+						display: flex;
+						flex-direction: column;
+						gap: 10px;
+
+						.name {
+							font-weight: 800;
+						}
+						.size {
+							color: #818181;
+						}
+					}
+				}
+			}
+
+			.flex {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				gap: 150px;
+				.price {
+					font-weight: 600;
+					font-size: 25px;
+				}
+				.clear {
+					cursor: pointer;
+					font-size: 30px;
+					&:hover {
+						color: #818181;
+					}
+				}
+			}
+		}
+	}
+}

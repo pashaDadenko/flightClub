@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
 import { DetailsAccordion } from '../DetailsAccordion/DetailsAccordion';
-import { setBrand, setCardItems, setImageCarousel, setSizes } from '../../redux/sneakersData/sneakersDataSlice';
+import { setBrand, setCartItems, setImageCarousel, setSize } from '../../redux/sneakersData/sneakersDataSlice';
 import { Carousel } from '../Carousel/Carousel';
 
 import styles from './DetailsSneakers.module.scss';
@@ -13,6 +13,7 @@ export const DetailsSneakers: FC = () => {
 	const dispatch = useDispatch();
 
 	const detailsSneakers = useSelector((state: RootState) => state.sneakersDataSlice.sneakersData).filter((item) => item.id === +id!);
+	const size = useSelector((state: RootState) => state.sneakersDataSlice.size);
 
 	const brand = detailsSneakers.length > 0 && detailsSneakers[0].brand;
 	typeof brand === 'string' && dispatch(setBrand(brand));
@@ -34,13 +35,13 @@ export const DetailsSneakers: FC = () => {
 								<p className={styles.selectSize}>SELECT US SIZE</p>
 								<div className={styles.sizeWrap}>
 									{item.sizes.map((size, index) => (
-										<button onClick={() => dispatch(setSizes(size))} className={styles.size} key={index}>
+										<button onClick={() => dispatch(setSize(size))} className={styles.size} key={index}>
 											{size}
 										</button>
 									))}
 								</div>
-								<p className={styles.buy}>BUY NOW</p>
-								<button onClick={() => dispatch(setCardItems(item))} className={styles.btn}>
+								<p className={styles.buy}>ADD TO CART</p>
+								<button onClick={() => size > 0 && dispatch(setCartItems(item))} className={styles.btn}>
 									${item.price}
 								</button>
 								<div className={styles.line}></div>

@@ -26,7 +26,7 @@ export const sneakersDataSlice = createSlice({
 
 		searchValue: '',
 
-		cardItems: [],
+		cartItems: [],
 		size: 0,
 	},
 
@@ -92,12 +92,14 @@ export const sneakersDataSlice = createSlice({
 		setSearchValue(state, { payload }: PayloadAction<string>) {
 			state.searchValue = payload;
 		},
-
-		setCardItems(state, { payload }: PayloadAction<TypeApi>) {
-			state.cardItems.push({ ...payload, sizes: state.size });
+		setCartItems(state, { payload }: PayloadAction<TypeApi>) {
+			state.cartItems.push({ ...payload, sizes: state.size });
 		},
-		setSizes(state, { payload }: PayloadAction<number>) {
+		setSize(state, { payload }: PayloadAction<number>) {
 			state.size = payload;
+		},
+		deleteSneakers(state, { payload }: PayloadAction<number>) {
+			state.cartItems = state.cartItems.filter((_, index) => index !== payload);
 		},
 	},
 });
@@ -112,8 +114,9 @@ export const {
 	setValueColor,
 	setClearFilter,
 	setSearchValue,
-	setCardItems,
-	setSizes,
+	setCartItems,
+	setSize,
+	deleteSneakers,
 } = sneakersDataSlice.actions;
 
 export default sneakersDataSlice.reducer;
