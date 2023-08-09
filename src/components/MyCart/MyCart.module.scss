@@ -23,9 +23,6 @@
 				align-items: center;
 				border-bottom: 1px solid #eaeaea;
 				padding: 0 50px;
-				&:last-child {
-					border-bottom: none;
-				}
 				.flexBox {
 					display: flex;
 					justify-content: space-between;
