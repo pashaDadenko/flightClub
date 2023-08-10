@@ -19,7 +19,7 @@ export const MyCartPage: FC = () => {
 		<>
 			<Header />
 			{cartItems.length > 0 ? <MyCart /> : <NotFound />}
-			<RecommendedBlock />
+			{cartItems.length > 0 && <RecommendedBlock />}
 			<Footer />
 		</>
 	);

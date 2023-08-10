@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { RootState } from '../../redux/store';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteSneakers } from '../../redux/cartSlice/cartSlice';
+import { deleteSneakers, setClearCart } from '../../redux/cartSlice/cartSlice';
 
 import ClearIcon from '@mui/icons-material/Clear';
 import styles from './MyCart.module.scss';
@@ -11,6 +11,7 @@ export const MyCart: FC = () => {
 	const dispatch = useDispatch();
 
 	const cartItems = useSelector((state: RootState) => state.cartSlice.cartItems);
+	const totalPrice = cartItems.reduce((sum, sneaker) => sum + sneaker.price, 0);
 
 	return (
 		<div className={styles.wrapper}>
@@ -37,6 +38,14 @@ export const MyCart: FC = () => {
 								</div>
 							</div>
 						))}
+				</div>
+
+				<div className={styles.priceWrap}>
+					<p className={styles.priceText}>TOTAL PRICE:</p>
+					<span className={styles.price}>${totalPrice}</span>
+					<button className={styles.clear} onClick={() => dispatch(setClearCart())}>
+						Clear Cart
+					</button>
 				</div>
 
 				<div className={styles.buttonWrap}>
