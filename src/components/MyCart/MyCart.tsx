@@ -1,17 +1,23 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { RootState } from '../../redux/store';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteSneakers, setClearCart } from '../../redux/cartSlice/cartSlice';
+import { useAuth } from '../../hooks/useAuth';
 
 import ClearIcon from '@mui/icons-material/Clear';
 import styles from './MyCart.module.scss';
 
 export const MyCart: FC = () => {
 	const dispatch = useDispatch();
+	const navigate = useNavigate();
+	const { isAuth } = useAuth();
 
 	const cartItems = useSelector((state: RootState) => state.cartSlice.cartItems);
 	const totalPrice = cartItems.reduce((sum, sneaker) => sum + sneaker.price, 0);
+
+	const checkoutClick = () => (isAuth ? navigate('/checkout') : navigate('/login'));
 
 	return (
 		<div className={styles.wrapper}>
@@ -53,7 +59,9 @@ export const MyCart: FC = () => {
 						<button className={styles.btn}>BACK TO SHOP</button>
 					</Link>
 					<Link className={styles.link} to={''}>
-						<button className={styles.btn}>CHECKOUT</button>
+						<button onClick={checkoutClick} className={styles.btn}>
+							CHECKOUT
+						</button>
 					</Link>
 				</div>
 			</div>

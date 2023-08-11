@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Api } from '../api/Api';
+import { api } from '../api/api';
 
 import { Header } from '../components/Header/Header';
 import { DetailsSneakers } from '../components/DetailsSneakers/DetailsSneakers';
@@ -7,7 +7,7 @@ import { RecommendedBlock } from '../components/RecommendedBlock/RecommendedBloc
 import { Footer } from '../components/Footer/Footer';
 
 export const DetailsPage: FC = () => {
-    Api();
+    api();
     window.scrollTo(0, 0);
 
     return (

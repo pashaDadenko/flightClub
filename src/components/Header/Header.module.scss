@@ -33,6 +33,17 @@
 		.accountWrap {
 			position: relative;
 
+			.item {
+				font-size: 18px;
+				color: #000;
+				border: none;
+				background-color: transparent;
+				cursor: pointer;
+				&:hover {
+					color: #0000009c;
+				}
+			}
+
 			.wrap {
 				display: flex;
 				flex-direction: column;
@@ -42,6 +53,16 @@
 				gap: 20px;
 				width: 100px;
 				align-items: end;
+				.item {
+					font-size: 18px;
+					color: #000;
+					border: none;
+					background-color: transparent;
+					cursor: pointer;
+					&:hover {
+						color: #0000009c;
+					}
+				}
 			}
 		}
 	}

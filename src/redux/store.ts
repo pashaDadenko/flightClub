@@ -3,6 +3,7 @@ import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, 
 import storage from 'redux-persist/lib/storage';
 
 import cartSlice from './cartSlice/cartSlice';
+import userSlice from './userSlice/userSlice';
 import searchSlice from './searchSlice/searchSlice';
 import filterSlice from './filterSlice/filterSlice';
 import sneakersSlice from './sneakersSlice/sneakersSlice';
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
 	cartSlice,
 	searchSlice,
 	filterSlice,
+	userSlice,
 });
 
 const persistConfig = {

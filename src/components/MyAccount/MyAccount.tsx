@@ -1,4 +1,6 @@
 import { FC, useState } from 'react';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../redux/store';
 
 import { EditAccount } from '../EditAccount/EditAccount';
 import { EditShipping } from '../EditShipping/EditShipping';
@@ -7,6 +9,8 @@ import { EditPayment } from '../EditPayment/EditPayment';
 import styles from './MyAccount.module.scss';
 
 export const MyAccount: FC = () => {
+	const { fullName, email } = useSelector((state: RootState) => state.userSlice);
+
 	const [accountClick, setAccountClick] = useState(false);
 	const [shippingClick, setShippingClick] = useState(false);
 	const [paymentClick, setPaymentClick] = useState(false);
@@ -20,63 +24,39 @@ export const MyAccount: FC = () => {
 					<div className={styles.accountWrap}>
 						<div className={styles.accountTop}>
 							<p>ACCOUNT</p>
-							<p
-								onClick={() => {
-									setAccountClick(true);
-									window.scrollTo(0, 0);
-								}}
-								className={styles.edit}>
-								Edit
-							</p>
 						</div>
 						<div className={styles.accountBottom}>
-							<p>Full Name</p>
-							<p>email</p>
+							<p>{fullName}</p>
+							<p>{email}</p>
 						</div>
 					</div>
 
 					<div className={styles.shippingWrap}>
 						<div className={styles.shippingTop}>
 							<p>SHIPPING ADDRESS</p>
-							<p
-								onClick={() => {
-									setShippingClick(true);
-									window.scrollTo(0, 0);
-								}}
-								className={styles.edit}>
-								Edit
-							</p>
 						</div>
 						<div className={styles.shippingBottom}>
-							{/* <div> Please add a default shipping address.</div> */}
+							<div> Please add a default shipping address.</div>
 
-							<p>Full Name</p>
+							{/* <p>Full Name</p>
 							<p>Street Address</p>
 							<p>Apartment, Suite, Unit, Building, Floor, etc.</p>
 							<p>City</p>
 							<p> Zip / Postal Code</p>
 							<p>Country or Region</p>
-							<p>Telephone</p>
+							<p>Telephone</p> */}
 						</div>
 					</div>
 
 					<div className={styles.paymentWrap}>
 						<div className={styles.paymentTop}>
 							<p>PAYMENT</p>
-							<p
-								onClick={() => {
-									setPaymentClick(true);
-									window.scrollTo(0, 0);
-								}}
-								className={styles.edit}>
-								Edit
-							</p>
 						</div>
 						<div className={styles.paymentBottom}>
-							{/* <div>No saved payments.</div> */}
-
+							<div>No saved payments.</div>
+							{/* 
 							<p>Name on Card</p>
-							<p>Credit Card</p>
+							<p>Credit Card</p> */}
 						</div>
 					</div>
 				</div>

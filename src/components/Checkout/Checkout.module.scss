@@ -1,0 +1,209 @@
+.wrapper {
+	display: flex;
+	justify-content: center;
+	padding: 50px;
+	gap: 20px;
+
+	.containerLeft {
+		width: 500px;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		.accountWrap {
+			background-color: #fff;
+			padding: 30px;
+			.line {
+				margin-top: 20px;
+				height: 1px;
+				background-color: #eaeaea;
+			}
+			.name {
+				margin-top: 20px;
+			}
+			.email {
+				margin-top: 10px;
+				color: #818181;
+			}
+		}
+
+		.shippingWrap {
+			background-color: #fff;
+			padding: 30px;
+			.line {
+				margin-top: 20px;
+				height: 1px;
+				background-color: #eaeaea;
+			}
+			.title {
+				margin-top: 20px;
+				font-weight: 500;
+				font-size: 12px;
+				color: #818181;
+			}
+			.input {
+				border-radius: 5px;
+				padding: 10px;
+				outline: none;
+				border: 0;
+				background-color: transparent;
+				border: 1px solid #eaeaea;
+				width: 95%;
+				margin-top: 10px;
+				border-radius: 0;
+			}
+			.button {
+				margin-top: 20px;
+				width: 100%;
+				border: none;
+				padding: 10px;
+				font-weight: 600;
+			}
+		}
+
+		.paymentWrap {
+			background-color: #fff;
+			padding: 30px;
+			.line {
+				margin-top: 20px;
+				height: 1px;
+				background-color: #eaeaea;
+			}
+			.title {
+				margin-top: 20px;
+				margin-bottom: 5px;
+				font-size: 15px;
+				color: #818181;
+			}
+			.input {
+				outline: none;
+				width: 95%;
+				border: 1px solid #eaeaea;
+				padding: 10px;
+			}
+			.inputWrap {
+				display: flex;
+				border: 1px solid #eaeaea;
+				width: 100%;
+				.cardNumber {
+					outline: none;
+					width: 70%;
+					padding: 10px;
+					border: none;
+				}
+				.mm_yy {
+					outline: none;
+					width: 10%;
+					padding: 10px;
+					border: none;
+				}
+				.cvc {
+					outline: none;
+					width: 10%;
+					padding: 10px;
+					border: none;
+				}
+			}
+			.button {
+				margin-top: 20px;
+				width: 100%;
+				border: none;
+				padding: 10px;
+				font-weight: 600;
+			}
+		}
+	}
+
+	.containerRight {
+		width: 500px;
+
+		.orderWrap {
+			background-color: #fff;
+			padding: 30px;
+			.line {
+				margin-top: 20px;
+				height: 1px;
+				background-color: #eaeaea;
+			}
+
+			.sneakerWrap {
+				display: flex;
+				flex-direction: column;
+
+				.sneaker {
+					border-bottom: 1px solid #eaeaea;
+					.flexBox {
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						gap: 20px;
+						.img {
+							object-fit: contain;
+							width: 120px;
+							margin-bottom: 35px;
+						}
+						.flexInfo {
+							display: flex;
+							flex-direction: column;
+							gap: 10px;
+							.name {
+								font-weight: 800;
+							}
+							.size {
+								color: #818181;
+							}
+						}
+						.price {
+							margin-top: 65px;
+						}
+					}
+				}
+			}
+		}
+
+		.totalInfoWrap {
+			display: flex;
+			justify-content: space-between;
+			border-bottom: 1px solid #eaeaea;
+			padding: 30px 0;
+
+			.flexText {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				color: #818181;
+			}
+
+			.flexPrice {
+				display: flex;
+				flex-direction: column;
+				align-items: end;
+				gap: 10px;
+			}
+		}
+
+		.totalWrap {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 30px 0;
+			.price {
+				font-size: 25px;
+				font-weight: 900;
+			}
+		}
+
+		.text {
+			color: #818181;
+			font-size: 15px;
+		}
+
+		.button {
+			margin-top: 20px;
+			width: 100%;
+			border: none;
+			padding: 10px;
+			font-weight: 600;
+		}
+	}
+}

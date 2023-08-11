@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Api } from '../api/Api';
+import { api } from '../api/api';
 
 import { Header } from '../components/Header/Header';
 import { TopSellersBlock } from '../components/TopSellersBlock/TopSellersBlock';
@@ -9,7 +9,7 @@ import { InfoBlock } from '../components/InfoBlock/InfoBlock';
 import { Footer } from '../components/Footer/Footer';
 
 export const HomePage: FC = () => {
-	Api();
+	api();
 	window.scrollTo(0, 0);
 
 	return (

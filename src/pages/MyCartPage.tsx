@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
-import { Api } from '../api/Api';
+import { api } from '../api/api';
 
 import { Header } from '../components/Header/Header';
 import { MyCart } from '../components/MyCart/MyCart';
@@ -12,7 +12,7 @@ import { RecommendedBlock } from '../components/RecommendedBlock/RecommendedBloc
 export const MyCartPage: FC = () => {
 	const cartItems = useSelector((state: RootState) => state.cartSlice.cartItems);
 
-	Api();
+	api();
 	window.scrollTo(0, 0);
 
 	return (

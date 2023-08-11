@@ -1,0 +1,39 @@
+.wrapper {
+	position: sticky;
+	background-color: #fff;
+	border-bottom: 1px solid #e7e7e7;
+	height: 60px;
+	width: 100%;
+	z-index: 1000;
+
+	.container {
+		width: 1500px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 5px;
+
+		.logo {
+			font-family: 'Oswald', sans-serif;
+			font-size: 30px;
+			color: #e91c23;
+			cursor: pointer;
+			text-decoration: none;
+		}
+
+		.link {
+			text-decoration: none;
+			.help {
+				font-weight: 500;
+				font-size: 15px;
+				color: #818181;
+				text-decoration: underline;
+				margin-right: 50px;
+				&:hover {
+					color: #000;
+				}
+			}
+		}
+	}
+}

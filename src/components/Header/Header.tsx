@@ -1,15 +1,21 @@
-import { CSSProperties, FC, useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-
+import { useDispatch } from 'react-redux';
 import { Search } from '../Search/Search';
+import { useAuth } from '../../hooks/useAuth';
 import { SearchOpen } from '../SearchOpen/SearchOpen';
+import { CSSProperties, FC, useEffect, useState } from 'react';
+import { setRemoveUser } from '../../redux/userSlice/userSlice';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import backgroundImg from '../../images/backgroundImg.jpg';
 
 import styles from './Header.module.scss';
 
 export const Header: FC = () => {
+	const { isAuth } = useAuth();
 	const { pathname } = useLocation();
+	const navigate = useNavigate();
+	const dispatch = useDispatch();
+
 	const [scroll, setScroll] = useState(0);
 	const handleScroll = () => setScroll(window.scrollY);
 
@@ -33,6 +39,12 @@ export const Header: FC = () => {
 	const scrollBack =
 		pathname === '/' && scroll < document.documentElement.clientHeight ? { backgroundColor: '#ffffff00' } : { backgroundColor: '#fff' };
 
+	const accountClick = () => (isAuth ? navigate('/my-account') : navigate('/login'));
+	const singOutClick = () => {
+		dispatch(setRemoveUser());
+		navigate('/');
+	};
+
 	return (
 		<header style={pathname === '/' ? styleHeaderIMG : { height: '100px' }}>
 			<div style={scrollBack} className={styles.headerTop}>
@@ -54,20 +66,28 @@ export const Header: FC = () => {
 						</Link>
 
 						<div onMouseLeave={() => setIsHovered(false)} className={styles.accountWrap}>
-							<Link onMouseEnter={() => setIsHovered(true)} className={styles.item} to={'/my-account'}>
+							<button style={isHovered ? { color: '#0000009c' } : {}} className={styles.item} onMouseEnter={() => setIsHovered(true)}>
 								Account
-							</Link>
+							</button>
 							{isHovered && (
 								<div style={scrollBack} className={styles.wrap}>
-									<Link className={styles.item} to={'/my-account'}>
+									<button className={styles.item} onClick={accountClick}>
 										My Account
-									</Link>
+									</button>
+
 									<Link className={styles.item} to={'/my-cart'}>
 										My Cart
 									</Link>
-									<Link className={styles.item} to={'/sing -up'}>
-										Sing Up
-									</Link>
+
+									{isAuth ? (
+										<button className={styles.item} onClick={singOutClick}>
+											Sing Out
+										</button>
+									) : (
+										<Link className={styles.item} to={'/login'}>
+											Sing Up
+										</Link>
+									)}
 								</div>
 							)}
 						</div>

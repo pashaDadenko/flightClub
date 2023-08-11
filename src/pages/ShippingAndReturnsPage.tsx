@@ -1,12 +1,12 @@
 import { FC } from 'react';
-import { Api } from '../api/Api';
+import { api } from '../api/api';
 
 import { Header } from '../components/Header/Header';
 import { ShippingAndReturns } from '../components/ShippingAndReturns/ShippingAndReturns';
 import { Footer } from '../components/Footer/Footer';
 
 export const ShippingAndReturnsPage: FC = () => {
-	Api();
+	api();
 	window.scrollTo(0, 0);
 
 	return (
