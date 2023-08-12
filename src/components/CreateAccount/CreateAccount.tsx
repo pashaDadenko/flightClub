@@ -28,7 +28,11 @@ export const CreateAccount: FC = () => {
 				);
 				navigate('/my-account');
 			})
-			.catch(console.error);
+			.catch(() => {
+				setEmail('');
+				setPassword('');
+				alert('Email or password not correct.');
+			});
 	};
 
 	return (

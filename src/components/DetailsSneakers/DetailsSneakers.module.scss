@@ -31,7 +31,7 @@
 				}
 				.sizeWrap {
 					display: flex;
-					gap: 10px;
+					gap: 12.5px;
 					flex-wrap: wrap;
 					margin-bottom: 30px;
 					.size {
@@ -44,10 +44,9 @@
 						&:hover {
 							border: 1.5px solid #00000065;
 						}
-                        &:focus {
+						&:focus {
 							border: 1.5px solid #000;
-
-                        }
+						}
 					}
 				}
 				.buy {
@@ -55,21 +54,50 @@
 					margin-bottom: 30px;
 					letter-spacing: 2px;
 				}
-				.btn {
-					display: block;
-					background-color: #e91c23;
-					padding: 20px;
-					color: #fff;
-					border: none;
-					width: 300px;
-					font-size: 20px;
-					cursor: pointer;
+
+				.buttonWrap {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
 					margin-bottom: 30px;
-					&:hover {
-						background-color: #c01a22;
-						transition: 0.2s;
+					.btn {
+						background-color: #e91c23;
+						color: #fff;
+						border: none;
+						font-size: 20px;
+						width: 79%;
+						height: 70px;
+						cursor: pointer;
+						&:hover {
+							background-color: #c01a22;
+							transition: 0.2s;
+						}
+					}
+
+					.link {
+						text-decoration: none;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						background-color: #e6e4e4;
+						color: #000;
+						border: none;
+						width: 90px;
+						height: 70px;
+						cursor: pointer;
+						&:hover {
+							background-color: #d6d6d6;
+							transition: 0.2s;
+						}
+						.icon{
+							margin-left: 8px;
+						}
+						.count {
+							margin-bottom: 20px;
+						}
 					}
 				}
+
 				.line {
 					height: 10px;
 					background-color: #f9f9f9;
