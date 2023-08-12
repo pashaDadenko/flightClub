@@ -27,6 +27,7 @@
 			color: #000;
 			&:hover {
 				color: #0000009c;
+				transition: 0.2s;
 			}
 		}
 
@@ -34,13 +35,14 @@
 			position: relative;
 
 			.item {
-				font-size: 18px;
+				font-size: 17px;
 				color: #000;
 				border: none;
 				background-color: transparent;
 				cursor: pointer;
 				&:hover {
 					color: #0000009c;
+					transition: 0.2s;
 				}
 			}
 
@@ -54,13 +56,14 @@
 				width: 100px;
 				align-items: end;
 				.item {
-					font-size: 18px;
+					font-size: 17px;
 					color: #000;
 					border: none;
 					background-color: transparent;
 					cursor: pointer;
 					&:hover {
 						color: #0000009c;
+						transition: 0.2s;
 					}
 				}
 			}

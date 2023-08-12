@@ -44,7 +44,7 @@ export const AllSneakers: FC = () => {
 	const [activeModel, setActiveModel] = useState<{ [key: number]: boolean }>({});
 	const [activeColors, setActiveColors] = useState<{ [key: number]: boolean }>({});
 
-	const clearActiveColor = () => {
+	const clearFilters = () => {
 		setActiveBrand({});
 		setActiveModel({});
 		setActiveColors({});
@@ -64,7 +64,7 @@ export const AllSneakers: FC = () => {
 								<p
 									onClick={() => {
 										dispatch(setClearFilter());
-										clearActiveColor();
+										clearFilters();
 									}}
 									className={styles.clear}>
 									Clear Filters

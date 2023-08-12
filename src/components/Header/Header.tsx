@@ -65,12 +65,12 @@ export const Header: FC = () => {
 							Store
 						</Link>
 
-						<div onMouseLeave={() => setIsHovered(false)} className={styles.accountWrap}>
-							<button style={isHovered ? { color: '#0000009c' } : {}} className={styles.item} onMouseEnter={() => setIsHovered(true)}>
+						<div className={styles.accountWrap} onMouseLeave={() => setIsHovered(false)}>
+							<button className={styles.item} style={isHovered ? { color: '#0000009c' } : {}} onMouseEnter={() => setIsHovered(true)}>
 								Account
 							</button>
 							{isHovered && (
-								<div style={scrollBack} className={styles.wrap}>
+								<div className={styles.wrap}>
 									<button className={styles.item} onClick={accountClick}>
 										My Account
 									</button>

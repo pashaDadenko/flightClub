@@ -17,11 +17,7 @@ export const SearchOpen: FC<SearchProps> = ({ setIsClicked }) => {
 	const searchValue = useSelector((state: RootState) => state.searchSlice.searchValue);
 
 	const inputRef = useRef<HTMLInputElement>(null);
-
-	const searchClear = () => {
-		dispatch(setSearchValue(''));
-		inputRef.current?.focus();
-	};
+	inputRef.current?.focus();
 
 	const filteredSneakers = allSneakers.filter((sneaker) => {
 		const title = sneaker.title.toLowerCase().includes(searchValue.toLowerCase());
@@ -60,11 +56,12 @@ export const SearchOpen: FC<SearchProps> = ({ setIsClicked }) => {
 						onKeyDown={(e) => e.key === 'Enter' && navigate('/search-result')}
 					/>
 					<Link to={'/search-result'} />
-					{searchValue && (
-						<button className={styles.buttonClear} onClick={() => searchClear()}>
-							Clear
-						</button>
-					)}
+					<button
+						style={searchValue ? { color: '#000' } : { color: '#eaeaea' }}
+						className={styles.buttonClear}
+						onClick={() => dispatch(setSearchValue(''))}>
+						Clear
+					</button>
 					<div className={styles.line}></div>
 					<button className={styles.buttonClose} onClick={() => setIsClicked(false)}>
 						Close

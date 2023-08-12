@@ -8,18 +8,19 @@ import searchSlice from './searchSlice/searchSlice';
 import filterSlice from './filterSlice/filterSlice';
 import sneakersSlice from './sneakersSlice/sneakersSlice';
 
-const rootReducer = combineReducers({
-	sneakersSlice,
-	cartSlice,
-	searchSlice,
-	filterSlice,
-	userSlice,
-});
-
 const persistConfig = {
 	key: 'root',
 	storage,
+	blacklist: ['searchSlice', 'filterSlice'],
 };
+
+const rootReducer = combineReducers({
+	sneakersSlice,
+	cartSlice,
+	userSlice,
+	searchSlice,
+	filterSlice,
+});
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
