@@ -1,5 +1,5 @@
-import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { TypeFilterSliceSlice } from './TypeFilterSlice.ts';
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 export const filterSlice = createSlice({
 	name: 'filterSlice',

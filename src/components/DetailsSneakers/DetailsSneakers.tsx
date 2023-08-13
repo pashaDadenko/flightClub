@@ -4,12 +4,11 @@ import { RootState } from '../../redux/store';
 import { Carousel } from '../Carousel/Carousel';
 import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { DetailsAccordion } from '../DetailsAccordion/DetailsAccordion';
 import { setCartItems, setSize } from '../../redux/cartSlice/cartSlice';
-import { setBrand, setImageCarousel } from '../../redux/sneakersSlice/sneakersSlice';
-
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { setBrand, setImageCarousel } from '../../redux/sneakersSlice/sneakersSlice';
 
 import styles from './DetailsSneakers.module.scss';
 

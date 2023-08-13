@@ -1,12 +1,12 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
 import { RootState } from '../../redux/store';
+import { useAuth } from '../../hooks/useAuth';
+import { useNavigate } from 'react-router-dom';
+import ClearIcon from '@mui/icons-material/Clear';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteSneakers, setClearCart } from '../../redux/cartSlice/cartSlice';
-import { useAuth } from '../../hooks/useAuth';
 
-import ClearIcon from '@mui/icons-material/Clear';
 import styles from './MyCart.module.scss';
 
 export const MyCart: FC = () => {

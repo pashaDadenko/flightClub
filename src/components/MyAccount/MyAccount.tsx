@@ -1,19 +1,11 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
-
-import { EditAccount } from '../EditAccount/EditAccount';
-import { EditShipping } from '../EditShipping/EditShipping';
-import { EditPayment } from '../EditPayment/EditPayment';
 
 import styles from './MyAccount.module.scss';
 
 export const MyAccount: FC = () => {
 	const { fullName, email } = useSelector((state: RootState) => state.userSlice);
-
-	const [accountClick, setAccountClick] = useState(false);
-	const [shippingClick, setShippingClick] = useState(false);
-	const [paymentClick, setPaymentClick] = useState(false);
 
 	return (
 		<div className={styles.wrapper}>
@@ -61,10 +53,6 @@ export const MyAccount: FC = () => {
 					</div>
 				</div>
 			</div>
-
-			{accountClick && <EditAccount setAccountClick={setAccountClick} />}
-			{shippingClick && <EditShipping setShippingClick={setShippingClick} />}
-			{paymentClick && <EditPayment setPaymentClick={setPaymentClick} />}
 		</div>
 	);
 };

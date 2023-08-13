@@ -1,8 +1,7 @@
 import { FC } from 'react';
+import { api } from '../api/api';
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
-import { api } from '../api/api';
-
 import { Header } from '../components/Header/Header';
 import { MyCart } from '../components/MyCart/MyCart';
 import { Footer } from '../components/Footer/Footer';

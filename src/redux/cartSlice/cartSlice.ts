@@ -1,6 +1,6 @@
-import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { TypeCartSlice } from './TypeCartSlice.ts';
 import { TypeApi } from '../../api/TypeApi';
+import { TypeCartSlice } from './TypeCartSlice.ts';
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 export const cartSlice = createSlice({
 	name: 'cartSlice',

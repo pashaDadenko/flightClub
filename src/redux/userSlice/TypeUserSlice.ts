@@ -1,5 +1,6 @@
 export type TypeUserSlice = {
-	token: undefined | string;
+	fullName?: null | string;
 	email: null | string;
+	token: undefined | string;
 	id: null | string;
 };

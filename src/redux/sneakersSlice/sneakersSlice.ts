@@ -1,6 +1,6 @@
-import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { TypeSneakersSlice } from './TypeSneakersSlice.ts';
 import { TypeApi } from '../../api/TypeApi.ts';
+import { TypeSneakersSlice } from './TypeSneakersSlice.ts';
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 export const sneakersSlice = createSlice({
 	name: 'sneakersSlice',

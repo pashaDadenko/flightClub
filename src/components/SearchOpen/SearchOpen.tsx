@@ -1,11 +1,10 @@
-import { FC, useEffect, useRef, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
 import { SearchProps } from './TypeSearchOpen';
-import { setSearchValue } from '../../redux/searchSlice/searchSlice';
-
 import SearchIcon from '@mui/icons-material/Search';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { FC, useEffect, useRef, useState } from 'react';
+import { setSearchValue } from '../../redux/searchSlice/searchSlice';
 
 import styles from './SearchOpen.module.scss';
 
@@ -55,9 +54,8 @@ export const SearchOpen: FC<SearchProps> = ({ setIsClicked }) => {
 						onChange={(e) => dispatch(setSearchValue(e.target.value))}
 						onKeyDown={(e) => e.key === 'Enter' && navigate('/search-result')}
 					/>
-					<Link to={'/search-result'} />
 					<button
-						style={searchValue ? { color: '#000' } : { color: '#eaeaea' }}
+						style={searchValue ? { color: '#000' } : { pointerEvents: 'none' }}
 						className={styles.buttonClear}
 						onClick={() => dispatch(setSearchValue(''))}>
 						Clear

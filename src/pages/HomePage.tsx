@@ -1,12 +1,11 @@
 import { FC } from 'react';
 import { api } from '../api/api';
-
 import { Header } from '../components/Header/Header';
-import { TopSellersBlock } from '../components/TopSellersBlock/TopSellersBlock';
+import { Footer } from '../components/Footer/Footer';
+import { InfoBlock } from '../components/InfoBlock/InfoBlock';
 import { OffWhiteBlock } from '../components/OffWhiteBlock/OffWhiteBlock';
 import { AirJordanBlock } from '../components/AirJordanBlock/AirJordanBlock';
-import { InfoBlock } from '../components/InfoBlock/InfoBlock';
-import { Footer } from '../components/Footer/Footer';
+import { TopSellersBlock } from '../components/TopSellersBlock/TopSellersBlock';
 
 export const HomePage: FC = () => {
 	api();

@@ -1,11 +1,10 @@
 import { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
-
 import Accordion from '@mui/material/Accordion';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import AccordionSummary from '@mui/material/AccordionSummary';
 import { TypeDetailsAccordionStyle } from './TypeDetailsAccordion';
 
 import styles from './DetailsAccordion.module.scss';

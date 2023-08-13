@@ -1,7 +1,7 @@
 import { FC } from 'react';
+import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
-import { Link } from 'react-router-dom';
 
 import styles from './TopSellersBlock.module.scss';
 

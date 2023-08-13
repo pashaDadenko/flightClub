@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { TypeApi } from './TypeApi';
 import { useDispatch } from 'react-redux';
-
 import { setSneakersData } from '../redux/sneakersSlice/sneakersSlice';
 
 export const api = (): void => {

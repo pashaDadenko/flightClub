@@ -1,9 +1,8 @@
 import { FC } from 'react';
-
+import { useLocation } from 'react-router-dom';
 import notFoundImage from '../../images/notFound.png';
 
 import styles from './NotFound.module.scss';
-import { useLocation } from 'react-router-dom';
 
 export const NotFound: FC = () => {
 	const { pathname } = useLocation();

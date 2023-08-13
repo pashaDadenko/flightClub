@@ -1,10 +1,9 @@
 import { FC } from 'react';
 import { api } from '../api/api';
-
 import { Header } from '../components/Header/Header';
-import { AllSneakers } from '../components/AllSneakers/AllSneakers';
 import { Footer } from '../components/Footer/Footer';
 import { TitleBrand } from '../components/TitleBrand/TitleBrand';
+import { AllSneakers } from '../components/AllSneakers/AllSneakers';
 
 export const AllSneakersPage: FC = () => {
 	api();

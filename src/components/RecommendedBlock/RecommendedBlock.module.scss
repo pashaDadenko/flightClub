@@ -1,61 +1,65 @@
 .wrapper {
-    background-color: #f9f9f9;
+	background-color: #f9f9f9;
 
-    .container {
-        width: 1300px;
-        margin: 0 auto;
-        padding-top: 100px;
-        padding-bottom: 50px;
+	.container {
+		width: 1300px;
+		margin: 0 auto;
+		padding-top: 100px;
+		padding-bottom: 50px;
 
-        .title {
-            margin-bottom: 50px;
-        }
+		.title {
+			margin-bottom: 50px;
+		}
 
-        .previewGroupe {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            cursor: pointer;
+		.previewGroupe {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 30px;
+			cursor: pointer;
 
-            .previewProduct {
-                display: flex;
-                flex-direction: column;
-                width: 300px;
-                background-color: #fff;
-                text-decoration: none;
+			.previewProduct {
+				display: flex;
+				flex-direction: column;
+				width: 300px;
+				background-color: #fff;
+				text-decoration: none;
 
-                .img {
-                    width: 270px;
-                    height: 270px;
-                    object-fit: contain;
-                    margin: 0 auto;
-                }
+				.img {
+					width: 270px;
+					height: 270px;
+					object-fit: contain;
+					margin: 0 auto;
+				}
 
-                .info {
-                    padding: 0 20px 20px 20px;
-                    .subTitle {
-                        color: #818181;
-                    }
-                    .text {
-                        margin-top: 10px;
-                        color: #000;
-                    }
-                }
-            }
-        }
+				.info {
+					padding: 0 20px 20px 20px;
+					.subTitle {
+						color: #818181;
+					}
+					.text {
+						margin-top: 10px;
+						color: #000;
+					}
+				}
+				&:hover img {
+					scale: 105%;
+					transition: 0.2s;
+				}
+			}
+		}
 
-        .btn {
-            margin: 0 auto;
-            display: block;
-            background-color: #000;
-            color: #fff;
-            padding: 15px 20px;
-            border: 0;
-            cursor: pointer;
-            margin-top: 30px;
-            &:hover {
-                background-color: #000000e0;
-            }
-        }
-    }
+		.btn {
+			margin: 0 auto;
+			display: block;
+			background-color: #000;
+			color: #fff;
+			padding: 15px 20px;
+			border: 0;
+			cursor: pointer;
+			margin-top: 30px;
+			&:hover {
+				background-color: #000000e0;
+			}
+		}
+	}
 }

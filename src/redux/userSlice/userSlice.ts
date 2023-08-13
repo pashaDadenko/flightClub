@@ -5,6 +5,7 @@ export const userSlice = createSlice({
 	name: 'userSlice',
 
 	initialState: <TypeUserSlice>{
+		fullName: null,
 		email: null,
 		token: undefined,
 		id: null,
@@ -12,6 +13,7 @@ export const userSlice = createSlice({
 
 	reducers: {
 		setUser(state, { payload }: PayloadAction<TypeUserSlice>) {
+			state.fullName = payload.fullName;
 			state.email = payload.email;
 			state.token = payload.token;
 			state.id = payload.id;

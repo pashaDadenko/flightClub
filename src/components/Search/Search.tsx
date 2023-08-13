@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import { SearchProps } from './TypeSearch';
-
 import SearchIcon from '@mui/icons-material/Search';
 
 import styles from './Search.module.scss';

@@ -1,15 +1,14 @@
 import { FC, useState } from 'react';
-import { FilterBarProps, TypeAccordionStyle } from './TypeFilterBar';
-import { useDispatch, useSelector } from 'react-redux';
-import { setValueBrand, setValueModel, setValueColor } from '../../redux/filterSlice/filterSlice';
 import { RootState } from '../../redux/store';
 import { useLocation } from 'react-router-dom';
-
 import Accordion from '@mui/material/Accordion';
+import Typography from '@mui/material/Typography';
+import { useDispatch, useSelector } from 'react-redux';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
-import Typography from '@mui/material/Typography';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { FilterBarProps, TypeAccordionStyle } from './TypeFilterBar';
+import { setValueBrand, setValueModel, setValueColor } from '../../redux/filterSlice/filterSlice';
 
 import styles from './FilterBar.module.scss';
 

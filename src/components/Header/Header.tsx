@@ -2,11 +2,10 @@ import { useDispatch } from 'react-redux';
 import { Search } from '../Search/Search';
 import { useAuth } from '../../hooks/useAuth';
 import { SearchOpen } from '../SearchOpen/SearchOpen';
+import backgroundImg from '../../images/backgroundImg.jpg';
 import { CSSProperties, FC, useEffect, useState } from 'react';
 import { setRemoveUser } from '../../redux/userSlice/userSlice';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-
-import backgroundImg from '../../images/backgroundImg.jpg';
 
 import styles from './Header.module.scss';
 

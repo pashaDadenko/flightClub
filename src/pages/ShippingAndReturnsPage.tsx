@@ -1,9 +1,8 @@
 import { FC } from 'react';
 import { api } from '../api/api';
-
 import { Header } from '../components/Header/Header';
-import { ShippingAndReturns } from '../components/ShippingAndReturns/ShippingAndReturns';
 import { Footer } from '../components/Footer/Footer';
+import { ShippingAndReturns } from '../components/ShippingAndReturns/ShippingAndReturns';
 
 export const ShippingAndReturnsPage: FC = () => {
 	api();

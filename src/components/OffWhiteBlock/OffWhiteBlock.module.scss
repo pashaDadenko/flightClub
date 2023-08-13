@@ -38,6 +38,10 @@
 					color: #000;
 				}
 			}
+			&:hover img {
+				scale: 105%;
+				transition: 0.2s;
+			}
 		}
 	}
 

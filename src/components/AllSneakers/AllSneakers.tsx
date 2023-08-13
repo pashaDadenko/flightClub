@@ -1,10 +1,9 @@
 import { FC, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
-import { Link, useLocation } from 'react-router-dom';
-
-import { FilterBar } from '../FilterBar/FilterBar';
 import { Selected } from '../Selected/Selected';
+import { FilterBar } from '../FilterBar/FilterBar';
+import { Link, useLocation } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import { setClearFilter } from '../../redux/filterSlice/filterSlice';
 
 import styles from './AllSneakers.module.scss';

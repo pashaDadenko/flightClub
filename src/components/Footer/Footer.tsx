@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
-
 import { FooterBot } from '../FooterBot/FooterBot';
 
 import styles from './Footer.module.scss';
