@@ -6,6 +6,7 @@ import styles from './MyAccount.module.scss';
 
 export const MyAccount: FC = () => {
 	const { fullName, email } = useSelector((state: RootState) => state.userSlice);
+	const { name, streetAddress, apartment, city, postalCode, telephone } = useSelector((state: RootState) => state.shippingSlice);
 
 	return (
 		<div className={styles.wrapper}>
@@ -28,15 +29,20 @@ export const MyAccount: FC = () => {
 							<p>SHIPPING ADDRESS</p>
 						</div>
 						<div className={styles.shippingBottom}>
-							<div> Please add a default shipping address.</div>
-
-							{/* <p>Full Name</p>
-							<p>Street Address</p>
-							<p>Apartment, Suite, Unit, Building, Floor, etc.</p>
-							<p>City</p>
-							<p> Zip / Postal Code</p>
-							<p>Country or Region</p>
-							<p>Telephone</p> */}
+							{name && streetAddress && apartment && city && postalCode && telephone ? (
+								<div className={styles.flex}>
+									<p>{name}</p>
+									<div className={styles.box}>
+										<p>{city},</p>
+										<p>{postalCode}</p>
+									</div>
+									<p>{streetAddress}</p>
+									<p>{apartment}</p>
+									<p>{telephone}</p>
+								</div>
+							) : (
+								<div> Please add a default shipping address.</div>
+							)}
 						</div>
 					</div>
 
@@ -46,9 +52,9 @@ export const MyAccount: FC = () => {
 						</div>
 						<div className={styles.paymentBottom}>
 							<div>No saved payments.</div>
-							{/* 
+
 							<p>Name on Card</p>
-							<p>Credit Card</p> */}
+							<p>Credit Card</p>
 						</div>
 					</div>
 				</div>

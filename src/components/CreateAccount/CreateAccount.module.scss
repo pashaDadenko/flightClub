@@ -15,7 +15,7 @@
 			background-color: #eaeaea;
 		}
 
-		.fullNameWrap {
+		.wrap {
 			display: flex;
 			justify-content: space-between;
 			margin-top: 20px;
@@ -24,42 +24,10 @@
 				font-size: 12px;
 				color: #ff0000;
 			}
-			.fullName {
+			.title {
 				font-weight: 500;
 				font-size: 12px;
 				color: #818181;
-			}
-		}
-
-		.emailWrap {
-			display: flex;
-			justify-content: space-between;
-			margin-top: 20px;
-			.error {
-				font-weight: 500;
-				font-size: 12px;
-				color: #ff0000;
-			}
-			.email {
-				font-weight: 500;
-				font-size: 12px;
-				color: #818181;
-			}
-		}
-
-		.passwordWrap {
-			display: flex;
-			justify-content: space-between;
-			margin-top: 20px;
-			.password {
-				font-weight: 500;
-				font-size: 12px;
-				color: #818181;
-			}
-			.error {
-				font-weight: 500;
-				font-size: 12px;
-				color: #ff0000;
 			}
 		}
 
@@ -73,6 +41,32 @@
 			width: 95%;
 			margin-top: 10px;
 			border-radius: 0;
+		}
+
+		.inputWrap {
+			position: relative;
+			.input {
+				border-radius: 5px;
+				padding: 10px;
+				outline: none;
+				border: 0;
+				background-color: transparent;
+				border: 1px solid #eaeaea;
+				width: 95%;
+				margin-top: 10px;
+				border-radius: 0;
+			}
+			.icon {
+				position: absolute;
+				top: 36%;
+				right: 5%;
+				color: #818181;
+				cursor: pointer;
+				&:hover {
+					color: #000;
+					transition: 0.2s;
+				}
+			}
 		}
 
 		.create {

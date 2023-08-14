@@ -38,7 +38,6 @@ export const Header: FC = () => {
 	const scrollBack =
 		pathname === '/' && scroll < document.documentElement.clientHeight ? { backgroundColor: '#ffffff00' } : { backgroundColor: '#fff' };
 
-	const accountClick = () => (isAuth ? navigate('/my-account') : navigate('/login'));
 	const singOutClick = () => {
 		dispatch(setRemoveUser());
 		navigate('/');
@@ -70,7 +69,7 @@ export const Header: FC = () => {
 							</button>
 							{isHovered && (
 								<div className={styles.wrap}>
-									<button className={styles.item} onClick={accountClick}>
+									<button className={styles.item} onClick={() => (isAuth ? navigate('/my-account') : navigate('/login'))}>
 										My Account
 									</button>
 

@@ -14,7 +14,7 @@
 		color: #e91c23;
 		cursor: pointer;
 		text-decoration: none;
-		margin-left: 70px;
+		margin-left: 50px;
 	}
 
 	.listing {
@@ -35,7 +35,7 @@
 			position: relative;
 
 			.item {
-				font-size: 17px;
+				font-size: 18px;
 				color: #000;
 				border: none;
 				background-color: transparent;
@@ -57,9 +57,9 @@
 				align-items: end;
 				.item {
 					font-size: 17px;
+					background-color: transparent;
 					color: #000;
 					border: none;
-					background-color: transparent;
 					cursor: pointer;
 					&:hover {
 						color: #0000009c;

@@ -1,0 +1,30 @@
+.wrapper {
+	background-color: #fff;
+	padding: 30px;
+
+	.flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.icon {
+			color: #22b82252;
+		}
+	}
+
+	.line {
+		margin: 20px 0;
+		height: 1px;
+		background-color: #eaeaea;
+	}
+
+	.wrap {
+		display: flex;
+		flex-direction: column;
+		gap: 7px;
+		.box {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+		}
+	}
+}

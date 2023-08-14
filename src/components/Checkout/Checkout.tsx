@@ -1,6 +1,10 @@
 import { FC } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
+import { Shipping } from '../Shipping/Shipping';
+import { ShippingFilled } from '../ShippingFilled/ShippingFilled';
+import { ShippingMethod } from '../ShippingMethod/ShippingMethod';
+import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutlineOutlined';
 
 import styles from './Checkout.module.scss';
 
@@ -8,35 +12,27 @@ export const Checkout: FC = () => {
 	const cartItems = useSelector((state: RootState) => state.cartSlice.cartItems);
 	const { fullName, email } = useSelector((state: RootState) => state.userSlice);
 	const totalPrice = cartItems.reduce((sum, sneaker) => sum + sneaker.price, 0);
+	const standardShipping = useSelector((state: RootState) => state.shippingSlice.standardShipping);
+	const { name, streetAddress, apartment, city, postalCode, telephone } = useSelector((state: RootState) => state.shippingSlice);
+
+	const conditionalRender = name && streetAddress && apartment && city && postalCode && telephone;
 
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.containerLeft}>
 				<div className={styles.accountWrap}>
-					<p>FLIGHT CLUB ACCOUNT</p>
+					<div className={styles.flex}>
+						<p>FLIGHT CLUB ACCOUNT</p>
+						<CheckCircleOutlineOutlinedIcon className={styles.icon} />
+					</div>
 					<p className={styles.line}></p>
 					<p className={styles.name}>{fullName}</p>
 					<p className={styles.email}>{email}</p>
 				</div>
 
-				<div className={styles.shippingWrap}>
-					<p>SHIPPING ADDRESS</p>
-					<p className={styles.line}></p>
-					<p className={styles.title}>* Full Name</p>
-					<input className={styles.input} type='text' />
-					<p className={styles.title}>* Street Address</p>
-					<input className={styles.input} type='text' />
-					<p className={styles.title}>* Apartment, Suite, Unit, Building, Floor, etc.</p>
-					<input className={styles.input} type='text' />
-					<p className={styles.title}>* City</p>
-					<input className={styles.input} type='text' />
-					<p className={styles.title}>* Zip / Postal Code</p>
-					<input className={styles.input} type='text' />
-					<p className={styles.title}>* Telephone</p>
-					<input className={styles.input} type='text' />
+				{conditionalRender ? <ShippingFilled /> : <Shipping />}
 
-					<button className={styles.button}>CONTINUE</button>
-				</div>
+				<ShippingMethod />
 
 				<div className={styles.paymentWrap}>
 					<p>PAYMENT METHOD</p>
@@ -84,7 +80,7 @@ export const Checkout: FC = () => {
 						</div>
 						<div className={styles.flexPrice}>
 							<p>${totalPrice}</p>
-							<p>$40</p>
+							<p>${standardShipping}</p>
 							<p>$0</p>
 						</div>
 					</div>
@@ -98,7 +94,13 @@ export const Checkout: FC = () => {
 						By clicking "place order", I acknowledge that I have read and agree to the Terms & Conditions and the Privacy Policy.
 					</p>
 
-					<button className={styles.button}>PLACE ORDER</button>
+					{conditionalRender ? (
+						<button className={styles.buttonUpdate}>PLACE ORDER</button>
+					) : (
+						<button className={styles.button} disabled>
+							PLACE ORDER
+						</button>
+					)}
 				</div>
 			</div>
 		</div>

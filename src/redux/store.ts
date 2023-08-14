@@ -3,6 +3,7 @@ import userSlice from './userSlice/userSlice';
 import storage from 'redux-persist/lib/storage';
 import searchSlice from './searchSlice/searchSlice';
 import filterSlice from './filterSlice/filterSlice';
+import shippingSlice from './shippingSlice/shippingSlice';
 import sneakersSlice from './sneakersSlice/sneakersSlice';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist';
@@ -19,6 +20,7 @@ const rootReducer = combineReducers({
 	userSlice,
 	searchSlice,
 	filterSlice,
+	shippingSlice,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

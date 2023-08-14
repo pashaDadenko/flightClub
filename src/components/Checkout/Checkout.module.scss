@@ -3,6 +3,7 @@
 	justify-content: center;
 	padding: 50px;
 	gap: 20px;
+	height: 100vh;
 
 	.containerLeft {
 		width: 500px;
@@ -13,6 +14,14 @@
 		.accountWrap {
 			background-color: #fff;
 			padding: 30px;
+			.flex {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				.icon {
+					color: #22b82252;
+				}
+			}
 			.line {
 				margin-top: 20px;
 				height: 1px;
@@ -24,40 +33,6 @@
 			.email {
 				margin-top: 10px;
 				color: #818181;
-			}
-		}
-
-		.shippingWrap {
-			background-color: #fff;
-			padding: 30px;
-			.line {
-				margin-top: 20px;
-				height: 1px;
-				background-color: #eaeaea;
-			}
-			.title {
-				margin-top: 20px;
-				font-weight: 500;
-				font-size: 12px;
-				color: #818181;
-			}
-			.input {
-				border-radius: 5px;
-				padding: 10px;
-				outline: none;
-				border: 0;
-				background-color: transparent;
-				border: 1px solid #eaeaea;
-				width: 95%;
-				margin-top: 10px;
-				border-radius: 0;
-			}
-			.button {
-				margin-top: 20px;
-				width: 100%;
-				border: none;
-				padding: 10px;
-				font-weight: 600;
 			}
 		}
 
@@ -198,12 +173,29 @@
 			font-size: 15px;
 		}
 
+		.buttonUpdate {
+			margin-top: 20px;
+			width: 100%;
+			border: none;
+			padding: 10px;
+			font-weight: 600;
+			cursor: pointer;
+			background-color: #e91c23;
+			color: #ffffff;
+			&:hover {
+				background-color: #c01a22;
+				transition: 0.2s;
+			}
+		}
+
 		.button {
 			margin-top: 20px;
 			width: 100%;
 			border: none;
 			padding: 10px;
 			font-weight: 600;
+			background-color: #eaeaea;
+			color: #000;
 		}
 	}
 }

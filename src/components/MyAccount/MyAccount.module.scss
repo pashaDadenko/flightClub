@@ -1,5 +1,6 @@
 .wrapper {
 	background-color: #fff;
+	padding-bottom: 50px;
 
 	.container {
 		width: 1200px;
@@ -43,6 +44,17 @@
 				.shippingBottom {
 					margin-top: 20px;
 					color: #818181;
+
+					.flex {
+						display: flex;
+						flex-direction: column;
+						gap: 7px;
+						.box {
+							display: flex;
+							align-items: center;
+							gap: 10px;
+						}
+					}
 				}
 			}
 
