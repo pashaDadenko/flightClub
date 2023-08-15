@@ -30,7 +30,18 @@ export const InfoBlock: FC = () => {
 					<p className={styles.textHistory}>
 						For over a decade, Flight Club has changed the landscape of sneaker retail. Carrying every brand name on the market, Flight
 						Club has evolved from a one-stop sneaker destination, to a cultural hub for sneaker enthusiasts and novices alike. From{' '}
-						<a>Air Jordans</a> to <a>Nike</a> to <a>Adidas</a> and more, we have it all.
+						<Link to={'/air-jordan'} className={styles.linkBrand}>
+							Air Jordans
+						</Link>{' '}
+						to{' '}
+						<Link to={'/nike'} className={styles.linkBrand}>
+							Nike
+						</Link>{' '}
+						to{' '}
+						<Link to={'/new-balance'} className={styles.linkBrand}>
+							New balance
+						</Link>{' '}
+						and more, we have it all.
 					</p>
 					<Link className={styles.link} to={'/about-us'}>
 						Learn More

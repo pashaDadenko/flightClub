@@ -14,7 +14,7 @@ export const Search: FC<SearchProps> = ({ setIsClicked, scroll }) => {
 
 	return (
 		<div className={styles.wrapper}>
-			<input className={styles.search} style={inputColor} onClick={() => setIsClicked(true)} type='search' value='Search' />
+			<input className={styles.search} style={inputColor} onClick={() => setIsClicked(true)} type='search' defaultValue='Search' />
 			<SearchIcon className={styles.icon} style={iconColor} />
 		</div>
 	);

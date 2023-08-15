@@ -1,81 +1,82 @@
 .wrapper {
-    background-color: #fff;
-    padding: 50px 0;
+	background-color: #fff;
+	padding: 50px 0;
 
-    .container {
-        width: 1300px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
+	.container {
+		width: 1300px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
 
-        .store {
-            .storeImg {
-                width: 625px;
-                height: 400px;
-                cursor: pointer;
-            }
-            .titleStore {
-                font-size: 20px;
-                margin: 20px 0;
-                color: #000000e0;
-            }
-            .textStore {
-                font-family: sans-serif;
-                width: 625px;
-                color: #000000a6;
-                letter-spacing: 0.5px;
-                font-size: 15px;
-                a {
-                    color: #000000a6;
+		.store {
+			.storeImg {
+				width: 625px;
+				height: 400px;
+				cursor: pointer;
+			}
+			.titleStore {
+				font-size: 20px;
+				margin: 20px 0;
+				color: #000000e0;
+			}
+			.textStore {
+				font-family: sans-serif;
+				width: 625px;
+				color: #000000a6;
+				letter-spacing: 0.5px;
+				font-size: 15px;
+				a {
+					color: #000000a6;
 
-                    &:hover {
-                        color: #000000e0;
-                    }
-                }
-            }
-            .link {
-                display: inline-block;
-                margin-top: 64px;
-                color: #000;
-                &:hover {
-                    color: #33322f49;
-                }
-            }
-        }
+					&:hover {
+						color: #000000e0;
+					}
+				}
+			}
+			.link {
+				display: inline-block;
+				margin-top: 64px;
+				color: #000;
+				&:hover {
+					color: #33322f49;
+				}
+			}
+		}
 
-        .history {
-            .historyImg {
-                width: 625px;
-                height: 400px;
-                cursor: pointer;
-            }
-            .titleHistory {
-                font-size: 20px;
-                margin: 20px 0;
-                color: #000000e0;
-            }
-            .textHistory {
-                font-family: sans-serif;
-                width: 605px;
-                color: #000000a6;
-                letter-spacing: 0.5px;
-                font-size: 15px;
-                a {
-                    text-decoration: underline;
-                    cursor: pointer;
-                    &:hover {
-                        color: #000000;
-                    }
-                }
-            }
-            .link {
-                display: inline-block;
-                margin-top: 30px;
-                color: #000000;
-                &:hover {
-                    color: #33322f49;
-                }
-            }
-        }
-    }
+		.history {
+			.historyImg {
+				width: 625px;
+				height: 400px;
+				cursor: pointer;
+			}
+			.titleHistory {
+				font-size: 20px;
+				margin: 20px 0;
+				color: #000000e0;
+			}
+			.textHistory {
+				font-family: sans-serif;
+				width: 605px;
+				color: #000000a6;
+				letter-spacing: 0.5px;
+				font-size: 15px;
+				.linkBrand {
+					font-size: 15px;
+					color: #000000a6;
+					cursor: pointer;
+					&:hover {
+						color: #000000;
+					}
+				}
+			}
+			.link {
+				display: inline-block;
+				margin-top: 30px;
+				color: #000000;
+				&:hover {
+					color: #33322f49;
+				}
+			}
+		}
+	}
 }
