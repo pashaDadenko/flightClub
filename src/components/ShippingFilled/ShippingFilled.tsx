@@ -1,18 +1,25 @@
 import { FC } from 'react';
-import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
+import { useDispatch, useSelector } from 'react-redux';
+import { setEdit } from '../../redux/shippingSlice/shippingSlice';
 import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutlineOutlined';
 
 import styles from './ShippingFilled.module.scss';
 
 export const ShippingFilled: FC = () => {
+	const dispatch = useDispatch();
 	const { name, streetAddress, apartment, city, postalCode, telephone } = useSelector((state: RootState) => state.shippingSlice);
 
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.flex}>
 				<p>SHIPPING ADDRESS</p>
-				<CheckCircleOutlineOutlinedIcon className={styles.icon} />
+				<div className={styles.flexBox}>
+					<p className={styles.edit} onClick={() => dispatch(setEdit())}>
+						Edit
+					</p>
+					<CheckCircleOutlineOutlinedIcon className={styles.icon} />
+				</div>
 			</div>
 			<p className={styles.line}></p>
 			<div className={styles.wrap}>

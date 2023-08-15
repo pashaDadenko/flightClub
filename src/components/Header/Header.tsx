@@ -37,6 +37,7 @@ export const Header: FC = () => {
 
 	const scrollBack =
 		pathname === '/' && scroll < document.documentElement.clientHeight ? { backgroundColor: '#ffffff00' } : { backgroundColor: '#fff' };
+	const scrollColor = pathname === '/' && scroll < document.documentElement.clientHeight ? { color: '#fff' } : {};
 
 	const singOutClick = () => {
 		dispatch(setRemoveUser());
@@ -46,7 +47,7 @@ export const Header: FC = () => {
 	return (
 		<header style={pathname === '/' ? styleHeaderIMG : { height: '100px' }}>
 			<div style={scrollBack} className={styles.headerTop}>
-				{isClicked ? <SearchOpen setIsClicked={setIsClicked} /> : <Search setIsClicked={setIsClicked} />}
+				{isClicked ? <SearchOpen setIsClicked={setIsClicked} /> : <Search setIsClicked={setIsClicked} scroll={scroll} />}
 
 				{!isClicked && (
 					<Link className={styles.logo} to={'/'}>
@@ -56,33 +57,36 @@ export const Header: FC = () => {
 
 				{!isClicked && (
 					<div className={styles.listing}>
-						<Link className={styles.item} to={'/sneakers'}>
+						<Link className={styles.item} to={'/sneakers'} style={scrollColor}>
 							Sneakers
 						</Link>
-						<Link className={styles.item} to={'/store-location'}>
+						<Link className={styles.item} to={'/store-location'} style={scrollColor}>
 							Store
 						</Link>
 
-						<div className={styles.accountWrap} onMouseLeave={() => setIsHovered(false)}>
-							<button className={styles.item} style={isHovered ? { color: '#0000009c' } : {}} onMouseEnter={() => setIsHovered(true)}>
+						<div className={styles.accountWrap} style={scrollColor} onMouseLeave={() => setIsHovered(false)}>
+							<button
+								className={styles.item}
+								style={isHovered ? { color: '#33322f49' } : scrollColor}
+								onMouseEnter={() => setIsHovered(true)}>
 								Account
 							</button>
 							{isHovered && (
 								<div className={styles.wrap}>
-									<button className={styles.item} onClick={() => (isAuth ? navigate('/my-account') : navigate('/login'))}>
+									<Link to={isAuth ? '/my-account' : '/login'} className={styles.item} style={scrollColor}>
 										My Account
-									</button>
+									</Link>
 
-									<Link className={styles.item} to={'/my-cart'}>
+									<Link className={styles.item} style={scrollColor} to={'/my-cart'}>
 										My Cart
 									</Link>
 
 									{isAuth ? (
-										<button className={styles.item} onClick={singOutClick}>
+										<button className={styles.item} style={scrollColor} onClick={singOutClick}>
 											Sing Out
 										</button>
 									) : (
-										<Link className={styles.item} to={'/login'}>
+										<Link className={styles.item} style={scrollColor} to={'/login'}>
 											Sing Up
 										</Link>
 									)}
@@ -104,3 +108,4 @@ export const Header: FC = () => {
 		</header>
 	);
 };
+// onClick={() => (isAuth ? navigate('/my-account') : navigate('/login'))}

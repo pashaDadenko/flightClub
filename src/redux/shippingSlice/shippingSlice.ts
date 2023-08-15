@@ -24,9 +24,17 @@ export const shippingSlice = createSlice({
 			state.postalCode = payload.postalCode;
 			state.telephone = payload.telephone;
 		},
+		setEdit(state) {
+			state.name = null;
+			state.streetAddress = null;
+			state.apartment = null;
+			state.city = null;
+			state.postalCode = null;
+			state.telephone = null;
+		},
 	},
 });
 
-export const { setShipping } = shippingSlice.actions;
+export const { setShipping, setEdit } = shippingSlice.actions;
 
 export default shippingSlice.reducer;

@@ -35,23 +35,16 @@ export const Checkout: FC = () => {
 				<ShippingMethod />
 
 				<div className={styles.paymentWrap}>
-					<p>PAYMENT METHOD</p>
-					<p className={styles.line}></p>
-
-					<p className={styles.title}>* Name on Card</p>
-					<input className={styles.input} type='text' />
-					<p className={styles.title}>* Credit Card</p>
-					<div className={styles.inputWrap}>
-						<input className={styles.cardNumber} placeholder='Card number' type='text' maxLength={16} />
-						<input className={styles.mm_yy} placeholder='MM/YY' type='text' maxLength={4} />
-						<input className={styles.cvc} placeholder='CVC' type='text' maxLength={3} />
+					<div className={styles.flex}>
+						<p>PAYMENT METHOD</p>
+						<CheckCircleOutlineOutlinedIcon className={styles.icon} />
 					</div>
-
-					<button className={styles.button}>CONTINUE</button>
+					<p className={styles.line}></p>
+					<p className={styles.text}>Payment is made to the in cash or by bank card to the courier.</p>
 				</div>
 			</div>
 
-			<div className={styles.containerRight}>
+			<div className={styles.containerRight} style={cartItems.length < 3 ? { position: 'fixed', marginLeft: '520px' } : {}}>
 				<div className={styles.orderWrap}>
 					<p>ORDER SUMMARY</p>
 					<p className={styles.line}></p>

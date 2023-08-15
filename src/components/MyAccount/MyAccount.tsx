@@ -45,18 +45,6 @@ export const MyAccount: FC = () => {
 							)}
 						</div>
 					</div>
-
-					<div className={styles.paymentWrap}>
-						<div className={styles.paymentTop}>
-							<p>PAYMENT</p>
-						</div>
-						<div className={styles.paymentBottom}>
-							<div>No saved payments.</div>
-
-							<p>Name on Card</p>
-							<p>Credit Card</p>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>

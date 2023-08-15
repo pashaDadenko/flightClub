@@ -6,8 +6,21 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		.icon {
-			color: #22b82252;
+		.flexBox {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			.edit {
+				color: #818181;
+				text-decoration: underline;
+				cursor: pointer;
+				&:hover {
+					color: #000;
+				}
+			}
+			.icon {
+				color: #22b82252;
+			}
 		}
 	}
 
