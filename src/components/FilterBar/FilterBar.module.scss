@@ -2,7 +2,6 @@
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
-
 	.button {
 		display: flex;
 		justify-content: start;
@@ -17,7 +16,6 @@
 		&:hover {
 			background-color: #81818113;
 		}
-
 		.circle {
 			width: 15px;
 			height: 15px;

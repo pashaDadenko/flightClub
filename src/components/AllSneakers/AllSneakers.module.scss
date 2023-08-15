@@ -4,11 +4,9 @@
 		margin: 0 auto;
 		margin-top: 50px;
 		margin-bottom: 50px;
-
 		.wrap {
 			display: flex;
 			justify-content: space-between;
-
 			.filter {
 				width: 300px;
 				.filterWrap {
@@ -31,10 +29,8 @@
 					}
 				}
 			}
-
 			.sneakers {
 				width: 960px;
-
 				.titleWrap {
 					display: flex;
 					align-items: center;
@@ -49,27 +45,23 @@
 						}
 					}
 				}
-
 				.previewGroupe {
 					display: flex;
 					flex-wrap: wrap;
 					gap: 30px;
 					cursor: pointer;
-
 					.previewProduct {
 						display: flex;
 						flex-direction: column;
 						width: 300px;
 						background-color: #fff;
 						text-decoration: none;
-
 						.img {
 							margin: 0 auto;
 							width: 270px;
 							height: 270px;
 							object-fit: contain;
 						}
-
 						.info {
 							padding: 0 20px 20px 20px;
 							.subTitle {
@@ -85,14 +77,12 @@
 								font-weight: 900;
 							}
 						}
-
 						&:hover img {
 							scale: 105%;
 							transition: 0.2s;
 						}
 					}
 				}
-
 				.button {
 					margin: 0 auto;
 					display: block;

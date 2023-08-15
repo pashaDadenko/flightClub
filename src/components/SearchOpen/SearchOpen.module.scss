@@ -9,7 +9,6 @@
 		display: flex;
 		align-items: center;
 		border-bottom: 2px solid #eaeaea;
-
 		.search {
 			padding: 10px 35px;
 			outline: none;
@@ -22,14 +21,12 @@
 				font-size: 16px;
 			}
 		}
-
 		.icon {
 			position: absolute;
 			top: 37%;
 			left: 40px;
 			color: #000;
 		}
-
 		.buttonClear {
 			background-color: transparent;
 			padding: 0 30px;
@@ -49,32 +46,26 @@
 			font-size: 20px;
 			cursor: pointer;
 		}
-
 		.line {
 			height: 100px;
 			width: 2px;
 			background-color: #f9f9f9;
 		}
 	}
-
 	.wrapSearchBottom {
 		background-color: #fff;
 		height: 600px;
 		display: flex;
 		justify-content: space-between;
-
 		.title {
 			margin-bottom: 30px;
 		}
-
 		.left {
 			width: 50%;
 			padding: 40px;
-
 			.previewGroupe {
 				display: flex;
 				flex-wrap: wrap;
-
 				.previewProduct {
 					display: flex;
 					align-items: center;
@@ -82,7 +73,6 @@
 					text-decoration: none;
 					width: 50%;
 					margin-bottom: 20px;
-
 					.img {
 						width: 140px;
 						height: 100px;
@@ -98,7 +88,6 @@
 				}
 			}
 		}
-
 		.right {
 			border-left: 2px solid #eaeaea;
 			width: 50%;
@@ -106,21 +95,18 @@
 			.wrap {
 				display: flex;
 				justify-content: space-between;
-
 				.brand {
 					display: flex;
 					flex-direction: column;
 					align-items: start;
 					gap: 15px;
 					width: 50%;
-
 					.button {
 						background-color: #fff;
 						border: none;
 						cursor: pointer;
 					}
 				}
-
 				.recommended {
 					display: flex;
 					flex-direction: column;

@@ -1,23 +1,19 @@
 .wrapper {
 	background-color: #fff;
-
 	.container {
 		width: 1000px;
 		margin: 0 auto;
 		padding-top: 50px;
 		padding-bottom: 50px;
-
 		.title {
 			font-size: 30px;
 			margin-bottom: 100px;
 		}
-
 		.sneakerWrap {
 			display: flex;
 			flex-direction: column;
 			gap: 20px;
 			padding-right: 50px;
-
 			.sneaker {
 				display: flex;
 				justify-content: space-between;
@@ -50,7 +46,6 @@
 					}
 				}
 			}
-
 			.flex {
 				display: flex;
 				justify-content: space-between;
@@ -69,7 +64,6 @@
 				}
 			}
 		}
-
 		.priceWrap {
 			display: flex;
 			align-items: center;
@@ -98,7 +92,6 @@
 				}
 			}
 		}
-
 		.buttonWrap {
 			display: flex;
 			justify-content: space-between;

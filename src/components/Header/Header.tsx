@@ -46,7 +46,7 @@ export const Header: FC = () => {
 
 	return (
 		<header style={pathname === '/' ? styleHeaderIMG : { height: '100px' }}>
-			<div style={scrollBack} className={styles.headerTop}>
+			<div className={styles.headerTop} style={scrollBack}>
 				{isClicked ? <SearchOpen setIsClicked={setIsClicked} /> : <Search setIsClicked={setIsClicked} scroll={scroll} />}
 
 				{!isClicked && (
@@ -57,10 +57,10 @@ export const Header: FC = () => {
 
 				{!isClicked && (
 					<div className={styles.listing}>
-						<Link className={styles.item} to={'/sneakers'} style={scrollColor}>
+						<Link className={styles.item} style={scrollColor} to={'/sneakers'}>
 							Sneakers
 						</Link>
-						<Link className={styles.item} to={'/store-location'} style={scrollColor}>
+						<Link className={styles.item} style={scrollColor} to={'/store-location'}>
 							Store
 						</Link>
 

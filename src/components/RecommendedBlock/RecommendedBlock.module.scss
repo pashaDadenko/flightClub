@@ -1,36 +1,30 @@
 .wrapper {
 	background-color: #f9f9f9;
-
 	.container {
 		width: 1300px;
 		margin: 0 auto;
 		padding-top: 100px;
 		padding-bottom: 50px;
-
 		.title {
 			margin-bottom: 50px;
 		}
-
 		.previewGroupe {
 			display: flex;
 			flex-wrap: wrap;
 			gap: 30px;
 			cursor: pointer;
-
 			.previewProduct {
 				display: flex;
 				flex-direction: column;
 				width: 300px;
 				background-color: #fff;
 				text-decoration: none;
-
 				.img {
 					width: 270px;
 					height: 270px;
 					object-fit: contain;
 					margin: 0 auto;
 				}
-
 				.info {
 					padding: 0 20px 20px 20px;
 					.subTitle {
@@ -47,7 +41,6 @@
 				}
 			}
 		}
-
 		.btn {
 			margin: 0 auto;
 			display: block;

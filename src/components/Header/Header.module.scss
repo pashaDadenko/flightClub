@@ -7,7 +7,6 @@
 	position: fixed;
 	z-index: 999;
 	transition: 0.7s;
-
 	.logo {
 		font-family: 'Oswald', sans-serif;
 		font-size: 40px;
@@ -16,7 +15,6 @@
 		text-decoration: none;
 		margin-left: 50px;
 	}
-
 	.listing {
 		display: flex;
 		gap: 50px;
@@ -30,10 +28,8 @@
 				transition: 0.2s;
 			}
 		}
-
 		.accountWrap {
 			position: relative;
-
 			.item {
 				font-size: 20px;
 				color: #000;
@@ -45,7 +41,6 @@
 					transition: 0.2s;
 				}
 			}
-
 			.wrap {
 				display: flex;
 				flex-direction: column;
@@ -70,7 +65,6 @@
 		}
 	}
 }
-
 .previewWrapper {
 	position: absolute;
 	top: 35%;

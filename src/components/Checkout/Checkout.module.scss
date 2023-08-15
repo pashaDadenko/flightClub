@@ -4,13 +4,11 @@
 	gap: 20px;
 	width: 1000px;
 	margin: 0 auto;
-
 	.containerLeft {
 		width: 500px;
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
-
 		.accountWrap {
 			background-color: #fff;
 			padding: 30px;
@@ -35,11 +33,9 @@
 				color: #818181;
 			}
 		}
-
 		.paymentWrap {
 			background-color: #fff;
 			padding: 30px;
-
 			.flex {
 				display: flex;
 				justify-content: space-between;
@@ -48,13 +44,11 @@
 					color: #22b82252;
 				}
 			}
-
 			.line {
 				margin-top: 20px;
 				height: 1px;
 				background-color: #eaeaea;
 			}
-
 			.text {
 				margin-top: 30px;
 				font-size: 12px;
@@ -62,7 +56,6 @@
 			}
 		}
 	}
-
 	.containerRight {
 		width: 500px;
 		.orderWrap {
@@ -106,7 +99,6 @@
 				}
 			}
 		}
-
 		.totalInfoWrap {
 			display: flex;
 			justify-content: space-between;
@@ -125,7 +117,6 @@
 				gap: 10px;
 			}
 		}
-
 		.totalWrap {
 			display: flex;
 			justify-content: space-between;
@@ -136,12 +127,10 @@
 				font-weight: 900;
 			}
 		}
-
 		.text {
 			color: #818181;
 			font-size: 15px;
 		}
-
 		.buttonUpdate {
 			margin-top: 20px;
 			width: 100%;
@@ -156,7 +145,6 @@
 				transition: 0.2s;
 			}
 		}
-
 		.button {
 			margin-top: 20px;
 			width: 100%;

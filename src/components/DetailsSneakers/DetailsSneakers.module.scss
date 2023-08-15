@@ -1,23 +1,18 @@
 .wrapper {
 	background-color: #fff;
-
 	.container {
 		max-width: 1400px;
 		margin: 0 auto;
 		padding: 50px 0;
-
 		.wrap {
 			display: flex;
 			gap: 100px;
-
 			.image {
 				width: 600px;
 				height: 400px;
 			}
-
 			.infoWrap {
 				width: 500px;
-
 				.brand {
 					color: #818181;
 				}
@@ -54,7 +49,6 @@
 					margin-bottom: 30px;
 					letter-spacing: 2px;
 				}
-
 				.buttonWrap {
 					display: flex;
 					align-items: center;
@@ -73,7 +67,6 @@
 							transition: 0.2s;
 						}
 					}
-
 					.link {
 						text-decoration: none;
 						display: flex;
@@ -97,7 +90,6 @@
 						}
 					}
 				}
-
 				.line {
 					height: 10px;
 					background-color: #f9f9f9;

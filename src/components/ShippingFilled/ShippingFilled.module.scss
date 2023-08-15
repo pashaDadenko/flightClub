@@ -1,7 +1,6 @@
 .wrapper {
 	background-color: #fff;
 	padding: 30px;
-
 	.flex {
 		display: flex;
 		justify-content: space-between;
@@ -23,13 +22,11 @@
 			}
 		}
 	}
-
 	.line {
 		margin: 20px 0;
 		height: 1px;
 		background-color: #eaeaea;
 	}
-
 	.wrap {
 		display: flex;
 		flex-direction: column;
