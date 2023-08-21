@@ -49,9 +49,9 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 									<button
 										onClick={() => {
 											dispatch(setValueBrand(brand));
-											setActiveBrand((prevActiveColors) => ({
-												...prevActiveColors,
-												[index]: !prevActiveColors[index],
+											setActiveBrand((prevActiveBrand) => ({
+												...prevActiveBrand,
+												[index]: !prevActiveBrand[index],
 											}));
 										}}
 										style={activeBrand[index] ? { border: '1px solid #000' } : {}}
@@ -82,9 +82,9 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 								<button
 									onClick={() => {
 										dispatch(setValueModel(model));
-										setActiveModel((prevActiveColors) => ({
-											...prevActiveColors,
-											[index]: !prevActiveColors[index],
+										setActiveModel((prevActiveModel) => ({
+											...prevActiveModel,
+											[index]: !prevActiveModel[index],
 										}));
 									}}
 									style={activeModel[index] ? { border: '1px solid #000' } : {}}
@@ -114,9 +114,9 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 								<button
 									onClick={() => {
 										dispatch(setValueColor(color));
-										setActiveColors((prevActiveColors) => ({
-											...prevActiveColors,
-											[index]: !prevActiveColors[index],
+										setActiveColors((prevActiveColor) => ({
+											...prevActiveColor,
+											[index]: !prevActiveColor[index],
 										}));
 									}}
 									style={activeColors[index] ? { border: '1px solid #000' } : {}}
