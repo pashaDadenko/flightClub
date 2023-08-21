@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
 
 import styles from './OffWhiteBlock.module.scss';
+import { SkeletonBlock } from '../Skeleton/SkeletonBlock';
 
 export const OffWhiteBlock: FC = () => {
 	const offWhite = useSelector((state: RootState) => state.sneakersSlice.offWhiteSneakers);
@@ -12,7 +13,7 @@ export const OffWhiteBlock: FC = () => {
 		<section className={styles.wrapper}>
 			<h2 className={styles.title}>OFF WHITE</h2>
 			<ul className={styles.previewGroupe}>
-				{offWhite &&
+				{offWhite ? (
 					offWhite.map((sneaker) => (
 						<Link to={`/details/${sneaker.id}`} key={sneaker.id} className={styles.previewProduct}>
 							<img className={styles.img} src={sneaker.images[0]} alt='image' />
@@ -21,7 +22,10 @@ export const OffWhiteBlock: FC = () => {
 								<p className={styles.text}>{sneaker.title}</p>
 							</div>
 						</Link>
-					))}
+					))
+				) : (
+					<SkeletonBlock />
+				)}
 			</ul>
 			<Link className={styles.link} to={'/off-white'}>
 				<button className={styles.btn}>SHOP OFF WHITE</button>

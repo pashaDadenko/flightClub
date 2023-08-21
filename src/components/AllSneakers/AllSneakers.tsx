@@ -4,6 +4,7 @@ import { Selected } from '../Selected/Selected';
 import { FilterBar } from '../FilterBar/FilterBar';
 import { Link, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { SkeletonSneakers } from '../Skeleton/SkeletonSneakers';
 import { setClearFilter } from '../../redux/filterSlice/filterSlice';
 
 import styles from './AllSneakers.module.scss';
@@ -89,7 +90,7 @@ export const AllSneakers: FC = () => {
 							<Selected />
 						</div>
 						<ul className={styles.previewGroupe}>
-							{updateSneakers.length > 0 &&
+							{updateSneakers.length ? (
 								updateSneakers.slice(0, visibleProducts).map((sneaker) => (
 									<Link to={`/details/${sneaker.id}`} key={sneaker.id} className={styles.previewProduct}>
 										<img className={styles.img} src={sneaker.images[0]} alt='image' />
@@ -99,7 +100,10 @@ export const AllSneakers: FC = () => {
 											<p className={styles.price}>${sneaker.price}</p>
 										</div>
 									</Link>
-								))}
+								))
+							) : (
+								<SkeletonSneakers />
+							)}
 						</ul>
 						{visibleProducts < updateSneakers.length && (
 							<button onClick={handleShowMore} className={styles.button}>
