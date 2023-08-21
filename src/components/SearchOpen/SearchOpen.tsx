@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { RootState } from '../../redux/store';
 import { SearchProps } from './TypeSearchOpen';
 import SearchIcon from '@mui/icons-material/Search';
@@ -43,7 +44,7 @@ export const SearchOpen: FC<SearchProps> = ({ setIsClicked }) => {
 
 	return (
 		<>
-			<div className={styles.wrapper}>
+			<motion.div className={styles.wrapper} initial={{ y: -700 }} animate={{ y: 0 }}>
 				<div className={styles.wrapSearch}>
 					<SearchIcon className={styles.icon} />
 					<input
@@ -117,8 +118,8 @@ export const SearchOpen: FC<SearchProps> = ({ setIsClicked }) => {
 						</div>
 					</div>
 				</div>
-			</div>
-			<div className={styles.overlay} onClick={() => setIsClicked(false)}></div>
+			</motion.div>
+			<motion.div className={styles.overlay} onClick={() => setIsClicked(false)} initial={{ y: 1000 }} animate={{ y: 0 }}></motion.div>
 		</>
 	);
 };
