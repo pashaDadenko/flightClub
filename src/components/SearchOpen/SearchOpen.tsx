@@ -44,7 +44,7 @@ export const SearchOpen: FC<SearchProps> = ({ setIsClicked }) => {
 
 	return (
 		<>
-			<motion.div className={styles.wrapper} initial={{ y: -700 }} animate={{ y: 0 }}>
+			<div className={styles.wrapper}>
 				<div className={styles.wrapSearch}>
 					<SearchIcon className={styles.icon} />
 					<input
@@ -118,8 +118,8 @@ export const SearchOpen: FC<SearchProps> = ({ setIsClicked }) => {
 						</div>
 					</div>
 				</div>
-			</motion.div>
-			<motion.div className={styles.overlay} onClick={() => setIsClicked(false)} initial={{ y: 1000 }} animate={{ y: 0 }}></motion.div>
+			</div>
+			<div className={styles.overlay} onClick={() => setIsClicked(false)}></div>
 		</>
 	);
 };

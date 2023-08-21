@@ -15,15 +15,13 @@ export const AirJordanBlock: FC = () => {
 			<ul className={styles.previewGroupe}>
 				{airJordan ? (
 					airJordan.map((sneaker) => (
-						<>
-							<Link to={`/details/${sneaker.id}`} key={sneaker.id} className={styles.previewProduct}>
-								<img className={styles.img} src={sneaker.images[0]} alt='image' />
-								<div className={styles.info}>
-									<span className={styles.subTitle}>{sneaker.brand}</span>
-									<p className={styles.text}>{sneaker.title}</p>
-								</div>
-							</Link>
-						</>
+						<Link className={styles.previewProduct} to={`/details/${sneaker.id}`} key={sneaker.id}>
+							<img className={styles.img} src={sneaker.images[0]} alt='image' />
+							<div className={styles.info}>
+								<span className={styles.subTitle}>{sneaker.brand}</span>
+								<p className={styles.text}>{sneaker.title}</p>
+							</div>
+						</Link>
 					))
 				) : (
 					<SkeletonBlock />
