@@ -31,7 +31,7 @@
 		.accountWrap {
 			position: relative;
 			.item {
-				font-size: 20px;
+				font-size: 19px;
 				color: #000;
 				border: none;
 				background-color: transparent;
@@ -44,12 +44,12 @@
 			.wrap {
 				display: flex;
 				flex-direction: column;
+				align-items: end;
 				position: absolute;
 				right: -60px;
 				padding: 30px 60px 40px 40px;
 				gap: 20px;
 				width: 100px;
-				align-items: end;
 				.item {
 					font-size: 20px;
 					background-color: transparent;
@@ -59,6 +59,9 @@
 					&:hover {
 						color: #0000009c;
 						transition: 0.2s;
+					}
+					&:last-child {
+						font-size: 18px;
 					}
 				}
 			}

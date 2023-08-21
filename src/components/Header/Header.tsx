@@ -72,7 +72,7 @@ export const Header: FC = () => {
 								Account
 							</button>
 							{isHovered && (
-								<div className={styles.wrap}>
+								<div className={styles.wrap} style={scrollBack}>
 									<Link to={isAuth ? '/my-account' : '/login'} className={styles.item} style={scrollColor}>
 										My Account
 									</Link>
@@ -108,4 +108,3 @@ export const Header: FC = () => {
 		</header>
 	);
 };
-// onClick={() => (isAuth ? navigate('/my-account') : navigate('/login'))}
