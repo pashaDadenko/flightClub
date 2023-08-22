@@ -15,7 +15,7 @@ export const RecommendedBlock: FC = () => {
 			<section className={styles.container}>
 				<h2 className={styles.title}>RECOMMENDED FOR YOU</h2>
 				<ul className={styles.previewGroupe}>
-					{recommendedSneakers ? (
+					{recommendedSneakers.length > 0 ? (
 						recommendedSneakers.map((sneaker) => (
 							<Link
 								to={`/details/${sneaker.id}`}

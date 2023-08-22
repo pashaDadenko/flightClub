@@ -13,7 +13,7 @@ export const OffWhiteBlock: FC = () => {
 		<section className={styles.wrapper}>
 			<h2 className={styles.title}>OFF WHITE</h2>
 			<ul className={styles.previewGroupe}>
-				{offWhite ? (
+				{offWhite.length > 0 ? (
 					offWhite.map((sneaker) => (
 						<Link to={`/details/${sneaker.id}`} key={sneaker.id} className={styles.previewProduct}>
 							<img className={styles.img} src={sneaker.images[0]} alt='image' />

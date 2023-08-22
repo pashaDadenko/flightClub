@@ -13,7 +13,7 @@ export const AirJordanBlock: FC = () => {
 		<section className={styles.wrapper}>
 			<h2 className={styles.title}>AIR JORDAN</h2>
 			<ul className={styles.previewGroupe}>
-				{airJordan ? (
+				{airJordan.length > 0 ? (
 					airJordan.map((sneaker) => (
 						<Link className={styles.previewProduct} to={`/details/${sneaker.id}`} key={sneaker.id}>
 							<img className={styles.img} src={sneaker.images[0]} alt='image' />

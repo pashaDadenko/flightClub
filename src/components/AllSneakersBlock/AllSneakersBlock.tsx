@@ -14,7 +14,7 @@ export const AllSneakersBlock: FC = () => {
 			<section className={styles.container}>
 				<h2 className={styles.title}>ALL SNEAKERS</h2>
 				<ul className={styles.previewGroupe}>
-					{randomSneakers ? (
+					{randomSneakers.length > 0 ? (
 						randomSneakers.map((sneaker) => (
 							<Link to={`/details/${sneaker.id}`} key={sneaker.id} className={styles.previewProduct}>
 								<img className={styles.img} src={sneaker.images[0]} alt='image' />

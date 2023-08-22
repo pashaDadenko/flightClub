@@ -72,7 +72,7 @@ export const SearchOpen: FC<SearchProps> = ({ setIsClicked }) => {
 					<div className={styles.left}>
 						{filteredSneakers.length > 0 ? <p className={styles.title}>Popular</p> : <p className={styles.title}>No Result</p>}
 						<ul className={styles.previewGroupe}>
-							{filteredSneakers ? (
+							{filteredSneakers.length > 0 ? (
 								filteredSneakers.slice(0, 8).map((sneaker) => (
 									<Link to={`/details/${sneaker.id}`} key={sneaker.id} className={styles.previewProduct}>
 										<img className={styles.img} src={sneaker.images[0]} alt='image' />

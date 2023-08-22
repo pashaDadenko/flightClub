@@ -90,7 +90,7 @@ export const AllSneakers: FC = () => {
 							<Selected />
 						</div>
 						<ul className={styles.previewGroupe}>
-							{updateSneakers.length ? (
+							{updateSneakers.length > 0 ? (
 								updateSneakers.slice(0, visibleProducts).map((sneaker) => (
 									<Link to={`/details/${sneaker.id}`} key={sneaker.id} className={styles.previewProduct}>
 										<img className={styles.img} src={sneaker.images[0]} alt='image' />

@@ -13,7 +13,7 @@ export const TopSellersBlock: FC = () => {
 		<section className={styles.wrapper}>
 			<h2 className={styles.title}>TOP SELLERS</h2>
 			<ul className={styles.previewGroupe}>
-				{topSellers ? (
+				{topSellers.length > 0 ? (
 					topSellers.map((sneaker) => (
 						<Link to={`/details/${sneaker.id}`} key={sneaker.id} className={styles.previewProduct}>
 							<img className={styles.img} src={sneaker.images[0]} alt='image' />
