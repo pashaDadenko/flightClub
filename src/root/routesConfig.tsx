@@ -19,6 +19,7 @@ import { LowestPricePage } from '../pages/LowestPricePage';
 import { AllSneakersPage } from '../pages/AllSneakersPage';
 import { SearchResultPage } from '../pages/SearchResultPage';
 import { CreateAccountPage } from '../pages/CreateAccountPage';
+import { ForgotPasswordPage } from '../pages/ForgotPasswordPage';
 import { ShippingAndReturnsPage } from '../pages/ShippingAndReturnsPage';
 
 interface IRouteConfig {
@@ -108,5 +109,9 @@ export const routesConfig: IRouteConfig[] = [
 	{
 		path: '/help',
 		element: <HelpPage />,
+	},
+	{
+		path: '/forgot-password',
+		element: <ForgotPasswordPage />,
 	},
 ];

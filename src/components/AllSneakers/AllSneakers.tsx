@@ -40,9 +40,9 @@ export const AllSneakers: FC = () => {
 
 	const renderClearFiltersBtn = valueBrand.length > 0 || valueModel.length > 0 || valueColor.length > 0;
 
-	const [activeBrand, setActiveBrand] = useState<{ [key: number]: boolean }>({});
-	const [activeModel, setActiveModel] = useState<{ [key: number]: boolean }>({});
-	const [activeColors, setActiveColors] = useState<{ [key: number]: boolean }>({});
+	const [activeBrand, setActiveBrand] = useState<{ [key: string]: boolean }>({});
+	const [activeModel, setActiveModel] = useState<{ [key: string]: boolean }>({});
+	const [activeColors, setActiveColors] = useState<{ [key: string]: boolean }>({});
 
 	const clearFilters = () => {
 		setActiveBrand({});

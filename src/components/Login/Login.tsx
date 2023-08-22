@@ -95,6 +95,10 @@ export const FormLogin: FC = () => {
 						)}
 					</div>
 
+					<Link to={'/forgot-password'} className={styles.forgot}>
+						Forgot Password?
+					</Link>
+
 					{isValid && watch('email') && watch('password') ? (
 						<button className={styles.loginUpdate}>LOGIN</button>
 					) : (

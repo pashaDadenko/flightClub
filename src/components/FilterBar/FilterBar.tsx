@@ -51,10 +51,10 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 											dispatch(setValueBrand(brand));
 											setActiveBrand((prevActiveBrand) => ({
 												...prevActiveBrand,
-												[index]: !prevActiveBrand[index],
+												[brand]: !prevActiveBrand[brand],
 											}));
 										}}
-										style={activeBrand[index] ? { border: '1px solid #000' } : {}}
+										style={activeBrand[brand] ? { border: '1px solid #000' } : {}}
 										className={styles.button}
 										name={brand}
 										id={brand}
@@ -84,10 +84,10 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 										dispatch(setValueModel(model));
 										setActiveModel((prevActiveModel) => ({
 											...prevActiveModel,
-											[index]: !prevActiveModel[index],
+											[model]: !prevActiveModel[model],
 										}));
 									}}
-									style={activeModel[index] ? { border: '1px solid #000' } : {}}
+									style={activeModel[model] ? { border: '1px solid #000' } : {}}
 									className={styles.button}
 									name={model}
 									id={model}
@@ -116,16 +116,15 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 										dispatch(setValueColor(color));
 										setActiveColors((prevActiveColor) => ({
 											...prevActiveColor,
-											[index]: !prevActiveColor[index],
+											[color]: !prevActiveColor[color],
 										}));
 									}}
-									style={activeColors[index] ? { border: '1px solid #000' } : {}}
+									style={activeColors[color] ? { border: '1px solid #000' } : {}}
 									className={styles.button}
 									name={color}
 									id={color}
 									key={index}>
 									<span style={color === 'multi' ? multiColor : { backgroundColor: `${color}` }} className={styles.circle}></span>
-
 									{color}
 								</button>
 							))}

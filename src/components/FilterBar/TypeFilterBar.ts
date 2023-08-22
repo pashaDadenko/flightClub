@@ -7,10 +7,10 @@ export type TypeAccordionStyle = {
 
 export type FilterBarProps = {
 	updateSneakers: TypeApi[];
-	activeBrand: { [key: number]: boolean };
-	activeModel: { [key: number]: boolean };
-	activeColors: { [key: number]: boolean };
-	setActiveBrand: React.Dispatch<React.SetStateAction<{ [key: number]: boolean }>>;
-	setActiveModel: React.Dispatch<React.SetStateAction<{ [key: number]: boolean }>>;
-	setActiveColors: React.Dispatch<React.SetStateAction<{ [key: number]: boolean }>>;
+	activeBrand: { [key: string]: boolean };
+	activeModel: { [key: string]: boolean };
+	activeColors: { [key: string]: boolean };
+	setActiveBrand: React.Dispatch<React.SetStateAction<{ [key: string]: boolean }>>;
+	setActiveModel: React.Dispatch<React.SetStateAction<{ [key: string]: boolean }>>;
+	setActiveColors: React.Dispatch<React.SetStateAction<{ [key: string]: boolean }>>;
 };
