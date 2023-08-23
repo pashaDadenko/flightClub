@@ -9,14 +9,18 @@ import { MyCartPage } from '../pages/MyCartPage';
 import { StoresPage } from '../pages/StoresPage';
 import { AboutUsPage } from '../pages/AboutUsPage';
 import { DetailsPage } from '../pages/DetailsPage';
+import { RarShoesPage } from '../pages/RarShoesPage';
 import { OffWhitePage } from '../pages/OffWhitePage';
 import { CheckoutPage } from '../pages/CheckoutPage';
+import { NikeDunkPage } from '../pages/NikeDunkPage';
 import { AirJordanPage } from '../pages/AirJordanPage';
 import { MyAccountPage } from '../pages/MyAccountPage';
+import { DarkShoesPage } from '../pages/DarkShoesPage';
 import { TopSellersPage } from '../pages/TopSellersPage';
 import { NewBalancePage } from '../pages/NewBalancePage';
 import { LowestPricePage } from '../pages/LowestPricePage';
 import { AllSneakersPage } from '../pages/AllSneakersPage';
+import { SellSneakersPage } from '../pages/SellSneakersPage';
 import { SearchResultPage } from '../pages/SearchResultPage';
 import { CreateAccountPage } from '../pages/CreateAccountPage';
 import { ForgotPasswordPage } from '../pages/ForgotPasswordPage';
@@ -113,5 +117,21 @@ export const routesConfig: IRouteConfig[] = [
 	{
 		path: '/forgot-password',
 		element: <ForgotPasswordPage />,
+	},
+	{
+		path: '/nike-dunk',
+		element: <NikeDunkPage />,
+	},
+	{
+		path: '/dark-shoes',
+		element: <DarkShoesPage />,
+	},
+	{
+		path: '/rar-shoes',
+		element: <RarShoesPage />,
+	},
+	{
+		path: '//sell-sneakers',
+		element: <SellSneakersPage />,
 	},
 ];

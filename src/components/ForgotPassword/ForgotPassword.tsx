@@ -1,7 +1,7 @@
 import { FC } from 'react';
+import { Link } from 'react-router-dom';
 
 import styles from './ForgotPassword.module.scss';
-import { Link } from 'react-router-dom';
 
 export const ForgotPassword: FC = () => {
 	return (

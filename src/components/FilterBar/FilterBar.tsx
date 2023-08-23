@@ -29,7 +29,12 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 	const accordionStyle: TypeAccordionStyle = { boxShadow: 'none', transition: 'none' };
 	const multiColor = { backgroundImage: `linear-gradient(to left, rgb(255, 244, 12), rgb(74, 138, 0) 31%, rgb(0, 72, 156) 63%, rgb(213, 55, 54))` };
 
-	const renderBrand = pathname === '/sneakers' || pathname === '/top-sellers' || pathname === '/lowest-price' || pathname === '/search-result';
+	const renderBrand =
+		pathname === '/sneakers' ||
+		pathname === '/top-sellers' ||
+		pathname === '/lowest-price' ||
+		pathname === '/search-result' ||
+		pathname === '/dark-shoes';
 
 	return (
 		<div className={styles.wrapper}>

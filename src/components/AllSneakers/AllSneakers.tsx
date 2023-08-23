@@ -32,6 +32,9 @@ export const AllSneakers: FC = () => {
 	if (pathname === '/yeezy') updateSneakers = updateSneakers.filter((item) => item.brand === 'Yeezy');
 	if (pathname === '/new-balance') updateSneakers = updateSneakers.filter((item) => item.brand === 'New balance');
 	if (pathname === '/lowest-price') updateSneakers = updateSneakers.filter((item) => item.price < 300);
+	if (pathname === '/nike-dunk') updateSneakers = updateSneakers.filter((item) => item.model === 'dunk');
+	if (pathname === '/dark-shoes') updateSneakers = updateSneakers.filter((item) => item.color === 'black');
+	if (pathname === '/rar-shoes') updateSneakers = updateSneakers.filter((item) => item.price > 1000);
 	if (pathname === '/search-result')
 		updateSneakers = updateSneakers.filter(
 			(sneaker) =>
