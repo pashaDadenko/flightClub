@@ -8,6 +8,7 @@ export const filterSlice = createSlice({
 		filterValues: {
 			valueBrand: [],
 			valueModel: [],
+			valueSizes: [],
 			valueColor: [],
 		},
 	},
@@ -29,6 +30,14 @@ export const filterSlice = createSlice({
 				state.filterValues.valueModel = [...state.filterValues.valueModel, payload];
 			}
 		},
+		setValueSizes(state, { payload }: PayloadAction<number>) {
+			if (state.filterValues.valueSizes.includes(payload)) {
+				let filters = state.filterValues.valueSizes.filter((el) => el !== payload);
+				state.filterValues.valueSizes = filters;
+			} else {
+				state.filterValues.valueSizes = [...state.filterValues.valueSizes, payload];
+			}
+		},
 		setValueColor(state, { payload }: PayloadAction<string>) {
 			if (state.filterValues.valueColor.includes(payload)) {
 				let filters = state.filterValues.valueColor.filter((el) => el !== payload);
@@ -40,11 +49,12 @@ export const filterSlice = createSlice({
 		setClearFilter(state) {
 			state.filterValues.valueBrand = [];
 			state.filterValues.valueModel = [];
+			state.filterValues.valueSizes = [];
 			state.filterValues.valueColor = [];
 		},
 	},
 });
 
-export const { setValueBrand, setValueModel, setValueColor, setClearFilter } = filterSlice.actions;
+export const { setValueBrand, setValueModel, setValueSizes, setValueColor, setClearFilter } = filterSlice.actions;
 
 export default filterSlice.reducer;

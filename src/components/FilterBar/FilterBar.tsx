@@ -8,12 +8,12 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import { FilterBarProps, TypeAccordionStyle } from './TypeFilterBar';
-import { setValueBrand, setValueModel, setValueColor } from '../../redux/filterSlice/filterSlice';
+import { setValueBrand, setValueModel, setValueColor, setValueSizes } from '../../redux/filterSlice/filterSlice';
 
 import styles from './FilterBar.module.scss';
 
 export const FilterBar: FC<FilterBarProps> = (props) => {
-	const { updateSneakers, activeBrand, activeModel, activeColors, setActiveBrand, setActiveModel, setActiveColors } = props;
+	const { updateSneakers, activeBrand, activeModel, activeSizes, activeColors, setActiveBrand, setActiveModel, setActiveSizes, setActiveColors } = props;
 
 	const dispatch = useDispatch();
 	const { pathname } = useLocation();
@@ -21,6 +21,7 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 	const allSneakers = useSelector((state: RootState) => state.sneakersSlice.allSneakers);
 	const brands = [...new Set(allSneakers.map((sneakers) => sneakers.brand))].sort();
 	const models = [...new Set(updateSneakers.map((sneakers) => sneakers.model))].sort();
+	const sizes = [...new Set(allSneakers.map((sneakers) => sneakers.sizes).flat())].sort((a, b) => a - b);
 	const colors = [...new Set(updateSneakers.map((sneakers) => sneakers.color))].sort();
 
 	const [expanded, setExpanded] = useState<string | false>('panel1');
@@ -34,6 +35,7 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 		pathname === '/top-sellers' ||
 		pathname === '/lowest-price' ||
 		pathname === '/search-result' ||
+		pathname === '/rar-shoes' ||
 		pathname === '/dark-shoes';
 
 	return (
@@ -98,6 +100,38 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 									id={model}
 									key={index}>
 									{model}
+								</button>
+							))}
+					</Typography>
+				</AccordionDetails>
+			</Accordion>
+
+			<Accordion style={accordionStyle} disableGutters>
+				<AccordionSummary
+					expandIcon={<ExpandMoreIcon />}
+					aria-controls='panel1bh-content'
+					id='panel1bh-header'
+					style={{ border: '1px solid #81818131' }}>
+					<Typography sx={{}}>US SIZES</Typography>
+				</AccordionSummary>
+				<AccordionDetails style={{ borderTop: 'none', padding: '20px 20px 0 20px', backgroundColor: '#f9f9f9' }}>
+					<Typography sx={{ display: 'flex', flexWrap: 'wrap', gap: '5px', marginLeft: '10px' }}>
+						{sizes &&
+							sizes.map((size, index) => (
+								<button
+									onClick={() => {
+										dispatch(setValueSizes(size));
+										setActiveSizes((prevActiveSize) => ({
+											...prevActiveSize,
+											[size]: !prevActiveSize[size],
+										}));
+									}}
+									style={activeSizes[size] ? { border: '1px solid #000' } : {}}
+									className={styles.buttonSize}
+									name={size.toString()}
+									id={size.toString()}
+									key={index}>
+									{size}
 								</button>
 							))}
 					</Typography>

@@ -15,14 +15,17 @@ export const AllSneakers: FC = () => {
 
 	const allSneakers = useSelector((state: RootState) => state.sneakersSlice.allSneakers);
 	const searchValue = useSelector((state: RootState) => state.searchSlice.searchValue);
-	const { valueBrand, valueModel, valueColor } = useSelector((state: RootState) => state.filterSlice.filterValues);
+	const { valueBrand, valueModel, valueSizes, valueColor } = useSelector((state: RootState) => state.filterSlice.filterValues);
 
 	let updateSneakers = allSneakers.filter((sneakers) => {
-		const { brand, model, color } = sneakers;
+		const { brand, model, color, sizes } = sneakers;
+
 		const brandFilterMatch = valueBrand.length === 0 || valueBrand.includes(brand);
 		const modelFilterMatch = valueModel.length === 0 || valueModel.includes(model);
+		const sizeFilterMatch = valueSizes.length === 0 || valueSizes.some((size) => sizes.includes(size));
 		const colorFilterMatch = valueColor.length === 0 || valueColor.includes(color);
-		return brandFilterMatch && modelFilterMatch && colorFilterMatch;
+
+		return brandFilterMatch && modelFilterMatch && sizeFilterMatch && colorFilterMatch;
 	});
 
 	if (pathname === '/top-sellers') updateSneakers = updateSneakers.sort((a, b) => b.rating - a.rating);
@@ -37,19 +40,20 @@ export const AllSneakers: FC = () => {
 	if (pathname === '/rar-shoes') updateSneakers = updateSneakers.filter((item) => item.price > 1000);
 	if (pathname === '/search-result')
 		updateSneakers = updateSneakers.filter(
-			(sneaker) =>
-				sneaker.title.toLowerCase().includes(searchValue.toLowerCase()) || sneaker.brand.toLowerCase().includes(searchValue.toLowerCase())
+			(sneaker) => sneaker.title.toLowerCase().includes(searchValue.toLowerCase()) || sneaker.brand.toLowerCase().includes(searchValue.toLowerCase())
 		);
 
-	const renderClearFiltersBtn = valueBrand.length > 0 || valueModel.length > 0 || valueColor.length > 0;
+	const renderClearFiltersBtn = valueBrand.length > 0 || valueModel.length > 0 || valueSizes.length > 0 || valueColor.length > 0;
 
 	const [activeBrand, setActiveBrand] = useState<{ [key: string]: boolean }>({});
 	const [activeModel, setActiveModel] = useState<{ [key: string]: boolean }>({});
+	const [activeSizes, setActiveSizes] = useState<{ [key: number]: boolean }>({});
 	const [activeColors, setActiveColors] = useState<{ [key: string]: boolean }>({});
 
 	const clearFilters = () => {
 		setActiveBrand({});
 		setActiveModel({});
+		setActiveSizes({});
 		setActiveColors({});
 	};
 
@@ -78,17 +82,18 @@ export const AllSneakers: FC = () => {
 							updateSneakers={updateSneakers}
 							activeBrand={activeBrand}
 							activeModel={activeModel}
+							activeSizes={activeSizes}
 							activeColors={activeColors}
 							setActiveBrand={setActiveBrand}
 							setActiveModel={setActiveModel}
+							setActiveSizes={setActiveSizes}
 							setActiveColors={setActiveColors}
 						/>
 					</div>
 					<div className={styles.sneakers}>
 						<div className={styles.titleWrap}>
 							<p className={styles.title}>
-								RESULTS{' '}
-								<span className={styles.quantity}>{updateSneakers.length > 0 ? updateSneakers.length : allSneakers.length}</span>
+								RESULTS <span className={styles.quantity}>{updateSneakers.length > 0 ? updateSneakers.length : allSneakers.length}</span>
 							</p>
 							<Selected />
 						</div>
