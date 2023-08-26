@@ -17,7 +17,10 @@ export const ShippingMethod: FC = () => {
 			<p className={styles.line}></p>
 
 			<p className={styles.ship}>Standard - ${standardShipping}</p>
-			<p className={styles.text}>Pre-verified and ready to ship from a Flight Club facility. International shipping times vary by country.</p>
+			<p className={styles.text}>
+				Pre-verified and ready to ship from a Flight Club facility. <br />
+				International shipping times vary by country.
+			</p>
 		</div>
 	);
 };
