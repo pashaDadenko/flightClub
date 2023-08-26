@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { RootState } from '../../redux/store';
 import { SearchProps } from './TypeSearchOpen';
 import SearchIcon from '@mui/icons-material/Search';

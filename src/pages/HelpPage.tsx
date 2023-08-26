@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { api } from '../api/api';
+import { motion } from 'framer-motion';
 import { HeaderCheckout } from '../components/HeaderCheckout/HeaderCheckout';
 
 export const HelpPage: FC = () => {
@@ -18,7 +19,7 @@ export const HelpPage: FC = () => {
 	return (
 		<>
 			<HeaderCheckout />
-			<div style={style}>сам себе помоги (◕‿◕)</div>
+			<motion.div style={style}>сам себе помоги (◕‿◕)</motion.div>
 		</>
 	);
 };
