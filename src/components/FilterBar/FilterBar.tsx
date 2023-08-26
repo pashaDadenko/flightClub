@@ -21,7 +21,7 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 	const allSneakers = useSelector((state: RootState) => state.sneakersSlice.allSneakers);
 	const brands = [...new Set(allSneakers.map((sneakers) => sneakers.brand))].sort();
 	const models = [...new Set(updateSneakers.map((sneakers) => sneakers.model))].sort();
-	const sizes = [...new Set(allSneakers.map((sneakers) => sneakers.sizes).flat())].sort((a, b) => a - b);
+	const sizes = [...new Set(updateSneakers.map((sneakers) => sneakers.sizes).flat())].sort((a, b) => a - b);
 	const colors = [...new Set(updateSneakers.map((sneakers) => sneakers.color))].sort();
 
 	const [expanded, setExpanded] = useState<string | false>('panel1');

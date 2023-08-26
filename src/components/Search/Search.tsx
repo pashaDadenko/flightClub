@@ -8,8 +8,7 @@ import styles from './Search.module.scss';
 export const Search: FC<SearchProps> = ({ setIsClicked, scroll }) => {
 	const { pathname } = useLocation();
 
-	const inputColor =
-		pathname === '/' && scroll < document.documentElement.clientHeight ? { border: '1px solid #81818122', color: '#fff', fontSize: '16px' } : {};
+	const inputColor = pathname === '/' && scroll < document.documentElement.clientHeight ? { border: '1px solid #81818122', color: '#fff', fontSize: '16px' } : {};
 	const iconColor = pathname === '/' && scroll < document.documentElement.clientHeight ? { color: '#fff' } : {};
 
 	return (

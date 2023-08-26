@@ -15,16 +15,16 @@ export const Header: FC = () => {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
 
-	const [scroll, setScroll] = useState(0);
-	const handleScroll = () => setScroll(window.scrollY);
-
 	const [isClicked, setIsClicked] = useState(false);
 	const [isHovered, setIsHovered] = useState(false);
 
+	const [scroll, setScroll] = useState(0);
+
 	useEffect(() => {
+		const handleScroll = () => setScroll(window.scrollY);
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
-	}, []);
+	}, [scroll]);
 
 	const styleHeaderIMG: CSSProperties = {
 		backgroundImage: `url(${backgroundImg})`,
@@ -35,8 +35,7 @@ export const Header: FC = () => {
 		position: 'relative',
 	};
 
-	const scrollBack =
-		pathname === '/' && scroll < document.documentElement.clientHeight ? { backgroundColor: '#ffffff00' } : { backgroundColor: '#fff' };
+	const scrollBack = pathname === '/' && scroll < document.documentElement.clientHeight ? { backgroundColor: '#ffffff00' } : { backgroundColor: '#fff' };
 	const scrollColor = pathname === '/' && scroll < document.documentElement.clientHeight ? { color: '#fff' } : {};
 
 	const singOutClick = () => {
@@ -65,10 +64,7 @@ export const Header: FC = () => {
 						</Link>
 
 						<div className={styles.accountWrap} style={scrollColor} onMouseLeave={() => setIsHovered(false)}>
-							<button
-								className={styles.item}
-								style={isHovered ? { color: '#33322f49' } : scrollColor}
-								onMouseEnter={() => setIsHovered(true)}>
+							<button className={styles.item} style={isHovered ? { color: '#33322f49' } : scrollColor} onMouseEnter={() => setIsHovered(true)}>
 								Account
 							</button>
 							{isHovered && (

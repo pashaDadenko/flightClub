@@ -29,8 +29,7 @@ export const Shipping: FC = () => {
 		);
 	};
 
-	const renderButton =
-		isValid && watch('name') && watch('streetAddress') && watch('apartment') && watch('city') && watch('postalCode') && watch('telephone');
+	const renderButton = isValid && watch('name') && watch('streetAddress') && watch('apartment') && watch('city') && watch('postalCode') && watch('telephone');
 
 	return (
 		<form className={styles.shippingWrap} onSubmit={handleSubmit(onSubmit)}>
