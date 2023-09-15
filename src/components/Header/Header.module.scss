@@ -31,13 +31,13 @@
 		.accountWrap {
 			position: relative;
 			.item {
-				font-size: 19px;
+				font-size: 20px;
 				color: #000;
 				border: none;
 				background-color: transparent;
 				cursor: pointer;
 				&:hover {
-					color: #0000009c;
+					color: #33322f49;
 					transition: 0.2s;
 				}
 			}
@@ -50,16 +50,14 @@
 				padding: 30px 60px 40px 40px;
 				gap: 20px;
 				width: 100px;
-				transition: 0.7s;
-
 				.item {
-					font-size: 20px;
+					font-size: 19px;
 					background-color: transparent;
 					color: #000;
 					border: none;
 					cursor: pointer;
 					&:hover {
-						color: #0000009c;
+						color: #33322f49;
 						transition: 0.2s;
 					}
 				}

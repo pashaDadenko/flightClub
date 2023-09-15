@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { useDispatch } from 'react-redux';
 import { Search } from '../Search/Search';
 import { useAuth } from '../../hooks/useAuth';
@@ -6,6 +7,7 @@ import backgroundImg from '../../images/backgroundImg.jpg';
 import { CSSProperties, FC, useEffect, useState } from 'react';
 import { setRemoveUser } from '../../redux/userSlice/userSlice';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { variantAccount, variantCart, variantOut, variantUp, variantWrap } from './HeaderVariants';
 
 import styles from './Header.module.scss';
 
@@ -64,29 +66,37 @@ export const Header: FC = () => {
 						</Link>
 
 						<div className={styles.accountWrap} style={scrollColor} onMouseLeave={() => setIsHovered(false)}>
-							<button className={styles.item} style={isHovered ? { color: '#33322f49' } : scrollColor} onMouseEnter={() => setIsHovered(true)}>
+							<Link to={''} className={styles.item} style={isHovered ? { color: '#33322f49' } : scrollColor} onMouseEnter={() => setIsHovered(true)}>
 								Account
-							</button>
+							</Link>
 							{isHovered && (
-								<div className={styles.wrap} style={scrollBack}>
-									<Link to={isAuth ? '/my-account' : '/login'} className={styles.item} style={scrollColor}>
-										My Account
-									</Link>
+								<motion.div className={styles.wrap} style={scrollBack} initial={'initial'} animate={'animate'} variants={variantWrap}>
+									<motion.div initial={'initial'} animate={'animate'} variants={variantAccount}>
+										<Link to={isAuth ? '/my-account' : '/login'} className={styles.item} style={scrollColor}>
+											My Account
+										</Link>
+									</motion.div>
 
-									<Link className={styles.item} style={scrollColor} to={'/my-cart'}>
-										My Cart
-									</Link>
+									<motion.div initial={'initial'} animate={'animate'} variants={variantCart}>
+										<Link className={styles.item} style={scrollColor} to={'/my-cart'}>
+											My Cart
+										</Link>
+									</motion.div>
 
 									{isAuth ? (
-										<button className={styles.item} style={scrollColor} onClick={singOutClick}>
-											Sing Out
-										</button>
+										<motion.div initial={'initial'} animate={'animate'} variants={variantOut}>
+											<Link to={''} className={styles.item} style={scrollColor} onClick={singOutClick}>
+												Sing Out
+											</Link>
+										</motion.div>
 									) : (
-										<Link className={styles.item} style={scrollColor} to={'/login'}>
-											Sing Up
-										</Link>
+										<motion.div initial={'initial'} animate={'animate'} variants={variantUp}>
+											<Link className={styles.item} style={scrollColor} to={'/login'}>
+												Sing Up
+											</Link>
+										</motion.div>
 									)}
-								</div>
+								</motion.div>
 							)}
 						</div>
 					</div>

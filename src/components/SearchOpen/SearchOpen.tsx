@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { RootState } from '../../redux/store';
 import { SearchProps } from './TypeSearchOpen';
 import SearchIcon from '@mui/icons-material/Search';
@@ -5,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { FC, useEffect, useRef, useState } from 'react';
 import { setSearchValue } from '../../redux/searchSlice/searchSlice';
+import { variantOverlay, variantSearch } from './SearchOpenVariants';
 
 import styles from './SearchOpen.module.scss';
 
@@ -42,7 +44,7 @@ export const SearchOpen: FC<SearchProps> = ({ setIsClicked }) => {
 
 	return (
 		<>
-			<div className={styles.wrapper}>
+			<motion.div className={styles.wrapper} initial={'initial'} animate={'animate'} exit={'exit'} variants={variantSearch}>
 				<div className={styles.wrapSearch}>
 					<SearchIcon className={styles.icon} />
 					<input
@@ -113,8 +115,14 @@ export const SearchOpen: FC<SearchProps> = ({ setIsClicked }) => {
 						</div>
 					</div>
 				</div>
-			</div>
-			<div className={styles.overlay} onClick={() => setIsClicked(false)}></div>
+			</motion.div>
+			<motion.div
+				className={styles.overlay}
+				onClick={() => setIsClicked(false)}
+				initial={'initial'}
+				animate={'animate'}
+				exit={'exit'}
+				variants={variantOverlay}></motion.div>
 		</>
 	);
 };

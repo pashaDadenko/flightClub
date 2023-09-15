@@ -15,7 +15,7 @@ export const HeaderCheckout: FC = () => {
 
 				{pathname !== '/help' && (
 					<Link className={styles.link} to={'/help'}>
-						<p className={styles.help}>Need Help?</p>
+						Need Help?
 					</Link>
 				)}
 			</div>

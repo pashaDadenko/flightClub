@@ -5,8 +5,8 @@ import { persistor, store } from './redux/store';
 import { PersistGate } from 'redux-persist/integration/react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import styles from './root/main.module.scss';
 import { routesConfig } from './root/routesConfig';
+import './root/main.module.scss';
 import './firebase';
 
 const router = createBrowserRouter(routesConfig);
@@ -15,9 +15,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 	<React.StrictMode>
 		<Provider store={store}>
 			<PersistGate loading={null} persistor={persistor}>
-				<div className={styles.wrapper}>
-					<RouterProvider router={router} />
-				</div>
+				<RouterProvider router={router} />
 			</PersistGate>
 		</Provider>
 	</React.StrictMode>

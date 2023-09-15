@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { motion } from 'framer-motion';
 import { TypeApi } from '../../api/TypeApi';
 import { RootState } from '../../redux/store';
 import { Carousel } from '../Carousel/Carousel';
@@ -53,12 +54,12 @@ export const DetailsSneakers: FC = () => {
 								<p className={styles.buy}>ADD TO CART</p>
 								<div className={styles.buttonWrap}>
 									<button onClick={() => size > 0 && buttonClick(item)} className={styles.btn}>
-										${item.price}
+										<motion.p className={styles.price} whileTap={size > 0 ? { scale: 1.3 } : {}} transition={{ duration: 0.2 }}>
+											${item.price}
+										</motion.p>
 									</button>
 									<Link style={cartItems.length === 0 ? { pointerEvents: 'none' } : {}} className={styles.link} to={'/my-cart'}>
-										<div className={styles.icon}>
-											{cartItems.length > 0 ? <ShoppingCartIcon /> : <ShoppingCartOutlinedIcon />}
-										</div>
+										<div className={styles.icon}>{cartItems.length > 0 ? <ShoppingCartIcon /> : <ShoppingCartOutlinedIcon />}</div>
 										<p style={cartItems.length > 0 ? { opacity: '1' } : { opacity: 0 }} className={styles.count}>
 											{cartItems.length}
 										</p>

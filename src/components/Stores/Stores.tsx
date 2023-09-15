@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { TypeStores } from './TypeStores';
 import mapImage from '../../images/map.png';
@@ -36,9 +37,11 @@ export const Stores: FC = () => {
 			<ul className={styles.storeWrapper}>
 				{stores.map((item, index) => (
 					<li className={styles.store} key={index}>
-						<Link to={item.link}>
-							<img src={mapImage} alt='mapImage' />
-						</Link>
+						<motion.div whileTap={{ scale: 1.3, y: 30 }}>
+							<Link to={item.link}>
+								<img src={mapImage} alt='mapImage' />
+							</Link>
+						</motion.div>
 						<div>
 							<h4 className={styles.storeTitle}>{item.title}</h4>
 							<Link className={styles.storeAddress} to={item.link}>

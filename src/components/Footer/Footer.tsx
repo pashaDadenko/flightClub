@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useAuth } from '../../hooks/useAuth';
 import { RootState } from '../../redux/store';
+import { motion } from 'framer-motion';
 
 import styles from './Footer.module.scss';
 
@@ -14,9 +15,15 @@ export const Footer: FC = () => {
 	return (
 		<>
 			<footer className={styles.footer}>
-				<Link className={styles.logo} to={'/'}>
-					FLIGHT CLUB
-				</Link>
+				<motion.div
+					style={{ display: 'inline-block' }}
+					initial={{ rotateY: 0 }}
+					animate={{ rotateY: 360 }}
+					transition={{ duration: 5, repeat: Infinity, ease: 'linear' }}>
+					<Link className={styles.logo} to={'/'}>
+						FLIGHT CLUB
+					</Link>
+				</motion.div>
 				<div className={styles.wrapper}>
 					<div className={styles.wrap}>
 						<div className={styles.title}>Trending</div>
@@ -39,11 +46,7 @@ export const Footer: FC = () => {
 						<div className={styles.title}>New Releases</div>
 						{allSneakers &&
 							allSneakers.map((sneaker) => (
-								<Link
-									to={`/details/${sneaker.id}`}
-									className={styles.subTitle}
-									key={sneaker.id}
-									onClick={() => window.scrollTo(0, 0)}>
+								<Link to={`/details/${sneaker.id}`} className={styles.subTitle} key={sneaker.id} onClick={() => window.scrollTo(0, 0)}>
 									{sneaker.title}
 								</Link>
 							))}
