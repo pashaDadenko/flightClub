@@ -4,8 +4,10 @@ import { Selected } from '../Selected/Selected';
 import { FilterBar } from '../FilterBar/FilterBar';
 import { Link, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { AnimatePresence, motion } from 'framer-motion';
 import { SkeletonSneakers } from '../Skeleton/SkeletonSneakers';
 import { setClearFilter } from '../../redux/filterSlice/filterSlice';
+import { variantsImg, variantsP, variantsSneakers, variantsSpan } from './AllSneakersVariants';
 
 import styles from './AllSneakers.module.scss';
 
@@ -39,9 +41,7 @@ export const AllSneakers: FC = () => {
 	if (pathname === '/dark-shoes') updateSneakers = updateSneakers.filter((item) => item.color === 'black');
 	if (pathname === '/rar-shoes') updateSneakers = updateSneakers.filter((item) => item.price > 1000);
 	if (pathname === '/search-result')
-		updateSneakers = updateSneakers.filter(
-			(sneaker) => sneaker.title.toLowerCase().includes(searchValue.toLowerCase()) || sneaker.brand.toLowerCase().includes(searchValue.toLowerCase())
-		);
+		updateSneakers = updateSneakers.filter((sneaker) => sneaker.title.toLowerCase().includes(searchValue.toLowerCase()) || sneaker.brand.toLowerCase().includes(searchValue.toLowerCase()));
 
 	const renderClearFiltersBtn = valueBrand.length > 0 || valueModel.length > 0 || valueSizes.length > 0 || valueColor.length > 0;
 
@@ -98,20 +98,30 @@ export const AllSneakers: FC = () => {
 							<Selected />
 						</div>
 						<ul className={styles.previewGroupe}>
-							{updateSneakers.length > 0 ? (
-								updateSneakers.slice(0, visibleProducts).map((sneaker) => (
-									<Link to={`/details/${sneaker.id}`} key={sneaker.id} className={styles.previewProduct}>
-										<img className={styles.img} src={sneaker.images[0]} alt='image' />
-										<div className={styles.info}>
-											<span className={styles.subTitle}>{sneaker.brand}</span>
-											<p className={styles.text}>{sneaker.title}</p>
-											<p className={styles.price}>${sneaker.price}</p>
-										</div>
-									</Link>
-								))
-							) : (
-								<SkeletonSneakers />
-							)}
+							<AnimatePresence>
+								{updateSneakers.length > 0 ? (
+									updateSneakers.slice(0, visibleProducts).map((sneaker) => (
+										<motion.div className={styles.previewProduct} key={sneaker.id} initial={'initial'} animate={'animate'} exit={'exit'} variants={variantsSneakers}>
+											<Link to={`/details/${sneaker.id}`} className={styles.previewProduct}>
+												<motion.img className={styles.img} src={sneaker.images[0]} alt='image' initial={'initial'} animate={'animate'} variants={variantsImg} />
+												<div className={styles.info}>
+													<motion.span className={styles.subTitle} initial={'initial'} animate={'animate'} variants={variantsSpan}>
+														{sneaker.brand}
+													</motion.span>
+													<motion.p className={styles.text} initial={'initial'} animate={'animate'} variants={variantsP}>
+														{sneaker.title}
+													</motion.p>
+													<motion.p className={styles.price} initial={'initial'} animate={'animate'} variants={variantsSpan}>
+														${sneaker.price}
+													</motion.p>
+												</div>
+											</Link>
+										</motion.div>
+									))
+								) : (
+									<SkeletonSneakers />
+								)}
+							</AnimatePresence>
 						</ul>
 						{visibleProducts < updateSneakers.length && (
 							<button onClick={handleShowMore} className={styles.button}>

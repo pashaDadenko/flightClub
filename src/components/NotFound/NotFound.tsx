@@ -22,7 +22,7 @@ export const NotFound: FC = () => {
 						</p>
 					)}
 				</motion.div>
-				<motion.img src={notFoundImage} alt='notFoundImage' initial='initial' animate={'animate'} exit='exit' variants={variants} />
+				<motion.img src={notFoundImage} alt='notFoundImage' initial='initial' animate={'animate'} exit='exit' variants={variants} whileHover='hover' />
 			</div>
 		</div>
 	);

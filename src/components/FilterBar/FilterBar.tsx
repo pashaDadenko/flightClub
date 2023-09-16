@@ -31,22 +31,13 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 	const multiColor = { backgroundImage: `linear-gradient(to left, rgb(255, 244, 12), rgb(74, 138, 0) 31%, rgb(0, 72, 156) 63%, rgb(213, 55, 54))` };
 
 	const renderBrand =
-		pathname === '/sneakers' ||
-		pathname === '/top-sellers' ||
-		pathname === '/lowest-price' ||
-		pathname === '/search-result' ||
-		pathname === '/rar-shoes' ||
-		pathname === '/dark-shoes';
+		pathname === '/sneakers' || pathname === '/top-sellers' || pathname === '/lowest-price' || pathname === '/search-result' || pathname === '/rar-shoes' || pathname === '/dark-shoes';
 
 	return (
 		<div className={styles.wrapper}>
 			{renderBrand && (
 				<Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={accordionStyle} disableGutters>
-					<AccordionSummary
-						expandIcon={<ExpandMoreIcon />}
-						aria-controls='panel1bh-content'
-						id='panel1bh-header'
-						style={{ border: '1px solid #81818131' }}>
+					<AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls='panel1bh-content' id='panel1bh-header' style={{ border: '1px solid #81818131' }}>
 						<Typography sx={{}}>BRAND</Typography>
 					</AccordionSummary>
 					<AccordionDetails style={{ borderTop: 'none', padding: '20px 20px 0 20px', backgroundColor: '#f9f9f9' }}>
@@ -75,11 +66,7 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 			)}
 
 			<Accordion style={accordionStyle} disableGutters>
-				<AccordionSummary
-					expandIcon={<ExpandMoreIcon />}
-					aria-controls='panel1bh-content'
-					id='panel1bh-header'
-					style={{ border: '1px solid #81818131' }}>
+				<AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls='panel1bh-content' id='panel1bh-header' style={{ border: '1px solid #81818131' }}>
 					<Typography sx={{}}>MODEL</Typography>
 				</AccordionSummary>
 				<AccordionDetails style={{ borderTop: 'none', padding: '20px 20px 0 20px', backgroundColor: '#f9f9f9' }}>
@@ -107,11 +94,7 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 			</Accordion>
 
 			<Accordion style={accordionStyle} disableGutters>
-				<AccordionSummary
-					expandIcon={<ExpandMoreIcon />}
-					aria-controls='panel1bh-content'
-					id='panel1bh-header'
-					style={{ border: '1px solid #81818131' }}>
+				<AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls='panel1bh-content' id='panel1bh-header' style={{ border: '1px solid #81818131' }}>
 					<Typography sx={{}}>US SIZES</Typography>
 				</AccordionSummary>
 				<AccordionDetails style={{ borderTop: 'none', padding: '20px 20px 0 20px', backgroundColor: '#f9f9f9' }}>
@@ -139,11 +122,7 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 			</Accordion>
 
 			<Accordion style={accordionStyle} disableGutters>
-				<AccordionSummary
-					expandIcon={<ExpandMoreIcon />}
-					aria-controls='panel1bh-content'
-					id='panel1bh-header'
-					style={{ border: '1px solid #81818131' }}>
+				<AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls='panel1bh-content' id='panel1bh-header' style={{ border: '1px solid #81818131' }}>
 					<Typography sx={{}}>COLOR</Typography>
 				</AccordionSummary>
 				<AccordionDetails style={{ borderTop: 'none', padding: '20px 20px 0 20px', backgroundColor: '#f9f9f9' }}>
