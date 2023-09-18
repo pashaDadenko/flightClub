@@ -5,9 +5,9 @@ import { FilterBar } from '../FilterBar/FilterBar';
 import { Link, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { AnimatePresence, motion } from 'framer-motion';
+import { variantsSneakers } from './AllSneakersVariants';
 import { SkeletonSneakers } from '../Skeleton/SkeletonSneakers';
 import { setClearFilter } from '../../redux/filterSlice/filterSlice';
-import { variantsImg, variantsP, variantsSneakers, variantsSpan } from './AllSneakersVariants';
 
 import styles from './AllSneakers.module.scss';
 
@@ -103,17 +103,11 @@ export const AllSneakers: FC = () => {
 									updateSneakers.slice(0, visibleProducts).map((sneaker) => (
 										<motion.div className={styles.previewProduct} key={sneaker.id} initial={'initial'} animate={'animate'} exit={'exit'} variants={variantsSneakers}>
 											<Link to={`/details/${sneaker.id}`} className={styles.previewProduct}>
-												<motion.img className={styles.img} src={sneaker.images[0]} alt='image' initial={'initial'} animate={'animate'} variants={variantsImg} />
+												<img className={styles.img} src={sneaker.images[0]} alt='image' />
 												<div className={styles.info}>
-													<motion.span className={styles.subTitle} initial={'initial'} animate={'animate'} variants={variantsSpan}>
-														{sneaker.brand}
-													</motion.span>
-													<motion.p className={styles.text} initial={'initial'} animate={'animate'} variants={variantsP}>
-														{sneaker.title}
-													</motion.p>
-													<motion.p className={styles.price} initial={'initial'} animate={'animate'} variants={variantsSpan}>
-														${sneaker.price}
-													</motion.p>
+													<span className={styles.subTitle}>{sneaker.brand}</span>
+													<p className={styles.text}>{sneaker.title}</p>
+													<p className={styles.price}>${sneaker.price}</p>
 												</div>
 											</Link>
 										</motion.div>
