@@ -7,7 +7,7 @@ import { setUser } from '../../redux/userSlice/userSlice';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-import { OAuthCredential, getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { OAuthCredential, fetchSignInMethodsForEmail, getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
 import styles from './Login.module.scss';
 
@@ -26,24 +26,29 @@ export const FormLogin: FC = () => {
 		formState: { errors, isValid },
 	} = useForm<TypeLogin>({ mode: 'onChange' });
 
-	const onSubmit: SubmitHandler<TypeLogin> = (data) => {
+	const onSubmit: SubmitHandler<TypeLogin> = async (data) => {
 		const auth = getAuth();
-		signInWithEmailAndPassword(auth, data.email, data.password)
-			.then(({ user }) => {
-				const newUser = user as unknown as OAuthCredential;
-				dispatch(
-					setUser({
-						email: user.email,
-						token: newUser.accessToken,
-						id: user.uid,
+		const methods = await fetchSignInMethodsForEmail(auth, data.email);
+
+		methods.length > 0
+			? signInWithEmailAndPassword(auth, data.email, data.password)
+					.then(({ user }) => {
+						const newUser = user as unknown as OAuthCredential;
+						dispatch(
+							setUser({
+								email: user.email,
+								token: newUser.accessToken,
+								id: user.uid,
+							})
+						);
+						navigate('/my-account');
 					})
-				);
-				navigate('/my-account');
-			})
-			.catch(() => {
-				reset();
-				setAuthError('Email or password not correct.');
-			});
+					.catch(() => {
+						reset();
+						setAuthError('Email or password not correct.');
+					})
+			: reset(),
+			setAuthError('The user with this email is not registered');
 	};
 
 	return (

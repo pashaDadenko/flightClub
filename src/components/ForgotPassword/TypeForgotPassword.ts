@@ -1,2 +1,4 @@
-export type ForgotPassword = {
-}
+export type TypeForgotPassword = {
+	email: string;
+	password: string;
+};

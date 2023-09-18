@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 export const SkeletonSneakers: FC = () => {
 	const variantsSkeleton = {
 		initial: { clipPath: 'inset(50% 50% 50% 50%)' },
-		animate: { clipPath: 'inset(0% 0% 0% 0%)', transition: { duration: 1 } },
-		exit: { clipPath: 'inset(50% 50% 50% 50%)' },
+		animate: { clipPath: 'inset(0% 0% 0% 0%)', transition: { duration: 0.7 } },
+		exit: { clipPath: 'inset(50% 50% 50% 50%)', transition: { duration: 0.5 } },
 	};
 
 	return (
