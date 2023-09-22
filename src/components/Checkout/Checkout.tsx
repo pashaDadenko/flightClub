@@ -10,7 +10,7 @@ import styles from './Checkout.module.scss';
 
 export const Checkout: FC = () => {
 	const cartItems = useSelector((state: RootState) => state.cartSlice.cartItems);
-	const { fullName, email } = useSelector((state: RootState) => state.userSlice);
+	const { email, fullNameReg } = useSelector((state: RootState) => state.userSlice);
 	const totalPrice = cartItems.reduce((sum, sneaker) => sum + sneaker.price, 0);
 	const standardShipping = useSelector((state: RootState) => state.shippingSlice.standardShipping);
 	const { name, streetAddress, apartment, city, postalCode, telephone } = useSelector((state: RootState) => state.shippingSlice);
@@ -26,7 +26,7 @@ export const Checkout: FC = () => {
 						<CheckCircleOutlineOutlinedIcon className={styles.icon} />
 					</div>
 					<p className={styles.line}></p>
-					<p className={styles.name}>{fullName}</p>
+					<p className={styles.name}>{fullNameReg}</p>
 					<p className={styles.email}>{email}</p>
 				</div>
 
@@ -83,9 +83,7 @@ export const Checkout: FC = () => {
 						<p className={styles.price}>${totalPrice + 40}</p>
 					</div>
 
-					<p className={styles.text}>
-						By clicking "place order", I acknowledge that I have read and agree to the Terms & Conditions and the Privacy Policy.
-					</p>
+					<p className={styles.text}>By clicking "place order", I acknowledge that I have read and agree to the Terms & Conditions and the Privacy Policy.</p>
 
 					{conditionalRender ? (
 						<button className={styles.buttonUpdate}>PLACE ORDER</button>

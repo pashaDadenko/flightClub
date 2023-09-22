@@ -1,11 +1,10 @@
 import { FC } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
-
 import styles from './MyAccount.module.scss';
 
 export const MyAccount: FC = () => {
-	const { fullName, email } = useSelector((state: RootState) => state.userSlice);
+	const { email, fullNameReg } = useSelector((state: RootState) => state.userSlice);
 	const { name, streetAddress, apartment, city, postalCode, telephone } = useSelector((state: RootState) => state.shippingSlice);
 
 	return (
@@ -19,7 +18,7 @@ export const MyAccount: FC = () => {
 							<p>ACCOUNT</p>
 						</div>
 						<div className={styles.accountBottom}>
-							<p>{fullName}</p>
+							<p>{fullNameReg}</p>
 							<p>{email}</p>
 						</div>
 					</div>
@@ -50,3 +49,23 @@ export const MyAccount: FC = () => {
 		</div>
 	);
 };
+
+// const [userName, setUserName] = useState('');
+// const auth = getAuth();
+// const user = auth.currentUser;
+// const userId = user.uid;
+// useEffect(() => {
+// 	const firestore = getFirestore();
+// 	const userDocRef = doc(firestore, 'users', userId);
+// 	getDoc(userDocRef)
+// 		.then((docSnapshot) => {
+// 			if (docSnapshot.exists()) {
+// 				const userData = docSnapshot.data();
+// 				const fullNameReg = userData.fullNameReg;
+// 				setUserName(fullNameReg);
+// 			}
+// 		})
+// 		.catch((error) => {
+// 			console.error('Error getting user data:', error);
+// 		});
+// }, []);

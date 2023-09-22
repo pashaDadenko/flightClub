@@ -1,5 +1,5 @@
 export type TypeCreateAccount = {
-	fullName: string;
+	fullNameReg: string;
 	email: string;
 	password: string;
 };

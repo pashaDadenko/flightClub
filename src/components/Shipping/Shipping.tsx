@@ -1,10 +1,13 @@
 import { FC } from 'react';
-import { TypeShipping } from './TypeShipping';
 import { useDispatch } from 'react-redux';
+import { TypeShipping } from './TypeShipping';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { setShipping } from '../../redux/shippingSlice/shippingSlice';
 
 import styles from './Shipping.module.scss';
+import { doc, getDoc, updateDoc } from 'firebase/firestore';
+import { getAuth } from 'firebase/auth';
+import { db } from '../../firebase';
 
 export const Shipping: FC = () => {
 	const dispatch = useDispatch();
@@ -16,17 +19,27 @@ export const Shipping: FC = () => {
 		formState: { errors, isValid },
 	} = useForm<TypeShipping>({ mode: 'onChange' });
 
-	const onSubmit: SubmitHandler<TypeShipping> = (data) => {
-		dispatch(
-			setShipping({
-				name: data.name,
-				streetAddress: data.streetAddress,
-				apartment: data.apartment,
-				city: data.city,
-				postalCode: data.postalCode,
-				telephone: data.telephone,
-			})
-		);
+	const onSubmit: SubmitHandler<TypeShipping> = async (data) => {
+		const auth = getAuth();
+		const user = auth.currentUser;
+		const uid = user!.uid;
+		const userDocRef = doc(db, 'users', uid);
+
+		const dataShip = {
+			name: data.name,
+			streetAddress: data.streetAddress,
+			apartment: data.apartment,
+			city: data.city,
+			postalCode: data.postalCode,
+			telephone: data.telephone,
+		};
+
+		const userDoc = await getDoc(userDocRef);
+		const userData = userDoc.data();
+		const mergedData = { ...userData, ...dataShip };
+		await updateDoc(userDocRef, mergedData);
+
+		dispatch(setShipping(dataShip));
 	};
 
 	const renderButton = isValid && watch('name') && watch('streetAddress') && watch('apartment') && watch('city') && watch('postalCode') && watch('telephone');

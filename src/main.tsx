@@ -1,11 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
+import ReactDOM from 'react-dom/client';
 import { persistor, store } from './redux/store';
+import { routesConfig } from './root/routesConfig';
 import { PersistGate } from 'redux-persist/integration/react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import { routesConfig } from './root/routesConfig';
 import './root/main.module.scss';
 import './firebase';
 

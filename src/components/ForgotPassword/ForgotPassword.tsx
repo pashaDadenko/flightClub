@@ -30,8 +30,7 @@ export const ForgotPassword: FC = () => {
 					.catch(() => {
 						reset();
 					})
-			: reset(),
-			setForgotError('The user with this email is not registered');
+			: (reset(), setForgotError('The user with this email is not registered'));
 	};
 
 	return (

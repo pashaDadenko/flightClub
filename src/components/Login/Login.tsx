@@ -1,12 +1,15 @@
+import { db } from '../../firebase';
 import { FC, useState } from 'react';
-import { TypeLogin } from './TypeLogin';
 import { useDispatch } from 'react-redux';
+import { doc, getDoc } from 'firebase/firestore';
 import { Link, useNavigate } from 'react-router-dom';
+import { TypeLogin, TypeUserData } from './TypeLogin';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { setUser } from '../../redux/userSlice/userSlice';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import { setShipping } from '../../redux/shippingSlice/shippingSlice';
 import { OAuthCredential, fetchSignInMethodsForEmail, getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
 import styles from './Login.module.scss';
@@ -32,13 +35,30 @@ export const FormLogin: FC = () => {
 
 		methods.length > 0
 			? signInWithEmailAndPassword(auth, data.email, data.password)
-					.then(({ user }) => {
+					.then(async ({ user }) => {
 						const newUser = user as unknown as OAuthCredential;
+						const userDocRef = doc(db, 'users', user.uid);
+						const userDocSnapshot = await getDoc(userDocRef);
+						const userData = userDocSnapshot.data() as TypeUserData;
+						const { fullNameReg, telephone, postalCode, city, apartment, streetAddress, name } = userData;
+
 						dispatch(
 							setUser({
 								email: user.email,
 								token: newUser.accessToken,
 								id: user.uid,
+								fullNameReg: fullNameReg,
+							})
+						);
+
+						dispatch(
+							setShipping({
+								telephone: telephone,
+								postalCode: postalCode,
+								city: city,
+								apartment: apartment,
+								streetAddress: streetAddress,
+								name: name,
 							})
 						);
 						navigate('/my-account');
@@ -47,8 +67,7 @@ export const FormLogin: FC = () => {
 						reset();
 						setAuthError('Email or password not correct.');
 					})
-			: reset(),
-			setAuthError('The user with this email is not registered');
+			: (reset(), setAuthError('The user with this email is not registered'));
 	};
 
 	return (
