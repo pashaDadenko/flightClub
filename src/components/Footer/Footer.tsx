@@ -15,11 +15,7 @@ export const Footer: FC = () => {
 	return (
 		<>
 			<footer className={styles.footer}>
-				<motion.div
-					style={{ display: 'inline-block' }}
-					initial={{ rotateY: 0 }}
-					animate={{ rotateY: 360 }}
-					transition={{ duration: 5, repeat: Infinity, ease: 'linear' }}>
+				<motion.div style={{ display: 'inline-block' }} initial={{ rotateY: 0 }} animate={{ rotateY: 360 }} transition={{ duration: 5, repeat: Infinity, ease: 'linear' }}>
 					<Link className={styles.logo} to={'/'}>
 						FLIGHT CLUB
 					</Link>
@@ -55,6 +51,9 @@ export const Footer: FC = () => {
 						<div className={styles.title}>Support</div>
 						<Link to={isAuth ? '/my-account' : '/login'} className={styles.subTitle}>
 							My Account
+						</Link>
+						<Link to={isAuth ? '/my-orders' : '/login'} className={styles.subTitle}>
+							My Orders
 						</Link>
 						<Link to={'/shipAndReturn'} className={styles.subTitle}>
 							Shipping & Returns

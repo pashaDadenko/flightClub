@@ -1,4 +1,4 @@
-import { TypeFilterSliceSlice } from './TypeFilterSlice.ts';
+import { TypeFilterSlice } from './TypeFilterSlice.ts';
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 const updateFilters = <T>(state: T[], payload: T): T[] => {
@@ -12,7 +12,7 @@ const updateFilters = <T>(state: T[], payload: T): T[] => {
 export const filterSlice = createSlice({
 	name: 'filterSlice',
 
-	initialState: <TypeFilterSliceSlice>{
+	initialState: <TypeFilterSlice>{
 		filterValues: {
 			valueBrand: [],
 			valueModel: [],

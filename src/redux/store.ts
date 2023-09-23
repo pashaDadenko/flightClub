@@ -3,6 +3,7 @@ import userSlice from './userSlice/userSlice';
 import storage from 'redux-persist/lib/storage';
 import searchSlice from './searchSlice/searchSlice';
 import filterSlice from './filterSlice/filterSlice';
+import ordersSlice from './ordersSlice/ordersSlice';
 import shippingSlice from './shippingSlice/shippingSlice';
 import sneakersSlice from './sneakersSlice/sneakersSlice';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
@@ -21,6 +22,7 @@ const rootReducer = combineReducers({
 	searchSlice,
 	filterSlice,
 	shippingSlice,
+	ordersSlice
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

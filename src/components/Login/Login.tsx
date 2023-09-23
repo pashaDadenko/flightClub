@@ -61,6 +61,7 @@ export const FormLogin: FC = () => {
 								name: name,
 							})
 						);
+
 						navigate('/my-account');
 					})
 					.catch(() => {

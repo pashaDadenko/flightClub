@@ -13,6 +13,7 @@ import { RarShoesPage } from '../pages/RarShoesPage';
 import { OffWhitePage } from '../pages/OffWhitePage';
 import { CheckoutPage } from '../pages/CheckoutPage';
 import { NikeDunkPage } from '../pages/NikeDunkPage';
+import { MyOrdersPage } from '../pages/MyOrdersPage';
 import { AirJordanPage } from '../pages/AirJordanPage';
 import { MyAccountPage } from '../pages/MyAccountPage';
 import { DarkShoesPage } from '../pages/DarkShoesPage';
@@ -131,7 +132,11 @@ export const routesConfig: IRouteConfig[] = [
 		element: <RarShoesPage />,
 	},
 	{
-		path: '//sell-sneakers',
+		path: '/sell-sneakers',
 		element: <SellSneakersPage />,
+	},
+	{
+		path: '/my-orders',
+		element: <MyOrdersPage />,
 	},
 ];

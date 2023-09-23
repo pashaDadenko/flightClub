@@ -5,6 +5,6 @@ export type TypeFilterValues = {
 	valueColor: string[];
 };
 
-export type TypeFilterSliceSlice = {
+export type TypeFilterSlice = {
 	filterValues: TypeFilterValues;
 };

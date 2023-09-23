@@ -7,7 +7,7 @@ import backgroundImg from '../../images/backgroundImg.jpg';
 import { CSSProperties, FC, useEffect, useState } from 'react';
 import { setRemoveUser } from '../../redux/userSlice/userSlice';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { variantAccount, variantCart, variantOut, variantUp, variantWrap } from './HeaderVariants';
+import { variantAccount, variantCart, variantOrders, variantOut, variantUp, variantWrap } from './HeaderVariants';
 
 import styles from './Header.module.scss';
 
@@ -75,6 +75,12 @@ export const Header: FC = () => {
 										<motion.div initial={'initial'} animate={'animate'} exit={'exit'} variants={variantAccount}>
 											<Link to={isAuth ? '/my-account' : '/login'} className={styles.item} style={scrollColor}>
 												My Account
+											</Link>
+										</motion.div>
+
+										<motion.div initial={'initial'} animate={'animate'} exit={'exit'} variants={variantOrders}>
+											<Link className={styles.item} style={scrollColor} to={isAuth ? '/my-orders' : '/login'}>
+												My Orders
 											</Link>
 										</motion.div>
 

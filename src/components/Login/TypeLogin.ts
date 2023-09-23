@@ -12,3 +12,16 @@ export type TypeUserData = {
 	postalCode: null | number;
 	telephone: null | number;
 };
+
+export type TypeSneakers = {
+	image: string;
+	sizes: number;
+	title: string;
+};
+
+export type TypeOrdersData = {
+	userId: null | string;
+	numberOrder: null | number;
+	orderTotalPrice: null | number;
+	sneakers: TypeSneakers[];
+};
