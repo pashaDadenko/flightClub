@@ -1,15 +1,16 @@
 import { db } from '../../firebase';
 import { FC, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { doc, getDoc } from 'firebase/firestore';
 import { Link, useNavigate } from 'react-router-dom';
-import { TypeLogin, TypeUserData } from './TypeLogin';
+import { TypeLogin, TypeOrdersData, TypeUserData } from './TypeLogin';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { setUser } from '../../redux/userSlice/userSlice';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
+import { setOrders } from '../../redux/ordersSlice/ordersSlice';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { setShipping } from '../../redux/shippingSlice/shippingSlice';
+import { collection, doc, getDoc, getDocs, query, where } from 'firebase/firestore';
 import { OAuthCredential, fetchSignInMethodsForEmail, getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
 import styles from './Login.module.scss';
@@ -42,6 +43,13 @@ export const FormLogin: FC = () => {
 						const userData = userDocSnapshot.data() as TypeUserData;
 						const { fullNameReg, telephone, postalCode, city, apartment, streetAddress, name } = userData;
 
+						const ordersCollectionRef = collection(db, 'orders');
+						const ordersQuery = query(ordersCollectionRef, where('userId', '==', user.uid));
+						const ordersQuerySnapshot = await getDocs(ordersQuery);
+
+						const ordersData: TypeOrdersData[] = [];
+						ordersQuerySnapshot.forEach((order) => ordersData.push(order.data() as TypeOrdersData));
+
 						dispatch(
 							setUser({
 								email: user.email,
@@ -61,6 +69,8 @@ export const FormLogin: FC = () => {
 								name: name,
 							})
 						);
+
+						dispatch(setOrders(ordersData));
 
 						navigate('/my-account');
 					})

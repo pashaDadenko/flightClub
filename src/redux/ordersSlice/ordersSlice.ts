@@ -1,22 +1,16 @@
-import { TypeOrdersSlice } from './TypeOrdersSlice';
+import { TypeOrderData, TypeOrdersSlice } from './TypeOrdersSlice';
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 export const ordersSlice = createSlice({
 	name: 'ordersSlice',
 
 	initialState: <TypeOrdersSlice>{
-		userId: '',
-		numberOrder: 0,
-		orderTotalPrice: 0,
-		sneakers: [],
+		ordersData: [],
 	},
 
 	reducers: {
-		setOrders(state, { payload }: PayloadAction<TypeOrdersSlice>) {
-			state.userId = payload.userId;
-			state.numberOrder = payload.numberOrder;
-			state.orderTotalPrice = payload.orderTotalPrice;
-			state.sneakers = payload.sneakers;
+		setOrders(state, { payload }: PayloadAction<TypeOrderData[]>) {
+			state.ordersData = payload;
 		},
 	},
 });

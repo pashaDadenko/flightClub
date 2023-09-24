@@ -1,3 +1,5 @@
+import { TypeOrderData } from '../../redux/ordersSlice/TypeOrdersSlice';
+
 export type TypeLogin = {
 	email: string;
 	password: string;
@@ -13,15 +15,4 @@ export type TypeUserData = {
 	telephone: null | number;
 };
 
-export type TypeSneakers = {
-	image: string;
-	sizes: number;
-	title: string;
-};
-
-export type TypeOrdersData = {
-	userId: null | string;
-	numberOrder: null | number;
-	orderTotalPrice: null | number;
-	sneakers: TypeSneakers[];
-};
+export type TypeOrdersData = TypeOrderData;

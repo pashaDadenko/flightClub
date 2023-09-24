@@ -32,6 +32,7 @@ export const Shipping: FC = () => {
 			city: data.city,
 			postalCode: data.postalCode,
 			telephone: data.telephone,
+			
 		};
 
 		const userDoc = await getDoc(userDocRef);

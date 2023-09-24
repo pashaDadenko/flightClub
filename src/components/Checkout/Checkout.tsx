@@ -53,9 +53,15 @@ export const Checkout: FC = () => {
 		const orderData = {
 			userId: uid,
 			name: name,
+			email: email,
+			telephone: telephone,
 			numberOrder: currentOrderNumber,
-			orderTotalPrice: orderTotalPrice,
 			sneakers: sneaker,
+			city: city,
+			streetAddress: streetAddress,
+			apartment: apartment,
+			postalCode: postalCode,
+			orderTotalPrice: orderTotalPrice,
 		};
 
 		setCurrentOrderNumber(currentOrderNumber);
@@ -107,7 +113,7 @@ export const Checkout: FC = () => {
 				</div>
 			</div>
 
-			<div className={styles.containerRight} style={cartItems.length < 3 ? { position: 'fixed', marginLeft: '520px' } : {}}>
+			<div className={styles.containerRight} style={cartItems.length < 5 ? { position: 'fixed', marginLeft: '520px' } : {}}>
 				<div className={styles.orderWrap}>
 					<p>ORDER SUMMARY</p>
 					<p className={styles.line}></p>
