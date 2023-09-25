@@ -1,12 +1,16 @@
-import { FC } from 'react';
-import { motion } from 'framer-motion';
+import { FC, useState } from 'react';
 import { useSelector } from 'react-redux';
+import { variant } from './MyOrdersVariants';
 import { RootState } from '../../redux/store';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import styles from './MyOrders.module.scss';
 
 export const MyOrders: FC = () => {
 	const ordersData = useSelector((state: RootState) => state.ordersSlice.ordersData);
+
+	const [activeOrders, setActiveOrders] = useState<boolean[]>(Array(ordersData.length).fill(false));
+	const toggleOrderContent = (index: number) => setActiveOrders(activeOrders.map((value, i) => (i === index ? !value : value)));
 
 	const hoverAnimation = {
 		translateY: -10,
@@ -20,22 +24,48 @@ export const MyOrders: FC = () => {
 
 				<ul className={styles.wrap}>
 					{ordersData.length > 0 ? (
-						ordersData.map((order) => (
-							<motion.li key={order.numberOrder} className={styles.orderWrap} whileHover={hoverAnimation}>
+						ordersData.map((order, index) => (
+							<motion.li key={order.numberOrder} className={styles.orderWrap} whileHover={hoverAnimation} onClick={() => toggleOrderContent(index)}>
 								<div className={styles.orderBox}>
-									<p className={styles.numberOrder}>
-										Order № <span className={styles.span}>{order.numberOrder}</span>
+									<p className={styles.orderTitle}>
+										Order № <span className={styles.subTitle}>{order.numberOrder}</span>
 									</p>
-									<p>Order dated {order.orderDate}</p>
-									<p className={styles.orderTotalPrice}>
-										$ <span className={styles.span}>{order.orderTotalPrice}</span>
+
+									<p className={styles.orderTitle}>
+										Order dated <span className={styles.subTitle}>{order.orderDate}</span>
+									</p>
+
+									<p className={styles.orderTitle}>
+										$ <span className={styles.subTitle}>{order.orderTotalPrice}</span>
 									</p>
 								</div>
-								<ul className={styles.sneakerWrap}>
-									{order.sneakers.slice(0, 4).map((sneaker, index) => (
-										<img key={index} className={styles.image} src={sneaker.image} alt='sneaker' />
-									))}
-								</ul>
+								<AnimatePresence mode='wait'>
+									{activeOrders[index] ? (
+										<motion.div className={styles.addressBox} key='address' initial={'initial'} animate={'animate'} exit={'exit'} variants={variant}>
+											<div className={styles.name}>
+												<p>{order.name}</p>
+											</div>
+											<div>
+												<div className={styles.box}>
+													<p>{order.city}, </p>
+													<p>{order.postalCode}</p>
+												</div>
+												<p className={styles.box}>{order.streetAddress}</p>
+												<p className={styles.box}>{order.apartment}</p>
+											</div>
+										</motion.div>
+									) : (
+										<motion.ul className={styles.sneakerWrap} key='sneakers' initial={'initial'} animate={'animate'} exit={'exit'} variants={variant}>
+											{order.sneakers.slice(0, 4).map((sneaker, index) => (
+												<div key={index} className={styles.sneakerBox}>
+													<img key={index} className={styles.image} src={sneaker.image} alt='sneaker' />
+													<p>{sneaker.title}</p>
+													<p>{sneaker.sizes}</p>
+												</div>
+											))}
+										</motion.ul>
+									)}
+								</AnimatePresence>
 							</motion.li>
 						))
 					) : (
