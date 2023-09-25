@@ -1,3 +1,4 @@
+import { format } from 'date-fns';
 import { db } from '../../firebase';
 import { FC, useState } from 'react';
 import { getAuth } from 'firebase/auth';
@@ -62,6 +63,7 @@ export const Checkout: FC = () => {
 			apartment: apartment,
 			postalCode: postalCode,
 			orderTotalPrice: orderTotalPrice,
+			orderDate: format(new Date(), 'd MMMM'),
 		};
 
 		setCurrentOrderNumber(currentOrderNumber);

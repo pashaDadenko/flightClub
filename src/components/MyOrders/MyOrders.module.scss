@@ -10,5 +10,48 @@
 			font-size: 30px;
 			margin-bottom: 40px;
 		}
+
+		.wrap {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			gap: 20px;
+			text-align: center;
+			.orderWrap {
+				border: 1px solid #eaeaea;
+				width: 548px;
+				padding: 20px;
+				cursor: pointer;
+				.orderBox {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					border-bottom: 1px solid #eaeaea;
+					padding-bottom: 20px;
+					.numberOrder {
+						.span {
+							font-size: 20px;
+							color: #e91c23;
+							display: inline-block;
+						}
+					}
+					.orderTotalPrice {
+						.span {
+							font-size: 16px;
+							font-weight: 700;
+							display: inline-block;
+						}
+					}
+				}
+				.sneakerWrap {
+					display: flex;
+					gap: 30px;
+					.image {
+						width: 115px;
+						height: 90px;
+					}
+				}
+			}
+		}
 	}
 }

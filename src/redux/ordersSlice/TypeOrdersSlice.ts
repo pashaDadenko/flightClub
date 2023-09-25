@@ -16,9 +16,9 @@ export type TypeOrderData = {
 	apartment: null | string;
 	postalCode: null | number;
 	orderTotalPrice: null | number;
+	orderDate: null | string;
 };
 
 export type TypeOrdersSlice = {
 	ordersData: TypeOrderData[];
 };
-
