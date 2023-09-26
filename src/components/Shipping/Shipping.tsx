@@ -22,7 +22,8 @@ export const Shipping: FC = () => {
 	const onSubmit: SubmitHandler<TypeShipping> = async (data) => {
 		const auth = getAuth();
 		const user = auth.currentUser;
-		const uid = user!.uid;
+		if (!user) return;
+		const uid = user.uid;
 		const userDocRef = doc(db, 'users', uid);
 
 		const dataShip = {

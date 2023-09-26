@@ -8,6 +8,7 @@ import { Shipping } from '../Shipping/Shipping';
 import { Box, Modal, Typography } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { setClearCart } from '../../redux/cartSlice/cartSlice';
+import { addOrder } from '../../redux/ordersSlice/ordersSlice';
 import { ShippingFilled } from '../ShippingFilled/ShippingFilled';
 import { ShippingMethod } from '../ShippingMethod/ShippingMethod';
 import { addDoc, collection, doc, getDoc, setDoc } from 'firebase/firestore';
@@ -24,7 +25,7 @@ export const Checkout: FC = () => {
 	const standardShipping = useSelector((state: RootState) => state.shippingSlice.standardShipping);
 	const { name, streetAddress, apartment, city, postalCode, telephone } = useSelector((state: RootState) => state.shippingSlice);
 
-	const conditionalRender = name && streetAddress && apartment && city && postalCode && telephone;
+	const conditionalRender = name && streetAddress && apartment && city && postalCode && telephone && cartItems.length > 0;
 	const orderTotalPrice = standardShipping !== undefined ? totalPrice + standardShipping : totalPrice + 40;
 	const [currentOrderNumber, setCurrentOrderNumber] = useState(0);
 
@@ -38,11 +39,11 @@ export const Checkout: FC = () => {
 	const handleOpen = async () => {
 		const auth = getAuth();
 		const user = auth.currentUser;
+		if (!user) return;
 		const uid = user!.uid;
 		const sneaker = cartItems.map(({ images: [image], title, sizes }) => ({ image, title, sizes }));
 
 		const ordersCollectionRef = collection(db, 'orders');
-
 		const counterRef = doc(db, 'counters', 'orderNumberCounter');
 		const counterDoc = await getDoc(counterRef);
 		let currentOrderNumber = 1;
@@ -69,9 +70,8 @@ export const Checkout: FC = () => {
 		setCurrentOrderNumber(currentOrderNumber);
 		const newOrderNumber = currentOrderNumber + 1;
 		await setDoc(counterRef, { value: newOrderNumber });
-
 		await addDoc(ordersCollectionRef, orderData);
-
+		dispatch(addOrder(orderData));
 		setOpen(true);
 	};
 

@@ -2,25 +2,25 @@
 	background-color: #fff;
 	padding-bottom: 50px;
 	.container {
-		width: 1200px;
+		width: 1000px;
 		margin: 0 auto;
 		padding-top: 150px;
 		padding-bottom: 150px;
 		.title {
 			font-size: 30px;
-			margin-bottom: 40px;
+			margin-bottom: 60px;
 		}
 
 		.wrap {
 			display: flex;
 			flex-direction: column;
+			justify-content: center;
 			align-items: center;
 			gap: 50px;
 
 			.orderWrap {
 				border: 1px solid #eaeaea;
-				width: 700px;
-				padding: 20px;
+				width: 1000px;
 				cursor: pointer;
 
 				.orderBox {
@@ -28,7 +28,7 @@
 					justify-content: space-between;
 					align-items: center;
 					border-bottom: 1px solid #eaeaea;
-					padding-bottom: 10px;
+					padding: 20px 20px 13px 20px;
 
 					.orderTitle {
 						font-size: 14px;
@@ -45,6 +45,7 @@
 				.sneakerWrap {
 					display: flex;
 					flex-direction: column;
+					padding: 0 20px 20px 20px;
 					.sneakerBox {
 						display: flex;
 						align-items: end;
@@ -63,14 +64,19 @@
 				.addressBox {
 					display: flex;
 					justify-content: space-between;
-					margin-top: 20px;
+					padding: 20px;
 					.name {
 						font-size: 17px;
 						font-weight: 800;
 					}
-					.box {
+					.flex {
 						display: flex;
-						color: #00000086;
+						flex-direction: column;
+						gap: 6.5px;
+						.box {
+							display: flex;
+							color: #00000086;
+						}
 					}
 				}
 			}

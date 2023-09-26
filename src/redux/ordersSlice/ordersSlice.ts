@@ -12,9 +12,12 @@ export const ordersSlice = createSlice({
 		setOrders(state, { payload }: PayloadAction<TypeOrderData[]>) {
 			state.ordersData = payload;
 		},
+		addOrder: (state, { payload }: PayloadAction<TypeOrderData>) => {
+			state.ordersData.push(payload);
+		},
 	},
 });
 
-export const { setOrders } = ordersSlice.actions;
+export const { setOrders, addOrder } = ordersSlice.actions;
 
 export default ordersSlice.reducer;

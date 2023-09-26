@@ -24,50 +24,53 @@ export const MyOrders: FC = () => {
 
 				<ul className={styles.wrap}>
 					{ordersData.length > 0 ? (
-						ordersData.map((order, index) => (
-							<motion.li key={order.numberOrder} className={styles.orderWrap} whileHover={hoverAnimation} onClick={() => toggleOrderContent(index)}>
-								<div className={styles.orderBox}>
-									<p className={styles.orderTitle}>
-										Order № <span className={styles.subTitle}>{order.numberOrder}</span>
-									</p>
+						ordersData
+							.filter((order) => order.numberOrder !== null)
+							.sort((a, b) => (b.numberOrder ?? -1) - (a.numberOrder ?? -1))
+							.map((order, index) => (
+								<motion.li key={order.numberOrder} className={styles.orderWrap} whileHover={hoverAnimation} onClick={() => toggleOrderContent(index)}>
+									<div className={styles.orderBox}>
+										<p className={styles.orderTitle}>
+											Order № <span className={styles.subTitle}>{order.numberOrder}</span>
+										</p>
 
-									<p className={styles.orderTitle}>
-										Order dated <span className={styles.subTitle}>{order.orderDate}</span>
-									</p>
+										<p className={styles.orderTitle}>
+											Order dated <span className={styles.subTitle}>{order.orderDate}</span>
+										</p>
 
-									<p className={styles.orderTitle}>
-										$ <span className={styles.subTitle}>{order.orderTotalPrice}</span>
-									</p>
-								</div>
-								<AnimatePresence mode='wait'>
-									{activeOrders[index] ? (
-										<motion.div className={styles.addressBox} key='address' initial={'initial'} animate={'animate'} exit={'exit'} variants={variant}>
-											<div className={styles.name}>
-												<p>{order.name}</p>
-											</div>
-											<div>
-												<div className={styles.box}>
-													<p>{order.city}, </p>
-													<p>{order.postalCode}</p>
+										<p className={styles.orderTitle}>
+											$ <span className={styles.subTitle}>{order.orderTotalPrice}</span>
+										</p>
+									</div>
+									<AnimatePresence mode='wait'>
+										{activeOrders[index] ? (
+											<motion.div className={styles.addressBox} key='address' initial={'initial'} animate={'animate'} exit={'exit'} variants={variant}>
+												<div className={styles.name}>
+													<p>{order.name}</p>
 												</div>
-												<p className={styles.box}>{order.streetAddress}</p>
-												<p className={styles.box}>{order.apartment}</p>
-											</div>
-										</motion.div>
-									) : (
-										<motion.ul className={styles.sneakerWrap} key='sneakers' initial={'initial'} animate={'animate'} exit={'exit'} variants={variant}>
-											{order.sneakers.slice(0, 4).map((sneaker, index) => (
-												<div key={index} className={styles.sneakerBox}>
-													<img key={index} className={styles.image} src={sneaker.image} alt='sneaker' />
-													<p>{sneaker.title}</p>
-													<p>{sneaker.sizes}</p>
+												<div className={styles.flex}>
+													<div className={styles.box}>
+														<p>{order.city}, </p>
+														<p>{order.postalCode}</p>
+													</div>
+													<p className={styles.box}>{order.streetAddress}</p>
+													<p className={styles.box}>{order.apartment}</p>
 												</div>
-											))}
-										</motion.ul>
-									)}
-								</AnimatePresence>
-							</motion.li>
-						))
+											</motion.div>
+										) : (
+											<motion.ul className={styles.sneakerWrap} key='sneakers' initial={'initial'} animate={'animate'} exit={'exit'} variants={variant}>
+												{order.sneakers.slice(0, 4).map((sneaker, index) => (
+													<div key={index} className={styles.sneakerBox}>
+														<img key={index} className={styles.image} src={sneaker.image} alt='sneaker' />
+														<p>{sneaker.title}</p>
+														<p>{sneaker.sizes}</p>
+													</div>
+												))}
+											</motion.ul>
+										)}
+									</AnimatePresence>
+								</motion.li>
+							))
 					) : (
 						<p>loading...</p>
 					)}
