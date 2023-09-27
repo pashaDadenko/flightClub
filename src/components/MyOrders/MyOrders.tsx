@@ -23,7 +23,7 @@ export const MyOrders: FC = () => {
 				<h2 className={styles.title}>MY ORDERS</h2>
 
 				<ul className={styles.wrap}>
-					{ordersData.length > 0 ? (
+					{ordersData &&
 						ordersData
 							.filter((order) => order.numberOrder !== null)
 							.sort((a, b) => (b.numberOrder ?? -1) - (a.numberOrder ?? -1))
@@ -70,10 +70,7 @@ export const MyOrders: FC = () => {
 										)}
 									</AnimatePresence>
 								</motion.li>
-							))
-					) : (
-						<p>loading...</p>
-					)}
+							))}
 				</ul>
 			</div>
 		</div>

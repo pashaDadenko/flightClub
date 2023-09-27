@@ -2,7 +2,6 @@ import { db } from '../../firebase';
 import { FC, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { TypeLogin, TypeOrdersData, TypeUserData } from './TypeLogin';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { setUser } from '../../redux/userSlice/userSlice';
 import VisibilityIcon from '@mui/icons-material/Visibility';
@@ -10,12 +9,13 @@ import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import { setOrders } from '../../redux/ordersSlice/ordersSlice';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { setShipping } from '../../redux/shippingSlice/shippingSlice';
+import { TypeLogin, TypeOrdersData, TypeUserData } from './TypeLogin';
 import { collection, doc, getDoc, getDocs, query, where } from 'firebase/firestore';
 import { OAuthCredential, fetchSignInMethodsForEmail, getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
 import styles from './Login.module.scss';
 
-export const FormLogin: FC = () => {
+export const Login: FC = () => {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 

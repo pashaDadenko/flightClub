@@ -20,7 +20,7 @@
 
 			.orderWrap {
 				border: 1px solid #eaeaea;
-				width: 1000px;
+				width: 100%;
 				cursor: pointer;
 
 				.orderBox {
@@ -72,7 +72,7 @@
 					.flex {
 						display: flex;
 						flex-direction: column;
-						gap: 6.5px;
+						gap: 9.5px;
 						.box {
 							display: flex;
 							color: #00000086;

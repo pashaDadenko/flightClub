@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { api } from '../api/api';
 import { Header } from '../components/Header/Header';
 import { Footer } from '../components/Footer/Footer';
-import { FormLogin } from '../components/Login/Login';
+import { Login } from '../components/Login/Login';
 
 export const LoginPage: FC = () => {
 	api();
@@ -11,7 +11,7 @@ export const LoginPage: FC = () => {
 	return (
 		<>
 			<Header />
-			<FormLogin />
+			<Login />
 			<Footer />
 		</>
 	);
