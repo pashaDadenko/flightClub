@@ -1,15 +1,14 @@
 import { FC } from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useAuth } from '../../hooks/useAuth';
 import { RootState } from '../../redux/store';
-import { motion } from 'framer-motion';
 
 import styles from './Footer.module.scss';
 
 export const Footer: FC = () => {
 	const { isAuth } = useAuth();
-
 	const allSneakers = useSelector((state: RootState) => state.sneakersSlice.allSneakers).slice(-6);
 
 	return (

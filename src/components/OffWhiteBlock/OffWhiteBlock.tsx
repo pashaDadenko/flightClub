@@ -2,9 +2,9 @@ import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
+import { SkeletonBlock } from '../Skeleton/SkeletonBlock';
 
 import styles from './OffWhiteBlock.module.scss';
-import { SkeletonBlock } from '../Skeleton/SkeletonBlock';
 
 export const OffWhiteBlock: FC = () => {
 	const offWhite = useSelector((state: RootState) => state.sneakersSlice.offWhiteSneakers);

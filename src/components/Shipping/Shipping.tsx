@@ -1,13 +1,13 @@
 import { FC } from 'react';
+import { db } from '../../firebase';
+import { getAuth } from 'firebase/auth';
 import { useDispatch } from 'react-redux';
 import { TypeShipping } from './TypeShipping';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import { setShipping } from '../../redux/shippingSlice/shippingSlice';
 
 import styles from './Shipping.module.scss';
-import { doc, getDoc, updateDoc } from 'firebase/firestore';
-import { getAuth } from 'firebase/auth';
-import { db } from '../../firebase';
 
 export const Shipping: FC = () => {
 	const dispatch = useDispatch();

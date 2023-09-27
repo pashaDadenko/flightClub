@@ -12,10 +12,7 @@ export const MyOrders: FC = () => {
 	const [activeOrders, setActiveOrders] = useState<boolean[]>(Array(ordersData.length).fill(false));
 	const toggleOrderContent = (index: number) => setActiveOrders(activeOrders.map((value, i) => (i === index ? !value : value)));
 
-	const hoverAnimation = {
-		translateY: -10,
-		boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.2)',
-	};
+	const hoverAnimation = { translateY: -10, boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.2)' };
 
 	return (
 		<div className={styles.wrapper}>

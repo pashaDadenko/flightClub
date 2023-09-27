@@ -1,5 +1,5 @@
-import { TypeOrderData, TypeOrdersSlice } from './TypeOrdersSlice';
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+import { TypeOrderData, TypeOrdersSlice } from './TypeOrdersSlice';
 
 export const ordersSlice = createSlice({
 	name: 'ordersSlice',

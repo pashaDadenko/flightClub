@@ -7,8 +7,8 @@ import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import { fetchSignInMethodsForEmail, getAuth, sendPasswordResetEmail } from 'firebase/auth';
 
 export const ForgotPassword: FC = () => {
-	const [forgotError, setForgotError] = useState<string | null>(null);
 	const navigate = useNavigate();
+	const [forgotError, setForgotError] = useState<string | null>(null);
 
 	const {
 		register,

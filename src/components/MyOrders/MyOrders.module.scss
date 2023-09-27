@@ -10,26 +10,22 @@
 			font-size: 30px;
 			margin-bottom: 60px;
 		}
-
 		.wrap {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
 			gap: 50px;
-
 			.orderWrap {
 				border: 1px solid #eaeaea;
 				width: 100%;
 				cursor: pointer;
-
 				.orderBox {
 					display: flex;
 					justify-content: space-between;
 					align-items: center;
 					border-bottom: 1px solid #eaeaea;
 					padding: 20px 20px 13px 20px;
-
 					.orderTitle {
 						font-size: 14px;
 						color: #00000086;
@@ -41,7 +37,6 @@
 						}
 					}
 				}
-
 				.sneakerWrap {
 					display: flex;
 					flex-direction: column;
@@ -60,7 +55,6 @@
 						}
 					}
 				}
-
 				.addressBox {
 					display: flex;
 					justify-content: space-between;

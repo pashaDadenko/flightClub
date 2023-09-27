@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { useSelector } from 'react-redux';
-import { RootState } from '../../redux/store';
 import styles from './MyAccount.module.scss';
+import { RootState } from '../../redux/store';
 
 export const MyAccount: FC = () => {
 	const { email, fullNameReg } = useSelector((state: RootState) => state.userSlice);
@@ -49,23 +49,3 @@ export const MyAccount: FC = () => {
 		</div>
 	);
 };
-
-// const [userName, setUserName] = useState('');
-// const auth = getAuth();
-// const user = auth.currentUser;
-// const userId = user.uid;
-// useEffect(() => {
-// 	const firestore = getFirestore();
-// 	const userDocRef = doc(firestore, 'users', userId);
-// 	getDoc(userDocRef)
-// 		.then((docSnapshot) => {
-// 			if (docSnapshot.exists()) {
-// 				const userData = docSnapshot.data();
-// 				const fullNameReg = userData.fullNameReg;
-// 				setUserName(fullNameReg);
-// 			}
-// 		})
-// 		.catch((error) => {
-// 			console.error('Error getting user data:', error);
-// 		});
-// }, []);

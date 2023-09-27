@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import Skeleton from '@mui/material/Skeleton';
 import { motion } from 'framer-motion';
+import Skeleton from '@mui/material/Skeleton';
 
 export const SkeletonBlock: FC = () => {
 	const variantsSkeleton = {
