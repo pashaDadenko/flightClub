@@ -9,7 +9,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { DetailsAccordion } from '../DetailsAccordion/DetailsAccordion';
 import { setCartItems, setSize } from '../../redux/cartSlice/cartSlice';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import { setBrand, setImageCarousel } from '../../redux/sneakersSlice/sneakersSlice';
+import { setBrand, setImageCarousel, setTitle } from '../../redux/sneakersSlice/sneakersSlice';
 
 import styles from './DetailsSneakers.module.scss';
 
@@ -18,14 +18,17 @@ export const DetailsSneakers: FC = () => {
 	const dispatch = useDispatch();
 
 	const detailsSneakers = useSelector((state: RootState) => state.sneakersSlice.allSneakers).filter((item) => item.id === +id!);
-	const size = useSelector((state: RootState) => state.cartSlice.size);
 	const cartItems = useSelector((state: RootState) => state.cartSlice.cartItems);
+	const size = useSelector((state: RootState) => state.cartSlice.size);
 
 	const brand = detailsSneakers.length > 0 && detailsSneakers[0].brand;
 	typeof brand === 'string' && dispatch(setBrand(brand));
 
 	const images = detailsSneakers.length > 0 && detailsSneakers[0].images;
 	Array.isArray(images) && dispatch(setImageCarousel(images));
+
+	const title = detailsSneakers.length > 0 && detailsSneakers[0].title;
+	typeof title === 'string' && dispatch(setTitle(title));
 
 	const buttonClick = (item: TypeApi) => {
 		dispatch(setCartItems(item));

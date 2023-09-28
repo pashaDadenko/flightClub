@@ -15,6 +15,7 @@ export const sneakersSlice = createSlice({
 		recommendedSneakers: [],
 		ImageCarousel: [],
 		brand: '',
+		title: '',
 
 		currentSort: 'relevance',
 	},
@@ -34,6 +35,10 @@ export const sneakersSlice = createSlice({
 		setImageCarousel(state, { payload }: PayloadAction<string[]>) {
 			state.ImageCarousel = payload;
 		},
+		setTitle(state, { payload }: PayloadAction<string>) {
+			state.title = payload;
+		},
+
 		setCurrentSort(state, { payload }: PayloadAction<string>) {
 			state.currentSort = payload;
 			if (payload === 'low') state.allSneakers = state.allSneakers.sort((a, b) => a.price - b.price);
@@ -43,6 +48,6 @@ export const sneakersSlice = createSlice({
 	},
 });
 
-export const { setSneakersData, setBrand, setImageCarousel, setCurrentSort } = sneakersSlice.actions;
+export const { setSneakersData, setBrand, setImageCarousel, setTitle, setCurrentSort } = sneakersSlice.actions;
 
 export default sneakersSlice.reducer;
