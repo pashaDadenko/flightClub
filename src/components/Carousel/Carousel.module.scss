@@ -1,15 +1,19 @@
 .wrapper {
-    .carousel {
-        margin-top: 30px;
-        .image {
-            width: 600px;
-            height: 400px;
-        }
-        .arrow {
-            font-size: 70px;
-            cursor: pointer;
-            margin-bottom: 150px;
-            font-size: 70px;
-        }
-    }
+	width: 800px;
+	.carousel {
+		margin-top: 30px;
+		display: flex;
+		align-items: center;
+		.image {
+			width: 600px;
+			height: 400px;
+		}
+		.arrow {
+			font-size: 100px;
+			cursor: pointer;
+		}
+		.opacity {
+			color: #818181;
+		}
+	}
 }
