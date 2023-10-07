@@ -1,19 +1,51 @@
 .wrapper {
+	@media (max-width: 1400px) {
+		padding: 0 50px;
+	}
+	@media (max-width: 900px) {
+		padding: 0 20px;
+	}
 	.container {
-		width: 1300px;
+		max-width: 1300px;
 		margin: 0 auto;
 		margin-top: 50px;
 		margin-bottom: 50px;
+		@media (max-width: 900px) {
+			margin-top: 0;
+			margin-bottom: 20px;
+		}
 		.wrap {
 			display: flex;
-			justify-content: space-between;
+			gap: 30px;
+			@media (max-width: 1130px) {
+				gap: 20px;
+			}
+			@media (max-width: 900px) {
+				flex-direction: column;
+			}
 			.filter {
-				width: 300px;
+				max-width: 100%;
+				.add {
+					width: 100%;
+					background-color: #000;
+					color: #fff;
+					display: none;
+					text-align: center;
+					padding: 15px 0;
+					margin: 20px 0;
+					font-weight: 800;
+					@media (max-width: 900px) {
+						display: block;
+					}
+				}
 				.filterWrap {
 					display: flex;
 					justify-content: space-between;
 					align-items: center;
 					margin-bottom: 37px;
+					@media (max-width: 900px) {
+						display: none;
+					}
 					.title {
 						font-size: 20px;
 						margin-top: 8px;
@@ -30,7 +62,7 @@
 				}
 			}
 			.sneakers {
-				width: 960px;
+				max-width: 960px;
 				.titleWrap {
 					display: flex;
 					align-items: center;
@@ -38,43 +70,143 @@
 					margin-bottom: 20px;
 					.title {
 						font-size: 20px;
+						@media (max-width: 600px) {
+							font-size: 15px;
+						}
+						@media (max-width: 500px) {
+							font-size: 13px;
+						}
 						.quantity {
 							display: inline-block;
 							font-size: 20px;
 							color: #818181;
+							@media (max-width: 600px) {
+								font-size: 15px;
+							}
+							@media (max-width: 500px) {
+								font-size: 13px;
+							}
 						}
 					}
 				}
 				.previewGroupe {
-					display: flex;
-					flex-wrap: wrap;
+					display: grid;
+					grid-template-columns: repeat(3, 1fr);
 					gap: 30px;
 					cursor: pointer;
+					@media (max-width: 1130px) {
+						grid-template-columns: repeat(2, 1fr);
+						gap: 20px;
+					}
+					@media (max-width: 900px) {
+						grid-template-columns: repeat(3, 1fr);
+					}
+					@media (max-width: 800px) {
+						grid-template-columns: repeat(2, 1fr);
+					}
 					.previewProduct {
 						display: flex;
 						flex-direction: column;
-						width: 300px;
+						max-width: 300px;
 						background-color: #fff;
 						text-decoration: none;
+						@media (max-width: 1230px) {
+							max-width: 270px;
+						}
+						@media (max-width: 1130px) {
+							max-width: 400px;
+						}
+						@media (max-width: 550px) {
+							max-width: 270px;
+						}
+						@media (max-width: 500px) {
+							max-width: 240px;
+						}
+						@media (max-width: 460px) {
+							max-width: 200px;
+						}
+						@media (max-width: 380px) {
+							max-width: 160px;
+						}
 						.img {
 							margin: 0 auto;
 							width: 270px;
 							height: 270px;
 							object-fit: contain;
+							@media (max-width: 1230px) {
+								width: 240px;
+								height: 240px;
+							}
+							@media (max-width: 1130px) {
+								width: 270px;
+								height: 270px;
+							}
+							@media (max-width: 900px) {
+								width: 240px;
+								height: 240px;
+							}
+							@media (max-width: 800px) {
+								width: 270px;
+								height: 270px;
+							}
+							@media (max-width: 600px) {
+								width: 240px;
+								height: 240px;
+							}
+							@media (max-width: 550px) {
+								width: 220px;
+								height: 220px;
+							}
+							@media (max-width: 500px) {
+								width: 200px;
+								height: 200px;
+							}
+							@media (max-width: 460px) {
+								width: 160px;
+								height: 160px;
+							}
+							@media (max-width: 380px) {
+								width: 120px;
+								height: 120px;
+							}
 						}
 						.info {
+							display: flex;
+							flex-direction: column;
+							justify-content: space-between;
 							padding: 0 20px 20px 20px;
+							height: 90px;
+							@media (max-width: 500px) {
+								padding: 0 10px 10px 10px;
+								height: 60px;
+							}
 							.subTitle {
 								color: #818181;
+								@media (max-width: 500px) {
+									font-size: 12px;
+								}
+								@media (max-width: 380px) {
+									font-size: 10px;
+								}
 							}
 							.text {
-								margin-top: 10px;
 								color: #000;
+								@media (max-width: 500px) {
+									font-size: 12px;
+								}
+								@media (max-width: 380px) {
+									font-size: 10px;
+								}
 							}
 							.price {
-								margin-top: 10px;
 								color: #000;
 								font-weight: 900;
+								@media (max-width: 500px) {
+									font-size: 12px;
+								}
+								@media (max-width: 380px) {
+									font-size: 10px;
+								}
 							}
 						}
 						&:hover img {

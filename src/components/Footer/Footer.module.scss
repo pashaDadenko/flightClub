@@ -1,6 +1,9 @@
 .footer {
 	background-color: #000;
 	padding: 50px 50px 100px 50px;
+	@media (max-width: 900px) {
+		padding: 20px 20px 100px 20px;
+	}
 	.logo {
 		display: inline-block;
 		font-family: 'Oswald', sans-serif;
@@ -8,14 +11,28 @@
 		color: #e91c23;
 		margin-bottom: 50px;
 		text-decoration: none;
+		@media (max-width: 520px) {
+			display: none;
+		}
 	}
 	.wrapper {
 		display: flex;
 		justify-content: space-between;
+		@media (max-width: 720px) {
+			flex-wrap: wrap;
+			gap: 60px;
+		}
 		.wrap {
 			display: flex;
 			flex-direction: column;
 			gap: 27px;
+			@media (max-width: 720px) {
+				width: 40%;
+			}
+			@media (max-width: 520px) {
+				text-align: center;
+				width: 100%;
+			}
 			.title {
 				color: #ffffffd5;
 			}
@@ -36,4 +53,7 @@
 	text-align: center;
 	color: #ffffff5b;
 	padding: 10px 50px;
+	@media (max-width: 520px) {
+		font-size: 15px;
+	}
 }

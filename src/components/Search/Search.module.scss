@@ -1,6 +1,9 @@
 .wrapper {
 	position: relative;
 	margin-left: 50px;
+	@media (max-width: 900px) {
+		display: none;
+	}
 	.search {
 		border-radius: 5px;
 		padding: 10px 35px;

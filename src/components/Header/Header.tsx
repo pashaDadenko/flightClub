@@ -50,6 +50,8 @@ export const Header: FC = () => {
 			<div className={styles.headerTop} style={scrollBack}>
 				{isClicked ? <SearchOpen setIsClicked={setIsClicked} /> : <Search setIsClicked={setIsClicked} scroll={scroll} />}
 
+				<div className={styles.mediaS}>Search</div>
+
 				{!isClicked && (
 					<Link className={styles.logo} to={'/'}>
 						FLIGHT CLUB
@@ -109,6 +111,8 @@ export const Header: FC = () => {
 						</div>
 					</div>
 				)}
+
+				<div className={styles.mediaM}>Menu</div>
 			</div>
 
 			{pathname === '/' && (

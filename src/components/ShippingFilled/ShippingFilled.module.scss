@@ -1,6 +1,9 @@
 .wrapper {
 	background-color: #fff;
 	padding: 30px;
+	@media (max-width: 900px) {
+		padding: 20px;
+	}
 	.flex {
 		display: flex;
 		justify-content: space-between;

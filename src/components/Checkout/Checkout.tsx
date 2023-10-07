@@ -1,6 +1,6 @@
 import { format } from 'date-fns';
 import { db } from '../../firebase';
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { getAuth } from 'firebase/auth';
 import { RootState } from '../../redux/store';
 import { useNavigate } from 'react-router-dom';
@@ -75,17 +75,23 @@ export const Checkout: FC = () => {
 		setOpen(true);
 	};
 
+	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+	const handleResize = () => setWindowWidth(window.innerWidth);
+	useEffect(() => {
+		window.addEventListener('resize', handleResize);
+		return () => window.removeEventListener('resize', handleResize);
+	}, []);
+
 	const style = {
 		position: 'absolute' as 'absolute',
 		top: '50%',
 		left: '50%',
 		transform: 'translate(-50%, -50%)',
-		width: 600,
+		width: windowWidth <= 700 ? 300 : 600,
 		bgcolor: 'background.paper',
 		border: '1px solid #000',
 		textAlign: 'center',
-		pt: 7,
-		pb: 7,
+		p: windowWidth <= 700 ? 2 : 7,
 	};
 
 	return (
@@ -115,7 +121,7 @@ export const Checkout: FC = () => {
 				</div>
 			</div>
 
-			<div className={styles.containerRight} style={cartItems.length < 5 ? { position: 'fixed', marginLeft: '520px' } : {}}>
+			<div className={styles.containerRight}>
 				<div className={styles.orderWrap}>
 					<p>ORDER SUMMARY</p>
 					<p className={styles.line}></p>
@@ -168,10 +174,10 @@ export const Checkout: FC = () => {
 
 					<Modal open={open} onClose={handleClose} aria-labelledby='modal-modal-title' aria-describedby='modal-modal-description' sx={{ backgroundColor: '#00000080' }}>
 						<Box sx={style}>
-							<Typography id='modal-modal-title' variant='h4' component='h2' sx={{ fontSize: 30, mb: 2 }}>
-								{fullNameReg}, your order <span style={{ fontSize: 35, color: '#e91c23', display: 'inline-block' }}>{currentOrderNumber}</span> received.
+							<Typography id='modal-modal-title' variant='h4' component='h2' sx={{ fontSize: windowWidth <= 700 ? 20 : 30, mb: windowWidth <= 700 ? 1 : 2 }}>
+								{fullNameReg}, your order <span style={{ fontSize: windowWidth <= 700 ? 25 : 35, color: '#e91c23', display: 'inline-block' }}>{currentOrderNumber}</span> received.
 							</Typography>
-							<Typography id='modal-modal-description' variant='h6' component='h3' sx={{ fontSize: 20 }}>
+							<Typography id='modal-modal-description' variant='h6' component='h3' sx={{ fontSize: windowWidth <= 700 ? 15 : 20 }}>
 								The letter has been sent to the email you provided during registration. Thank you for choosing FLIGHT CLUB.
 							</Typography>
 						</Box>

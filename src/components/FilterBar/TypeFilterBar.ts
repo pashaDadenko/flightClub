@@ -15,4 +15,8 @@ export type FilterBarProps = {
 	setActiveModel: React.Dispatch<React.SetStateAction<{ [key: string]: boolean }>>;
 	setActiveSizes: React.Dispatch<React.SetStateAction<{ [key: number]: boolean }>>;
 	setActiveColors: React.Dispatch<React.SetStateAction<{ [key: string]: boolean }>>;
+	setAddFilters: (arg: boolean) => void;
+	renderClearFiltersBtn: boolean;
+	clearFilters: () => void;
+	windowWidth: number;
 };

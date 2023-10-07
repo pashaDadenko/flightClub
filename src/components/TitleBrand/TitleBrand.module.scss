@@ -1,18 +1,28 @@
 .wrapper {
 	background-color: #fff;
 	.container {
-		width: 1200px;
+		max-width: 1200px;
 		margin: 0 auto;
-		padding-top: 100px;
-		padding-bottom: 100px;
+		padding: 100px 0;
 		text-align: center;
+		@media (max-width: 1270px) {
+			max-width: 900px;
+			padding: 50px 0;
+		}
 		.title {
 			font-size: 30px;
 			margin-bottom: 30px;
-			margin-left: 10px;
+			padding: 0 20px;
+			@media (max-width: 900px) {
+				text-align: left;
+			}
 		}
 		.text {
 			color: #818181;
+			padding: 0 20px;
+			@media (max-width: 900px) {
+				text-align: left;
+			}
 		}
 	}
 }

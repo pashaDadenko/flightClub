@@ -33,28 +33,30 @@ export const Stores: FC = () => {
 
 	return (
 		<div className={styles.wrapper}>
-			<h2 className={styles.title}>STORES</h2>
-			<ul className={styles.storeWrapper}>
-				{stores.map((item, index) => (
-					<li className={styles.store} key={index}>
-						<motion.div whileTap={{ scale: 1.3, y: 30 }}>
-							<Link to={item.link}>
-								<img src={mapImage} alt='mapImage' />
-							</Link>
-						</motion.div>
-						<div>
-							<h4 className={styles.storeTitle}>{item.title}</h4>
-							<Link className={styles.storeAddress} to={item.link}>
-								{item.address}
-							</Link>
-							<h4 className={styles.storeSubTitle}>Store Hours</h4>
-							<p className={styles.storeHours}>{item.storeHours}</p>
-							<p className={styles.storeSubTitle}>Consignment</p>
-							<p className={styles.consignment}>{item.consignment}</p>
-						</div>
-					</li>
-				))}
-			</ul>
+			<div className={styles.container}>
+				<h2 className={styles.title}>STORES</h2>
+				<ul className={styles.storeWrapper}>
+					{stores.map((item, index) => (
+						<li className={styles.store} key={index}>
+							<motion.div whileTap={{ scale: 1.3, y: 30 }}>
+								<Link to={item.link}>
+									<img src={mapImage} alt='mapImage' />
+								</Link>
+							</motion.div>
+							<div>
+								<h4 className={styles.storeTitle}>{item.title}</h4>
+								<Link className={styles.storeAddress} to={item.link}>
+									{item.address}
+								</Link>
+								<h4 className={styles.storeSubTitle}>Store Hours</h4>
+								<p className={styles.storeHours}>{item.storeHours}</p>
+								<p className={styles.storeSubTitle}>Consignment</p>
+								<p className={styles.consignment}>{item.consignment}</p>
+							</div>
+						</li>
+					))}
+				</ul>
+			</div>
 		</div>
 	);
 };

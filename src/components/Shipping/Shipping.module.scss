@@ -1,6 +1,9 @@
 .shippingWrap {
 	background-color: #fff;
 	padding: 30px;
+	@media (max-width: 900px) {
+		padding: 20px;
+	}
 	.line {
 		margin-top: 20px;
 		height: 1px;
@@ -22,15 +25,14 @@
 		}
 	}
 	.input {
-		border-radius: 5px;
-		padding: 10px;
 		outline: none;
-		border: 0;
 		background-color: transparent;
 		border: 1px solid #eaeaea;
-		width: 95%;
 		margin-top: 10px;
 		border-radius: 0;
+		padding: 10px 0;
+		width: calc(100% - 10px);
+		padding-left: 10px;
 	}
 	.buttonUpdate {
 		margin-top: 20px;

@@ -50,8 +50,7 @@ export const TitleBrand: FC = () => {
 						`Virgil Abloh created Off-White as a fashion house with a streetwear mentality. Critiquing contemporary culture and always looking for his next inspiration, Abloh serves up a unique design language with Off-White, leaving his mark on classic Air Jordan, Converse, and Nike silhouettes through the brand's coveted sneaker collaborations.`}
 				</p>
 				<p className={styles.text}>
-					{pathname === '/lowest-price' &&
-						`Shop the latest price drops on Air Jordan, Yeezy and more, including Air Jordan 1s, Yeezy Boost 350s, Air Max, Vans Sk8-Hi and Air Force 1s.`}
+					{pathname === '/lowest-price' && `Shop the latest price drops on Air Jordan, Yeezy and more, including Air Jordan 1s, Yeezy Boost 350s, Air Max, Vans Sk8-Hi and Air Force 1s.`}
 				</p>
 				<p className={styles.text}>
 					{pathname === '/nike-dunk' &&

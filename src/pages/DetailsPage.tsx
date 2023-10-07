@@ -19,7 +19,6 @@ export const DetailsPage: FC = () => {
 		const queryString = qs.stringify({
 			title: title.toLowerCase(),
 		});
-
 		navigate(`?${queryString}`);
 	}, [title]);
 

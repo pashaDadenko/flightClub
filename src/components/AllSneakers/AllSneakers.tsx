@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { RootState } from '../../redux/store';
 import { Selected } from '../Selected/Selected';
 import { FilterBar } from '../FilterBar/FilterBar';
@@ -49,6 +49,13 @@ export const AllSneakers: FC = () => {
 	const [activeModel, setActiveModel] = useState<{ [key: string]: boolean }>({});
 	const [activeSizes, setActiveSizes] = useState<{ [key: number]: boolean }>({});
 	const [activeColors, setActiveColors] = useState<{ [key: string]: boolean }>({});
+	const allFilters = [activeBrand, activeModel, activeSizes, activeColors];
+	const [countFilters, setCountFilters] = useState<number>(0);
+
+	useEffect(() => {
+		const totalFilters = allFilters.reduce((count, filter) => count + Object.values(filter).filter(Boolean).length, 0);
+		setCountFilters(totalFilters);
+	}, [activeBrand, activeModel, activeSizes, activeColors]);
 
 	const clearFilters = () => {
 		setActiveBrand({});
@@ -57,14 +64,39 @@ export const AllSneakers: FC = () => {
 		setActiveColors({});
 	};
 
-	const [visibleProducts, setVisibleProducts] = useState(9);
+	const [visibleProducts, setVisibleProducts] = useState(6);
 	const handleShowMore = () => setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + 6);
+
+	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+	const [addFilters, setAddFilters] = useState(true);
+	useEffect(() => {
+		const handleResize = () => {
+			setWindowWidth(window.innerWidth);
+			if (window.innerWidth <= 900) {
+				setAddFilters(false);
+			} else {
+				setAddFilters(true);
+			}
+		};
+		handleResize();
+		window.addEventListener('resize', handleResize);
+		return () => window.removeEventListener('resize', handleResize);
+	}, []);
+
+	const handleClick = () => {
+		setAddFilters(true);
+		window.scrollTo(0, 0);
+	};
 
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.container}>
 				<div className={styles.wrap}>
 					<div className={styles.filter}>
+						<div className={styles.add} onClick={handleClick}>
+							{countFilters > 0 ? `${countFilters} FILTERS ADDED` : 'ADD FILTERS'}
+						</div>
+
 						<div className={styles.filterWrap}>
 							<p className={styles.title}>FILTER</p>
 							{renderClearFiltersBtn && (
@@ -78,17 +110,23 @@ export const AllSneakers: FC = () => {
 								</p>
 							)}
 						</div>
-						<FilterBar
-							updateSneakers={updateSneakers}
-							activeBrand={activeBrand}
-							activeModel={activeModel}
-							activeSizes={activeSizes}
-							activeColors={activeColors}
-							setActiveBrand={setActiveBrand}
-							setActiveModel={setActiveModel}
-							setActiveSizes={setActiveSizes}
-							setActiveColors={setActiveColors}
-						/>
+						{addFilters && (
+							<FilterBar
+								updateSneakers={updateSneakers}
+								activeBrand={activeBrand}
+								activeModel={activeModel}
+								activeSizes={activeSizes}
+								activeColors={activeColors}
+								setActiveBrand={setActiveBrand}
+								setActiveModel={setActiveModel}
+								setActiveSizes={setActiveSizes}
+								setActiveColors={setActiveColors}
+								setAddFilters={setAddFilters}
+								renderClearFiltersBtn={renderClearFiltersBtn}
+								clearFilters={clearFilters}
+								windowWidth={windowWidth}
+							/>
+						)}
 					</div>
 					<div className={styles.sneakers}>
 						<div className={styles.titleWrap}>
@@ -105,7 +143,7 @@ export const AllSneakers: FC = () => {
 											<Link to={`/details/${sneaker.id}`} className={styles.previewProduct}>
 												<img className={styles.img} src={sneaker.images[0]} alt='image' />
 												<div className={styles.info}>
-													<span className={styles.subTitle}>{sneaker.brand}</span>
+													<p className={styles.subTitle}>{sneaker.brand}</p>
 													<p className={styles.text}>{sneaker.title}</p>
 													<p className={styles.price}>${sneaker.price}</p>
 												</div>

@@ -9,15 +9,17 @@ export const HeaderCheckout: FC = () => {
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.container}>
-				<Link className={styles.logo} to={'/'}>
-					FLIGHT CLUB
-				</Link>
-
-				{pathname !== '/help' && (
-					<Link className={styles.link} to={'/help'}>
-						Need Help?
+				<div className={styles.wrap}>
+					<Link className={styles.logo} to={'/'}>
+						FLIGHT CLUB
 					</Link>
-				)}
+
+					{pathname !== '/help' && (
+						<Link className={styles.link} to={'/help'}>
+							Need Help?
+						</Link>
+					)}
+				</div>
 			</div>
 		</div>
 	);
