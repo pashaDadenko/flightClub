@@ -28,7 +28,6 @@ export const Carousel: FC = () => {
 			<div className={styles.carousel}>
 				<NavigateBeforeIcon className={`${styles.arrow} ${isFirstSlide ? styles.opacity : ''}`} onClick={goPrev} />
 				<Swiper
-					allowTouchMove={false}
 					slidesPerView={1}
 					speed={1000}
 					onSwiper={(swiper) => {

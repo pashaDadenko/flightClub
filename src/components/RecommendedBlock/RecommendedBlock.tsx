@@ -8,6 +8,7 @@ import styles from './RecommendedBlock.module.scss';
 
 export const RecommendedBlock: FC = () => {
 	const { id } = useParams();
+
 	const recommendedSneakers = useSelector((state: RootState) => state.sneakersSlice.recommendedSneakers.filter((item) => item.id !== +id!));
 
 	return (
@@ -17,11 +18,7 @@ export const RecommendedBlock: FC = () => {
 				<ul className={styles.previewGroupe}>
 					{recommendedSneakers.length > 0 ? (
 						recommendedSneakers.map((sneaker) => (
-							<Link
-								to={`/details/${sneaker.id}`}
-								key={sneaker.id}
-								className={styles.previewProduct}
-								onClick={() => window.scrollTo(0, 0)}>
+							<Link to={`/details/${sneaker.id}`} key={sneaker.id} className={styles.previewProduct} onClick={() => window.scrollTo(0, 0)}>
 								<img className={styles.img} src={sneaker.images[0]} alt='image' />
 								<div className={styles.info}>
 									<span className={styles.subTitle}>{sneaker.brand}</span>

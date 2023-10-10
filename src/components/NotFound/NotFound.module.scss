@@ -1,20 +1,36 @@
 .wrapper {
-    background-color: #fff;
-    .container {
-        width: 1000px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        gap: 50px;
-        padding: 220px 0;
-        .title {
-            font-size: 30px;
-            font-weight: normal;
-            margin-bottom: 30px;
-        }
-        .text {
-            color: #818181;
-            letter-spacing: -0.3px;
-        }
-    }
+	background-color: #fff;
+	.container {
+		max-width: 1000px;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		gap: 50px;
+		padding: 220px 50px;
+		@media (max-width: 900px) {
+			flex-direction: column-reverse;
+			max-width: 400px;
+			padding: 120px 20px;
+		}
+		@media (max-width: 500px) {
+			padding: 50px 20px;
+		}
+		.title {
+			font-size: 30px;
+			font-weight: normal;
+			margin-bottom: 30px;
+		}
+		.text {
+			color: #818181;
+			letter-spacing: -0.3px;
+		}
+		.img {
+			@media (max-width: 500px) {
+				max-width: 400px;
+			}
+			@media (max-width: 450px) {
+				max-width: 300px;
+			}
+		}
+	}
 }

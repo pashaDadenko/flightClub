@@ -6,15 +6,15 @@ import { NotFound } from '../components/NotFound/NotFound';
 import { AllSneakersBlock } from '../components/AllSneakersBlock/AllSneakersBlock';
 
 export const ErrorPage: FC = () => {
-    api();
-    window.scrollTo(0, 0);
+	api();
+	window.scrollTo(0, 0);
 
-    return (
-        <>
-            <Header />
-            <NotFound />
-            <AllSneakersBlock />
-            <Footer />
-        </>
-    );
+	return (
+		<>
+			<Header />
+			<NotFound />
+			<AllSneakersBlock />
+			<Footer />
+		</>
+	);
 };

@@ -29,7 +29,7 @@ export const NotFound: FC = () => {
 						<p className={styles.text}>Sorry, we could not find this page. Please search again or navigate to the home page to find what you are looking for.</p>
 					)}
 				</motion.div>
-				<motion.img src={notFoundImage} alt='notFoundImage' initial='initial' animate={'animate'} exit='exit' variants={variants} whileHover='hover' />
+				<motion.img className={styles.img} src={notFoundImage} alt='notFoundImage' initial='initial' animate={'animate'} exit='exit' variants={variants} whileHover='hover' />
 			</div>
 		</div>
 	);

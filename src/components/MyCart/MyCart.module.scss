@@ -1,10 +1,15 @@
 .wrapper {
 	background-color: #fff;
 	.container {
-		width: 1000px;
+		max-width: 1000px;
 		margin: 0 auto;
-		padding-top: 50px;
-		padding-bottom: 50px;
+		padding: 50px 0;
+		@media (max-width: 1100px) {
+			padding: 50px;
+		}
+		@media (max-width: 900px) {
+			padding: 20px;
+		}
 		.title {
 			font-size: 30px;
 			margin-bottom: 100px;
@@ -13,18 +18,20 @@
 			display: flex;
 			flex-direction: column;
 			gap: 20px;
-			padding-right: 50px;
 			.sneaker {
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
+				gap: 30px;
 				border-bottom: 1px solid #eaeaea;
-				padding: 0 50px;
+				padding: 0 30px;
+
 				.flexBox {
 					display: flex;
 					justify-content: space-between;
 					align-items: center;
 					gap: 50px;
+
 					.img {
 						object-fit: contain;
 						width: 140px;
@@ -51,6 +58,13 @@
 				justify-content: space-between;
 				align-items: center;
 				gap: 150px;
+				@media (max-width: 1100px) {
+					gap: 50px;
+				}
+				@media (max-width: 900px) {
+					flex-direction: column-reverse;
+					gap: 25px;
+				}
 				.price {
 					font-weight: 600;
 					font-size: 25px;
@@ -69,19 +83,15 @@
 			align-items: center;
 			justify-content: space-between;
 			margin-top: 10px;
-			padding-right: 50px;
 			.priceText {
 				font-size: 20px;
-				margin-left: 240px;
 			}
 			.price {
 				margin-top: 7px;
 				font-weight: 600;
 				font-size: 25px;
-				padding-left: 185px;
 			}
 			.clear {
-				margin-right: 20px;
 				background-color: transparent;
 				border: none;
 				cursor: pointer;

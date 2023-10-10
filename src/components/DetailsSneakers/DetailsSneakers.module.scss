@@ -4,96 +4,295 @@
 		max-width: 1400px;
 		margin: 0 auto;
 		padding: 50px 0;
+		@media (max-width: 1600px) {
+			max-width: 1200px;
+		}
+		@media (max-width: 1300px) {
+			max-width: 900px;
+		}
+		@media (max-width: 900px) {
+			padding: 50px 20px;
+		}
+		.wrapMob {
+			display: none;
+			@media (max-width: 900px) {
+				display: block;
+			}
+			.brandMob {
+				color: #818181;
+			}
+			.titleMob {
+				font-size: 30px;
+				@media (max-width: 600px) {
+					font-size: 25px;
+				}
+				@media (max-width: 500px) {
+					font-size: 20px;
+				}
+				@media (max-width: 400px) {
+					font-size: 17px;
+				}
+			}
+		}
 		.wrap {
 			display: flex;
 			gap: 100px;
-			.image {
-				width: 600px;
-				height: 400px;
+			@media (max-width: 1600px) {
+				gap: 50px;
+			}
+			@media (max-width: 1300px) {
+				gap: 20px;
+			}
+			@media (max-width: 1100px) {
+				gap: 10px;
+			}
+			@media (max-width: 900px) {
+				flex-direction: column;
+				align-items: center;
 			}
 			.infoWrap {
 				width: 500px;
+				@media (max-width: 1300px) {
+					width: 400px;
+				}
+				@media (max-width: 950px) {
+					width: 350px;
+				}
+				@media (max-width: 900px) {
+					width: 500px;
+				}
+				@media (max-width: 600px) {
+					width: 100%;
+				}
 				.brand {
 					color: #818181;
+					@media (max-width: 900px) {
+						display: none;
+					}
 				}
 				.title {
 					margin: 20px 0;
 					font-size: 30px;
+					@media (max-width: 1600px) {
+						font-size: 27px;
+					}
+					@media (max-width: 1100px) {
+						font-size: 25px;
+					}
+					@media (max-width: 900px) {
+						display: none;
+					}
 				}
 				.selectSize {
 					margin-bottom: 30px;
 					font-size: 20px;
-				}
-				.sizeWrap {
-					display: flex;
-					gap: 12.5px;
-					flex-wrap: wrap;
-					margin-bottom: 30px;
-					.size {
-						background-color: #fff;
-						color: #000;
-						cursor: pointer;
-						border: 1.5px solid #e7e7e7;
-						width: 90px;
-						height: 50px;
-						&:hover {
-							border: 1.5px solid #00000065;
-						}
-						&:focus {
-							border: 1.5px solid #000;
-						}
+					@media (max-width: 500px) {
+						font-size: 15px;
 					}
 				}
-				.buy {
+				.btnMob {
+					background-color: #e91c23;
+					color: #fff;
+					border: none;
 					font-size: 20px;
-					margin-bottom: 30px;
-					letter-spacing: 2px;
+					width: 100%;
+					height: 70px;
+					cursor: pointer;
+					display: none;
+					@media (max-width: 900px) {
+						display: block;
+						margin-bottom: 20px;
+					}
+					@media (max-width: 600px) {
+						height: 50px;
+					}
+					&:hover {
+						background-color: #c01a22;
+					}
+					.price {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width: 100%;
+						height: 100%;
+					}
 				}
-				.buttonWrap {
-					display: flex;
-					align-items: center;
-					justify-content: space-between;
-					margin-bottom: 30px;
-					.btn {
-						background-color: #e91c23;
-						color: #fff;
-						border: none;
-						font-size: 20px;
-						width: 79%;
-						height: 70px;
-						cursor: pointer;
-						&:hover {
-							background-color: #c01a22;
-							transition: 0.2s;
-						}
-						.price {
+				.overlay {
+					position: fixed;
+					top: 0px;
+					left: 0px;
+					width: 100%;
+					height: 100%;
+					background-color: #00000080;
+					z-index: 1000;
+					display: none;
+					@media (max-width: 900px) {
+						display: block;
+					}
+				}
+				.boxMob {
+					@media (max-width: 900px) {
+						width: 100%;
+						height: fit-content;
+						position: fixed;
+						bottom: 0;
+						left: 0;
+						background-color: #fff;
+						z-index: 1001;
+					}
+					.wrapTopMob {
+						display: none;
+						@media (max-width: 900px) {
+							display: block;
 							display: flex;
 							align-items: center;
-							justify-content: center;
-							width: 100%;
-							height: 100%;
+							justify-content: space-between;
+							padding: 20px;
+							border-bottom: 1px solid #81818154;
+						}
+						.titleMob {
+							font-size: 25px;
+							@media (max-width: 600px) {
+								font-size: 20px;
+							}
+							@media (max-width: 500px) {
+								font-size: 15px;
+							}
+						}
+						.iconMob {
+							color: #818181;
+							font-size: 30px;
+							@media (max-width: 500px) {
+								font-size: 20px;
+							}
 						}
 					}
-					.link {
-						text-decoration: none;
+					.selectSizeMob {
+						display: none;
+						@media (max-width: 900px) {
+							padding: 20px 20px 0 20px;
+							display: block;
+						}
+					}
+					.sizeWrap {
+						display: grid;
+						grid-template-columns: repeat(5, 1fr);
+						gap: 12.5px;
+						margin-bottom: 30px;
+						@media (max-width: 900px) {
+							grid-template-columns: repeat(6, 1fr);
+							padding: 20px;
+							margin: 0;
+						}
+						.size {
+							background-color: #fff;
+							color: #000;
+							cursor: pointer;
+							border: 1.5px solid #e7e7e7;
+							max-width: 90px;
+							height: 50px;
+							@media (max-width: 1600px) {
+								max-width: 80px;
+							}
+							@media (max-width: 1300px) {
+								max-width: 70px;
+							}
+							@media (max-width: 950px) {
+								max-width: 60px;
+							}
+							@media (max-width: 900px) {
+								max-width: 130px;
+							}
+							&:hover {
+								border: 1.5px solid #00000065;
+							}
+							&:focus {
+								border: 1.5px solid #000;
+							}
+						}
+					}
+					.lineMob {
+						height: 10px;
+						background-color: #f9f9f9;
+						display: none;
+						@media (max-width: 900px) {
+							display: block;
+						}
+					}
+					.buy {
+						font-size: 20px;
+						margin-bottom: 30px;
+						letter-spacing: 2px;
+						@media (max-width: 900px) {
+							padding: 20px;
+							margin: 0;
+						}
+					}
+					.buttonWrap {
 						display: flex;
-						justify-content: center;
 						align-items: center;
-						background-color: #e6e4e4;
-						color: #000;
-						border: none;
-						width: 90px;
-						height: 70px;
-						cursor: pointer;
-						&:hover {
-							background-color: #d6d6d6;
-							transition: 0.2s;
+						gap: 12.5px;
+						margin-bottom: 30px;
+						@media (max-width: 900px) {
+							gap: 20px;
+							padding: 0 20px 20px 20px;
+							margin: 0;
 						}
-						.icon {
-							margin-left: 8px;
+						.btn {
+							background-color: #e91c23;
+							color: #fff;
+							border: none;
+							font-size: 20px;
+							width: 79%;
+							height: 70px;
+							cursor: pointer;
+							@media (max-width: 900px) {
+								width: 50%;
+							}
+							&:hover {
+								background-color: #c01a22;
+							}
+							.price {
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								width: 100%;
+								height: 100%;
+							}
 						}
-						.count {
-							margin-bottom: 20px;
+						.link {
+							text-decoration: none;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							background-color: #e6e4e4;
+							color: #000;
+							border: none;
+							width: 90px;
+							height: 70px;
+							cursor: pointer;
+							@media (max-width: 1600px) {
+								width: 80px;
+							}
+							@media (max-width: 1300px) {
+								width: 70px;
+							}
+							@media (max-width: 950px) {
+								width: 60px;
+							}
+							@media (max-width: 900px) {
+								width: 50%;
+							}
+							&:hover {
+								background-color: #d6d6d6;
+								transition: 0.2s;
+							}
+							.icon {
+								margin-left: 8px;
+							}
+							.count {
+								margin-bottom: 20px;
+							}
 						}
 					}
 				}
@@ -101,14 +300,13 @@
 					height: 10px;
 					background-color: #f9f9f9;
 				}
-				.lineMini {
-					margin: 20px 0;
-					height: 1px;
-					background-color: #d8d8d8;
-				}
 				.about {
 					margin: 30px 0;
 					letter-spacing: 1px;
+					@media (max-width: 900px) {
+						font-weight: 800;
+						font-size: 20px;
+					}
 				}
 				.InfoProduct {
 					margin-bottom: 30px;
