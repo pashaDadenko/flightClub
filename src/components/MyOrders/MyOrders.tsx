@@ -18,7 +18,6 @@ export const MyOrders: FC = () => {
 		<div className={styles.wrapper}>
 			<div className={styles.container}>
 				<h2 className={styles.title}>MY ORDERS</h2>
-
 				<ul className={styles.wrap}>
 					{ordersData &&
 						ordersData
@@ -30,11 +29,9 @@ export const MyOrders: FC = () => {
 										<p className={styles.orderTitle}>
 											Order № <span className={styles.subTitle}>{order.numberOrder}</span>
 										</p>
-
 										<p className={styles.orderTitle}>
 											Order dated <span className={styles.subTitle}>{order.orderDate}</span>
 										</p>
-
 										<p className={styles.orderTitle}>
 											$ <span className={styles.subTitle}>{order.orderTotalPrice}</span>
 										</p>
@@ -57,11 +54,11 @@ export const MyOrders: FC = () => {
 										) : (
 											<motion.ul className={styles.sneakerWrap} key='sneakers' initial={'initial'} animate={'animate'} exit={'exit'} variants={variant}>
 												{order.sneakers.slice(0, 4).map((sneaker, index) => (
-													<div key={index} className={styles.sneakerBox}>
+													<li key={index} className={styles.sneakerBox}>
 														<img key={index} className={styles.image} src={sneaker.image} alt='sneaker' />
 														<p>{sneaker.title}</p>
 														<p>{sneaker.sizes}</p>
-													</div>
+													</li>
 												))}
 											</motion.ul>
 										)}

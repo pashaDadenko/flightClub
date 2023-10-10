@@ -13,6 +13,9 @@
 		.title {
 			font-size: 30px;
 			margin-bottom: 100px;
+			@media (max-width: 900px) {
+				margin-bottom: 50px;
+			}
 		}
 		.sneakerWrap {
 			display: flex;
@@ -24,23 +27,29 @@
 				align-items: center;
 				gap: 30px;
 				border-bottom: 1px solid #eaeaea;
-				padding: 0 30px;
-
 				.flexBox {
 					display: flex;
 					justify-content: space-between;
 					align-items: center;
 					gap: 50px;
-
+					@media (max-width: 700px) {
+						gap: 20px;
+					}
 					.img {
 						object-fit: contain;
 						width: 140px;
 						margin-bottom: 35px;
+						@media (max-width: 700px) {
+							width: 100px;
+						}
 					}
 					.flexInfo {
 						display: flex;
 						flex-direction: column;
 						gap: 10px;
+						@media (max-width: 700px) {
+							font-size: 13px;
+						}
 						.name {
 							font-weight: 800;
 						}
@@ -59,19 +68,29 @@
 				align-items: center;
 				gap: 150px;
 				@media (max-width: 1100px) {
-					gap: 50px;
+					gap: 100px;
 				}
 				@media (max-width: 900px) {
 					flex-direction: column-reverse;
 					gap: 25px;
 				}
+				@media (max-width: 700px) {
+					flex-direction: column-reverse;
+					gap: 30px;
+				}
 				.price {
 					font-weight: 600;
 					font-size: 25px;
+					@media (max-width: 700px) {
+						font-size: 20px;
+					}
 				}
 				.clear {
 					cursor: pointer;
 					font-size: 30px;
+					@media (max-width: 700px) {
+						font-size: 20px;
+					}
 					&:hover {
 						color: #818181;
 					}
@@ -85,20 +104,37 @@
 			margin-top: 10px;
 			.priceText {
 				font-size: 20px;
+				@media (max-width: 700px) {
+					font-size: 15px;
+				}
 			}
-			.price {
-				margin-top: 7px;
-				font-weight: 600;
-				font-size: 25px;
-			}
-			.clear {
-				background-color: transparent;
-				border: none;
-				cursor: pointer;
-				font-size: 15px;
-				font-weight: 800;
-				&:hover {
-					color: #818181;
+			.priceBox {
+				display: flex;
+				align-items: center;
+				gap: 95px;
+				@media (max-width: 1100px) {
+					gap: 45px;
+				}
+				.price {
+					margin-top: 7px;
+					font-weight: 600;
+					font-size: 25px;
+					@media (max-width: 700px) {
+						font-size: 15px;
+					}
+				}
+				.clear {
+					background-color: transparent;
+					border: none;
+					cursor: pointer;
+					font-size: 15px;
+					font-weight: 800;
+					@media (max-width: 700px) {
+						font-size: 12px;
+					}
+					&:hover {
+						color: #818181;
+					}
 				}
 			}
 		}
@@ -107,6 +143,12 @@
 			justify-content: space-between;
 			align-items: center;
 			margin-top: 50px;
+			@media (max-width: 700px) {
+				gap: 100px;
+			}
+			@media (max-width: 450px) {
+				gap: 50px;
+			}
 			.link {
 				text-decoration: none;
 				background-color: #000;
@@ -114,6 +156,11 @@
 				padding: 15px 20px;
 				border: 0;
 				cursor: pointer;
+				text-align: center;
+				@media (max-width: 700px) {
+					padding: 10px;
+					width: 100%;
+				}
 				&:hover {
 					background-color: #000000e0;
 				}

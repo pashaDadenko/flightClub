@@ -19,7 +19,6 @@ export const MyCart: FC = () => {
 		<div className={styles.wrapper}>
 			<div className={styles.container}>
 				<h2 className={styles.title}>MY CART</h2>
-
 				<div className={styles.sneakerWrap}>
 					{cartItems &&
 						cartItems.map((sneaker, index) => (
@@ -41,15 +40,15 @@ export const MyCart: FC = () => {
 							</div>
 						))}
 				</div>
-
 				<div className={styles.priceWrap}>
 					<p className={styles.priceText}>TOTAL PRICE:</p>
-					<span className={styles.price}>${totalPrice}</span>
-					<button className={styles.clear} onClick={() => dispatch(setClearCart())}>
-						Clear Cart
-					</button>
+					<div className={styles.priceBox}>
+						<span className={styles.price}>${totalPrice}</span>
+						<button className={styles.clear} onClick={() => dispatch(setClearCart())}>
+							Clear Cart
+						</button>
+					</div>
 				</div>
-
 				<div className={styles.buttonWrap}>
 					<Link className={styles.link} to={'/sneakers'}>
 						BACK TO SHOP
