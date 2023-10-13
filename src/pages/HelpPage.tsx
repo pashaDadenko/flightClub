@@ -1,10 +1,10 @@
-import { api } from '../api/api';
+import { Api } from '../api/Api';
 import { motion } from 'framer-motion';
 import { CSSProperties, FC } from 'react';
 import { HeaderCheckout } from '../components/HeaderCheckout/HeaderCheckout';
 
 export const HelpPage: FC = () => {
-	api();
+	Api();
 	window.scrollTo(0, 0);
 
 	const styleDiv: CSSProperties = {

@@ -4,7 +4,7 @@ import { TypeApi } from './TypeApi';
 import { useDispatch } from 'react-redux';
 import { setSneakersData } from '../redux/sneakersSlice/sneakersSlice';
 
-export const api = (): void => {
+export const Api = (): void => {
 	const dispatch = useDispatch();
 
 	const URL_DATA: string = `https://646cb4927b42c06c3b2bd66e.mockapi.io/sneakersData`;

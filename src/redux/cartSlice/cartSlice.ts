@@ -1,4 +1,4 @@
-import { TypeApi } from '../../api/TypeApi';
+import { TypeApi } from '../../api/TypeApi.ts';
 import { TypeCartSlice } from './TypeCartSlice.ts';
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 

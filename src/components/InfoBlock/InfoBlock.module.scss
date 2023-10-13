@@ -1,76 +1,97 @@
 .wrapper {
 	background-color: #fff;
-	padding: 50px 0;
 	.container {
-		width: 1300px;
+		max-width: fit-content;
 		margin: 0 auto;
-		display: flex;
-		justify-content: space-between;
-		.store {
-			.storeImg {
-				width: 625px;
-				height: 400px;
-				cursor: pointer;
+		padding: 50px;
+	
+		@media (max-width: 900px) {
+			padding: 20px 0;
+			width: 100%;
+		}
+		.wrap {
+			display: flex;
+			justify-content: center;
+			gap: 30px;
+			@media (max-width: 900px) {
+				flex-direction: column;
+				align-items: center;
 			}
-			.titleStore {
-				font-size: 20px;
-				margin: 20px 0;
-				color: #000000e0;
-			}
-			.textStore {
-				font-family: sans-serif;
-				width: 625px;
-				color: #000000a6;
-				letter-spacing: 0.5px;
-				font-size: 15px;
-				a {
-					color: #000000a6;
-					&:hover {
+			.box {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				@media (max-width: 900px) {
+					width: 100%;
+				}
+				.img {
+					width: 100%;
+					height: 400px;
+					cursor: pointer;
+					@media (max-width: 1600px) {
+						width: 535px;
+					}
+					@media (max-width: 1300px) {
+						width: 465px;
+						height: 300px;
+					}
+					@media (max-width: 1100px) {
+						width: 390px;
+						height: 200px;
+					}
+					@media (max-width: 900px) {
+						width: 100%;
+						height: 100%;
+					}
+				}
+				.flex {
+					display: flex;
+					flex-direction: column;
+					height: 100%;
+					justify-content: space-between;
+					gap: 10px;
+					@media (max-width: 900px) {
+						padding: 0 20px;
+					}
+					.title {
+						font-size: 20px;
 						color: #000000e0;
 					}
-				}
-			}
-			.link {
-				display: inline-block;
-				margin-top: 64px;
-				color: #000;
-				&:hover {
-					color: #33322f49;
-				}
-			}
-		}
-		.history {
-			.historyImg {
-				width: 625px;
-				height: 400px;
-				cursor: pointer;
-			}
-			.titleHistory {
-				font-size: 20px;
-				margin: 20px 0;
-				color: #000000e0;
-			}
-			.textHistory {
-				font-family: sans-serif;
-				width: 605px;
-				color: #000000a6;
-				letter-spacing: 0.5px;
-				font-size: 15px;
-				.linkBrand {
-					font-size: 15px;
-					color: #000000a6;
-					cursor: pointer;
-					&:hover {
-						color: #000000;
+					.text {
+						font-family: sans-serif;
+						width: 625px;
+						color: #000000a6;
+						letter-spacing: 0.5px;
+						font-size: 15px;
+						@media (max-width: 1600px) {
+							width: 535px;
+						}
+						@media (max-width: 1300px) {
+							width: 465px;
+							font-size: 13px;
+						}
+						@media (max-width: 1100px) {
+							width: 390px;
+						}
+						@media (max-width: 900px) {
+							width: 100%;
+						}
+						.linkBrand {
+							font-size: 15px;
+							color: #000000a6;
+							cursor: pointer;
+							&:hover {
+								color: #000000;
+							}
+						}
 					}
-				}
-			}
-			.link {
-				display: inline-block;
-				margin-top: 30px;
-				color: #000000;
-				&:hover {
-					color: #33322f49;
+					.link {
+						display: inline-block;
+						color: #000;
+						&:hover {
+							color: #33322f49;
+						}
+					}
 				}
 			}
 		}

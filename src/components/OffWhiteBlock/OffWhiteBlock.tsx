@@ -10,26 +10,28 @@ export const OffWhiteBlock: FC = () => {
 	const offWhite = useSelector((state: RootState) => state.sneakersSlice.offWhiteSneakers);
 
 	return (
-		<section className={styles.wrapper}>
-			<h2 className={styles.title}>OFF WHITE</h2>
-			<ul className={styles.previewGroupe}>
-				{offWhite.length > 0 ? (
-					offWhite.map((sneaker) => (
-						<Link to={`/details/${sneaker.id}`} key={sneaker.id} className={styles.previewProduct}>
-							<img className={styles.img} src={sneaker.images[0]} alt='image' />
-							<div className={styles.info}>
-								<span className={styles.subTitle}>{sneaker.brand}</span>
-								<p className={styles.text}>{sneaker.title}</p>
-							</div>
-						</Link>
-					))
-				) : (
-					<SkeletonBlock />
-				)}
-			</ul>
-			<Link className={styles.link} to={'/off-white'}>
-				<button className={styles.btn}>SHOP OFF WHITE</button>
-			</Link>
-		</section>
+		<div className={styles.wrapper}>
+			<div className={styles.container}>
+				<h2 className={styles.title}>OFF WHITE</h2>
+				<ul className={styles.previewGroupe}>
+					{offWhite.length > 0 ? (
+						offWhite.map((sneaker) => (
+							<Link to={`/details/${sneaker.id}`} key={sneaker.id} className={styles.previewProduct}>
+								<img className={styles.img} src={sneaker.images[0]} alt='image' />
+								<div className={styles.info}>
+									<span className={styles.subTitle}>{sneaker.brand}</span>
+									<p className={styles.text}>{sneaker.title}</p>
+								</div>
+							</Link>
+						))
+					) : (
+						<SkeletonBlock />
+					)}
+				</ul>
+				<Link className={styles.link} to={'/off-white'}>
+					<button className={styles.btn}>SHOP OFF WHITE</button>
+				</Link>
+			</div>
+		</div>
 	);
 };

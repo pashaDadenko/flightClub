@@ -4,8 +4,8 @@
 		max-width: fit-content;
 		margin: 0 auto;
 		padding: 100px 0;
-		@media (max-width: 500px) {
-			padding: 20px 20px;
+		@media (max-width: 900px) {
+			padding: 20px;
 		}
 		.title {
 			margin-bottom: 50px;
@@ -44,7 +44,7 @@
 					max-width: 250px;
 				}
 				@media (max-width: 900px) {
-					max-width: 200px;
+					max-width: 100%;
 				}
 				.img {
 					max-width: 270px;
@@ -81,19 +81,6 @@
 					scale: 105%;
 					transition: 0.2s;
 				}
-			}
-		}
-		.btn {
-			margin: 0 auto;
-			display: block;
-			background-color: #000;
-			color: #fff;
-			padding: 15px 20px;
-			border: 0;
-			cursor: pointer;
-			margin-top: 30px;
-			&:hover {
-				background-color: #000000e0;
 			}
 		}
 	}
