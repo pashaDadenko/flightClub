@@ -71,7 +71,6 @@ export const Login: FC = () => {
 						);
 
 						dispatch(setOrders(ordersData));
-
 						navigate('/my-account');
 					})
 					.catch(() => {
@@ -88,12 +87,10 @@ export const Login: FC = () => {
 					<HighlightOffIcon /> {authError}
 				</p>
 			)}
-
 			<form className={styles.wrapper} onSubmit={handleSubmit(onSubmit)}>
 				<div className={styles.container}>
 					<p>LOGIN</p>
 					<p className={styles.line}></p>
-
 					<div className={styles.wrap}>
 						<p className={styles.title}>Email Address</p>
 						{errors.email && <p className={styles.error}>{errors.email.message}</p>}
@@ -107,7 +104,6 @@ export const Login: FC = () => {
 							},
 						})}
 					/>
-
 					<div className={styles.wrap}>
 						<p className={styles.title}>Password</p>
 						{errors.password && <p className={styles.error}>{errors.password.message}</p>}
@@ -129,11 +125,9 @@ export const Login: FC = () => {
 							</span>
 						)}
 					</div>
-
 					<Link to={'/forgot-password'} className={styles.forgot}>
 						Forgot Password?
 					</Link>
-
 					{isValid && watch('email') && watch('password') ? (
 						<button className={styles.loginUpdate}>LOGIN</button>
 					) : (

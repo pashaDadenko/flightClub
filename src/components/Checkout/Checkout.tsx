@@ -1,10 +1,10 @@
 import { format } from 'date-fns';
 import { db } from '../../firebase';
-import { FC, useEffect, useState } from 'react';
 import { getAuth } from 'firebase/auth';
 import { RootState } from '../../redux/store';
 import { useNavigate } from 'react-router-dom';
 import { Shipping } from '../Shipping/Shipping';
+import { FC, useEffect, useState } from 'react';
 import { Box, Modal, Typography } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { setClearCart } from '../../redux/cartSlice/cartSlice';
@@ -19,6 +19,7 @@ import styles from './Checkout.module.scss';
 export const Checkout: FC = () => {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
+
 	const cartItems = useSelector((state: RootState) => state.cartSlice.cartItems);
 	const { email, fullNameReg } = useSelector((state: RootState) => state.userSlice);
 	const totalPrice = cartItems.reduce((sum, sneaker) => sum + sneaker.price, 0);
@@ -42,8 +43,8 @@ export const Checkout: FC = () => {
 		if (!user) return;
 		const uid = user!.uid;
 		const sneaker = cartItems.map(({ images: [image], title, sizes }) => ({ image, title, sizes }));
-
 		const ordersCollectionRef = collection(db, 'orders');
+
 		const counterRef = doc(db, 'counters', 'orderNumberCounter');
 		const counterDoc = await getDoc(counterRef);
 		let currentOrderNumber = 1;
@@ -106,11 +107,8 @@ export const Checkout: FC = () => {
 					<p className={styles.name}>{fullNameReg}</p>
 					<p className={styles.email}>{email}</p>
 				</div>
-
 				{conditionalRender ? <ShippingFilled /> : <Shipping />}
-
 				<ShippingMethod />
-
 				<div className={styles.paymentWrap}>
 					<div className={styles.flex}>
 						<p>PAYMENT METHOD</p>
@@ -120,12 +118,10 @@ export const Checkout: FC = () => {
 					<p className={styles.text}>Payment is made to the in cash or by bank card to the courier.</p>
 				</div>
 			</div>
-
 			<div className={styles.containerRight}>
 				<div className={styles.orderWrap}>
 					<p>ORDER SUMMARY</p>
 					<p className={styles.line}></p>
-
 					<div className={styles.sneakerWrap}>
 						{cartItems &&
 							cartItems.map((sneaker, index) => (
@@ -141,7 +137,6 @@ export const Checkout: FC = () => {
 								</div>
 							))}
 					</div>
-
 					<div className={styles.totalInfoWrap}>
 						<div className={styles.flexText}>
 							<p>Subtotal</p>
@@ -154,14 +149,11 @@ export const Checkout: FC = () => {
 							<p>$0</p>
 						</div>
 					</div>
-
 					<div className={styles.totalWrap}>
 						<p>Order Total</p>
 						<p className={styles.price}>${orderTotalPrice}</p>
 					</div>
-
 					<p className={styles.text}>By clicking "place order", I acknowledge that I have read and agree to the Terms & Conditions and the Privacy Policy.</p>
-
 					{conditionalRender ? (
 						<button className={styles.buttonUpdate} onClick={handleOpen}>
 							PLACE ORDER
@@ -171,7 +163,6 @@ export const Checkout: FC = () => {
 							PLACE ORDER
 						</button>
 					)}
-
 					<Modal open={open} onClose={handleClose} aria-labelledby='modal-modal-title' aria-describedby='modal-modal-description' sx={{ backgroundColor: '#00000080' }}>
 						<Box sx={style}>
 							<Typography id='modal-modal-title' variant='h4' component='h2' sx={{ fontSize: windowWidth <= 700 ? 20 : 30, mb: windowWidth <= 700 ? 1 : 2 }}>

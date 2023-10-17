@@ -33,7 +33,6 @@ export const SearchOpen: FC<SearchProps> = ({ setSearchClick }) => {
 			document.body.style.overflow = 'hidden';
 			setScrollLocked(true);
 		}
-
 		return () => {
 			if (scrollLocked) {
 				document.body.style.overflow = 'auto';
@@ -64,7 +63,6 @@ export const SearchOpen: FC<SearchProps> = ({ setSearchClick }) => {
 						Close
 					</button>
 				</div>
-
 				<div className={styles.wrapSearchBottom}>
 					<div className={styles.left}>
 						{filteredSneakers.length > 0 ? <p className={styles.title}>Popular</p> : <p className={styles.title}>No Result</p>}
@@ -113,7 +111,6 @@ export const SearchOpen: FC<SearchProps> = ({ setSearchClick }) => {
 					</div>
 				</div>
 			</motion.div>
-
 			<motion.div className={styles.overlay} onClick={() => setSearchClick(false)} key='overlay' initial={'initial'} animate={'animate'} exit={'exit'} variants={variantOverlay}></motion.div>
 		</AnimatePresence>
 	);

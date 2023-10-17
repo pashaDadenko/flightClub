@@ -64,7 +64,6 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 								VIEW RESULT
 							</p>
 						</div>
-
 						{renderClearFiltersBtn && (
 							<p
 								onClick={() => {
@@ -77,7 +76,6 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 						)}
 					</div>
 				)}
-
 				{renderBrand && (
 					<Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={accordionStyle} disableGutters>
 						<AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls='panel1bh-content' id='panel1bh-header' style={{ border: '1px solid #81818131' }}>
@@ -109,7 +107,6 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 						</AccordionDetails>
 					</Accordion>
 				)}
-
 				<Accordion style={accordionStyle} disableGutters>
 					<AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls='panel1bh-content' id='panel1bh-header' style={{ border: '1px solid #81818131' }}>
 						<Typography sx={{}}>MODEL</Typography>
@@ -139,7 +136,6 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 						</div>
 					</AccordionDetails>
 				</Accordion>
-
 				<Accordion style={accordionStyle} disableGutters>
 					<AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls='panel1bh-content' id='panel1bh-header' style={{ border: '1px solid #81818131' }}>
 						<Typography sx={{}}>US SIZES</Typography>
@@ -167,7 +163,6 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 						</Typography>
 					</AccordionDetails>
 				</Accordion>
-
 				<Accordion style={{ marginBottom: '20px', ...accordionStyle }} disableGutters>
 					<AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls='panel1bh-content' id='panel1bh-header' style={{ border: '1px solid #81818131' }}>
 						<Typography sx={{}}>COLOR</Typography>

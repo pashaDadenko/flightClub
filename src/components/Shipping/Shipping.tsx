@@ -49,7 +49,6 @@ export const Shipping: FC = () => {
 		<form className={styles.shippingWrap} onSubmit={handleSubmit(onSubmit)}>
 			<p>SHIPPING ADDRESS</p>
 			<p className={styles.line}></p>
-
 			<div className={styles.wrap}>
 				<p className={styles.title}>* Full name</p>
 				{errors.name && <p className={styles.error}>{errors.name.message}</p>}
@@ -63,7 +62,6 @@ export const Shipping: FC = () => {
 					},
 				})}
 			/>
-
 			<div className={styles.wrap}>
 				<p className={styles.title}>* Street Address</p>
 				{errors.streetAddress && <p className={styles.error}>{errors.streetAddress.message}</p>}
@@ -77,7 +75,6 @@ export const Shipping: FC = () => {
 					},
 				})}
 			/>
-
 			<div className={styles.wrap}>
 				<p className={styles.title}>* Apartment, Suite, Unit, Building, Floor, etc.</p>
 				{errors.apartment && <p className={styles.error}>{errors.apartment.message}</p>}
@@ -91,7 +88,6 @@ export const Shipping: FC = () => {
 					},
 				})}
 			/>
-
 			<div className={styles.wrap}>
 				<p className={styles.title}>* City</p>
 				{errors.city && <p className={styles.error}>{errors.city.message}</p>}
@@ -105,7 +101,6 @@ export const Shipping: FC = () => {
 					},
 				})}
 			/>
-
 			<div className={styles.wrap}>
 				<p className={styles.title}>* Zip / Postal Code</p>
 				{errors.postalCode && <p className={styles.error}>{errors.postalCode.message}</p>}
@@ -119,7 +114,6 @@ export const Shipping: FC = () => {
 					},
 				})}
 			/>
-
 			<div className={styles.wrap}>
 				<p className={styles.title}>* Telephone</p>
 				{errors.telephone && <p className={styles.error}>{errors.telephone.message}</p>}
@@ -133,7 +127,6 @@ export const Shipping: FC = () => {
 					},
 				})}
 			/>
-
 			{renderButton ? (
 				<button className={styles.buttonUpdate}>CONTINUE</button>
 			) : (

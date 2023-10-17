@@ -55,7 +55,6 @@ export const CreateAccount: FC = () => {
 				);
 
 				dispatch(setEdit());
-
 				navigate('/my-account');
 			})
 			.catch(() => (reset(), setAuthError('The user with this email is already registered')));
@@ -68,12 +67,10 @@ export const CreateAccount: FC = () => {
 					<HighlightOffIcon /> {authError}
 				</p>
 			)}
-
 			<form className={styles.wrapper} onSubmit={handleSubmit(onSubmit)}>
 				<div className={styles.container}>
 					<p>CREATE AN ACCOUNT</p>
 					<p className={styles.line}></p>
-
 					<div className={styles.wrap}>
 						<p className={styles.title}>* Full name</p>
 						{errors.fullNameReg && <p className={styles.error}>{errors.fullNameReg.message}</p>}
@@ -87,7 +84,6 @@ export const CreateAccount: FC = () => {
 							},
 						})}
 					/>
-
 					<div className={styles.wrap}>
 						<p className={styles.title}>* Email Address</p>
 						{errors.email && <p className={styles.error}>{errors.email.message}</p>}
@@ -101,7 +97,6 @@ export const CreateAccount: FC = () => {
 							},
 						})}
 					/>
-
 					<div className={styles.wrap}>
 						<p className={styles.title}>* Password</p>
 						{errors.password && <p className={styles.error}>{errors.password.message}</p>}
@@ -123,7 +118,6 @@ export const CreateAccount: FC = () => {
 							</span>
 						)}
 					</div>
-
 					{isValid && watch('fullNameReg') && watch('email') && watch('password') ? (
 						<button className={styles.createUpdate}>CREATE ACCOUNT</button>
 					) : (
@@ -131,13 +125,11 @@ export const CreateAccount: FC = () => {
 							CREATE ACCOUNT
 						</button>
 					)}
-
 					<div className={styles.flex}>
 						<div className={styles.miniLine}></div>
 						<p className={styles.already}>ALREADY HAVE AN ACCOUNT?</p>
 						<div className={styles.miniLine}></div>
 					</div>
-
 					<Link className={styles.link} to={'/login'}>
 						<button className={styles.login}>LOGIN</button>
 					</Link>

@@ -40,13 +40,11 @@ export const ForgotPassword: FC = () => {
 					<HighlightOffIcon /> {forgotError}
 				</p>
 			)}
-
 			<form className={styles.wrapper} onSubmit={handleSubmit(onSubmit)}>
 				<div className={styles.container}>
 					<p>FORGOT PASSWORD?</p>
 					<p className={styles.text}>Please enter your email address below. You will receive a link to reset your password.</p>
 					<p className={styles.line}></p>
-
 					<div className={styles.wrap}>
 						<p className={styles.title}>* Email Address</p>
 						{errors.email && <p className={styles.error}>{errors.email.message}</p>}
@@ -60,7 +58,6 @@ export const ForgotPassword: FC = () => {
 							},
 						})}
 					/>
-
 					{isValid && watch('email') ? (
 						<button className={styles.submitUpdate}>SUBMIT</button>
 					) : (
@@ -68,7 +65,6 @@ export const ForgotPassword: FC = () => {
 							SUBMIT
 						</button>
 					)}
-
 					<Link className={styles.link} to={'/login'}>
 						<button className={styles.back}>BACK TO LOGIN</button>
 					</Link>

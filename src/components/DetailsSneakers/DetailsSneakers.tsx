@@ -89,7 +89,6 @@ export const DetailsSneakers: FC = () => {
 											animate={'animate'}
 											exit={'exit'}
 											variants={variantOverlay}></motion.div>
-
 										<motion.div className={styles.boxMob} key='sizes' initial={'initial'} animate={'animate'} exit={'exit'} variants={screenReduction ? variantSizes : {}}>
 											<div className={styles.wrapTopMob}>
 												<h2 className={styles.titleMob}>{item.title}</h2>

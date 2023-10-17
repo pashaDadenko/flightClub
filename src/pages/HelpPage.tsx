@@ -31,7 +31,6 @@ export const HelpPage: FC = () => {
 	return (
 		<>
 			<HeaderCheckout />
-
 			<div style={styleDiv}>
 				<div>
 					hover
@@ -41,19 +40,17 @@ export const HelpPage: FC = () => {
 						</motion.p>
 					))}
 				</div>
-
 				<motion.a style={{ marginTop: 100, marginBottom: 100, color: 'black', textDecoration: 'none' }} whileTap={{ scale: 2, color: 'red' }}>
 					(◕‿◕) 3
 				</motion.a>
-
 				<motion.div
 					style={{
 						display: 'inline-block',
 						marginBottom: 100,
 					}}
 					animate={{
-						x: 360, // Горизонтальное движение
-						rotateX: 360, // Горизонтальное вращение
+						x: 360,
+						rotateX: 360,
 					}}
 					transition={{
 						delay: 1,
@@ -66,7 +63,6 @@ export const HelpPage: FC = () => {
 					}}>
 					(◕‿◕) 2
 				</motion.div>
-
 				<motion.p style={{ marginBottom: 100 }} initial={'initial'} animate={'animate'} variants={variants1}>
 					(◕‿◕) 1
 				</motion.p>

@@ -24,7 +24,6 @@ export const TitleBrand: FC = () => {
 				<h2 className={styles.title}>{pathname === '/nike-dunk' && 'NiKE DUNK'}</h2>
 				<h2 className={styles.title}>{pathname === '/dark-shoes' && 'DARK SHOES'}</h2>
 				<h2 className={styles.title}>{pathname === '/rar-shoes' && 'RAR SHOES'}</h2>
-
 				<p className={styles.text}>
 					{pathname === '/sneakers' &&
 						`The vault goes deep at Flight Club. Shop for new releases from must-have names like Air Jordan, Nike, New Balance and Yeezy, along with the latest collaborations from brands like Vans, Reebok, Converse, ASICS, and more.`}

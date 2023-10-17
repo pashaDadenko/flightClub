@@ -28,7 +28,6 @@ export const AllSneakersBlock: FC = () => {
 						<SkeletonBlock />
 					)}
 				</ul>
-
 				<Link className={styles.link} to={'/sneakers'}>
 					<button className={styles.btn}>SHOP ALL SNEAKERS</button>
 				</Link>

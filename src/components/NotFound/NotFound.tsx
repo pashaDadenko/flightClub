@@ -20,7 +20,6 @@ export const NotFound: FC = () => {
 					) : (
 						<h2 className={styles.title}>404 - PAGE NOT FOUND</h2>
 					)}
-
 					{pathname === '/my-cart' ? (
 						<p className={styles.text}>Sorry, your shopping cart is empty. Use the search or go to the homepage to find what you are looking for.</p>
 					) : pathname === '/my-orders' ? (

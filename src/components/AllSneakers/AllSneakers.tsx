@@ -1,6 +1,6 @@
-import { FC, useEffect, useState } from 'react';
 import { RootState } from '../../redux/store';
 import { Selected } from '../Selected/Selected';
+import { FC, useEffect, useState } from 'react';
 import { FilterBar } from '../FilterBar/FilterBar';
 import { Link, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -69,6 +69,7 @@ export const AllSneakers: FC = () => {
 
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 	const [addFilters, setAddFilters] = useState(true);
+
 	useEffect(() => {
 		const handleResize = () => {
 			setWindowWidth(window.innerWidth);
@@ -96,7 +97,6 @@ export const AllSneakers: FC = () => {
 						<div className={styles.add} onClick={handleClick}>
 							{countFilters > 0 ? `${countFilters} FILTERS ADDED` : 'ADD FILTERS'}
 						</div>
-
 						<div className={styles.filterWrap}>
 							<p className={styles.title}>FILTER</p>
 							{renderClearFiltersBtn && (

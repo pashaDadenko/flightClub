@@ -11,7 +11,6 @@ export const MyAccount: FC = () => {
 		<div className={styles.wrapper}>
 			<div className={styles.container}>
 				<h2 className={styles.title}>MY ACCOUNT</h2>
-
 				<div className={styles.infoWrap}>
 					<div className={styles.accountWrap}>
 						<div className={styles.accountTop}>
@@ -22,7 +21,6 @@ export const MyAccount: FC = () => {
 							<p>{email}</p>
 						</div>
 					</div>
-
 					<div className={styles.shippingWrap}>
 						<div className={styles.shippingTop}>
 							<p>SHIPPING ADDRESS</p>
