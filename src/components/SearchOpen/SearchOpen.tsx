@@ -10,7 +10,7 @@ import { variantOverlay, variantSearch } from './SearchOpenVariants';
 
 import styles from './SearchOpen.module.scss';
 
-export const SearchOpen: FC<SearchProps> = ({ setIsClicked }) => {
+export const SearchOpen: FC<SearchProps> = ({ setSearchClick }) => {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 
@@ -60,7 +60,7 @@ export const SearchOpen: FC<SearchProps> = ({ setIsClicked }) => {
 						Clear
 					</button>
 					<div className={styles.line}></div>
-					<button className={styles.buttonClose} onClick={() => setIsClicked(false)}>
+					<button className={styles.buttonClose} onClick={() => setSearchClick(false)}>
 						Close
 					</button>
 				</div>
@@ -71,7 +71,7 @@ export const SearchOpen: FC<SearchProps> = ({ setIsClicked }) => {
 						<ul className={styles.previewGroupe}>
 							{filteredSneakers &&
 								filteredSneakers.slice(0, 8).map((sneaker) => (
-									<Link to={`/details/${sneaker.id}`} key={sneaker.id} className={styles.previewProduct}>
+									<Link to={`/details/${sneaker.id}`} key={sneaker.id} className={styles.previewProduct} onClick={() => setSearchClick(false)}>
 										<img className={styles.img} src={sneaker.images[0]} alt='image' />
 										<p className={styles.text}>{sneaker.title}</p>
 									</Link>
@@ -82,30 +82,30 @@ export const SearchOpen: FC<SearchProps> = ({ setIsClicked }) => {
 						<p className={styles.title}>Categories</p>
 						<div className={styles.wrap}>
 							<div className={styles.brand}>
-								<Link to={'/air-jordan'}>
+								<Link to={'/air-jordan'} onClick={() => setSearchClick(false)}>
 									<button className={styles.button}>Air jordan</button>
 								</Link>
-								<Link to={'/new-balance'}>
+								<Link to={'/new-balance'} onClick={() => setSearchClick(false)}>
 									<button className={styles.button}>New Balance</button>
 								</Link>
-								<Link to={'/nike'}>
+								<Link to={'/nike'} onClick={() => setSearchClick(false)}>
 									<button className={styles.button}>Nike</button>
 								</Link>
-								<Link to={'/off-white'}>
+								<Link to={'/off-white'} onClick={() => setSearchClick(false)}>
 									<button className={styles.button}>Off white</button>
 								</Link>
-								<Link to={'/yeezy'}>
+								<Link to={'/yeezy'} onClick={() => setSearchClick(false)}>
 									<button className={styles.button}>Yeezy</button>
 								</Link>
-								<Link to={'/sneakers'}>
+								<Link to={'/sneakers'} onClick={() => setSearchClick(false)}>
 									<button className={styles.button}>More Brands</button>
 								</Link>
 							</div>
 							<div className={styles.recommended}>
-								<Link to={'/top-sellers'}>
+								<Link to={'/top-sellers'} onClick={() => setSearchClick(false)}>
 									<button className={styles.button}>Top sellers</button>
 								</Link>
-								<Link to={'/lowest-price'}>
+								<Link to={'/lowest-price'} onClick={() => setSearchClick(false)}>
 									<button className={styles.button}>Lowest price</button>
 								</Link>
 							</div>
@@ -114,7 +114,7 @@ export const SearchOpen: FC<SearchProps> = ({ setIsClicked }) => {
 				</div>
 			</motion.div>
 
-			<motion.div className={styles.overlay} onClick={() => setIsClicked(false)} key='overlay' initial={'initial'} animate={'animate'} exit={'exit'} variants={variantOverlay}></motion.div>
+			<motion.div className={styles.overlay} onClick={() => setSearchClick(false)} key='overlay' initial={'initial'} animate={'animate'} exit={'exit'} variants={variantOverlay}></motion.div>
 		</AnimatePresence>
 	);
 };

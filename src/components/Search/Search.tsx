@@ -5,7 +5,7 @@ import SearchIcon from '@mui/icons-material/Search';
 
 import styles from './Search.module.scss';
 
-export const Search: FC<SearchProps> = ({ setIsClicked, scroll }) => {
+export const Search: FC<SearchProps> = ({ setSearchClick, scroll }) => {
 	const { pathname } = useLocation();
 
 	const inputColor = pathname === '/' && scroll < document.documentElement.clientHeight ? { border: '1px solid #81818122', color: '#fff', fontSize: '16px' } : {};
@@ -13,7 +13,7 @@ export const Search: FC<SearchProps> = ({ setIsClicked, scroll }) => {
 
 	return (
 		<div className={styles.wrapper}>
-			<input className={styles.search} style={inputColor} onClick={() => setIsClicked(true)} type='search' defaultValue='Search' />
+			<input className={styles.search} style={inputColor} onClick={() => setSearchClick(true)} type='search' defaultValue='Search' />
 			<SearchIcon className={styles.icon} style={iconColor} />
 		</div>
 	);

@@ -12,6 +12,7 @@ import backgroundImgDesc from '../../images/backgroundImgDesc.jpg';
 import { variantAccount, variantCart, variantOrders, variantOut, variantUp, variantWrap } from './HeaderVariants';
 
 import styles from './Header.module.scss';
+import { MenuOpen } from '../MenuOpen/MenuOpen';
 
 export const Header: FC = () => {
 	const { isAuth } = useAuth();
@@ -20,8 +21,9 @@ export const Header: FC = () => {
 	const dispatch = useDispatch();
 	const screenReduction = useMediaQuery('(max-width: 900px)');
 
-	const [isClicked, setIsClicked] = useState(false);
-	const [isHovered, setIsHovered] = useState(false);
+	const [searchClick, setSearchClick] = useState(false);
+	const [accountHover, setAccountHover] = useState(false);
+	const [menuOpen, setMenuOpen] = useState(false);
 
 	const [scroll, setScroll] = useState(0);
 
@@ -51,18 +53,18 @@ export const Header: FC = () => {
 	return (
 		<header style={pathname === '/' ? styleHeaderIMG : { height: '100px' }}>
 			<div className={styles.wrapper} style={scrollBack}>
-				{!isClicked && (
-					<div onClick={() => setIsClicked(true)} className={styles.mediaS} style={scrollColor}>
+				{!searchClick && (
+					<div onClick={() => setSearchClick(true)} className={styles.mediaS} style={scrollColor}>
 						Search
 					</div>
 				)}
-				{isClicked ? <SearchOpen setIsClicked={setIsClicked} /> : <Search setIsClicked={setIsClicked} scroll={scroll} />}
-				{!isClicked && (
+				{searchClick ? <SearchOpen setSearchClick={setSearchClick} /> : <Search setSearchClick={setSearchClick} scroll={scroll} />}
+				{!searchClick && (
 					<Link className={styles.logo} to={'/'}>
 						FLIGHT CLUB
 					</Link>
 				)}
-				{!isClicked && (
+				{!searchClick && (
 					<div className={styles.listing}>
 						<Link className={styles.item} style={scrollColor} to={'/sneakers'}>
 							Sneakers
@@ -70,12 +72,12 @@ export const Header: FC = () => {
 						<Link className={styles.item} style={scrollColor} to={'/store-location'}>
 							Store
 						</Link>
-						<div className={styles.accountWrap} style={scrollColor} onMouseLeave={() => setIsHovered(false)}>
-							<Link to={''} className={styles.item} style={isHovered ? { color: '#33322f49' } : scrollColor} onMouseEnter={() => setIsHovered(true)}>
+						<div className={styles.accountWrap} style={scrollColor} onMouseLeave={() => setAccountHover(false)}>
+							<Link to={''} className={styles.item} style={accountHover ? { color: '#33322f49' } : scrollColor} onMouseEnter={() => setAccountHover(true)}>
 								Account
 							</Link>
 							<AnimatePresence>
-								{isHovered && (
+								{accountHover && (
 									<motion.div className={styles.wrap} style={scrollBack} initial={'initial'} animate={'animate'} exit={'exit'} variants={variantWrap}>
 										<motion.div initial={'initial'} animate={'animate'} exit={'exit'} variants={variantAccount}>
 											<Link to={isAuth ? '/my-account' : '/login'} className={styles.item} style={scrollColor}>
@@ -111,11 +113,12 @@ export const Header: FC = () => {
 						</div>
 					</div>
 				)}
-				{!isClicked && (
-					<div className={styles.mediaM} style={scrollColor}>
+				{!searchClick && (
+					<div className={styles.mediaM} onClick={() => setMenuOpen(true)} style={scrollColor}>
 						Menu
 					</div>
 				)}
+				{menuOpen && <MenuOpen setMenuOpen={setMenuOpen} singOutClick={singOutClick} />}
 			</div>
 			{pathname === '/' && (
 				<div className={styles.previewWrapper}>

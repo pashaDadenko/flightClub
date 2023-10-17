@@ -1,4 +1,4 @@
 export type SearchProps = {
-	setIsClicked: React.Dispatch<React.SetStateAction<boolean>>;
+	setSearchClick: React.Dispatch<React.SetStateAction<boolean>>;
 	scroll: number;
 };

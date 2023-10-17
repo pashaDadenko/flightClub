@@ -1,0 +1,82 @@
+.wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #fff;
+
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px;
+		border-bottom: 2px solid #eaeaea;
+		.logo {
+			font-family: 'Oswald', sans-serif;
+			font-size: 30px;
+			color: #e91c23;
+			cursor: pointer;
+			text-decoration: none;
+		}
+		.buttonClose {
+			color: #000;
+			border: none;
+			background-color: transparent;
+			font-size: 17px;
+		}
+	}
+	.wrap {
+		display: flex;
+		flex-direction: column;
+		gap: 100px;
+		padding: 20px;
+		.sneakerBox {
+			.title {
+				font-size: 20px;
+				margin-bottom: 20px;
+			}
+			.sneakerFlex {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				grid-template-rows: repeat(3, 1fr);
+				gap: 20px;
+				.item {
+					color: #000;
+					text-decoration: none;
+				}
+			}
+		}
+		.accountBox {
+			.title {
+				font-size: 20px;
+				margin-bottom: 20px;
+			}
+			.accountFlex {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				grid-template-rows: repeat(3, 1fr);
+				gap: 20px;
+				.item {
+					color: #000;
+					text-decoration: none;
+				}
+			}
+		}
+		.storesBox {
+			.title {
+				font-size: 20px;
+				margin-bottom: 20px;
+			}
+			.storesFlex {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				.item {
+					color: #000;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
