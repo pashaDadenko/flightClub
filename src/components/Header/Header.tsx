@@ -51,9 +51,11 @@ export const Header: FC = () => {
 	return (
 		<header style={pathname === '/' ? styleHeaderIMG : { height: '100px' }}>
 			<div className={styles.wrapper} style={scrollBack}>
-				<div onClick={() => setIsClicked(true)} className={styles.mediaS} style={scrollColor}>
-					Search
-				</div>
+				{!isClicked && (
+					<div onClick={() => setIsClicked(true)} className={styles.mediaS} style={scrollColor}>
+						Search
+					</div>
+				)}
 				{isClicked ? <SearchOpen setIsClicked={setIsClicked} /> : <Search setIsClicked={setIsClicked} scroll={scroll} />}
 				{!isClicked && (
 					<Link className={styles.logo} to={'/'}>
@@ -109,9 +111,11 @@ export const Header: FC = () => {
 						</div>
 					</div>
 				)}
-				<div className={styles.mediaM} style={scrollColor}>
-					Menu
-				</div>
+				{!isClicked && (
+					<div className={styles.mediaM} style={scrollColor}>
+						Menu
+					</div>
+				)}
 			</div>
 			{pathname === '/' && (
 				<div className={styles.previewWrapper}>
