@@ -2,11 +2,13 @@ import { useDispatch } from 'react-redux';
 import { Search } from '../Search/Search';
 import { useAuth } from '../../hooks/useAuth';
 import { SearchOpen } from '../SearchOpen/SearchOpen';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { AnimatePresence, motion } from 'framer-motion';
-import backgroundImg from '../../images/backgroundImg.jpg';
 import { CSSProperties, FC, useEffect, useState } from 'react';
 import { setRemoveUser } from '../../redux/userSlice/userSlice';
+import backgroundImgMob from '../../images/backgroundImgMob.jpg';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import backgroundImgDesc from '../../images/backgroundImgDesc.jpg';
 import { variantAccount, variantCart, variantOrders, variantOut, variantUp, variantWrap } from './HeaderVariants';
 
 import styles from './Header.module.scss';
@@ -16,6 +18,7 @@ export const Header: FC = () => {
 	const { pathname } = useLocation();
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
+	const screenReduction = useMediaQuery('(max-width: 900px)');
 
 	const [isClicked, setIsClicked] = useState(false);
 	const [isHovered, setIsHovered] = useState(false);
@@ -29,11 +32,11 @@ export const Header: FC = () => {
 	}, [scroll]);
 
 	const styleHeaderIMG: CSSProperties = {
-		backgroundImage: `url(${backgroundImg})`,
+		backgroundImage: `url(${screenReduction ? backgroundImgMob : backgroundImgDesc})`,
 		backgroundPosition: 'center',
 		backgroundSize: 'cover',
 		backgroundRepeat: 'no-repeat',
-		height: '100vh',
+		height: screenReduction ? '90vh' : '100vh',
 		position: 'relative',
 	};
 
@@ -47,9 +50,11 @@ export const Header: FC = () => {
 
 	return (
 		<header style={pathname === '/' ? styleHeaderIMG : { height: '100px' }}>
-			<div className={styles.headerTop} style={scrollBack}>
+			<div className={styles.wrapper} style={scrollBack}>
+				<div onClick={() => setIsClicked(true)} className={styles.mediaS} style={scrollColor}>
+					Search
+				</div>
 				{isClicked ? <SearchOpen setIsClicked={setIsClicked} /> : <Search setIsClicked={setIsClicked} scroll={scroll} />}
-				<div className={styles.mediaS}>Search</div>
 				{!isClicked && (
 					<Link className={styles.logo} to={'/'}>
 						FLIGHT CLUB
@@ -104,12 +109,14 @@ export const Header: FC = () => {
 						</div>
 					</div>
 				)}
-				<div className={styles.mediaM}>Menu</div>
+				<div className={styles.mediaM} style={scrollColor}>
+					Menu
+				</div>
 			</div>
 			{pathname === '/' && (
 				<div className={styles.previewWrapper}>
-					<h1 className={styles.previewName}>WMNS AIR JORDAN 11 RETRO LOW 'YELLOW SNAKESKIN'</h1>
-					<Link to={'details/30'} className={styles.previewShow}>
+					<h1 className={styles.previewName}>AIR JORDAN 1 RETRO HIGH OG 'MAUVE'</h1>
+					<Link to={'details/51'} className={styles.previewShow}>
 						Shop Now
 					</Link>
 				</div>

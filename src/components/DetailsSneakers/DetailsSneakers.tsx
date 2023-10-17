@@ -19,7 +19,7 @@ import styles from './DetailsSneakers.module.scss';
 export const DetailsSneakers: FC = () => {
 	const { id } = useParams();
 	const dispatch = useDispatch();
-	const isMobile = useMediaQuery('(max-width: 900px)');
+	const screenReduction = useMediaQuery('(max-width: 900px)');
 
 	const detailsSneakers = useSelector((state: RootState) => state.sneakersSlice.allSneakers).filter((item) => item.id === +id!);
 	const cartItems = useSelector((state: RootState) => state.cartSlice.cartItems);
@@ -90,7 +90,7 @@ export const DetailsSneakers: FC = () => {
 											exit={'exit'}
 											variants={variantOverlay}></motion.div>
 
-										<motion.div className={styles.boxMob} key='sizes' initial={'initial'} animate={'animate'} exit={'exit'} variants={isMobile ? variantSizes : {}}>
+										<motion.div className={styles.boxMob} key='sizes' initial={'initial'} animate={'animate'} exit={'exit'} variants={screenReduction ? variantSizes : {}}>
 											<div className={styles.wrapTopMob}>
 												<h2 className={styles.titleMob}>{item.title}</h2>
 												<CloseIcon className={styles.iconMob} onClick={() => selectSizeHandler(!activeSize)} />

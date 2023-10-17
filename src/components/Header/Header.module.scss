@@ -1,6 +1,5 @@
 header {
-	background-size: auto;
-	.headerTop {
+	.wrapper {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -104,24 +103,25 @@ header {
 	}
 	.previewWrapper {
 		position: absolute;
-		top: 35%;
-		left: 20%;
-		max-width: 400px;
-		padding: 50px;
-		@media (max-width: 1600px) {
-			left: 5%;
-		}
+		top: 45%;
+		left: 10%;
+		max-width: 600px;
 		@media (max-width: 1300px) {
-			top: 80%;
 			left: 0;
-			max-width: 100%;
+			padding-left: 50px;
 		}
 		@media (max-width: 900px) {
+			top: auto;
+			bottom: 0;
 			padding: 20px;
 		}
 		.previewName {
 			color: #fff;
-			font-size: 40px;
+			font-size: 50px;
+			margin-bottom: 20px;
+			@media (max-width: 900px) {
+				font-size: 35px;
+			}
 			@media (max-width: 600px) {
 				font-size: 25px;
 			}
@@ -130,7 +130,7 @@ header {
 			font-size: 25px;
 			color: #fff;
 			cursor: pointer;
-			@media (max-width: 600px) {
+			@media (max-width: 900px) {
 				font-size: 20px;
 			}
 			&:hover {
