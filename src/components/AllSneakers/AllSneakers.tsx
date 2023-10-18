@@ -135,7 +135,7 @@ export const AllSneakers: FC = () => {
 							<Selected />
 						</div>
 						<ul className={styles.previewGroupe}>
-							<AnimatePresence mode='wait'>
+							<AnimatePresence>
 								{updateSneakers &&
 									updateSneakers.slice(0, visibleProducts).map((sneaker) => (
 										<motion.div className={styles.previewProduct} key={sneaker.id} initial={'initial'} animate={'animate'} exit={'exit'} variants={variantsSneakers}>
