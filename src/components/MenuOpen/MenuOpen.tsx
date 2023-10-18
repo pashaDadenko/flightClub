@@ -40,6 +40,9 @@ export const MenuOpen: FC<menuProps> = ({ setMenuOpen, singOutClick }) => {
 					<div className={styles.sneakerBox}>
 						<p className={styles.title}>Shop</p>
 						<div className={styles.sneakerFlex}>
+							<Link className={styles.item} to={'/sneakers'} onClick={() => setMenuOpen(false)}>
+								All sneakers
+							</Link>
 							<Link className={styles.item} to={'/air-jordan'} onClick={() => setMenuOpen(false)}>
 								Air jordan
 							</Link>

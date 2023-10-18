@@ -30,6 +30,8 @@
 		flex-direction: column;
 		gap: 100px;
 		padding: 20px;
+		overflow-y: auto;
+		max-height: 100vh;
 		.sneakerBox {
 			.title {
 				font-size: 20px;
@@ -63,6 +65,7 @@
 			}
 		}
 		.storesBox {
+			margin-bottom: 130px;
 			.title {
 				font-size: 20px;
 				margin-bottom: 20px;

@@ -90,6 +90,7 @@
 						flex-direction: column;
 						gap: 6.5px;
 						@media (max-width: 600px) {
+							gap: 9px;
 							font-size: 12px;
 						}
 						.box {
