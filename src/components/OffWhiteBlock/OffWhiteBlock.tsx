@@ -2,7 +2,6 @@ import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
-import { SkeletonBlock } from '../Skeleton/SkeletonBlock';
 
 import styles from './OffWhiteBlock.module.scss';
 
@@ -14,7 +13,7 @@ export const OffWhiteBlock: FC = () => {
 			<div className={styles.container}>
 				<h2 className={styles.title}>OFF WHITE</h2>
 				<ul className={styles.previewGroupe}>
-					{offWhite.length > 0 ? (
+					{offWhite &&
 						offWhite.map((sneaker) => (
 							<Link to={`/details/${sneaker.id}`} key={sneaker.id} className={styles.previewProduct}>
 								<img className={styles.img} src={sneaker.images[0]} alt='image' />
@@ -23,10 +22,7 @@ export const OffWhiteBlock: FC = () => {
 									<p className={styles.text}>{sneaker.title}</p>
 								</div>
 							</Link>
-						))
-					) : (
-						<SkeletonBlock />
-					)}
+						))}
 				</ul>
 				<Link className={styles.link} to={'/off-white'}>
 					<button className={styles.btn}>SHOP OFF WHITE</button>

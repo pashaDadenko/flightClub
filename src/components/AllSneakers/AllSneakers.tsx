@@ -6,7 +6,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { AnimatePresence, motion } from 'framer-motion';
 import { variantsSneakers } from './AllSneakersVariants';
-import { SkeletonSneakers } from '../Skeleton/SkeletonSneakers';
 import { setClearFilter } from '../../redux/filterSlice/filterSlice';
 
 import styles from './AllSneakers.module.scss';
@@ -131,13 +130,13 @@ export const AllSneakers: FC = () => {
 					<div className={styles.sneakers}>
 						<div className={styles.titleWrap}>
 							<p className={styles.title}>
-								RESULTS <span className={styles.quantity}>{updateSneakers.length > 0 ? updateSneakers.length : allSneakers.length}</span>
+								RESULTS <span className={styles.quantity}>{updateSneakers.length > 0 ? updateSneakers.length : 0}</span>
 							</p>
 							<Selected />
 						</div>
 						<ul className={styles.previewGroupe}>
-							<AnimatePresence>
-								{updateSneakers.length > 0 ? (
+							<AnimatePresence mode='wait'>
+								{updateSneakers &&
 									updateSneakers.slice(0, visibleProducts).map((sneaker) => (
 										<motion.div className={styles.previewProduct} key={sneaker.id} initial={'initial'} animate={'animate'} exit={'exit'} variants={variantsSneakers}>
 											<Link to={`/details/${sneaker.id}`} className={styles.previewProduct}>
@@ -149,10 +148,7 @@ export const AllSneakers: FC = () => {
 												</div>
 											</Link>
 										</motion.div>
-									))
-								) : (
-									<SkeletonSneakers />
-								)}
+									))}
 							</AnimatePresence>
 						</ul>
 						{visibleProducts < updateSneakers.length && (
