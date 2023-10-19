@@ -25,7 +25,7 @@ export const sneakersSlice = createSlice({
 			state.allSneakers = payload;
 			state.offWhiteSneakers = payload.filter((item) => item.brand === 'Off-white').slice(0, 8);
 			state.airJordanSneakers = payload.filter((item) => item.brand === 'Air jordan').slice(0, 8);
-			state.randomSneakers = payload.sort(() => 0.5 - Math.random()).slice(0, 8);
+			state.randomSneakers = payload.toSorted(() => 0.5 - Math.random()).slice(0, 8);
 			state.topSellersSneakers = payload.sort((a, b) => b.rating - a.rating).slice(0, 8);
 			state.recommendedSneakers = payload.filter((item) => item.brand === state.brand).slice(0, 9);
 		},

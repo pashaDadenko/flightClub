@@ -18,29 +18,36 @@ export const AllSneakers: FC = () => {
 	const searchValue = useSelector((state: RootState) => state.searchSlice.searchValue);
 	const { valueBrand, valueModel, valueSizes, valueColor } = useSelector((state: RootState) => state.filterSlice.filterValues);
 
-	let updateSneakers = allSneakers.filter((sneakers) => {
-		const { brand, model, color, sizes } = sneakers;
+	const updateSneakers = allSneakers.filter((sneakers) => {
+		const { brand, model, color, sizes, rating, price, title } = sneakers;
 
-		const brandFilterMatch = valueBrand.length === 0 || valueBrand.includes(brand);
-		const modelFilterMatch = valueModel.length === 0 || valueModel.includes(model);
-		const sizeFilterMatch = valueSizes.length === 0 || valueSizes.some((size) => sizes.includes(size));
-		const colorFilterMatch = valueColor.length === 0 || valueColor.includes(color);
+		const valueBrandSet = new Set(valueBrand);
+		const valueModelSet = new Set(valueModel);
+		const valueColorSet = new Set(valueColor);
 
-		return brandFilterMatch && modelFilterMatch && sizeFilterMatch && colorFilterMatch;
+		const pathnameFilter =
+			{
+				'/top-sellers': () => rating > 0,
+				'/off-white': () => brand === 'Off-white',
+				'/air-jordan': () => brand === 'Air jordan',
+				'/nike': () => brand === 'Nike',
+				'/yeezy': () => brand === 'Yeezy',
+				'/new-balance': () => brand === 'New balance',
+				'/lowest-price': () => price < 300,
+				'/nike-dunk': () => model === 'dunk',
+				'/dark-shoes': () => color === 'black',
+				'/rar-shoes': () => price > 1000,
+				'/search-result': () => title.toLowerCase().includes(searchValue.toLowerCase()) || brand.toLowerCase().includes(searchValue.toLowerCase()),
+			}[pathname] || (() => true);
+
+		return (
+			(!valueBrandSet.size || valueBrandSet.has(brand)) &&
+			(!valueModelSet.size || valueModelSet.has(model)) &&
+			(!valueSizes.length || valueSizes.some((size) => sizes.includes(size))) &&
+			(!valueColorSet.size || valueColorSet.has(color)) &&
+			pathnameFilter()
+		);
 	});
-
-	if (pathname === '/top-sellers') updateSneakers = updateSneakers.sort((a, b) => b.rating - a.rating);
-	if (pathname === '/off-white') updateSneakers = updateSneakers.filter((item) => item.brand === 'Off-white');
-	if (pathname === '/air-jordan') updateSneakers = updateSneakers.filter((item) => item.brand === 'Air jordan');
-	if (pathname === '/nike') updateSneakers = updateSneakers.filter((item) => item.brand === 'Nike');
-	if (pathname === '/yeezy') updateSneakers = updateSneakers.filter((item) => item.brand === 'Yeezy');
-	if (pathname === '/new-balance') updateSneakers = updateSneakers.filter((item) => item.brand === 'New balance');
-	if (pathname === '/lowest-price') updateSneakers = updateSneakers.filter((item) => item.price < 300);
-	if (pathname === '/nike-dunk') updateSneakers = updateSneakers.filter((item) => item.model === 'dunk');
-	if (pathname === '/dark-shoes') updateSneakers = updateSneakers.filter((item) => item.color === 'black');
-	if (pathname === '/rar-shoes') updateSneakers = updateSneakers.filter((item) => item.price > 1000);
-	if (pathname === '/search-result')
-		updateSneakers = updateSneakers.filter((sneaker) => sneaker.title.toLowerCase().includes(searchValue.toLowerCase()) || sneaker.brand.toLowerCase().includes(searchValue.toLowerCase()));
 
 	const renderClearFiltersBtn = valueBrand.length > 0 || valueModel.length > 0 || valueSizes.length > 0 || valueColor.length > 0;
 

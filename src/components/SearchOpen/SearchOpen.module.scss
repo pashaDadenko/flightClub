@@ -82,11 +82,12 @@
 	.wrapSearchBottom {
 		width: 100%;
 		background-color: #fff;
-		height: 100vh;
+		height: fit-content;
 		display: flex;
 		overflow-y: auto;
 		@media (max-width: 1200px) {
 			flex-direction: column;
+			height: 100vh;
 		}
 		.title {
 			margin-bottom: 30px;

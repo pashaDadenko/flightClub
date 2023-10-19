@@ -81,29 +81,27 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 						<AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls='panel1bh-content' id='panel1bh-header' style={{ border: '1px solid #81818131' }}>
 							<Typography sx={{}}>BRAND</Typography>
 						</AccordionSummary>
-						<AccordionDetails style={{ borderTop: 'none', padding: '20px 20px 0 20px', backgroundColor: '#f9f9f9' }}>
-							<div style={{ maxHeight: '145px', overflowY: 'auto' }}>
-								<Typography sx={{ display: 'grid', gridTemplateColumns: windowWidth <= 900 ? 'repeat(1, 1fr)' : 'repeat(2, 1fr)', gap: '5px' }}>
-									{brands &&
-										brands.map((brand, index) => (
-											<button
-												onClick={() => {
-													dispatch(setValueBrand(brand));
-													setActiveBrand((prevActiveBrand) => ({
-														...prevActiveBrand,
-														[brand]: !prevActiveBrand[brand],
-													}));
-												}}
-												style={activeBrand[brand] ? { border: '1px solid #000' } : {}}
-												className={styles.button}
-												name={brand}
-												id={brand}
-												key={index}>
-												{brand}
-											</button>
-										))}
-								</Typography>
-							</div>
+						<AccordionDetails style={{ borderTop: 'none', padding: '20px 20px 0 20px', backgroundColor: '#f9f9f9', maxHeight: '145px', overflowY: 'auto' }}>
+							<Typography sx={{ display: 'grid', gridTemplateColumns: windowWidth <= 900 ? 'repeat(1, 1fr)' : 'repeat(2, 1fr)', gap: '5px' }}>
+								{brands &&
+									brands.map((brand, index) => (
+										<button
+											onClick={() => {
+												dispatch(setValueBrand(brand));
+												setActiveBrand((prevActiveBrand) => ({
+													...prevActiveBrand,
+													[brand]: !prevActiveBrand[brand],
+												}));
+											}}
+											style={activeBrand[brand] ? { border: '1px solid #000' } : {}}
+											className={styles.button}
+											name={brand}
+											id={brand}
+											key={index}>
+											{brand}
+										</button>
+									))}
+							</Typography>
 						</AccordionDetails>
 					</Accordion>
 				)}
@@ -111,29 +109,27 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 					<AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls='panel1bh-content' id='panel1bh-header' style={{ border: '1px solid #81818131' }}>
 						<Typography sx={{}}>MODEL</Typography>
 					</AccordionSummary>
-					<AccordionDetails style={{ borderTop: 'none', padding: '20px 20px 0 20px', backgroundColor: '#f9f9f9' }}>
-						<div style={{ maxHeight: '145px', overflowY: 'auto' }}>
-							<Typography sx={{ display: 'grid', gridTemplateColumns: windowWidth <= 900 ? 'repeat(1, 1fr)' : 'repeat(2, 1fr)', gap: '5px' }}>
-								{models &&
-									models.map((model, index) => (
-										<button
-											onClick={() => {
-												dispatch(setValueModel(model));
-												setActiveModel((prevActiveModel) => ({
-													...prevActiveModel,
-													[model]: !prevActiveModel[model],
-												}));
-											}}
-											style={activeModel[model] ? { border: '1px solid #000' } : {}}
-											className={styles.button}
-											name={model}
-											id={model}
-											key={index}>
-											{model}
-										</button>
-									))}
-							</Typography>
-						</div>
+					<AccordionDetails style={{ borderTop: 'none', padding: '20px 20px 0 20px', backgroundColor: '#f9f9f9', maxHeight: '145px', overflowY: 'auto' }}>
+						<Typography sx={{ display: 'grid', gridTemplateColumns: windowWidth <= 900 ? 'repeat(1, 1fr)' : 'repeat(2, 1fr)', gap: '5px' }}>
+							{models &&
+								models.map((model, index) => (
+									<button
+										onClick={() => {
+											dispatch(setValueModel(model));
+											setActiveModel((prevActiveModel) => ({
+												...prevActiveModel,
+												[model]: !prevActiveModel[model],
+											}));
+										}}
+										style={activeModel[model] ? { border: '1px solid #000' } : {}}
+										className={styles.button}
+										name={model}
+										id={model}
+										key={index}>
+										{model}
+									</button>
+								))}
+						</Typography>
 					</AccordionDetails>
 				</Accordion>
 				<Accordion style={accordionStyle} disableGutters>

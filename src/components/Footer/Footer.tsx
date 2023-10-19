@@ -9,7 +9,9 @@ import styles from './Footer.module.scss';
 
 export const Footer: FC = () => {
 	const { isAuth } = useAuth();
-	const allSneakers = useSelector((state: RootState) => state.sneakersSlice.allSneakers).slice(-6);
+	const allSneakers = useSelector((state: RootState) => state.sneakersSlice.allSneakers)
+		.toSorted((a, b) => a.id - b.id)
+		.slice(-6);
 
 	return (
 		<>
