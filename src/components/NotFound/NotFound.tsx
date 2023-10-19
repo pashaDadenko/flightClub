@@ -2,7 +2,6 @@ import { FC } from 'react';
 import { motion } from 'framer-motion';
 import { variants } from './NotFoundVariants';
 import { useLocation } from 'react-router-dom';
-import notFoundImage from '../../images/notFound.png';
 
 import styles from './NotFound.module.scss';
 
@@ -28,7 +27,16 @@ export const NotFound: FC = () => {
 						<p className={styles.text}>Sorry, we could not find this page. Please search again or navigate to the home page to find what you are looking for.</p>
 					)}
 				</motion.div>
-				<motion.img className={styles.img} src={notFoundImage} alt='notFoundImage' initial='initial' animate={'animate'} exit='exit' variants={variants} whileHover='hover' />
+				<motion.img
+					className={styles.img}
+					src={'https://www.flightclub.com/static/shrinkWrappedJordan1Bred/desktop/51181-08-jpg@2x.png'}
+					alt='notFoundImage'
+					initial='initial'
+					animate={'animate'}
+					exit='exit'
+					variants={variants}
+					whileHover='hover'
+				/>
 			</div>
 		</div>
 	);
