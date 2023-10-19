@@ -144,21 +144,18 @@ export const AllSneakers: FC = () => {
 						<ul className={styles.previewGroupe}>
 							<AnimatePresence>
 								{updateSneakers &&
-									updateSneakers
-										.sort((a, b) => b.id - a.id)
-										.slice(0, visibleProducts)
-										.map((sneaker) => (
-											<motion.div className={styles.previewProduct} key={sneaker.id} initial={'initial'} animate={'animate'} exit={'exit'} variants={variantsSneakers}>
-												<Link to={`/details/${sneaker.id}`} className={styles.previewProduct}>
-													<img className={styles.img} src={sneaker.images[0]} alt='image' />
-													<div className={styles.info}>
-														<p className={styles.subTitle}>{sneaker.brand}</p>
-														<p className={styles.text}>{sneaker.title}</p>
-														<p className={styles.price}>${sneaker.price}</p>
-													</div>
-												</Link>
-											</motion.div>
-										))}
+									updateSneakers.slice(0, visibleProducts).map((sneaker) => (
+										<motion.div className={styles.previewProduct} key={sneaker.id} initial={'initial'} animate={'animate'} exit={'exit'} variants={variantsSneakers}>
+											<Link to={`/details/${sneaker.id}`} className={styles.previewProduct}>
+												<img className={styles.img} src={sneaker.images[0]} alt='image' />
+												<div className={styles.info}>
+													<p className={styles.subTitle}>{sneaker.brand}</p>
+													<p className={styles.text}>{sneaker.title}</p>
+													<p className={styles.price}>${sneaker.price}</p>
+												</div>
+											</Link>
+										</motion.div>
+									))}
 							</AnimatePresence>
 						</ul>
 						{visibleProducts < updateSneakers.length && (
