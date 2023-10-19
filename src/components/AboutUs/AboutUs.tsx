@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
-import imageStore from '../../images/aboutUs.png';
+import aboutUs from '../../images/aboutUs.png';
 
 import styles from './AboutUs.module.scss';
 
@@ -27,7 +27,7 @@ export const AboutUs: FC = () => {
 						</Link>
 						, Flight Club remains the premier source for authentic, rare sneakers.
 					</p>
-					<img className={styles.image} src={imageStore} alt='imageStore' />
+					<img className={styles.image} src={aboutUs} alt='aboutUs' />
 				</div>
 			</div>
 		</div>
