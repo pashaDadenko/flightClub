@@ -50,7 +50,7 @@ export const AllSneakers: FC = () => {
 				pathnameFilter()
 			);
 		})
-		.sort((a, b) => (currentSort === 'low' ? a.price - b.price : currentSort === 'high' ? b.price - a.price : currentSort === 'relevance' ? b.id - a.id : 0));
+		.sort((a, b) => (currentSort === 'low' ? a.price - b.price : currentSort === 'high' ? b.price - a.price : currentSort === 'relevance' ? b.rating - a.rating : 0));
 
 	const renderClearFiltersBtn = valueBrand.length > 0 || valueModel.length > 0 || valueSizes.length > 0 || valueColor.length > 0;
 
