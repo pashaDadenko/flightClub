@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import image from '../../images/map.png';
 import { TypeStores } from './TypeStores';
 
 import styles from './Stores.module.scss';
@@ -39,7 +40,7 @@ export const Stores: FC = () => {
 						<li className={styles.store} key={index}>
 							<motion.div whileTap={{ scale: 1.3, y: 30 }}>
 								<Link to={item.link}>
-									<img src={'https://www.flightclub.com/static/map-group.png'} alt='mapImage' />
+									<img src={image} alt='image' />
 								</Link>
 							</motion.div>
 							<div>

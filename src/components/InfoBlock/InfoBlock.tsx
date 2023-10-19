@@ -1,5 +1,7 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
+import imageOne from '../../images/stores.jpg';
+import imageTwo from '../../images/history.jpg';
 
 import styles from './InfoBlock.module.scss';
 
@@ -10,7 +12,7 @@ export const InfoBlock: FC = () => {
 				<div className={styles.wrap}>
 					<div className={styles.box}>
 						<Link to={'/store-location'}>
-							<img className={styles.img} src={'https://www.flightclub.com/static/homepage/our_stores.png'} alt='store' />
+							<img className={styles.img} src={imageOne} alt='imageOne' />
 						</Link>
 						<div className={styles.flex}>
 							<h2 className={styles.title}>FLIGHT CLUB STORES</h2>
@@ -36,7 +38,7 @@ export const InfoBlock: FC = () => {
 					</div>
 					<div className={styles.box}>
 						<Link to={'/about-us'}>
-							<img className={styles.img} src={'https://www.flightclub.com/static/homepage/our_history.png'} alt='history' />
+							<img className={styles.img} src={imageTwo} alt='imageTwo' />
 						</Link>
 						<div className={styles.flex}>
 							<h2 className={styles.title}>OUR HISTORY</h2>

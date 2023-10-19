@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import image from '../../images/consign.png';
 
 import styles from './SellSneakers.module.scss';
 
@@ -21,7 +22,7 @@ export const SellSneakers: FC = () => {
 						</p>
 						<p className={styles.subText}>3. When your shoes are sold, you can request a digital payout to your bank account.</p>
 					</div>
-					<img className={styles.image} src={'https://www.flightclub.com/static/staticPages/consign.png'} alt='imageStore' />
+					<img className={styles.image} src={image} alt='image' />
 				</div>
 			</div>
 		</div>
