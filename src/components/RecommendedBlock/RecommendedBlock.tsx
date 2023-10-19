@@ -1,16 +1,14 @@
 import { FC } from 'react';
+import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
-import { Link, useParams } from 'react-router-dom';
 
 import styles from './RecommendedBlock.module.scss';
 
 export const RecommendedBlock: FC = () => {
-	const { id } = useParams();
-
 	const allSneakers = useSelector((state: RootState) => state.sneakersSlice.allSneakers);
 	const brand = useSelector((state: RootState) => state.sneakersSlice.brand);
-	const recommendedSneakers = allSneakers.filter((item) => item.brand === brand && item.id !== +id!).slice(0, 8);
+	const recommendedSneakers = allSneakers.filter((item) => item.brand === brand).slice(0, 8);
 
 	return (
 		<div className={styles.wrapper}>
