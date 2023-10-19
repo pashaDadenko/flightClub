@@ -7,7 +7,7 @@ import styles from './TitleBrand.module.scss';
 
 export const TitleBrand: FC = () => {
 	const { pathname } = useLocation();
-	const searchValue = useSelector((state: RootState) => state.searchSlice.searchValue).toUpperCase();
+	const searchValue = useSelector((state: RootState) => state.searchSlice.searchValue);
 
 	return (
 		<div className={styles.wrapper}>
@@ -20,7 +20,7 @@ export const TitleBrand: FC = () => {
 				<h2 className={styles.title}>{pathname === '/yeezy' && 'YEEZY'}</h2>
 				<h2 className={styles.title}>{pathname === '/new-balance' && 'NEW BALANCE'}</h2>
 				<h2 className={styles.title}>{pathname === '/lowest-price' && 'LOWEST PRICE'}</h2>
-				<h2 className={styles.title}>{pathname === '/search-result' && `SEARCH RESULTS FOR "${searchValue}"`}</h2>
+				<h2 className={styles.title}>{pathname === '/search-result' && `SEARCH RESULTS FOR "${searchValue.toUpperCase()}"`}</h2>
 				<h2 className={styles.title}>{pathname === '/nike-dunk' && 'NiKE DUNK'}</h2>
 				<h2 className={styles.title}>{pathname === '/dark-shoes' && 'DARK SHOES'}</h2>
 				<h2 className={styles.title}>{pathname === '/rar-shoes' && 'RAR SHOES'}</h2>

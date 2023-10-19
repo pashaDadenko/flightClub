@@ -6,7 +6,8 @@ import { RootState } from '../../redux/store';
 import styles from './AirJordanBlock.module.scss';
 
 export const AirJordanBlock: FC = () => {
-	const airJordan = useSelector((state: RootState) => state.sneakersSlice.airJordanSneakers);
+	const allSneakers = useSelector((state: RootState) => state.sneakersSlice.allSneakers);
+	const airJordan = allSneakers.filter((item) => item.brand === 'Air jordan').slice(0, 8);
 
 	return (
 		<div className={styles.wrapper}>

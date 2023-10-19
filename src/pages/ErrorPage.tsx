@@ -7,6 +7,7 @@ import { AllSneakersBlock } from '../components/AllSneakersBlock/AllSneakersBloc
 
 export const ErrorPage: FC = () => {
 	Api();
+
 	window.scrollTo(0, 0);
 
 	return (

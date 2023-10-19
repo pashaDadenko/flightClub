@@ -6,7 +6,8 @@ import { RootState } from '../../redux/store';
 import styles from './OffWhiteBlock.module.scss';
 
 export const OffWhiteBlock: FC = () => {
-	const offWhite = useSelector((state: RootState) => state.sneakersSlice.offWhiteSneakers);
+	const allSneakers = useSelector((state: RootState) => state.sneakersSlice.allSneakers);
+	const offWhite = allSneakers.filter((item) => item.brand === 'Off-white').slice(0, 8);
 
 	return (
 		<div className={styles.wrapper}>

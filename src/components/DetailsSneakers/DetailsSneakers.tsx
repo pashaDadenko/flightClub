@@ -21,7 +21,8 @@ export const DetailsSneakers: FC = () => {
 	const dispatch = useDispatch();
 	const screenReduction = useMediaQuery('(max-width: 900px)');
 
-	const detailsSneakers = useSelector((state: RootState) => state.sneakersSlice.allSneakers).filter((item) => item.id === +id!);
+	const allSneakers = useSelector((state: RootState) => state.sneakersSlice.allSneakers);
+	const detailsSneakers = allSneakers.filter((item) => item.id === +id!);
 	const cartItems = useSelector((state: RootState) => state.cartSlice.cartItems);
 	const size = useSelector((state: RootState) => state.cartSlice.size);
 

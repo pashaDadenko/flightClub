@@ -20,11 +20,13 @@ export const SearchOpen: FC<SearchProps> = ({ setSearchClick }) => {
 	const inputRef = useRef<HTMLInputElement>(null);
 	inputRef.current?.focus();
 
-	const filteredSneakers = allSneakers.filter((sneaker) => {
-		const title = sneaker.title.toLowerCase().includes(searchValue.toLowerCase());
-		const brand = sneaker.brand.toLowerCase().includes(searchValue.toLowerCase());
-		return title || brand;
-	});
+	const filteredSneakers = allSneakers
+		.filter((sneaker) => {
+			const title = sneaker.title.toLowerCase().includes(searchValue.toLowerCase());
+			const brand = sneaker.brand.toLowerCase().includes(searchValue.toLowerCase());
+			return title || brand;
+		})
+		.sort((a, b) => b.rating - a.rating);
 
 	const [scrollLocked, setScrollLocked] = useState(false);
 

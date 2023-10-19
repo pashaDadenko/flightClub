@@ -6,7 +6,8 @@ import { RootState } from '../../redux/store';
 import styles from './TopSellersBlock.module.scss';
 
 export const TopSellersBlock: FC = () => {
-	const topSellers = useSelector((state: RootState) => state.sneakersSlice.topSellersSneakers);
+	const allSneakers = useSelector((state: RootState) => state.sneakersSlice.allSneakers);
+	const topSellers = allSneakers.slice(0, 8).sort((a, b) => b.rating - a.rating);
 
 	return (
 		<div className={styles.wrapper}>

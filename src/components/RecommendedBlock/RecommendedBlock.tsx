@@ -8,7 +8,9 @@ import styles from './RecommendedBlock.module.scss';
 export const RecommendedBlock: FC = () => {
 	const { id } = useParams();
 
-	const recommendedSneakers = useSelector((state: RootState) => state.sneakersSlice.recommendedSneakers.filter((item) => item.id !== +id!));
+	const allSneakers = useSelector((state: RootState) => state.sneakersSlice.allSneakers);
+	const brand = useSelector((state: RootState) => state.sneakersSlice.brand);
+	const recommendedSneakers = allSneakers.filter((item) => item.brand === brand && item.id !== +id!).slice(0, 8);
 
 	return (
 		<div className={styles.wrapper}>

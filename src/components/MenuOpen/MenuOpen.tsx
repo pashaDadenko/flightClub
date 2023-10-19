@@ -58,6 +58,9 @@ export const MenuOpen: FC<menuProps> = ({ setMenuOpen, singOutClick }) => {
 							<Link className={styles.item} to={'/yeezy'} onClick={() => setMenuOpen(false)}>
 								Yeezy
 							</Link>
+							<Link className={styles.item} to={'/top-sellers'} onClick={() => setMenuOpen(false)}>
+								Top sellers
+							</Link>
 							<Link className={styles.item} to={'/sneakers'} onClick={() => setMenuOpen(false)}>
 								More Brands
 							</Link>
