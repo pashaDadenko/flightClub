@@ -27,7 +27,6 @@ export const AboutUs: FC = () => {
 						</Link>
 						, Flight Club remains the premier source for authentic, rare sneakers.
 					</p>
-
 					<img className={styles.image} src={imageStore} alt='imageStore' />
 				</div>
 			</div>
