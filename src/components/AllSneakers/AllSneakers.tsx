@@ -61,7 +61,7 @@ export const AllSneakers: FC = () => {
 	useEffect(() => {
 		const totalFilters = allFilters.reduce((count, filter) => count + Object.values(filter).filter(Boolean).length, 0);
 		setCountFilters(totalFilters);
-	}, [activeBrand, activeModel, activeSizes, activeColors]);
+	}, [activeBrand, activeModel, activeSizes, activeColors, countFilters]);
 
 	const clearFilters = () => {
 		setActiveBrand({});
