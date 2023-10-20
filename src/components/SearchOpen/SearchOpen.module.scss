@@ -29,16 +29,9 @@
 			@media (max-width: 900px) {
 				margin-left: 20px;
 			}
-			input[type='search'] {
-				-webkit-appearance: none;
-				appearance: none;
-				background-image: none;
-				background: none;
-				&::-webkit-search-cancel-button,
-				&::-webkit-search-clear-button {
-					display: none;
-				}
-			}
+			background-image: none;
+			-webkit-appearance: none;
+			appearance: none;
 		}
 		.icon {
 			position: absolute;
