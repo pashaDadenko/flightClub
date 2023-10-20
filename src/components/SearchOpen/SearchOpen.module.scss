@@ -29,9 +29,15 @@
 			@media (max-width: 900px) {
 				margin-left: 20px;
 			}
-			input[type='search']::-webkit-search-cancel-button,
-			input[type='search']::-webkit-search-clear-button {
-				display: none;
+			input[type='search'] {
+				-webkit-appearance: none;
+				appearance: none;
+				background-image: none;
+				background: none;
+				&::-webkit-search-cancel-button,
+				&::-webkit-search-clear-button {
+					display: none;
+				}
 			}
 		}
 		.icon {
