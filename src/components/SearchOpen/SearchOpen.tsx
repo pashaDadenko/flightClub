@@ -1,6 +1,6 @@
 import { RootState } from '../../redux/store';
 import { SearchProps } from './TypeSearchOpen';
-import SearchIcon from '@mui/icons-material/Search';
+// import SearchIcon from '@mui/icons-material/Search';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { FC, useEffect, useRef, useState } from 'react';
