@@ -19,6 +19,9 @@
 			border: 0;
 			background-color: transparent;
 			margin-left: 30px;
+			appearance: none;
+			background-image: none;
+			-webkit-appearance: none;
 			&::placeholder {
 				color: #818181;
 				font-size: 16px;
@@ -29,9 +32,6 @@
 			@media (max-width: 900px) {
 				margin-left: 20px;
 			}
-			background-image: none;
-			-webkit-appearance: none;
-			appearance: none;
 		}
 		.icon {
 			position: absolute;
