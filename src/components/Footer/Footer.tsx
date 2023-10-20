@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useAuth } from '../../hooks/useAuth';
@@ -14,11 +13,9 @@ export const Footer: FC = () => {
 	return (
 		<>
 			<footer className={styles.footer}>
-				<motion.div style={{ display: 'inline-block' }} initial={{ rotateY: 0 }} animate={{ rotateY: 360 }} transition={{ duration: 5, repeat: Infinity, ease: 'linear' }}>
-					<Link className={styles.logo} to={'/'}>
-						FLIGHT CLUB
-					</Link>
-				</motion.div>
+				<Link className={styles.logo} to={'/'}>
+					FLIGHT CLUB
+				</Link>
 				<div className={styles.wrapper}>
 					<div className={styles.wrap}>
 						<div className={styles.title}>Trending</div>
