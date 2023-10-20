@@ -43,8 +43,7 @@ export const InfoBlock: FC = () => {
 						<div className={styles.flex}>
 							<h2 className={styles.title}>OUR HISTORY</h2>
 							<p className={styles.text}>
-								For over a decade, Flight Club has changed the landscape of sneaker retail. Carrying every brand name on the market, Flight Club has evolved from a one-stop sneaker
-								destination, to a cultural hub for sneaker enthusiasts and novices alike. From{' '}
+								For over a decade, Flight Club has changed the landscape of sneaker retail. Carrying every brand name on the market, Flight Club has evolved from a one-stop sneaker destination, to a cultural hub for sneaker enthusiasts and novices alike. From{' '}
 								<Link to={'/air-jordan'} className={styles.linkBrand}>
 									Air Jordans
 								</Link>{' '}

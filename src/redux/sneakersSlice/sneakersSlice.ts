@@ -28,7 +28,6 @@ export const sneakersSlice = createSlice({
 		setTitle(state, { payload }: PayloadAction<string>) {
 			state.title = payload;
 		},
-
 		setCurrentSort(state, { payload }: PayloadAction<string>) {
 			state.currentSort = payload;
 		},

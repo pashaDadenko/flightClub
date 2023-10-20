@@ -15,7 +15,6 @@ export const ShippingMethod: FC = () => {
 				<CheckCircleOutlineOutlinedIcon className={styles.icon} />
 			</div>
 			<p className={styles.line}></p>
-
 			<p className={styles.ship}>Standard - ${standardShipping}</p>
 			<p className={styles.text}>
 				Pre-verified and ready to ship from a Flight Club facility. <br />

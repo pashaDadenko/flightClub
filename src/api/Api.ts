@@ -19,7 +19,6 @@ export const Api = (): void => {
 				console.error('Error fetching data:', error);
 			}
 		};
-
 		fetchData();
 	}, []);
 };

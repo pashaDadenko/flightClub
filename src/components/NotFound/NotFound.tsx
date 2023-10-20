@@ -13,13 +13,7 @@ export const NotFound: FC = () => {
 		<div className={styles.wrapper}>
 			<div className={styles.container}>
 				<motion.div initial='initial' animate={'animate'} exit='exit' variants={variants}>
-					{pathname === '/my-cart' ? (
-						<h2 className={styles.title}>EMPTY CART</h2>
-					) : pathname === '/my-orders' ? (
-						<h2 className={styles.title}>YOU HAVE NO ORDERS</h2>
-					) : (
-						<h2 className={styles.title}>404 - PAGE NOT FOUND</h2>
-					)}
+					{pathname === '/my-cart' ? <h2 className={styles.title}>EMPTY CART</h2> : pathname === '/my-orders' ? <h2 className={styles.title}>YOU HAVE NO ORDERS</h2> : <h2 className={styles.title}>404 - PAGE NOT FOUND</h2>}
 					{pathname === '/my-cart' ? (
 						<p className={styles.text}>Sorry, your shopping cart is empty. Use the search or go to the homepage to find what you are looking for.</p>
 					) : pathname === '/my-orders' ? (

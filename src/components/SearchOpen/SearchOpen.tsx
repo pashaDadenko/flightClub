@@ -48,15 +48,7 @@ export const SearchOpen: FC<SearchProps> = ({ setSearchClick }) => {
 			<motion.div className={styles.wrapper} key='search' initial={'initial'} animate={'animate'} exit={'exit'} variants={variantSearch}>
 				<div className={styles.wrapSearch}>
 					<SearchIcon className={styles.icon} />
-					<input
-						type='search'
-						ref={inputRef}
-						value={searchValue}
-						placeholder='Search'
-						className={styles.search}
-						onChange={(e) => dispatch(setSearchValue(e.target.value))}
-						onKeyDown={(e) => e.key === 'Enter' && navigate('/search-result')}
-					/>
+					<input type='search' ref={inputRef} value={searchValue} placeholder='Search' className={styles.search} onChange={(e) => dispatch(setSearchValue(e.target.value))} onKeyDown={(e) => e.key === 'Enter' && navigate('/search-result')} />
 					<button style={searchValue ? { color: '#000' } : { pointerEvents: 'none' }} className={styles.buttonClear} onClick={() => dispatch(setSearchValue(''))}>
 						Clear
 					</button>

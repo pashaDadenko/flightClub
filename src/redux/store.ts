@@ -22,7 +22,7 @@ const rootReducer = combineReducers({
 	searchSlice,
 	filterSlice,
 	shippingSlice,
-	ordersSlice
+	ordersSlice,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

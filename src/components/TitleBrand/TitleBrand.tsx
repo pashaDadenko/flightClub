@@ -24,10 +24,7 @@ export const TitleBrand: FC = () => {
 				<h2 className={styles.title}>{pathname === '/nike-dunk' && 'NiKE DUNK'}</h2>
 				<h2 className={styles.title}>{pathname === '/dark-shoes' && 'DARK SHOES'}</h2>
 				<h2 className={styles.title}>{pathname === '/rar-shoes' && 'RAR SHOES'}</h2>
-				<p className={styles.text}>
-					{pathname === '/sneakers' &&
-						`The vault goes deep at Flight Club. Shop for new releases from must-have names like Air Jordan, Nike, New Balance and Yeezy, along with the latest collaborations from brands like Vans, Reebok, Converse, ASICS, and more.`}
-				</p>
+				<p className={styles.text}>{pathname === '/sneakers' && `The vault goes deep at Flight Club. Shop for new releases from must-have names like Air Jordan, Nike, New Balance and Yeezy, along with the latest collaborations from brands like Vans, Reebok, Converse, ASICS, and more.`}</p>
 				<p className={styles.text}>
 					{pathname === '/air-jordan' &&
 						`Michael Jordan entered the NBA with the Chicago Bulls, taking over the league with graceful athleticism and a driving will to win. Starting his rookie year, the Air Jordan 1 featured both the Wings and Swoosh logo, and Nike Air cushioning underfoot. Subsequent models like the Air Jordan 3, Air Jordan 4 and Air Jordan 11 featured new technology and bold design, keeping the lineage relevant to each new generation. Since 1985, Air Jordans have transcended basketball, moving sneakers to the forefront of culture with new releases and colorways such as the  AJ 1 Lows 'Black Cement,' 'Wolf Grey' 13s and AJKO Low 'Bred.'`}
@@ -48,9 +45,7 @@ export const TitleBrand: FC = () => {
 					{pathname === '/off-white' &&
 						`Virgil Abloh created Off-White as a fashion house with a streetwear mentality. Critiquing contemporary culture and always looking for his next inspiration, Abloh serves up a unique design language with Off-White, leaving his mark on classic Air Jordan, Converse, and Nike silhouettes through the brand's coveted sneaker collaborations.`}
 				</p>
-				<p className={styles.text}>
-					{pathname === '/lowest-price' && `Shop the latest price drops on Air Jordan, Yeezy and more, including Air Jordan 1s, Yeezy Boost 350s, Air Max, Vans Sk8-Hi and Air Force 1s.`}
-				</p>
+				<p className={styles.text}>{pathname === '/lowest-price' && `Shop the latest price drops on Air Jordan, Yeezy and more, including Air Jordan 1s, Yeezy Boost 350s, Air Max, Vans Sk8-Hi and Air Force 1s.`}</p>
 				<p className={styles.text}>
 					{pathname === '/nike-dunk' &&
 						`Hitting the courts in 1985 as a team-based basketball shoe, the Nike Dunk has evolved into a lifestyle staple. First seen on a few college teams, the ‘Be True to Your School’ campaign saw the Dunk High and Dunk Low arrive in colorful shades representing each university. Brought back in retro form, the Nike Dunk has become a cultural icon through a series of coveted collaborations and colorways. Launched with the introduction of Nike SB in 2002, the Dunk was converted into a skate shoe with extra padding and Zoom Air cushioning. With its clean design and hoops heritage, the Dunk stays timeless with new releases such as the 'Cacao Wow' restock, CLOT 'What The' collab and 'Jade Ice.'`}

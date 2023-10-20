@@ -16,21 +16,7 @@ import { setValueBrand, setValueModel, setValueColor, setValueSizes, setClearFil
 import styles from './FilterBar.module.scss';
 
 export const FilterBar: FC<FilterBarProps> = (props) => {
-	const {
-		activeBrand,
-		activeModel,
-		activeSizes,
-		windowWidth,
-		activeColors,
-		clearFilters,
-		setAddFilters,
-		updateSneakers,
-		setActiveBrand,
-		setActiveModel,
-		setActiveSizes,
-		setActiveColors,
-		renderClearFiltersBtn,
-	} = props;
+	const { activeBrand, activeModel, activeSizes, windowWidth, activeColors, clearFilters, setAddFilters, updateSneakers, setActiveBrand, setActiveModel, setActiveSizes, setActiveColors, renderClearFiltersBtn } = props;
 
 	const dispatch = useDispatch();
 	const { pathname } = useLocation();
@@ -47,8 +33,7 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 	const accordionStyle: TypeAccordionStyle = { boxShadow: 'none', transition: 'none' };
 	const multiColor = { backgroundImage: `linear-gradient(to left, rgb(255, 244, 12), rgb(74, 138, 0) 31%, rgb(0, 72, 156) 63%, rgb(213, 55, 54))` };
 
-	const renderBrand =
-		pathname === '/sneakers' || pathname === '/top-sellers' || pathname === '/lowest-price' || pathname === '/search-result' || pathname === '/rar-shoes' || pathname === '/dark-shoes';
+	const renderBrand = pathname === '/sneakers' || pathname === '/top-sellers' || pathname === '/lowest-price' || pathname === '/search-result' || pathname === '/rar-shoes' || pathname === '/dark-shoes';
 
 	const handleClick = () => {
 		setAddFilters(false);

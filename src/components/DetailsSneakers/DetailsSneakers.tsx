@@ -82,14 +82,7 @@ export const DetailsSneakers: FC = () => {
 								</button>
 								{activeSize && (
 									<AnimatePresence>
-										<motion.div
-											className={styles.overlay}
-											onClick={() => selectSizeHandler(!activeSize)}
-											key='overlay'
-											initial={'initial'}
-											animate={'animate'}
-											exit={'exit'}
-											variants={variantOverlay}></motion.div>
+										<motion.div className={styles.overlay} onClick={() => selectSizeHandler(!activeSize)} key='overlay' initial={'initial'} animate={'animate'} exit={'exit'} variants={variantOverlay}></motion.div>
 										<motion.div className={styles.boxMob} key='sizes' initial={'initial'} animate={'animate'} exit={'exit'} variants={screenReduction ? variantSizes : {}}>
 											<div className={styles.wrapTopMob}>
 												<h2 className={styles.titleMob}>{item.title}</h2>
@@ -111,11 +104,7 @@ export const DetailsSneakers: FC = () => {
 														${item.price}
 													</motion.p>
 												</button>
-												<Link
-													style={cartItems.length === 0 ? { pointerEvents: 'none' } : {}}
-													className={styles.link}
-													to={'/my-cart'}
-													onClick={() => selectSizeHandler(!activeSize)}>
+												<Link style={cartItems.length === 0 ? { pointerEvents: 'none' } : {}} className={styles.link} to={'/my-cart'} onClick={() => selectSizeHandler(!activeSize)}>
 													<div className={styles.icon}>{cartItems.length > 0 ? <ShoppingCartIcon /> : <ShoppingCartOutlinedIcon />}</div>
 													<p style={cartItems.length > 0 ? { opacity: '1' } : { opacity: 0 }} className={styles.count}>
 														{cartItems.length}

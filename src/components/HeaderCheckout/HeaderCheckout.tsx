@@ -13,7 +13,6 @@ export const HeaderCheckout: FC = () => {
 					<Link className={styles.logo} to={'/'}>
 						FLIGHT CLUB
 					</Link>
-
 					{pathname !== '/help' && (
 						<Link className={styles.link} to={'/help'}>
 							Need Help?
