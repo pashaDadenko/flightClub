@@ -159,7 +159,7 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 						</Typography>
 					</AccordionDetails>
 				</Accordion>
-				<Accordion style={{ marginBottom: '20px', ...accordionStyle }} disableGutters>
+				<Accordion style={{ marginBottom: '200px', ...accordionStyle }} disableGutters>
 					<AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls='panel1bh-content' id='panel1bh-header' style={{ border: '1px solid #81818131' }}>
 						<Typography sx={{}}>COLOR</Typography>
 					</AccordionSummary>
