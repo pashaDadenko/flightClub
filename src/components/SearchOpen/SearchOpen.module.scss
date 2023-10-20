@@ -29,6 +29,10 @@
 			@media (max-width: 900px) {
 				margin-left: 20px;
 			}
+			input[type='search']::-webkit-search-cancel-button,
+			input[type='search']::-webkit-search-clear-button {
+				display: none;
+			}
 		}
 		.icon {
 			position: absolute;
@@ -56,10 +60,6 @@
 			@media (max-width: 500px) {
 				font-size: 15px;
 			}
-		}
-		input[type='search']::-webkit-search-cancel-button,
-		input[type='search']::-webkit-search-clear-button {
-			display: none;
 		}
 		.buttonClose {
 			color: #000;
