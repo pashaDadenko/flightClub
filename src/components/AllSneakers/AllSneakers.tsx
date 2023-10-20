@@ -78,6 +78,7 @@ export const AllSneakers: FC = () => {
 
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 	const [addFilters, setAddFilters] = useState(true);
+	const [scrollLocked, setScrollLocked] = useState(false);
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -92,6 +93,26 @@ export const AllSneakers: FC = () => {
 		window.addEventListener('resize', handleResize);
 		return () => window.removeEventListener('resize', handleResize);
 	}, []);
+
+	useEffect(() => {
+		if (!scrollLocked) {
+			if (addFilters && window.innerWidth <= 900) {
+				document.body.style.overflow = 'hidden';
+				setScrollLocked(true);
+			}
+		} else {
+			if (!addFilters || window.innerWidth > 900) {
+				document.body.style.overflow = 'auto';
+				setScrollLocked(false);
+			}
+		}
+		return () => {
+			if (scrollLocked) {
+				document.body.style.overflow = 'auto';
+				setScrollLocked(false);
+			}
+		};
+	}, [scrollLocked, addFilters]);
 
 	const handleClick = () => {
 		setAddFilters(true);
