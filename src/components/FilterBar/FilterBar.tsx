@@ -5,6 +5,8 @@ import Accordion from '@mui/material/Accordion';
 import Typography from '@mui/material/Typography';
 import CloseIcon from '@mui/icons-material/Close';
 import { useDispatch, useSelector } from 'react-redux';
+import { variantFilterBar } from './FilterBarVariants';
+import { AnimatePresence, motion } from 'framer-motion';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -54,8 +56,8 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 	};
 
 	return (
-		<>
-			<div className={styles.wrapper}>
+		<AnimatePresence>
+			<motion.div className={styles.wrapper} key='filterBar' initial={'initial'} animate={'animate'} exit={'exit'} variants={windowWidth <= 900 ? variantFilterBar : {}}>
 				{windowWidth <= 900 && (
 					<div className={styles.header}>
 						<div className={styles.wrap}>
@@ -187,7 +189,7 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 						</Typography>
 					</AccordionDetails>
 				</Accordion>
-			</div>
-		</>
+			</motion.div>
+		</AnimatePresence>
 	);
 };
