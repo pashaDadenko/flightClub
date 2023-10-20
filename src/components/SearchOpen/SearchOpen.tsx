@@ -47,7 +47,7 @@ export const SearchOpen: FC<SearchProps> = ({ setSearchClick }) => {
 		<AnimatePresence>
 			<motion.div className={styles.wrapper} key='search' initial={'initial'} animate={'animate'} exit={'exit'} variants={variantSearch}>
 				<div className={styles.wrapSearch}>
-					<SearchIcon className={styles.icon} />
+					{/* <SearchIcon className={styles.icon} /> */}
 					<input
 						type='search'
 						ref={inputRef}
