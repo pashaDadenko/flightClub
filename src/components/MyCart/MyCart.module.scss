@@ -86,7 +86,6 @@
 					}
 				}
 				.clear {
-					color: #000;
 					cursor: pointer;
 					font-size: 30px;
 					@media (max-width: 700px) {
@@ -125,6 +124,7 @@
 					}
 				}
 				.clear {
+					color: #000;
 					background-color: transparent;
 					border: none;
 					cursor: pointer;
