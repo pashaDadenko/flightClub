@@ -3,7 +3,7 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
+	height: 55%;
 	background-color: #fff;
 	.wrapSearch {
 		position: relative;
@@ -24,7 +24,6 @@
 			margin-left: 30px;
 			appearance: none;
 			background-image: none;
-			-webkit-appearance: none;
 			&::placeholder {
 				color: #818181;
 				font-size: 16px;
@@ -203,4 +202,10 @@
 	@media (max-width: 1200px) {
 		display: none;
 	}
+}
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+	-webkit-appearance: none;
 }
