@@ -3,13 +3,6 @@
 
 Welcome to Flight Club, this project represents an online store for limited edition sneakers.
 
-## Table of Contents
-
-- [About](#about)
-- [Features](#features)
-- [Getting Started](#getting-started)
-- [Technologies](#technologies)
-
 ## About
 
 Flight Club - not a real online store, but rather a showcase of my development skills. The project demonstrates the entire process of working with clients, from showcasing products to order processing.
