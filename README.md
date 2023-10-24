@@ -1,4 +1,3 @@
-## Flight Club
 
 ![Project Preview](https://s3-eu-west-1.amazonaws.com/tpd/logos/5643700d0000ff00058569b5/0x0.png)
 
