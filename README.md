@@ -1,4 +1,4 @@
-# Flight Club Limited Sneakers
+## Flight Club
 
 ![Project Preview](https://your-image-url.com)
 
