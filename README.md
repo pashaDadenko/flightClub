@@ -1,6 +1,6 @@
 ## Flight Club
 
-![Project Preview](https://your-image-url.com)
+![Project Preview](https://cms-cdn.flightclub.com/3500/4f8e74f93059-2f4b-ee11-2cd6-018fc651.jpg)
 
 Welcome to Flight Club Limited Sneakers, your go-to destination for exclusive and limited edition sneakers. Whether you're a sneakerhead or just looking for a unique pair, our online store has you covered.
 
@@ -15,15 +15,13 @@ Welcome to Flight Club Limited Sneakers, your go-to destination for exclusive an
 
 ## About
 
-Flight Club Limited Sneakers is an e-commerce platform that specializes in offering a curated selection of limited edition and rare sneakers. Our platform is designed with both sellers and buyers in mind, creating a seamless experience for sneaker enthusiasts.
+Flight Club is an e-commerce platform that specializes in offering a curated selection of limited edition and rare sneakers. Our platform is designed with both sellers and buyers in mind, creating a seamless experience for sneaker enthusiasts.
 
 ## Features
 
 - **User Accounts:** Create and manage your personal account to keep track of your order history.
 
 - **Product Showcase:** Explore a showcase of the latest limited sneakers, with detailed information and high-quality images.
-
-- **Secure Payments:** Make secure and convenient payments for your purchases.
 
 - **Search and Filter:** Easily search for your favorite sneakers and apply filters to find exactly what you're looking for.
 
