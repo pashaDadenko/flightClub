@@ -1,6 +1,6 @@
 ## Flight Club
 
-![Project Preview](https://cms-cdn.flightclub.com/3500/4f8e74f93059-2f4b-ee11-2cd6-018fc651.jpg)
+![Project Preview]([https://cms-cdn.flightclub.com/3500/4f8e74f93059-2f4b-ee11-2cd6-018fc651.jpg](https://www.flightclub.com/static/homepage/our_stores.png))
 
 Welcome to Flight Club, this project represents an online store for limited edition sneakers.
 
@@ -17,9 +17,9 @@ Flight Club - not a real online store, but rather a showcase of my development s
 
 ## Features
 
-- **User Accounts:** Create and manage your personal account to keep track of your order history.
+- **User Accounts:** Create your personal user account to track your order history and manage your addresses.
 
-- **Product Showcase:** Explore a showcase of the latest limited sneakers, with detailed information and high-quality images.
+- **Product Showcase:** Explore the limited edition sneaker collection with detailed information and high-quality images.
 
 - **Search and Filter:** Easily search for your favorite sneakers and apply filters to find exactly what you're looking for.
 
@@ -46,7 +46,3 @@ Flight Club is built with a variety of modern web technologies, including:
 - Firebase (for authentication and data storage)
 
 For a complete list of dependencies and dev dependencies, check the `package.json` file in the project.
-
----
-
-Thank you for checking out Flight Club! We hope you find the perfect pair of limited edition sneakers. If you have any questions or feedback, feel free to reach out to us on [Telegram](https://t.me/pschPvl), [VK](https://vk.com/pashaye), or [Instagram](https://instagram.com/pschpvl).
