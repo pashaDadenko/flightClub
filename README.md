@@ -2,7 +2,7 @@
 
 ![Project Preview](https://cms-cdn.flightclub.com/3500/4f8e74f93059-2f4b-ee11-2cd6-018fc651.jpg)
 
-Welcome to Flight Club Limited Sneakers, your go-to destination for exclusive and limited edition sneakers. Whether you're a sneakerhead or just looking for a unique pair, our online store has you covered.
+Welcome to Flight Club, this project represents an online store for limited edition sneakers.
 
 ## Table of Contents
 
@@ -10,12 +10,10 @@ Welcome to Flight Club Limited Sneakers, your go-to destination for exclusive an
 - [Features](#features)
 - [Getting Started](#getting-started)
 - [Technologies](#technologies)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## About
 
-Flight Club is an e-commerce platform that specializes in offering a curated selection of limited edition and rare sneakers. Our platform is designed with both sellers and buyers in mind, creating a seamless experience for sneaker enthusiasts.
+Flight Club - not a real online store, but rather a showcase of my development skills. The project demonstrates the entire process of working with clients, from showcasing products to order processing.
 
 ## Features
 
@@ -27,7 +25,7 @@ Flight Club is an e-commerce platform that specializes in offering a curated sel
 
 - **Order History:** Keep track of your past orders for reference and repurchase.
 
-- **Responsive Design:** Our website is fully responsive and works great on both desktop and mobile devices.
+- **Adaptive Design:** My website is fully responsive and works seamlessly on both desktop and mobile devices.
 
 ## Getting Started
 
@@ -38,7 +36,7 @@ Flight Club is an e-commerce platform that specializes in offering a curated sel
 
 ## Technologies
 
-Flight Club Limited Sneakers is built with a variety of modern web technologies, including:
+Flight Club is built with a variety of modern web technologies, including:
 
 - React.js
 - TypeScript
@@ -49,15 +47,6 @@ Flight Club Limited Sneakers is built with a variety of modern web technologies,
 
 For a complete list of dependencies and dev dependencies, check the `package.json` file in the project.
 
-## Contributing
-
-We welcome contributions from the community. If you'd like to contribute to this project, please follow our [Contribution Guidelines](CONTRIBUTING.md).
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ---
 
-Thank you for checking out Flight Club Limited Sneakers! We hope you find the perfect pair of limited edition sneakers. If you have any questions or feedback, feel free to reach out to us on [Telegram](https://t.me/pschPvl), [VK](https://vk.com/pashaye), or [Instagram](https://instagram.com/pschpvl).
-Помимо этого базового шаблона, вы можете добавить более подробную информацию, 
+Thank you for checking out Flight Club! We hope you find the perfect pair of limited edition sneakers. If you have any questions or feedback, feel free to reach out to us on [Telegram](https://t.me/pschPvl), [VK](https://vk.com/pashaye), or [Instagram](https://instagram.com/pschpvl).
