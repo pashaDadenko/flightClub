@@ -1,6 +1,6 @@
 ## Flight Club
 
-![Project Preview]([https://cms-cdn.flightclub.com/3500/4f8e74f93059-2f4b-ee11-2cd6-018fc651.jpg](https://www.flightclub.com/static/homepage/our_stores.png))
+![Project Preview](https://s3-eu-west-1.amazonaws.com/tpd/logos/5643700d0000ff00058569b5/0x0.png)
 
 Welcome to Flight Club, this project represents an online store for limited edition sneakers.
 
