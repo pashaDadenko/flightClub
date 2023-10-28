@@ -1,4 +1,4 @@
-import { TypeApi } from '../../api/TypeApi';
+import { TypeApi } from "../../redux/api/TypeApi";
 
 export type TypeAccordionStyle = {
 	boxShadow: string;
