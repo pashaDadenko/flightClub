@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
+import { PATHS } from '../../root/routesConfig';
 
 import styles from './AirJordanBlock.module.scss';
 
@@ -25,7 +26,7 @@ export const AirJordanBlock: FC = () => {
 							</Link>
 						))}
 				</ul>
-				<Link className={styles.link} to={'/air-jordan'}>
+				<Link className={styles.link} to={PATHS.AIR_JORDAN}>
 					<button className={styles.btn}>SHOP AIR JORDAN</button>
 				</Link>
 			</div>

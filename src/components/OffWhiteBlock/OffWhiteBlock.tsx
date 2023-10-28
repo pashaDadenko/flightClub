@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
+import { PATHS } from '../../root/routesConfig';
 
 import styles from './OffWhiteBlock.module.scss';
 
@@ -25,7 +26,7 @@ export const OffWhiteBlock: FC = () => {
 							</Link>
 						))}
 				</ul>
-				<Link className={styles.link} to={'/off-white'}>
+				<Link className={styles.link} to={PATHS.OFF_WHITE}>
 					<button className={styles.btn}>SHOP OFF WHITE</button>
 				</Link>
 			</div>

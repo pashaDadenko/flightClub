@@ -1,6 +1,7 @@
 import { db } from '../../firebase';
 import { FC, useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { PATHS } from '../../root/routesConfig';
 import { Link, useNavigate } from 'react-router-dom';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { setUser } from '../../redux/userSlice/userSlice';
@@ -71,7 +72,7 @@ export const Login: FC = () => {
 						);
 
 						dispatch(setOrders(ordersData));
-						navigate('/my-account');
+						navigate(PATHS.MY_ACCOUNT);
 					})
 					.catch(() => {
 						reset();
@@ -125,7 +126,7 @@ export const Login: FC = () => {
 							</span>
 						)}
 					</div>
-					<Link to={'/forgot-password'} className={styles.forgot}>
+					<Link to={PATHS.FORGOT_PASSWORD} className={styles.forgot}>
 						Forgot Password?
 					</Link>
 					{isValid && watch('email') && watch('password') ? (
@@ -140,7 +141,7 @@ export const Login: FC = () => {
 						<p className={styles.new}>NEW TO FLIGHT CLUB?</p>
 						<div className={styles.miniLine}></div>
 					</div>
-					<Link className={styles.link} to={'/create-account'}>
+					<Link className={styles.link} to={PATHS.CREATE_ACCOUNT}>
 						<button className={styles.create}>CREATE ACCOUNT</button>
 					</Link>
 				</div>

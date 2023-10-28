@@ -3,6 +3,7 @@ import { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { PATHS } from '../../root/routesConfig';
 import { doc, setDoc } from 'firebase/firestore';
 import { TypeCreateAccount } from './TypeCreateAccount';
 import { useForm, SubmitHandler } from 'react-hook-form';
@@ -55,7 +56,7 @@ export const CreateAccount: FC = () => {
 				);
 
 				dispatch(setEdit());
-				navigate('/my-account');
+				navigate(PATHS.MY_ACCOUNT);
 			})
 			.catch(() => (reset(), setAuthError('The user with this email is already registered')));
 	};
@@ -130,7 +131,7 @@ export const CreateAccount: FC = () => {
 						<p className={styles.already}>ALREADY HAVE AN ACCOUNT?</p>
 						<div className={styles.miniLine}></div>
 					</div>
-					<Link className={styles.link} to={'/login'}>
+					<Link className={styles.link} to={PATHS.LOGIN}>
 						<button className={styles.login}>LOGIN</button>
 					</Link>
 				</div>

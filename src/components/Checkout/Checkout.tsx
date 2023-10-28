@@ -5,6 +5,7 @@ import { RootState } from '../../redux/store';
 import { useNavigate } from 'react-router-dom';
 import { Shipping } from '../Shipping/Shipping';
 import { FC, useEffect, useState } from 'react';
+import { PATHS } from '../../root/routesConfig';
 import { Box, Modal, Typography } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { setClearCart } from '../../redux/cartSlice/cartSlice';
@@ -34,7 +35,7 @@ export const Checkout: FC = () => {
 	const handleClose = () => {
 		setOpen(false);
 		dispatch(setClearCart());
-		navigate('/');
+		navigate(PATHS.HOME);
 	};
 
 	const handleOpen = async () => {

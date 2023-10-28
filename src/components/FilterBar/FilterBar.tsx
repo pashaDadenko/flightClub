@@ -1,6 +1,7 @@
 import { FC, useState } from 'react';
 import { RootState } from '../../redux/store';
 import { useLocation } from 'react-router-dom';
+import { PATHS } from '../../root/routesConfig';
 import Accordion from '@mui/material/Accordion';
 import Typography from '@mui/material/Typography';
 import CloseIcon from '@mui/icons-material/Close';
@@ -33,7 +34,7 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 	const accordionStyle: TypeAccordionStyle = { boxShadow: 'none', transition: 'none' };
 	const multiColor = { backgroundImage: `linear-gradient(to left, rgb(255, 244, 12), rgb(74, 138, 0) 31%, rgb(0, 72, 156) 63%, rgb(213, 55, 54))` };
 
-	const renderBrand = pathname === '/sneakers' || pathname === '/top-sellers' || pathname === '/lowest-price' || pathname === '/search-result' || pathname === '/rar-shoes' || pathname === '/dark-shoes';
+	const renderBrand = pathname === PATHS.SNEAKERS || pathname === PATHS.TOP_SELLERS || pathname === PATHS.LOWEST_PRICE || pathname === PATHS.SEARCH_RESULT || pathname === PATHS.RAR_SHOES || pathname === PATHS.DARK_SHOES;
 
 	const handleClick = () => {
 		setAddFilters(false);

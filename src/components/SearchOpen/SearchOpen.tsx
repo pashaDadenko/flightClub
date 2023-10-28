@@ -1,5 +1,6 @@
 import { RootState } from '../../redux/store';
 import { SearchProps } from './TypeSearchOpen';
+import { PATHS } from '../../root/routesConfig';
 import SearchIcon from '@mui/icons-material/Search';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -48,7 +49,7 @@ export const SearchOpen: FC<SearchProps> = ({ setSearchClick }) => {
 			<motion.div className={styles.wrapper} key='search' initial={'initial'} animate={'animate'} exit={'exit'} variants={variantSearch}>
 				<div className={styles.wrapSearch}>
 					<SearchIcon className={styles.icon} />
-					<input type='search' ref={inputRef} value={searchValue} placeholder='Search' className={styles.search} onChange={(e) => dispatch(setSearchValue(e.target.value))} onKeyDown={(e) => e.key === 'Enter' && navigate('/search-result')} />
+					<input type='search' ref={inputRef} value={searchValue} placeholder='Search' className={styles.search} onChange={(e) => dispatch(setSearchValue(e.target.value))} onKeyDown={(e) => e.key === 'Enter' && navigate(PATHS.SEARCH_RESULT)} />
 					<button style={searchValue ? { color: '#000' } : { pointerEvents: 'none' }} className={styles.buttonClear} onClick={() => dispatch(setSearchValue(''))}>
 						Clear
 					</button>
@@ -74,30 +75,30 @@ export const SearchOpen: FC<SearchProps> = ({ setSearchClick }) => {
 						<p className={styles.title}>Categories</p>
 						<div className={styles.wrap}>
 							<div className={styles.brand}>
-								<Link to={'/air-jordan'} onClick={() => setSearchClick(false)}>
+								<Link to={PATHS.AIR_JORDAN} onClick={() => setSearchClick(false)}>
 									<button className={styles.button}>Air jordan</button>
 								</Link>
-								<Link to={'/new-balance'} onClick={() => setSearchClick(false)}>
+								<Link to={PATHS.NEW_BALANCE} onClick={() => setSearchClick(false)}>
 									<button className={styles.button}>New Balance</button>
 								</Link>
-								<Link to={'/nike'} onClick={() => setSearchClick(false)}>
+								<Link to={PATHS.NIKE} onClick={() => setSearchClick(false)}>
 									<button className={styles.button}>Nike</button>
 								</Link>
-								<Link to={'/off-white'} onClick={() => setSearchClick(false)}>
+								<Link to={PATHS.OFF_WHITE} onClick={() => setSearchClick(false)}>
 									<button className={styles.button}>Off white</button>
 								</Link>
-								<Link to={'/yeezy'} onClick={() => setSearchClick(false)}>
+								<Link to={PATHS.YEEZY} onClick={() => setSearchClick(false)}>
 									<button className={styles.button}>Yeezy</button>
 								</Link>
-								<Link to={'/sneakers'} onClick={() => setSearchClick(false)}>
+								<Link to={PATHS.SNEAKERS} onClick={() => setSearchClick(false)}>
 									<button className={styles.button}>More Brands</button>
 								</Link>
 							</div>
 							<div className={styles.recommended}>
-								<Link to={'/top-sellers'} onClick={() => setSearchClick(false)}>
+								<Link to={PATHS.TOP_SELLERS} onClick={() => setSearchClick(false)}>
 									<button className={styles.button}>Top sellers</button>
 								</Link>
-								<Link to={'/lowest-price'} onClick={() => setSearchClick(false)}>
+								<Link to={PATHS.LOWEST_PRICE} onClick={() => setSearchClick(false)}>
 									<button className={styles.button}>Lowest price</button>
 								</Link>
 							</div>

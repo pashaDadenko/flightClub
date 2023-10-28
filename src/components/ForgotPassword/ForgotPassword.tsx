@@ -1,4 +1,5 @@
 import { FC, useState } from 'react';
+import { PATHS } from '../../root/routesConfig';
 import styles from './ForgotPassword.module.scss';
 import { Link, useNavigate } from 'react-router-dom';
 import { SubmitHandler, useForm } from 'react-hook-form';
@@ -25,7 +26,7 @@ export const ForgotPassword: FC = () => {
 		methods.length > 0
 			? sendPasswordResetEmail(auth, data.email)
 					.then(() => {
-						navigate('/login');
+						navigate(PATHS.LOGIN);
 					})
 					.catch(() => {
 						reset();
@@ -65,7 +66,7 @@ export const ForgotPassword: FC = () => {
 							SUBMIT
 						</button>
 					)}
-					<Link className={styles.link} to={'/login'}>
+					<Link className={styles.link} to={PATHS.LOGIN}>
 						<button className={styles.back}>BACK TO LOGIN</button>
 					</Link>
 				</div>

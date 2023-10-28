@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { Search } from '../Search/Search';
 import { useAuth } from '../../hooks/useAuth';
+import { PATHS } from '../../root/routesConfig';
 import { SearchOpen } from '../SearchOpen/SearchOpen';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -42,16 +43,16 @@ export const Header: FC = () => {
 		position: 'relative',
 	};
 
-	const scrollBack = pathname === '/' && scroll < document.documentElement.clientHeight ? { backgroundColor: '#ffffff00' } : { backgroundColor: '#fff' };
-	const scrollColor = pathname === '/' && scroll < document.documentElement.clientHeight ? { color: '#fff' } : {};
+	const scrollBack = pathname === PATHS.HOME && scroll < document.documentElement.clientHeight ? { backgroundColor: '#ffffff00' } : { backgroundColor: '#fff' };
+	const scrollColor = pathname === PATHS.HOME && scroll < document.documentElement.clientHeight ? { color: '#fff' } : {};
 
 	const singOutClick = () => {
 		dispatch(setRemoveUser());
-		navigate('/');
+		navigate(PATHS.HOME);
 	};
 
 	return (
-		<header style={pathname === '/' ? styleHeaderIMG : { height: '100px' }}>
+		<header style={pathname === PATHS.HOME ? styleHeaderIMG : { height: '100px' }}>
 			<div className={styles.wrapper} style={scrollBack}>
 				{!searchClick && (
 					<div onClick={() => setSearchClick(true)} className={styles.mediaS} style={scrollColor}>
@@ -60,16 +61,16 @@ export const Header: FC = () => {
 				)}
 				{searchClick ? <SearchOpen setSearchClick={setSearchClick} /> : <Search setSearchClick={setSearchClick} scroll={scroll} />}
 				{!searchClick && (
-					<Link className={styles.logo} to={'/'}>
+					<Link className={styles.logo} to={PATHS.HOME}>
 						FLIGHT CLUB
 					</Link>
 				)}
 				{!searchClick && (
 					<div className={styles.listing}>
-						<Link className={styles.item} style={scrollColor} to={'/sneakers'}>
+						<Link className={styles.item} style={scrollColor} to={PATHS.SNEAKERS}>
 							Sneakers
 						</Link>
-						<Link className={styles.item} style={scrollColor} to={'/store-location'}>
+						<Link className={styles.item} style={scrollColor} to={PATHS.STORE_LOCATION}>
 							Store
 						</Link>
 						<div className={styles.accountWrap} style={scrollColor} onMouseLeave={() => setAccountHover(false)}>
@@ -80,17 +81,17 @@ export const Header: FC = () => {
 								{accountHover && (
 									<motion.div className={styles.wrap} style={scrollBack} initial={'initial'} animate={'animate'} exit={'exit'} variants={variantWrap}>
 										<motion.div initial={'initial'} animate={'animate'} exit={'exit'} variants={variantAccount}>
-											<Link to={isAuth ? '/my-account' : '/login'} className={styles.item} style={scrollColor}>
+											<Link to={isAuth ? PATHS.MY_ACCOUNT : PATHS.LOGIN} className={styles.item} style={scrollColor}>
 												My Account
 											</Link>
 										</motion.div>
 										<motion.div initial={'initial'} animate={'animate'} exit={'exit'} variants={variantOrders}>
-											<Link className={styles.item} style={scrollColor} to={isAuth ? '/my-orders' : '/login'}>
+											<Link className={styles.item} style={scrollColor} to={isAuth ? PATHS.MY_ORDERS : PATHS.LOGIN}>
 												My Orders
 											</Link>
 										</motion.div>
 										<motion.div initial={'initial'} animate={'animate'} exit={'exit'} variants={variantCart}>
-											<Link className={styles.item} style={scrollColor} to={'/my-cart'}>
+											<Link className={styles.item} style={scrollColor} to={PATHS.MY_CART}>
 												My Cart
 											</Link>
 										</motion.div>
@@ -102,7 +103,7 @@ export const Header: FC = () => {
 											</motion.div>
 										) : (
 											<motion.div initial={'initial'} animate={'animate'} exit={'exit'} variants={variantUp}>
-												<Link className={styles.item} style={scrollColor} to={'/login'}>
+												<Link className={styles.item} style={scrollColor} to={PATHS.LOGIN}>
 													Sing Up
 												</Link>
 											</motion.div>
@@ -120,10 +121,10 @@ export const Header: FC = () => {
 				)}
 				{menuOpen && <MenuOpen setMenuOpen={setMenuOpen} singOutClick={singOutClick} />}
 			</div>
-			{pathname === '/' && (
+			{pathname === PATHS.HOME && (
 				<div className={styles.previewWrapper}>
 					<h1 className={styles.previewName}>AIR JORDAN 1 RETRO HIGH OG 'MAUVE'</h1>
-					<Link to={'details/51'} className={styles.previewShow}>
+					<Link to={'/details/51'} className={styles.previewShow}>
 						Shop Now
 					</Link>
 				</div>

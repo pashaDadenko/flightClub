@@ -3,41 +3,43 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useAuth } from '../../hooks/useAuth';
 import { RootState } from '../../redux/store';
+import { PATHS } from '../../root/routesConfig';
 
 import styles from './Footer.module.scss';
 
 export const Footer: FC = () => {
 	const { isAuth } = useAuth();
-	const allSneakers = useSelector((state: RootState) => state.sneakersSlice.allSneakers).slice(-6);
+	const allSneakers = useSelector((state: RootState) => state.sneakersSlice.allSneakers);
+	const sixSneakers = allSneakers.slice(-6);
 
 	return (
 		<>
 			<footer className={styles.footer}>
-				<Link className={styles.logo} to={'/'}>
+				<Link className={styles.logo} to={PATHS.HOME}>
 					FLIGHT CLUB
 				</Link>
 				<div className={styles.wrapper}>
 					<div className={styles.wrap}>
 						<div className={styles.title}>Trending</div>
-						<Link to={'/air-jordan'} className={styles.subTitle}>
+						<Link to={PATHS.AIR_JORDAN} className={styles.subTitle}>
 							Air Jordans
 						</Link>
-						<Link to={'/nike-dunk'} className={styles.subTitle}>
+						<Link to={PATHS.NIKE_DUNK} className={styles.subTitle}>
 							Nike Dunks
 						</Link>
-						<Link to={'/dark-shoes'} className={styles.subTitle}>
+						<Link to={PATHS.DARK_SHOES} className={styles.subTitle}>
 							Dark Shoes
 						</Link>
 						<div className={styles.subTitle}>Travis Scott Shoes</div>
 						<div className={styles.subTitle}>Bad Bunny x adidas</div>
-						<Link to={'/rar-shoes'} className={styles.subTitle}>
+						<Link to={PATHS.RAR_SHOES} className={styles.subTitle}>
 							Rar Shoe
 						</Link>
 					</div>
 					<div className={styles.wrap}>
 						<div className={styles.title}>New Releases</div>
-						{allSneakers &&
-							allSneakers.map((sneaker) => (
+						{sixSneakers &&
+							sixSneakers.map((sneaker) => (
 								<Link to={`/details/${sneaker.id}`} className={styles.subTitle} key={sneaker.id} onClick={() => window.scrollTo(0, 0)}>
 									{sneaker.title}
 								</Link>
@@ -45,22 +47,22 @@ export const Footer: FC = () => {
 					</div>
 					<div className={styles.wrap}>
 						<div className={styles.title}>Support</div>
-						<Link to={isAuth ? '/my-account' : '/login'} className={styles.subTitle}>
+						<Link to={isAuth ? PATHS.MY_ACCOUNT : PATHS.LOGIN} className={styles.subTitle}>
 							My Account
 						</Link>
-						<Link to={isAuth ? '/my-orders' : '/login'} className={styles.subTitle}>
+						<Link to={isAuth ? PATHS.MY_ORDERS : PATHS.LOGIN} className={styles.subTitle}>
 							My Orders
 						</Link>
-						<Link to={'/shipAndReturn'} className={styles.subTitle}>
+						<Link to={PATHS.SHIPPING_AND_RETURNS} className={styles.subTitle}>
 							Shipping & Returns
 						</Link>
-						<Link to={'/sell-sneakers'} className={styles.subTitle}>
+						<Link to={PATHS.SELL_SNEAKERS} className={styles.subTitle}>
 							Sell Sneakers
 						</Link>
 					</div>
 					<div className={styles.wrap}>
 						<div className={styles.title}>About Us</div>
-						<Link to={'/store-location'} className={styles.subTitle}>
+						<Link to={PATHS.STORE_LOCATION} className={styles.subTitle}>
 							Stores
 						</Link>
 						<div className={styles.subTitle}>Instagram</div>

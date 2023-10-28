@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { RootState } from '../../redux/store';
 import { useAuth } from '../../hooks/useAuth';
+import { PATHS } from '../../root/routesConfig';
 import ClearIcon from '@mui/icons-material/Clear';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteSneakers, setClearCart } from '../../redux/cartSlice/cartSlice';
@@ -24,7 +25,7 @@ export const MyCart: FC = () => {
 						cartItems.map((sneaker, index) => (
 							<div className={styles.sneaker} key={index}>
 								<div className={styles.flexBox}>
-									<Link to={`/details/${sneaker.id}`}>
+									<Link to={`${PATHS.DETAILS}/${sneaker.id}`}>
 										<img className={styles.img} src={sneaker.images[0]} alt={sneaker.brand} />
 									</Link>
 									<div className={styles.flexInfo}>
@@ -50,10 +51,10 @@ export const MyCart: FC = () => {
 					</div>
 				</div>
 				<div className={styles.buttonWrap}>
-					<Link className={styles.link} to={'/sneakers'}>
+					<Link className={styles.link} to={PATHS.SNEAKERS}>
 						BACK TO SHOP
 					</Link>
-					<Link className={styles.link} to={isAuth ? '/checkout' : '/login'}>
+					<Link className={styles.link} to={isAuth ? PATHS.CHECKOUT : PATHS.LOGIN}>
 						CHECKOUT
 					</Link>
 				</div>

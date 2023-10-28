@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
+import { PATHS } from '../../root/routesConfig';
 
 import styles from './AllSneakersBlock.module.scss';
 
@@ -25,7 +26,7 @@ export const AllSneakersBlock: FC = () => {
 							</Link>
 						))}
 				</ul>
-				<Link className={styles.link} to={'/sneakers'}>
+				<Link className={styles.link} to={PATHS.SNEAKERS}>
 					<button className={styles.btn}>SHOP ALL SNEAKERS</button>
 				</Link>
 			</section>

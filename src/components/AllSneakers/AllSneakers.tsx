@@ -1,5 +1,6 @@
 import { RootState } from '../../redux/store';
 import { Selected } from '../Selected/Selected';
+import { PATHS } from '../../root/routesConfig';
 import { FC, useEffect, useState } from 'react';
 import { FilterBar } from '../FilterBar/FilterBar';
 import { Link, useLocation } from 'react-router-dom';
@@ -29,26 +30,20 @@ export const AllSneakers: FC = () => {
 
 			const pathnameFilter =
 				{
-					'/top-sellers': () => rating > 0,
-					'/off-white': () => brand === 'Off-white',
-					'/air-jordan': () => brand === 'Air jordan',
-					'/nike': () => brand === 'Nike',
-					'/yeezy': () => brand === 'Yeezy',
-					'/new-balance': () => brand === 'New balance',
-					'/lowest-price': () => price < 300,
-					'/nike-dunk': () => model === 'dunk',
-					'/dark-shoes': () => color === 'black',
-					'/rar-shoes': () => price > 1000,
-					'/search-result': () => title.toLowerCase().includes(searchValue.toLowerCase()) || brand.toLowerCase().includes(searchValue.toLowerCase()),
+					[PATHS.TOP_SELLERS]: () => rating > 0,
+					[PATHS.OFF_WHITE]: () => brand === 'Off-white',
+					[PATHS.AIR_JORDAN]: () => brand === 'Air jordan',
+					[PATHS.NIKE]: () => brand === 'Nike',
+					[PATHS.YEEZY]: () => brand === 'Yeezy',
+					[PATHS.NEW_BALANCE]: () => brand === 'New balance',
+					[PATHS.LOWEST_PRICE]: () => price < 300,
+					[PATHS.NIKE_DUNK]: () => model === 'dunk',
+					[PATHS.DARK_SHOES]: () => color === 'black',
+					[PATHS.RAR_SHOES]: () => price > 1000,
+					[PATHS.SEARCH_RESULT]: () => title.toLowerCase().includes(searchValue.toLowerCase()) || brand.toLowerCase().includes(searchValue.toLowerCase()),
 				}[pathname] || (() => true);
 
-			return (
-				(!valueBrandSet.size || valueBrandSet.has(brand)) &&
-				(!valueModelSet.size || valueModelSet.has(model)) &&
-				(!valueSizes.length || valueSizes.some((size) => sizes.includes(size))) &&
-				(!valueColorSet.size || valueColorSet.has(color)) &&
-				pathnameFilter()
-			);
+			return (!valueBrandSet.size || valueBrandSet.has(brand)) && (!valueModelSet.size || valueModelSet.has(model)) && (!valueSizes.length || valueSizes.some((size) => sizes.includes(size))) && (!valueColorSet.size || valueColorSet.has(color)) && pathnameFilter();
 		})
 		.sort((a, b) => (currentSort === 'low' ? a.price - b.price : currentSort === 'high' ? b.price - a.price : currentSort === 'relevance' ? b.rating - a.rating : 0));
 

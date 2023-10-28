@@ -33,110 +33,139 @@ interface IRouteConfig {
 	errorElement?: ReactElement;
 }
 
+export enum PATHS {
+	HOME = '/',
+	STORE_LOCATION = '/store-location',
+	ABOUT_US = '/about-us',
+	DETAILS = '/details/:id',
+	SHIPPING_AND_RETURNS = '/shipAndReturn',
+	SNEAKERS = '/sneakers',
+	MY_ACCOUNT = '/my-account',
+	TOP_SELLERS = '/top-sellers',
+	OFF_WHITE = '/off-white',
+	AIR_JORDAN = '/air-jordan',
+	NIKE = '/nike',
+	YEEZY = '/yeezy',
+	NEW_BALANCE = '/new-balance',
+	LOWEST_PRICE = '/lowest-price',
+	SEARCH_RESULT = '/search-result',
+	MY_CART = '/my-cart',
+	LOGIN = '/login',
+	CREATE_ACCOUNT = '/create-account',
+	CHECKOUT = '/checkout',
+	HELP = '/help',
+	FORGOT_PASSWORD = '/forgot-password',
+	NIKE_DUNK = '/nike-dunk',
+	DARK_SHOES = '/dark-shoes',
+	RAR_SHOES = '/rar-shoes',
+	SELL_SNEAKERS = '/sell-sneakers',
+	MY_ORDERS = '/my-orders',
+}
+
 export const routesConfig: IRouteConfig[] = [
 	{
-		path: '/',
+		path: PATHS.HOME,
 		element: <HomePage />,
 		errorElement: <ErrorPage />,
 	},
 	{
-		path: '/store-location',
+		path: PATHS.STORE_LOCATION,
 		element: <StoresPage />,
 	},
 	{
-		path: '/about-us',
+		path: PATHS.ABOUT_US,
 		element: <AboutUsPage />,
 	},
 	{
-		path: '/details/:id',
+		path: PATHS.DETAILS,
 		element: <DetailsPage />,
 	},
 	{
-		path: '/shipAndReturn',
+		path: PATHS.SHIPPING_AND_RETURNS,
 		element: <ShippingAndReturnsPage />,
 	},
 	{
-		path: '/sneakers',
+		path: PATHS.SNEAKERS,
 		element: <AllSneakersPage />,
 	},
 	{
-		path: '/my-account',
+		path: PATHS.MY_ACCOUNT,
 		element: <MyAccountPage />,
 	},
 	{
-		path: '/top-sellers',
+		path: PATHS.TOP_SELLERS,
 		element: <TopSellersPage />,
 	},
 	{
-		path: '/off-white',
+		path: PATHS.OFF_WHITE,
 		element: <OffWhitePage />,
 	},
 	{
-		path: '/air-jordan',
+		path: PATHS.AIR_JORDAN,
 		element: <AirJordanPage />,
 	},
 	{
-		path: '/nike',
+		path: PATHS.NIKE,
 		element: <NikePage />,
 	},
 	{
-		path: '/yeezy',
+		path: PATHS.YEEZY,
 		element: <YeezyPage />,
 	},
 	{
-		path: '/new-balance',
+		path: PATHS.NEW_BALANCE,
 		element: <NewBalancePage />,
 	},
 	{
-		path: '/lowest-price',
+		path: PATHS.LOWEST_PRICE,
 		element: <LowestPricePage />,
 	},
 	{
-		path: '/search-result',
+		path: PATHS.SEARCH_RESULT,
 		element: <SearchResultPage />,
 	},
 	{
-		path: '/my-cart',
+		path: PATHS.MY_CART,
 		element: <MyCartPage />,
 	},
 	{
-		path: '/login',
+		path: PATHS.LOGIN,
 		element: <LoginPage />,
 	},
 	{
-		path: '/create-account',
+		path: PATHS.CREATE_ACCOUNT,
 		element: <CreateAccountPage />,
 	},
 	{
-		path: '/checkout',
+		path: PATHS.CHECKOUT,
 		element: <CheckoutPage />,
 	},
 	{
-		path: '/help',
+		path: PATHS.HELP,
 		element: <HelpPage />,
 	},
 	{
-		path: '/forgot-password',
+		path: PATHS.FORGOT_PASSWORD,
 		element: <ForgotPasswordPage />,
 	},
 	{
-		path: '/nike-dunk',
+		path: PATHS.NIKE_DUNK,
 		element: <NikeDunkPage />,
 	},
 	{
-		path: '/dark-shoes',
+		path: PATHS.DARK_SHOES,
 		element: <DarkShoesPage />,
 	},
 	{
-		path: '/rar-shoes',
+		path: PATHS.RAR_SHOES,
 		element: <RarShoesPage />,
 	},
 	{
-		path: '/sell-sneakers',
+		path: PATHS.SELL_SNEAKERS,
 		element: <SellSneakersPage />,
 	},
 	{
-		path: '/my-orders',
+		path: PATHS.MY_ORDERS,
 		element: <MyOrdersPage />,
 	},
 ];

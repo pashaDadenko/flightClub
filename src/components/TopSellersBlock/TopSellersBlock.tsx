@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
+import { PATHS } from '../../root/routesConfig';
 
 import styles from './TopSellersBlock.module.scss';
 
@@ -25,7 +26,7 @@ export const TopSellersBlock: FC = () => {
 							</Link>
 						))}
 				</ul>
-				<Link className={styles.link} to={'/top-sellers'}>
+				<Link className={styles.link} to={PATHS.TOP_SELLERS}>
 					<button className={styles.btn}>SHOP TOP SELLERS</button>
 				</Link>
 			</div>

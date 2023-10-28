@@ -1,5 +1,6 @@
 import { TypeApi } from '../../api/TypeApi';
 import { RootState } from '../../redux/store';
+import { PATHS } from '../../root/routesConfig';
 import { FC, useEffect, useState } from 'react';
 import { Carousel } from '../Carousel/Carousel';
 import CloseIcon from '@mui/icons-material/Close';
@@ -104,7 +105,7 @@ export const DetailsSneakers: FC = () => {
 														${item.price}
 													</motion.p>
 												</button>
-												<Link style={cartItems.length === 0 ? { pointerEvents: 'none' } : {}} className={styles.link} to={'/my-cart'} onClick={() => selectSizeHandler(!activeSize)}>
+												<Link style={cartItems.length === 0 ? { pointerEvents: 'none' } : {}} className={styles.link} to={PATHS.MY_CART} onClick={() => selectSizeHandler(!activeSize)}>
 													<div className={styles.icon}>{cartItems.length > 0 ? <ShoppingCartIcon /> : <ShoppingCartOutlinedIcon />}</div>
 													<p style={cartItems.length > 0 ? { opacity: '1' } : { opacity: 0 }} className={styles.count}>
 														{cartItems.length}

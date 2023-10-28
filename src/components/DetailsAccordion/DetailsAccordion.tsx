@@ -1,5 +1,6 @@
 import { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { PATHS } from '../../root/routesConfig';
 import Accordion from '@mui/material/Accordion';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -48,7 +49,7 @@ export const DetailsAccordion: FC = () => {
 						<span>Returns</span>
 						<span>All sales with Flight Club are final.</span>
 						<span>If you have any questions or concerns with regard to sizing or condition of a specific product on our site, please contact us before purchasing.</span>
-						<Link className={styles.link} to={'/shipAndReturn'}>
+						<Link className={styles.link} to={PATHS.SHIPPING_AND_RETURNS}>
 							Learn more
 						</Link>
 					</Typography>
