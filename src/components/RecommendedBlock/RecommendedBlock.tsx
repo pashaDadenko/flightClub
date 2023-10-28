@@ -2,13 +2,15 @@ import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
+import { useGetSneakersQuery } from '../../redux/api/api';
 
 import styles from './RecommendedBlock.module.scss';
 
 export const RecommendedBlock: FC = () => {
-	const allSneakers = useSelector((state: RootState) => state.sneakersSlice.allSneakers);
+	const { data = [] } = useGetSneakersQuery('');
+
 	const brand = useSelector((state: RootState) => state.sneakersSlice.brand);
-	const recommendedSneakers = allSneakers.filter((item) => item.brand === brand).slice(0, 8);
+	const recommendedSneakers = data.filter((item) => item.brand === brand).slice(0, 8);
 
 	return (
 		<div className={styles.wrapper}>

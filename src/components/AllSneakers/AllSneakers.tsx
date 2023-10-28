@@ -7,6 +7,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { AnimatePresence, motion } from 'framer-motion';
 import { variantsSneakers } from './AllSneakersVariants';
+import { useGetSneakersQuery } from '../../redux/api/api';
 import { setClearFilter } from '../../redux/filterSlice/filterSlice';
 
 import styles from './AllSneakers.module.scss';
@@ -14,13 +15,13 @@ import styles from './AllSneakers.module.scss';
 export const AllSneakers: FC = () => {
 	const dispatch = useDispatch();
 	const { pathname } = useLocation();
+	const { data = [] } = useGetSneakersQuery('');
 
-	const allSneakers = useSelector((state: RootState) => state.sneakersSlice.allSneakers);
 	const currentSort = useSelector((state: RootState) => state.sneakersSlice.currentSort);
 	const searchValue = useSelector((state: RootState) => state.searchSlice.searchValue);
 	const { valueBrand, valueModel, valueSizes, valueColor } = useSelector((state: RootState) => state.filterSlice.filterValues);
 
-	const updateSneakers = allSneakers
+	const updateSneakers = data
 		.filter((sneakers) => {
 			const { brand, model, color, sizes, rating, price, title } = sneakers;
 

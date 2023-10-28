@@ -1,13 +1,14 @@
-import { TypeApi } from '../../api/TypeApi';
 import { RootState } from '../../redux/store';
 import { PATHS } from '../../root/routesConfig';
 import { FC, useEffect, useState } from 'react';
 import { Carousel } from '../Carousel/Carousel';
 import CloseIcon from '@mui/icons-material/Close';
+import { TypeApi } from '../../redux/api/TypeApi';
 import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useGetSneakersQuery } from '../../redux/api/api';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { DetailsAccordion } from '../DetailsAccordion/DetailsAccordion';
 import { setCartItems, setSize } from '../../redux/cartSlice/cartSlice';
@@ -21,19 +22,19 @@ export const DetailsSneakers: FC = () => {
 	const { id } = useParams();
 	const dispatch = useDispatch();
 	const screenReduction = useMediaQuery('(max-width: 900px)');
+	const { data = [] } = useGetSneakersQuery('');
 
-	const allSneakers = useSelector((state: RootState) => state.sneakersSlice.allSneakers);
-	const detailsSneakers = allSneakers.filter((item) => item.id === +id!);
+	const detailsSneakers = data.filter((item) => item.id === +id!);
 	const cartItems = useSelector((state: RootState) => state.cartSlice.cartItems);
 	const size = useSelector((state: RootState) => state.cartSlice.size);
 
-	const brand = detailsSneakers.length > 0 && detailsSneakers[0].brand;
+	const brand = detailsSneakers && detailsSneakers[0].brand;
 	typeof brand === 'string' && dispatch(setBrand(brand));
 
-	const images = detailsSneakers.length > 0 && detailsSneakers[0].images;
+	const images = detailsSneakers && detailsSneakers[0].images;
 	Array.isArray(images) && dispatch(setImageCarousel(images));
 
-	const title = detailsSneakers.length > 0 && detailsSneakers[0].title;
+	const title = detailsSneakers && detailsSneakers[0].title;
 	typeof title === 'string' && dispatch(setTitle(title));
 
 	const buttonClick = (item: TypeApi) => {

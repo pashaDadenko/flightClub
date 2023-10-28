@@ -1,16 +1,16 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 import { useAuth } from '../../hooks/useAuth';
-import { RootState } from '../../redux/store';
 import { PATHS } from '../../root/routesConfig';
+import { useGetSneakersQuery } from '../../redux/api/api';
 
 import styles from './Footer.module.scss';
 
 export const Footer: FC = () => {
 	const { isAuth } = useAuth();
-	const allSneakers = useSelector((state: RootState) => state.sneakersSlice.allSneakers);
-	const sixSneakers = allSneakers.slice(-6);
+	const { data = [] } = useGetSneakersQuery('');
+
+	const sixSneakers = data.slice(-6);
 
 	return (
 		<>
@@ -38,12 +38,11 @@ export const Footer: FC = () => {
 					</div>
 					<div className={styles.wrap}>
 						<div className={styles.title}>New Releases</div>
-						{sixSneakers &&
-							sixSneakers.map((sneaker) => (
-								<Link to={`/details/${sneaker.id}`} className={styles.subTitle} key={sneaker.id} onClick={() => window.scrollTo(0, 0)}>
-									{sneaker.title}
-								</Link>
-							))}
+						{sixSneakers?.map((sneaker) => (
+							<Link to={`/details/${sneaker.id}`} className={styles.subTitle} key={sneaker.id} onClick={() => window.scrollTo(0, 0)}>
+								{sneaker.title}
+							</Link>
+						))}
 					</div>
 					<div className={styles.wrap}>
 						<div className={styles.title}>Support</div>

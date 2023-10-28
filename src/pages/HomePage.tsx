@@ -1,24 +1,21 @@
 import { FC } from 'react';
-import { Api } from '../api/Api';
-import { useSelector } from 'react-redux';
-import { RootState } from '../redux/store';
 import { MoonLoader } from 'react-spinners';
 import { Header } from '../components/Header/Header';
 import { Footer } from '../components/Footer/Footer';
+import { useGetSneakersQuery } from '../redux/api/api';
 import { InfoBlock } from '../components/InfoBlock/InfoBlock';
 import { OffWhiteBlock } from '../components/OffWhiteBlock/OffWhiteBlock';
 import { AirJordanBlock } from '../components/AirJordanBlock/AirJordanBlock';
 import { TopSellersBlock } from '../components/TopSellersBlock/TopSellersBlock';
 
 export const HomePage: FC = () => {
-	const allSneakers = useSelector((state: RootState) => state.sneakersSlice.allSneakers);
+	const { data = [] } = useGetSneakersQuery('');
 
-	Api();
 	window.scrollTo(0, 0);
 
 	return (
 		<>
-			{allSneakers.length > 0 ? (
+			{data.length > 0 ? (
 				<>
 					<Header />
 					<AirJordanBlock />

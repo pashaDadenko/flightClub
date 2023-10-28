@@ -1,14 +1,14 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { RootState } from '../../redux/store';
 import { PATHS } from '../../root/routesConfig';
+import { useGetSneakersQuery } from '../../redux/api/api';
 
 import styles from './TopSellersBlock.module.scss';
 
 export const TopSellersBlock: FC = () => {
-	const allSneakers = useSelector((state: RootState) => state.sneakersSlice.allSneakers);
-	const topSellers = allSneakers.slice(0, 8).sort((a, b) => b.rating - a.rating);
+	const { data = [] } = useGetSneakersQuery('');
+
+	const topSellers = data.slice(0, 8).sort((a, b) => b.rating - a.rating);
 
 	return (
 		<div className={styles.wrapper}>

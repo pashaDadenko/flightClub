@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { FC, useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useGetSneakersQuery } from '../../redux/api/api';
 import { setSearchValue } from '../../redux/searchSlice/searchSlice';
 import { variantOverlay, variantSearch } from './SearchOpenVariants';
 
@@ -14,14 +15,14 @@ import styles from './SearchOpen.module.scss';
 export const SearchOpen: FC<SearchProps> = ({ setSearchClick }) => {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
+	const { data = [] } = useGetSneakersQuery('');
 
-	const allSneakers = useSelector((state: RootState) => state.sneakersSlice.allSneakers);
 	const searchValue = useSelector((state: RootState) => state.searchSlice.searchValue);
 
 	const inputRef = useRef<HTMLInputElement>(null);
 	inputRef.current?.focus();
 
-	const filteredSneakers = allSneakers
+	const filteredSneakers = data
 		.filter((sneaker) => {
 			const title = sneaker.title.toLowerCase().includes(searchValue.toLowerCase());
 			const brand = sneaker.brand.toLowerCase().includes(searchValue.toLowerCase());

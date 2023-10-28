@@ -1,14 +1,13 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { RootState } from '../../redux/store';
 import { PATHS } from '../../root/routesConfig';
+import { useGetSneakersQuery } from '../../redux/api/api';
 
 import styles from './AirJordanBlock.module.scss';
 
 export const AirJordanBlock: FC = () => {
-	const allSneakers = useSelector((state: RootState) => state.sneakersSlice.allSneakers);
-	const airJordan = allSneakers.filter((item) => item.brand === 'Air jordan').slice(0, 8);
+	const { data = [] } = useGetSneakersQuery('');
+	const airJordan = data.filter((item) => item.brand === 'Air jordan').slice(0, 8);
 
 	return (
 		<div className={styles.wrapper}>

@@ -1,13 +1,13 @@
 import { FC, useState } from 'react';
-import { RootState } from '../../redux/store';
+import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { PATHS } from '../../root/routesConfig';
 import Accordion from '@mui/material/Accordion';
 import Typography from '@mui/material/Typography';
 import CloseIcon from '@mui/icons-material/Close';
-import { useDispatch, useSelector } from 'react-redux';
 import { variantFilterBar } from './FilterBarVariants';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useGetSneakersQuery } from '../../redux/api/api';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -21,9 +21,9 @@ export const FilterBar: FC<FilterBarProps> = (props) => {
 
 	const dispatch = useDispatch();
 	const { pathname } = useLocation();
+	const { data = [] } = useGetSneakersQuery('');
 
-	const allSneakers = useSelector((state: RootState) => state.sneakersSlice.allSneakers);
-	const brands = [...new Set(allSneakers.map((sneakers) => sneakers.brand))].sort();
+	const brands = [...new Set(data.map((sneakers) => sneakers.brand))].sort();
 	const models = [...new Set(updateSneakers.map((sneakers) => sneakers.model))].sort();
 	const sizes = [...new Set(updateSneakers.map((sneakers) => sneakers.sizes).flat())].sort((a, b) => a - b);
 	const colors = [...new Set(updateSneakers.map((sneakers) => sneakers.color))].sort();

@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import { Api } from '../api/Api';
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
 import { Header } from '../components/Header/Header';
@@ -10,7 +9,6 @@ import { NotFound } from '../components/NotFound/NotFound';
 export const MyOrdersPage: FC = () => {
 	const ordersData = useSelector((state: RootState) => state.ordersSlice.ordersData);
 
-	Api();
 	window.scrollTo(0, 0);
 
 	return (

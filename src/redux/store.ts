@@ -1,3 +1,4 @@
+import { sneakersApi } from './api/api';
 import cartSlice from './cartSlice/cartSlice';
 import userSlice from './userSlice/userSlice';
 import storage from 'redux-persist/lib/storage';
@@ -16,6 +17,7 @@ const persistConfig = {
 };
 
 const rootReducer = combineReducers({
+	[sneakersApi.reducerPath]: sneakersApi.reducer,
 	sneakersSlice,
 	cartSlice,
 	userSlice,
@@ -34,7 +36,7 @@ export const store = configureStore({
 			serializableCheck: {
 				ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
 			},
-		}),
+		}).concat(sneakersApi.middleware),
 });
 
 export const persistor = persistStore(store);

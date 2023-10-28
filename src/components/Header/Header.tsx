@@ -2,6 +2,7 @@ import { useDispatch } from 'react-redux';
 import { Search } from '../Search/Search';
 import { useAuth } from '../../hooks/useAuth';
 import { PATHS } from '../../root/routesConfig';
+import { MenuOpen } from '../MenuOpen/MenuOpen';
 import { SearchOpen } from '../SearchOpen/SearchOpen';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -13,7 +14,6 @@ import backgroundImgDesc from '../../images/backgroundImgDesc.jpg';
 import { variantAccount, variantCart, variantOrders, variantOut, variantUp, variantWrap } from './HeaderVariants';
 
 import styles from './Header.module.scss';
-import { MenuOpen } from '../MenuOpen/MenuOpen';
 
 export const Header: FC = () => {
 	const { isAuth } = useAuth();
