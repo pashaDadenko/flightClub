@@ -2,13 +2,13 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-	apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-	authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-	databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
-	projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-	storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-	messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-	appId: import.meta.env.VITE_FIREBASE_APP_ID,
+	apiKey: "AIzaSyDAoWAorKnbOPXpqGtHIH9_BEfkriaOyUQ",
+	authDomain: "authflightclub.firebaseapp.com",
+	databaseURL: "https://authflightclub-default-rtdb.europe-west1.firebasedatabase.app",
+	projectId: "authflightclub",
+	storageBucket: "authflightclub.appspot.com",
+	messagingSenderId: "719718642889",
+	appId: "1:719718642889:web:c379858be61cba048e4918"
 };
 
 const app = initializeApp(firebaseConfig);
