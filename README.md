@@ -34,6 +34,7 @@ Flight Club is built with a variety of modern web technologies, including:
 - TypeScript
 - Material-UI
 - Redux
+- RTK Query
 - Vite
 - Firebase (for authentication and data storage)
 
