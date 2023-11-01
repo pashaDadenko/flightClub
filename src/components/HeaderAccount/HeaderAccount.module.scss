@@ -6,7 +6,6 @@
 		border: none;
 		background-color: transparent;
 		text-decoration: none;
-
 		cursor: pointer;
 		&:hover {
 			color: #33322f49;
@@ -29,7 +28,7 @@
 			border: none;
 			cursor: pointer;
 			&:hover {
-				color: #33322f49;
+				color: #33322f49 !important;
 				transition: 0.2s;
 			}
 		}

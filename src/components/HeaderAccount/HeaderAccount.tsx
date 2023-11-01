@@ -22,7 +22,7 @@ export const HeaderAccount: FC<TypeHeaderAccountProps> = ({ scrollColor, scrollB
 				{accountHover && (
 					<motion.div className={styles.wrap} style={scrollBack} initial={'initial'} animate={'animate'} exit={'exit'} variants={variantWrap}>
 						<motion.div initial={'initial'} animate={'animate'} exit={'exit'} variants={variantAccount}>
-							<Link to={isAuth ? PATHS.MY_ACCOUNT : PATHS.LOGIN} className={styles.item} style={scrollColor}>
+							<Link className={styles.item} style={scrollColor} to={isAuth ? PATHS.MY_ACCOUNT : PATHS.LOGIN}>
 								My Account
 							</Link>
 						</motion.div>
